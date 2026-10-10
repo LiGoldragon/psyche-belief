@@ -188,6 +188,8 @@ The generated code carries no `use` statements; each imported name is
 written fully qualified: `protos:String` appears as `protos::String`,
 `datom:Datom` as `datom::Datom`.
 
+A type may be declared over a type from a source in place, with no entry in the imports section: `Topic.custom:Name` declares `Topic` over the type `Name` from the source `custom`. The source is known twice: its first letter is lowercase, and a colon follows it.
+
 ## What a declaration turns into
 
 A declaration turns into the Rust type with named fields, bearing the
