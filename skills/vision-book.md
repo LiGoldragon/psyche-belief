@@ -7,4 +7,6 @@ dependencies: [vision-distillation]
 
 Every book has a distillation section: it proposes the lines that move the living's words into vision, intent and spirit skills. A book without one proposes nothing to move forward.
 
+The first edition of a book is mostly questions.
+
 A book carries psyche only. Compensation, knowledge and operation skills are the machines' own: they write them and prove them by tests.
