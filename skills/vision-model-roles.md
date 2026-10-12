@@ -23,9 +23,8 @@ default: prefer the lower tier.
 
 ### Codex side (energy tiers)
 
-Luna launches only Luna. Terra launches Terra or Luna, not Sol. Sol is not
-launched lightly; it is getting expensive. Astra launches Sol, Terra, and
-Luna — try Terra and Luna first. Astra is main-flow only: no flow ever
+Luna launches only Luna. Sol is not
+launched lightly; it is getting expensive. Astra launches Sol and Luna — try Luna first. Astra is main-flow only: no flow ever
 launches an Astra subflow.
 
 ### Claude side (model names)
