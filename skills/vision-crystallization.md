@@ -1,6 +1,6 @@
 ---
 description: A crystallization proposal is composed or judged, or a vision impurity is met in a psyche record.
-dependencies: [operation-psyche-crystallization]
+dependencies: [inquiry-psyche-crystallization]
 ---
 
 ## Vision impurities
