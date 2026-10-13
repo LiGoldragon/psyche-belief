@@ -1,11 +1,11 @@
 ---
 description: A book for the living is written or judged.
-dependencies: [vision-distillation]
+dependencies: [vision-crystallization]
 ---
 
 ## Books
 
-Every book has a distillation section: it proposes the lines that move the living's words into vision, intent and spirit skills. A book without one proposes nothing to move forward.
+Every book has a crystallization section: it proposes the lines that move the living's words into vision, intent and spirit skills. A book without one proposes nothing to move forward.
 
 The first edition of a book is mostly questions.
 
