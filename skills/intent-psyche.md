@@ -15,6 +15,8 @@ The long-term vision is the goalpost, never a blocker; the short-term vision is 
 
 Anything the living has reviewed is psyche: a line he approves is a vision statement at least, whatever module proposed it, and leaves the mind or field module it sat in. A line he has not reviewed is a machine line.
 
+Only lines that land in a psyche module, and the code they land, are put to the living. A machine module is changed by its owner without him.
+
 ## Spirit holds beyond this system
 
 Spirit is philosophy that holds beyond this system. A rule about this system, however broad, is intent at most, on its subject.
