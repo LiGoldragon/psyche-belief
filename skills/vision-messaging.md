@@ -31,3 +31,7 @@ another, and a submission is never a read receipt.
 ## Only messages that act, deliver, or block
 
 Send only messages that require the recipient's action, deliver a result it awaits, or report an error or blocker affecting its work; keep routine receipts in durable records for requested status reports.
+
+## A hash or an identifier is six characters
+
+A hash or an identifier in a message is its first six characters.
