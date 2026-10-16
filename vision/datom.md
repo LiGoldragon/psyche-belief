@@ -53,7 +53,7 @@ Ada     TheBuildPassedOnTheThirdTry     «12 Rue de la Paix»
 Structure is the word for every unit of the text: enclosed when it
 stands between its delimiters, unenclosed when bare. A headed
 structure is a head, a separator and a body; the dot is the separator,
-written right after the head, and it opens the body's delimiter. A
+written right after the head. Any whitespace, any amount, may follow it: a space, a tab, a line break; so nesting may go down instead of to the right. A
 head is a symbol. In datom a head is always a variant, so it is
 capitalized. Which head a structure carries is part of its type:
 `Accepted.{ … }` and `Refused.{ … }` are two types. When an enum value
@@ -80,6 +80,13 @@ zero except 0 itself. A single semicolon opens a comment. Canonical
 text leaves a space inside every bracket and brace delimiter, at both
 ends, so that head, dot, delimiter and content read apart, and never
 inside the guillemets, where a space is content.
+
+```
+Observed.Locks.[]     ; on one line
+Observed.             ; or going down
+   Locks.
+      []
+```
 
 ```
 ; datom, in a position expecting Person: a struct of name String, born Integer, address Address, roles Vector<Role>.

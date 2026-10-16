@@ -169,6 +169,15 @@ Library.{
 }
 ```
 
+## The type ethos
+
+`Type` is a single-field variant carrying one declaration, so its payload is the declaration's own form, as any single-field variant's is; it is no exception to the datom.
+
+```
+Type.CommitMessage.[ Landing.Vector<String>
+                     Fix.String ]
+```
+
 ## Imports
 
 An import names a source and a type: `protos:String` or
