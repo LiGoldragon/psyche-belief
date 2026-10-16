@@ -60,4 +60,9 @@ A subject the living reviews or asks about has a module, on its topic or a broad
 
 A module declares its placement: the system prompt, or loaded on demand. A skill is the harness's interface for an on-demand module.
 
+The vocabulary is context, context modules and context building.
+A skill is the legacy name, one harness name for things that differ, becoming obsolete as harness infrastructure improves.
+
 A context repository holds one folder per module type; no folder is called skills. A file is named by its subject alone, and its folder gives its type.
+
+A context repository holds one section of role modules per layer, Primary, Secondary, Tertiary and Quaternary, and may hold sections for specialized topics.

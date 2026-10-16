@@ -20,8 +20,7 @@ Next begins from Primary's root commit and carries selected repository mounting
 points plus a README and AGENTS.md explaining those relationships. Orchestrate
 coordinates concurrent work across those repositories.
 
-The skills belong in a repository. This is a target shape, not authorization to
-create or migrate a repository (native desktop record, archive ordinal 1835).
+The context modules belong in a context repository; Psyche's is psyche-context.
 
 This accepted Vision describes a target shape. It does not authorize a data
 migration, repository creation, history rewrite, or broad archival operation.
