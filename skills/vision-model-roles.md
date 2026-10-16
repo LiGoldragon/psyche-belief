@@ -1,5 +1,5 @@
 ---
-description: Which model seat thinks, designs, delegates or speaks to the living is decided, or a model is named natively.
+description: Which model metaflow thinks, designs, delegates or speaks to the living is decided, or a model is named natively.
 dependencies: []
 ---
 
@@ -14,7 +14,7 @@ Roles are explained by layer, not by model; one skill maps layer to model.
 | Tertiary | Sonnet | Luna |
 | Quaternary | Haiku | Luna, low effort |
 
-Every seat runs at medium effort, except the OpenAI Quaternary.
+Every metaflow runs at medium effort, except the OpenAI Quaternary.
 
 ## Delegation ceiling
 
@@ -39,7 +39,7 @@ ever launches a Fable subflow.
 The model is declared once, as typed configuration in Flow, mutated only
 through the meta wire. Skill variables carry that value by name into every
 skill, launcher and brief. Nothing else holds a model name, so a launcher
-never writes one by hand and no flow is born on a seat by accident.
+never writes one by hand and no flow is born on a metaflow by accident.
 
 ## Native names use aspect, topic and layer
 
