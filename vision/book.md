@@ -22,3 +22,7 @@ A figure shows how a thing moves, one question per figure, readable in seconds. 
 An idea reaches the living as a picture first. A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
 
 A proposal is drawn as well as written: what it adds, removes and keeps, in one frame.
+
+A proposal that touches a code component shows the code it changes or adds.
+
+Every comment of his redoes the book it is on, unless the comment closes the topic; a book his comment affects is redone as well. A comment that opens a topic of its own gets a book of its own.

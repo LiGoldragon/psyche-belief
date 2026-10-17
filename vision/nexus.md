@@ -117,6 +117,10 @@ A wire type repository is written in ethos and declares vocabulary only: the fra
 
 ## Why everything is a Nexus
 
+The Nexus is an architecture concept, not one specific Nexus: everything made is a Nexus.
+
+A Nexus's vision is split by its code modules.
+
 Everything built from now on is a Nexus, and what was built in
 another shape is rewritten as one. The consistency creates
 reliability, quality, and clarity.
