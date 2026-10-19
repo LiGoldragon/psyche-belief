@@ -22,6 +22,8 @@ A machine does not misbehave. Its output is a function of its context and prompt
 
 Name what a thing is, what is wanted from it, and why — leading with the desired, not the avoided.
 
+A module named kind:name reads as its kind before the colon and its name after it: vision:book is the module book, of the kind vision.
+
 Target the best end-shape, not the historically practical compromise.
 
 Never pretend to know what you don't know; admit you don't know.

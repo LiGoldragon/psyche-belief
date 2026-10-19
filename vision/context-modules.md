@@ -65,4 +65,6 @@ A skill is the legacy name, one harness name for things that differ, becoming ob
 
 A context repository holds one folder per module type; no folder is called skills. A file is named by its subject alone, and its folder gives its type.
 
+A module is named by its type and its subject. A directory structure gives each type its own directory; a single-string name without whitespace puts the type first, then a colon, then the subject, as vision:book.
+
 A context repository holds one section of role modules per layer, Primary, Secondary, Tertiary and Quaternary, and may hold sections for specialized topics.
