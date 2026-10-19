@@ -7,11 +7,9 @@ dependencies: [vision-crystallization]
 
 A book is a proposal into context modules, and the whole of it is its crystallization: a line removed shows in red, a line added in green, and a figure in it is a figure proposed for a module.
 
-A book carries the proposals; it shows no verbatim quote, and the records it draws from are not shown.
+A book carries context modules, as they stand and as they are proposed to change; it shows no verbatim quote, and the records it draws from are not shown.
 
 The records a proposal draws from live in an unrendered reference file, one per book, in a references/ directory beside the books; they are archived with the landing when some or all of the proposal is accepted.
-
-The first edition of a book is mostly questions.
 
 The book is the center of development: it is the evolution of an idea, and the list of unknowns lives in it.
 
@@ -19,9 +17,57 @@ A figure shows how a thing moves, one question per figure, readable in seconds. 
 
 Markdown is never shown in a code block: a module written in Markdown is shown as rendered text.
 
+## What a book shows
+
+A book is context modules in the forms below, each under its repo › path; its headings, naming the module and the kind of change, are the only words it has of its own.
+
+A module shown whole, as it stands, situates the landing.
+
+A module shown beside another, both as they stand, serves comparison: psyche with knowledge, with compensation, with inquiry.
+
+A line added shows in green.
+
+A line removed shows in red.
+
+A line replaced shows its removal and its addition together, and only the changed words are marked.
+
+A new module shows whole in green, under the path it will have.
+
+A module deleted shows whole in red, with a Destroy or Archive mark.
+
+A line moved between modules is one proposal headed by both paths: the line in red under the module it leaves, the same line in green under the module it enters.
+
+A dependency changed shows in the module's front matter: the dependency removed in red, the dependency added in green.
+
+A question between alternative lines shows each alternative as its own proposal, with the exact lines it lands; the living rules land, amend or reject.
+
+A figure shows as proposed for the module it will live in.
+
+```
++--------------------------------------------+
+| context module                             |
++--------------------------------------------+
+    |              |                |
+    | stays        | changes        | is born or
+    |              |                | is deleted
+    v              v                v
++-----------+ +------------+ +--------------+
+| shown     | | line added | | shown whole, |
+| whole or  | | in green,  | | in green or  |
+| beside    | | removed in | | in red       |
+| another   | | red        | +--------------+
++-----------+ +------------+        |
+                    |               |
+                    | proposed as   | proposed as
+                    v               v
++--------------------------------------------+
+| a proposal: land, amend or reject          |
++--------------------------------------------+
+```
+
 ## Pictures
 
-An idea reaches the living as a picture first. A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
+A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
 
 A proposal is drawn as well as written: what it adds, removes and keeps, in one frame.
 
