@@ -52,7 +52,7 @@ dependencies: []
 +--------------------------------------------+
 ```
 
-Mind's second type is inquiry: it holds what is unclear, and what an audit finds varying from stated knowledge.
+Mind's second type is inquiry, as vision:inquiry holds it.
 
 Knowledge modules are audited from time to time for truth and currency against practice; a variation found goes to the type that holds what is unclear.
 
