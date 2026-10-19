@@ -24,6 +24,10 @@ old code at most inspiration.
 
 Every method lives in a trait; an inherent method is a trait not yet extracted. The traits and types of a Nexus are one ontology designed before any body is written; defaults wherever expressible, through rich sub-trait chains. Traits live on data-bearing types; a zero-sized type with behaviour is a namespace pretending. Identity is trait-borne: an encoded form fingerprints itself, by default the hash of its rkyv archive, and every reference names its target by that name. `fn main()` is the only free function; a missing owner is a missing type.
 
+## Long term: traits in ethos
+
+Long term, every trait a Nexus uses is declared in ethos; short term, a Nexus goes without declared traits.
+
 ## Processing is for the effect
 
 An object enters a Nexus for the effect; the response follows as an
@@ -151,51 +155,75 @@ changes.
 
 A Nexus has three parts, each its own ethos specification: Signal is what it says, Operation is what it does, Memory is what it remembers. Nexus always names the whole; the part that does is Operation. Every effect has a matching operation type. A signal reaches memory only through operation; memory answers operation that the change succeeded or failed; the answer returns through operation and leaves as a signal. Reading a Nexus's ethos alone shows every object and process on that path.
 
-```
-Library                                  ; what the three parts share
-[]                                       ; imports: none
-[ FlowId.Integer                         ; types
-  Voice.{ Aspect Layer }                 ;   who a flow speaks for, and at which layer
+The library, shared by the three parts:
+
+```ethos
+Library
+[]
+[ FlowId.Integer
+  Topic.String
   Aspect.[ Psyche Mind Field ]
-  Layer.[ Primary Secondary Tertiary Quaternary ]
+  Layer.[ Primary Secondary Tertiary
+          Quaternary ]
+  Address.{ Aspect Topic Layer }
   Event.[ Started Stopped ] ]
-[]                                       ; kinds
-[]                                       ; associations
+[]
+[]
+```
 
-Signal                                   ; what Flow says, on its ordinary socket
-[ flow:[ FlowId Voice Event ] ]          ; imports from the Library
-[ Launch.{ Voice                         ; queries
-           Brief.String }
+Signal, what Flow says:
+
+```ethos
+Signal
+[ flow:[ FlowId Address Event ] ]
+[ Launch.{ Address Brief.String }
   Report.{ FlowId Event } ]
-[ Launched.FlowId                        ; responses
+[ Launched.FlowId
   Refused.[ NoCapsule
-            VoiceBusy.Voice ]
+            AddressBusy.Address ]
   Reported ]
-[]                                       ; types
+[]
+```
 
-Operation                                ; what Flow does: one operation for every effect
-[ flow:[ FlowId Voice Event ] ]          ; imports
-[ Start.{ Voice Capsule }                ; operations
+Operation, what Flow does:
+
+```ethos
+Operation
+[ flow:[ FlowId Address Event ] ]
+[ Start.{ Address Capsule }
   Record.{ FlowId Event } ]
-[ Started.FlowId                         ; outcomes
+[ Started.FlowId
   Recorded
   Failed.[ CapsuleRefused StoreRefused ] ]
-[ Capsule.{ Home.String                  ; types
+[ Capsule.{ Home.String
             Login.Vector<String> } ]
+```
 
-Memory                                   ; what Flow remembers
-[ flow:[ FlowId Voice Event ] ]          ; imports
-[ Flow.{ FlowId                          ; record types
-         Voice
+Memory, what Flow remembers:
+
+```ethos
+Memory
+[ flow:[ FlowId Address Event ] ]
+[ Flow.{ FlowId Address
          State.[ Running Ended ]
-         Vector<Event> } ]
+         Vector<Event> }
+  Answer.[ Succeeded Failed ] ]
 ```
 
-```
-Launch.{ { Psyche Primary } «Draft the Nexus book» }      ; 1 Query, typed at the CLI, sent as signal
-Start.{ { Psyche Primary } { /home/li/primary [] } }      ; 2 Operation, from Signal's intend
-Flow.{ 7 { Psyche Primary } Running [ Started ] }         ; 3 the Change Operation hands Memory
-Succeeded                                             ; 4 Memory's answer to Operation
-Started.7                                             ; 5 Outcome
-Launched.7                                            ; 6 Response, from Signal's answer, back to the CLI
+```datom
+; 1 Query, typed at the CLI, sent as signal
+Launch.{ { Psyche core Primary }
+         «Draft the Nexus book» }
+; 2 Operation, from Signal's intend
+Start.{ { Psyche core Primary }
+        { /home/li/primary [] } }
+; 3 the Change Operation hands Memory
+Flow.{ 7 { Psyche core Primary } Running
+       [ Started ] }
+; 4 Memory's answer to Operation
+Succeeded
+; 5 Outcome
+Started.7
+; 6 Response, from Signal's answer, to the CLI
+Launched.7
 ```

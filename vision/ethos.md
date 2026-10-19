@@ -3,9 +3,9 @@ description: An ethos file is written, or a type, trait or layout is judged agai
 dependencies: [knowledge-datom, knowledge-protos]
 ---
 
-## Flow, a current best example
+## Ethos and Nexus are infrastructure
 
-Flow is one of the best current examples of ethos; its ethos lives in the vision-flow-ethos skill, which carries the code.
+Ethos and Nexus are basic infrastructure, not examples: the wood houses are built from. Chronos is the example project built with them, short term.
 
 ## Where the golden ethos lives
 
