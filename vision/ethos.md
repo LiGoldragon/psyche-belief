@@ -305,6 +305,40 @@ pub struct Unwritable_Data { pub file_path: FilePath, pub string: String }
 pub enum GenerationFailure { SyntaxError(Vec<FilePath>), Unwritable(Unwritable_Data) }
 ```
 
+## An open enum
+
+An open enum is an Ethos object whose capitalized words are its fixed variants. A word that is not capitalized is its implied extensible variant, a camel ID: a word-based camel-case identifier, written bare, with no variant head before it. The name camel ID is temporary. A check that a word is a word-based camel-case identifier comes long term; short term, none is made.
+
+The metaflow topic is an open enum: its fixed variants are a constant set, such as the core topic, and the users or the machine extend it with camel IDs as they need topics.
+
+The same mechanism carries an object that is represented unconventionally, such as a word-based hash.
+
+```
++--------------------------------------------+
+| a word in an open enum's position          |
++--------------------------------------------+
+        |                        |
+        | capitalized            | uncapitalized
+        v                        v
++----------------+     +---------------------+
+| fixed variant  |     | camel ID            |
++----------------+     +---------------------+
+        |                        |
+        |                        | is checked
+        |                        | long term as
+        |                        v
+        |             +---------------------+
+        |             | word-based          |
+        |             | camel-case          |
+        |             | identifier          |
+        |             +---------------------+
+        | is a                   | is a
+        v                        v
++--------------------------------------------+
+| value of the open enum                     |
++--------------------------------------------+
+```
+
 ## Every declared type bears both traits
 
 Ethos Zero emits `Datomizable` and `Compositional` on every struct and
