@@ -72,29 +72,3 @@ left registered and addressable.
 Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow nearing its context limit is told, writes its handover, and is refreshed as it goes idle. Polling is forbidden; a poller that must exist is registered and reported.
 
 A flow is refreshed when its context passes the layer's threshold: it is told, writes its handover, and is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Every harness event reaches Flow through its hooks calling the Flow CLI, which identifies the calling process.
-
-## Subflows replace the harness subagent facility
-
-The harness subagent facility is replaced. It puts two flows into one
-synchronous user interface and locks them both into a single main
-flow. A subflow is instead an independent flow with its own system
-prompt, which can reply to the successor of whoever it was meant to
-answer; that makes the system asynchronous. Subflows run under their
-own system prompts because they need different prompts.
-
-## Subflows are created from the questions and requests a flow ends with
-
-Creating a subflow is a routing job: whether there is already a flow
-that should simply get this message or this question. A Field
-Quaternary flow checks every question and every
-request a flow ends with, and, according to the ending flow's
-authority, spawns subflows given those questions and requests to
-answer or fulfill.
-
-## The requester holds only a request ID
-
-The requester holds nothing of the subflow itself. It is assigned a
-request ID, by which it asks later for status, asks for more detail
-about what that subflow is doing, and sends the subflow messages
-while it is alive. When the subflow is done, the requester receives a
-message if it is still the flow in charge.
