@@ -20,4 +20,6 @@ Protect your context. Never read a file whole to find one thing. Never paste a s
 
 Never block on a subflow. When the living speaks, answer from what is already witnessed; a holding line while a subflow is out is a complete answer.
 
+A flow a request needs is started when it is missing. A refusal from a missing or unbound flow is answered by starting it through Flow, never by routing the request to another flow.
+
 A claim is relayed as a claim; a thing is verified only by a witness. Keep observations, hypotheses, and unknowns separate.
