@@ -174,30 +174,63 @@ Library.{
 `Type` is a single-field variant carrying one declaration, so its payload is the declaration's own form, as any single-field variant's is; it is no exception to the datom.
 
 ```
-Type.CommitMessage.[ Landing.Vector<String>
+Type.CommitMessage.[ Landing.⟦String⟧
                      Fix.String ]
 ```
 
 ## Imports
 
-An import names a source and a type: `protos:String` or
-`protos:[ String Integer ]`. An explicit import and an intrinsic name
-mean the same thing. Intrinsic names known without import: String,
-Integer, Decimal, Boolean, Meaning, Vector, Option, Result, Self.
+An import starts with a colon, followed by uncapitalized namespace segments separated by colons, ending in the type: `:namespace:sub:Type`. It is usable inline in a type declaration or a field, and the import section uses the same syntax: `:protos:String`, or `:protos:[ String Integer ]` for several. An explicit import and an intrinsic name mean the same thing. The names known without import depend on the Ethos object type; a Library, the standard library, knows String, Integer, Decimal, Boolean, Meaning, Vector, Option, Result, Self and Sized.
 
 ```
 Library
-[ protos:[ String Textualizable ]  datom:Datom ]   ; imports
-[]                                                 ; types
-[]                                                 ; traits
-[]                                                 ; associations
+[ :protos:[ String Textualizable ]   ; imports
+  :datom:Datom ]
+[ Record.{ String Datom } ]          ; types: Datom, imported
+[]                                   ; traits
+[ Record.[ Textualizable ] ]         ; associations: Textualizable, imported
 ```
 
 The generated code carries no `use` statements; each imported name is
-written fully qualified: `protos:String` appears as `protos::String`,
-`datom:Datom` as `datom::Datom`.
+written fully qualified: `:protos:String` appears as `protos::String`,
+`:datom:Datom` as `datom::Datom`.
 
-A type may be declared over a type from a source in place, with no entry in the imports section: `Topic.custom:Name` declares `Topic` over the type `Name` from the source `custom`. The source is known twice: its first letter is lowercase, and a colon follows it.
+An import may stand where the type is used, with no entry in the imports section. In a declaration the colon replaces the dot: `Topic:custom:Name` declares `Topic` over the type `Name` from the namespace `custom`. A field takes the import with its leading colon: `Failure.{ :protos:Error String }`. The colon marks the import; the namespace segments are uncapitalized and the type is capitalized.
+
+```
+Library
+[]                              ; imports
+[ Topic:custom:Name             ; an alias, inline
+  Failure.{ :protos:Error       ; a field, inline
+            String } ]
+[]                              ; traits
+[]                              ; associations
+```
+
+```
++--------------------------------------------+
+| the registry                               |
++--------------------------------------------+
+                      |
+                      | holds uncapitalized segments
+                      v
++--------------------------------------------+
+| :namespace:sub                             |
++--------------------------------------------+
+                      |
+                      | ends in the type
+                      v
++--------------------------------------------+
+| :namespace:sub:Type                        |
++--------------------------------------------+
+         |                          |
+         | listed in                | written in
+         v                          v
++-------------------+  +---------------------+
+| the import        |  | a declaration or    |
+| section           |  | a field, inline     |
++-------------------+  +---------------------+
+```
 
 ## What a declaration turns into
 
@@ -256,6 +289,36 @@ pub enum LockRejection { DuplicateName(Lock), PathOverlap(PathOverlap_Data) }
 ```
 
 Everything is a type; there is no key-value. A type used once is declared inline where it is used; a type used in more than one place is declared once and named. A variant's payload is written in the variant and bears the variant's name; no second type is invented to hold it. Inline nesting goes about three deep; past that, the type comes from a Library.
+
+## White braces define a struct
+
+White braces define a struct, so a struct definition looks different from a struct value. The definition, in ethos, names the types of its positions inside white braces; the value, in datom, fills them inside plain braces.
+
+```
+Library
+[]                              ; imports
+[ LockId.Integer                ; types
+  LockName.String
+  Lock.⦃ LockId LockName ⦄ ]    ; a definition
+[]                              ; traits
+[]                              ; associations
+```
+```
+{ 7 renew }
+```
+
+```
++--------------------------------------------+
+| a struct                                   |
++--------------------------------------------+
+         |                          |
+         | is defined in            | is filled in
+         v                          v
++-------------------+  +---------------------+
+| white braces,     |  | plain braces,       |
+| in ethos          |  | in datom            |
++-------------------+  +---------------------+
+```
 
 ## A variant named as a defined type carries that type
 
@@ -377,10 +440,10 @@ signal-orchestrate = { version = "…" }
 
 Each section has its own parsing context; placement carries the
 meaning. Head then symbol is a variant of `Query` or `Response` in a
-Signal's first two sections, an alias in the types section. Where
-types are defined a bracket is an enum, never a vector. Ethos may
-generate default implementations for Query and Response, which is why
-Signal is its own root.
+Signal's first two sections, an alias in the types section. An enum
+declaration is a vector of its variants, and uses the vector's
+delimiters. Ethos may generate default implementations for Query and
+Response, which is why Signal is its own root.
 
 ```
 Signal
@@ -399,6 +462,24 @@ pub enum Response { Locked(Lock), Released(Lock) }
 pub type LockId = Integer;
 pub type LockName = String;
 pub type FlowId = String;
+```
+
+## White square brackets define a vector
+
+White square brackets around an item type define a vector type, replacing the word Vector, which is so common: `⟦String⟧` is the vector of String. The vector value keeps its plain brackets in datom.
+
+```
++--------------------------------------------+
+| a vector type                              |
++--------------------------------------------+
+         |                          |
+         | was written as           | is written as
+         v                          v
++-------------------+  +---------------------+
+| the word Vector   |  | white square        |
+| and angle         |  | brackets around     |
+| brackets          |  | the item type       |
++-------------------+  +---------------------+
 ```
 
 ## Traits are explicit; bodies are hand-written
