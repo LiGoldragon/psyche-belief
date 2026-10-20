@@ -1,5 +1,5 @@
 ---
-description: Flow — the Nexus that launches, names, tracks and ends flows — or a voice, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
+description: Flow — the Nexus that launches, names, tracks and ends flows — or a metaflow, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
 dependencies: [vision-nexus, vision-ethos]
 ---
 
@@ -41,6 +41,8 @@ Flow exposes everything from the harness, the bare input: a flow is started, sto
 
 A flow does not wait on a timer for another flow's work: the flow that finishes messages the flow that needs to know.
 
+A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the psyche. A message from another flow that only updates it needs no full presentation. A presentation takes its form from the context modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no context module.
+
 ## Starting flows
 
 A Nexus component decides the system prompt and everything about a
@@ -49,11 +51,15 @@ launched with specialized system prompts.
 
 A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model, declared once in Flow as configuration and changed only over its meta socket. A launch names the metaflow, the context modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
+A fresh flow starts with every context module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
+
 A simplified flow is a kind of flow made for judgment alone: it starts with a system prompt of its own, it has no regular tool, and its response is its message.
 
 A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default context modules and its variations. The flow ethos holds the specification.
 
 Short term, a Primary is not started without its Secondary, and the Secondary starts first.
+
+Long term, a Primary is a simplified flow, used only to render judgment: guiding a design or posing questions.
 
 To the Nexus, a module's location is nothing but its registry entry.
 
@@ -81,10 +87,12 @@ Reaping belongs to the refresh event, not to a later sweep. A refreshed flow
 takes the replaced end out of receiving messages, so a dead end is never
 left registered and addressable.
 
-Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow nearing its context limit is told, writes its handover, and is refreshed as it goes idle. Polling is forbidden; a poller that must exist is registered and reported.
+Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow past its context threshold is refreshed as it goes idle. Polling is forbidden; a poller that must exist is registered and reported.
 
-A flow is refreshed when its context passes the layer's threshold: it is told, writes its handover, and is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Every harness event reaches Flow through its hooks calling the Flow CLI, which identifies the calling process.
+A flow is refreshed when its context passes its model's threshold: it is told nothing and writes no handover; it is given no new message, Flow keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in Flow; an OpenAI model's is lower than a Claude model's.
 
 Compaction is an absolute emergency measure: a compaction request is refused while the context is below a threshold.
+
+A flow that keeps working without being given more work may compact. Its compaction raises a warning, and a flow investigates why it worked so long, so that the trouble is brought to the living or Psyche reconsiders the approach and gives guidance.
 
 An ephemeral flow is a continuous job flow that does not wake back up: it takes jobs while it runs, up to a ceiling on its context, and past the ceiling it is given no new job and another ephemeral flow takes it. With Claude the ceiling is 300,000 tokens, and the flow is wound down at 250,000.
