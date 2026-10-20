@@ -18,6 +18,10 @@ Every metaflow runs at medium effort, except the OpenAI Quaternary.
 
 ## Delegation ceiling
 
+A complex judgment is made by Opus, Fable or
+Astra; Sonnet and Sol are not trusted with
+complex reasoning or inference.
+
 Each layer has a ceiling on what subflows it may launch. Conservative by
 default: prefer the lower layer.
 
