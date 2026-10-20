@@ -22,6 +22,10 @@ without being submitted. Middle abrupt is the terminal prompt, which a
 Claude recipient receives at its next tool boundary. Soft waits for the
 recipient to finish.
 
+A pressing message wakes its recipient; a message that only queues carries what may wait.
+
+A request to deliver a recipient's queue delivers every queued message, or nothing when none is queued.
+
 ## An interrupt witness is not a delivery witness
 
 Inducing an interrupt, placing prompt text, submitting it, and the recipient
