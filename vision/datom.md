@@ -245,6 +245,21 @@ might be read as datom in one pass. Whether that is even possible,
 given the situation and the actualization involved in parsing ethos,
 is not settled, and the question is set aside for now.
 
+A datom newly made, or proposed, is shown with its Ethos specification.
+
+The Ethos:
+
+```
+Reply.[ Accepted.Integer   ; the type
+        Refused.String ]
+```
+
+The datom:
+
+```
+Accepted.42
+```
+
 ## Repository
 
 Everything moves to Datom: all of the stack, Horizon, Lojix, everything;

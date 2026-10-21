@@ -170,12 +170,10 @@ Library
 []                              ; associations
 
 ; the canonical form the reader sees, after the mechanical conversion
-Library.{
-  [ protos:String ]
-  [ Record.{ String Integer } ]
-  []
-  []
-}
+Library.{ [ protos:String ]
+          [ Record.{ String Integer } ]
+          []
+          [] }
 ```
 
 ## The type ethos
@@ -397,6 +395,23 @@ pub struct Unwritable_Data { pub file_path: FilePath, pub string: String }
 pub enum GenerationFailure { SyntaxError(Vec<FilePath>), Unwritable(Unwritable_Data) }
 ```
 
+Every variant is capitalized: Ethos reads only a capitalized symbol as a variant.
+
+The Ethos:
+
+```
+Reply.[ Accepted.Integer   ; two variants
+        Refused.String ]
+```
+
+An enum has two variants or more; an enum of one variant is refused.
+
+The Ethos:
+
+```
+Reply.[ Accepted ]   ; refused: one variant
+```
+
 ## An open enum
 
 An open enum is an Ethos object whose capitalized words are its fixed variants. A word that is not capitalized is its implied extensible variant, a camel ID: a word-based camel-case identifier, written bare, with no variant head before it. The name camel ID is temporary. A check that a word is a word-based camel-case identifier comes long term; short term, none is made.
@@ -543,6 +558,19 @@ const _: () = {
     fn assert_record_summarizable<T: Summarizable>() {}
     let _ = assert_record_summarizable::<Record>;
 };
+```
+
+An ethos declares the traits its types bear. Types that bear no trait describe a system that does nothing; such an ethos is not written.
+
+The Ethos:
+
+```
+Library
+[]                            ; imports
+[ Record.{ String Integer } ] ; types
+[ Summarizable.[              ; traits
+    summarize.[ String ] ] ]
+[ Record.[ Summarizable ] ]   ; associations
 ```
 
 ## Trait syntax
