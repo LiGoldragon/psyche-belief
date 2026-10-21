@@ -1,4 +1,4 @@
-# psyche-skills
+# psyche-context
 
 This repository holds the Psyche aspect's authored context modules in
 `vision/`, `intent/` and `spirit/`, with subject-only filenames. Stable
