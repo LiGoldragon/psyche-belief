@@ -66,3 +66,7 @@ eligible.
 Multiple bindings for one cell are an unresolved conflict, never fanout.
 Resolve the binding
 immediately before each attempt.
+
+## A grunt job goes down, not up
+
+A simple job — a book rebuilt, a page published, a module located, a file moved — goes to a Tertiary or a Quaternary; a Secondary is never in charge of redoing a book. Once a Secondary has figured out what to do, the doing is handed down.
