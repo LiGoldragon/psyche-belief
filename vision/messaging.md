@@ -39,3 +39,11 @@ Send only messages that require the recipient's action, deliver a result it awai
 ## A hash or an identifier is six characters
 
 A hash or an identifier in a message is its first six characters.
+
+## Work goes straight to the next hand
+
+Work goes straight to the flow that acts on it next; the ordering flow hears only of a blocker, a needed ruling, or a finished deliverable it must act on itself.
+
+## A messaging test sends one message
+
+A messaging test sends one message, to a flow that needs it anyway or to a Quaternary started for it and stopped after; it never goes to every flow and never wakes a Primary.

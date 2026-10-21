@@ -98,3 +98,7 @@ Compaction is an absolute emergency measure: a compaction request is refused whi
 A flow that keeps working without being given more work may compact. Its compaction raises a warning, and a flow investigates why it worked so long, so that the trouble is brought to the living or Psyche reconsiders the approach and gives guidance.
 
 An ephemeral flow is a continuous job flow that does not wake back up: it takes jobs while it runs, up to a ceiling on its context, and past the ceiling it is given no new job and another ephemeral flow takes it. With Claude the ceiling is 300,000 tokens, and the flow is wound down at 250,000.
+
+## A superseded flow is closed
+
+An abandoned, duplicated or superseded flow is closed, archived and deregistered, and never messaged or woken.
