@@ -101,6 +101,10 @@ among them, are tolerated as legacy, for cognitive ease while Rust
 and ethos code are switched between so often; once ethos is the
 authored language that debt is removed.
 
+## Ethos and the Rust it generates are shown apart
+
+An example shows the Ethos file and the Rust it generates as two blocks, each named for what it is: the Ethos, then the Rust generated from it. They never share one block, because they never share one file.
+
 ## Identity
 
 A trait is identified as a Rust trait is, by its name and its
@@ -117,6 +121,8 @@ its capabilities, is its definition. Angle brackets hold the
 constraints; they are a protos delimiter, recycled from Rust as
 Result and Self are.
 
+The Ethos:
+
 ```
 Library
 [ std:[ Clonable Sendable Serializable ] ]                  ; imports: where the three constraint traits come from
@@ -127,6 +133,9 @@ Library
                                                             ;   its capabilities, its definition
 []                                                          ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 // The trait's identity: its name and its constraints, two generic parameters with their bounds.
 // What ethos writes as the bounds alone, Rust writes as a named parameter carrying them;
@@ -240,6 +249,8 @@ A field is named after its type in snake case; a constructed type
 type-first, `string_vector`, `lock_option`; a repeated type as first
 and second.
 
+The Ethos:
+
 ```
 Library
 []                                            ; imports
@@ -250,6 +261,9 @@ Library
 []                                            ; traits
 []                                            ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 pub type LockId = Integer;
 pub type LockName = String;
@@ -266,6 +280,8 @@ a full type whose derived name carries an underscore, non-idiomatic
 for a Rust type, so it never collides and reads at a glance as
 inferred from the sugar.
 
+The Ethos:
+
 ```
 Library
 []                                                       ; imports
@@ -277,6 +293,9 @@ Library
 []                                                       ; traits
 []                                                       ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 pub type LockId = Integer;
 pub type LockName = String;
@@ -325,6 +344,8 @@ Library
 When a variant's name is a type already defined in the library, that
 type is the data the variant carries. Nothing further is written.
 
+The Ethos:
+
 ```
 Library
 []                                         ; imports
@@ -335,6 +356,9 @@ Library
 []                                         ; traits
 []                                         ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 pub type FilePath = String;
 pub type SyntaxError = Vec<FilePath>;
@@ -351,6 +375,8 @@ Instead of naming a defined type, a variant may declare what it
 carries in place: a vector, a struct, or an enum, each a full type
 with a derived name, recursively.
 
+The Ethos:
+
 ```
 Library
 []                                                        ; imports
@@ -360,6 +386,9 @@ Library
 []                                                        ; traits
 []                                                        ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 pub type FilePath = String;
 #[derive(Datomizable, Compositional)]
@@ -445,6 +474,8 @@ declaration is a vector of its variants, and uses the vector's
 delimiters. Ethos may generate default implementations for Query and
 Response, which is why Signal is its own root.
 
+The Ethos:
+
 ```
 Signal
 []                                                     ; imports
@@ -456,6 +487,9 @@ Signal
   LockRequest.{ LockName FlowId }
   Lock.{ LockId LockName } ]
 ```
+
+The Rust generated from it:
+
 ```rust
 pub enum Query    { Lock(LockRequest), Release(LockId) }
 pub enum Response { Locked(Lock), Released(Lock) }
@@ -488,6 +522,8 @@ A trait is declared, never inferred; an association asserts the type
 bears it. The generated Rust carries a compile-time assertion that the
 type bears the trait; the interaction body is hand-written Rust.
 
+The Ethos:
+
 ```
 Library
 []                                                ; imports
@@ -495,6 +531,9 @@ Library
 [ Summarizable.[ summarize.[ String ] ] ]         ; traits
 [ Record.[ Summarizable ] ]                       ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 #[derive(Datomizable, Compositional)]
 pub struct Record { pub string: String, pub integer: Integer }
@@ -514,6 +553,8 @@ inside. The receiver after a capability's head names who is called:
 capability with inputs is a headed brace: inputs in a bracket, yield
 in a bracket. A yield bracket holds one type.
 
+The Ethos:
+
 ```
 Library
 []                                                            ; imports
@@ -523,6 +564,9 @@ Library
              create:[ Self ] ] ]
 []                                                            ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 #[derive(Datomizable, Compositional)]
 pub enum SinkError { Closed, Full }
@@ -538,6 +582,8 @@ a bracket, associated types with their constraints in a bracket,
 associated constants in a bracket — upper case, each the name, a dot,
 and its type — and capabilities in a bracket.
 
+The Ethos:
+
 ```
 Library
 [ std:Serializable ]                                ; imports
@@ -549,6 +595,9 @@ Library
                [ next![ Option<Item> ] ] } ]
 []                                                  ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 pub trait Fillable { fn create() -> Self; }
 pub trait Streamable: Fillable {
@@ -569,6 +618,8 @@ associations of the query, response and record types are implied and
 never written. In a Library they are the fourth section, after the
 traits.
 
+The Ethos:
+
 ```
 Library
 []                                                       ; imports
@@ -577,6 +628,9 @@ Library
   Fillable.[ create:[ Self ] ] ]
 [ Sink.[ Summarizable Fillable ] ]                       ; associations
 ```
+
+The Rust generated from it:
+
 ```rust
 // Compile-time assertion: Sink bears Summarizable and Fillable.
 const _: () = {
