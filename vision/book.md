@@ -43,8 +43,6 @@ A dependency changed shows in the module's front matter: the dependency removed 
 
 A module is leaned out by removing a line that repeats another, shown beside the line that makes it unnecessary; the compensation module is leaned out first, because vision replaces it.
 
-A compensation line reaches a book only to be removed: the book shows the vision that makes it unnecessary and the line's deletion.
-
 A question between alternative lines shows each alternative as its own proposal, with the exact lines it lands; the living rules land, amend or reject.
 
 A figure shows as proposed for the module it will live in.
