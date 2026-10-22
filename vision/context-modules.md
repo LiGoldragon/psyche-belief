@@ -68,3 +68,11 @@ A context repository holds one folder per module type; no folder is called skill
 A module is named by its type and its subject. A directory structure gives each type its own directory; a single-string name without whitespace puts the type first, then a colon, then the subject, as vision:book.
 
 A context repository holds one section of role modules per layer, Primary, Secondary, Tertiary and Quaternary, and may hold sections for specialized topics.
+
+## No change except through the living or a mechanism
+
+No context module changes except through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
+
+## Context lines are richly annotated
+
+Context lines are richly annotated, because lines of very different categories share one module and are otherwise given the same weight. Separating modules into kinds such as vision and intent is the first, crude form of that annotation.
