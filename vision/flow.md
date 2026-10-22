@@ -106,3 +106,7 @@ An abandoned, duplicated or superseded flow is closed, archived and deregistered
 ## Herdr holds the panes
 
 Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Flow starts a flow in a pane of its own, names a sender by the pane it runs in, and delivers an abrupt message by typing it into the recipient's pane. Herdr is used as it is and never modified.
+
+## A permission prompt is a launch failure
+
+A permission prompt reaching the living is a launch failure.
