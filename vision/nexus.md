@@ -18,9 +18,9 @@ the library that defines the core of a Nexus component.
 
 ## Universal traits first
 
-The basic ontology of an actor and dataflow system is designed before
-implementation; signal and sema are designed against it as if new, the
-old code at most inspiration.
+For now, the basic ontology of an actor and dataflow system is designed
+before implementation; signal and memory are designed against it as if
+new, the old code at most inspiration.
 
 Every method lives in a trait; an inherent method is a trait not yet extracted. The traits and types of a Nexus are one ontology designed before any body is written; defaults wherever expressible, through rich sub-trait chains. Traits live on data-bearing types; a zero-sized type with behaviour is a namespace pretending. Identity is trait-borne: an encoded form fingerprints itself, by default the hash of its rkyv archive, and every reference names its target by that name. `fn main()` is the only free function; a missing owner is a missing type.
 
@@ -36,8 +36,8 @@ Apply liked.
 
 ## Documents
 
-The nexus and sema documents are undesigned; when they are designed
-they live in the Nexus's main repository.
+For now, the nexus and memory documents are undesigned; when they are
+designed they live in the Nexus's main repository.
 
 ## Sockets
 
@@ -90,12 +90,12 @@ among it.
 
 ## Configuration
 
-A Nexus starts with no arguments and there is no bootstrap binary.
-Its executable holds a default configuration as a constant. On start
-it looks for its Sema database at the default location: a database
-that exists holds the configuration; a database created new is
-seeded with the defaults. The meta socket carries a Configure
-interface, and changed values are accepted through it.
+For now, a Nexus starts with no arguments and there is no bootstrap
+binary. Its executable holds a default configuration as a constant. On
+start it looks for its memory at the default location: a memory that
+exists holds the configuration; a memory created new is seeded with the
+defaults. The meta socket carries a Configure interface, and changed
+values are accepted through it.
 
 ## First configuration
 

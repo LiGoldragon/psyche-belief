@@ -54,10 +54,10 @@ in one swoop.
 
 ## Roots
 
-Library, Signal, Operation, Memory. No version in a file. Signal's sections are
-queries and responses, since there is communication; Sema's are record
-types, the rest to be decided. Signal gives a Nexus its main types and
-Sema its database types.
+For now, Library, Signal, Operation, Memory. No version in a file.
+Signal's sections are queries and responses, since there is
+communication; Memory's are record types, the rest to be decided.
+Signal gives a Nexus its main types and Memory its database types.
 
 Four roots: Library, Signal, Operation, Memory. Signal declares what a Nexus says; Operation what it does, one operation type for every effect; Memory what it remembers; Library what they share. A memory trait carries a standard successful-or-unsuccessful change and, for each version, the upgrade from the previous format; that upgrade is the very edit the type needs.
 
@@ -641,7 +641,7 @@ Identity section above.
 ## Associations
 
 An association declares that a type bears a trait: the type's name, a
-dot, a bracket of its traits. In the Signal and Sema roots the
+dot, a bracket of its traits. In the Signal and Memory roots the
 associations of the query, response and record types are implied and
 never written. In a Library they are the fourth section, after the
 traits.
