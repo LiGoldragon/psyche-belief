@@ -77,4 +77,4 @@ A proposal is drawn as well as written: what it adds, removes and keeps, in one 
 
 A proposal that touches a code component shows the code it changes or adds.
 
-Every comment of his redoes the book it is on, unless the comment closes the topic; a book his comment affects is redone as well. A comment that opens a topic of its own gets a book of its own.
+Every word of his, in a book comment or anywhere else, redoes the book it bears on, unless it closes the topic; a book his words affect is redone as well. Words that open a topic of their own get a book of their own.
