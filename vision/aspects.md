@@ -5,7 +5,7 @@ dependencies: []
 
 ## Flows of one topic talk at the same layer across aspects
 
-Flows of the same topic talk at the same layer across aspects: Psyche sees and Mind implements, so a Psyche topic Secondary and the Mind Secondary of that topic speak directly. Field reaches Psyche through Mind, unless Psyche has just spoken to Field. This holds for every aspect.
+Flows of the same topic talk at the same layer across aspects, so a Psyche topic Secondary and the Mind Secondary of that topic speak directly. Field reaches Psyche through Mind, unless Psyche has just spoken to Field. This holds for every aspect.
 
 ## Psyche core keeps track of the psyche, through the Secondaries
 
