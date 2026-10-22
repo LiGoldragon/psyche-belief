@@ -641,10 +641,39 @@ Identity section above.
 ## Associations
 
 An association declares that a type bears a trait: the type's name, a
-dot, a bracket of its traits. In the Signal and Memory roots the
-associations of the query, response and record types are implied and
-never written. In a Library they are the fourth section, after the
-traits.
+dot, a bracket of its traits. In a Library they are the fourth section,
+after the traits.
+
+Signal, Operation and Memory imply traits on the types they declare: each type bears its root's trait, generated with it and never written. The record types of Memory bear the memory trait; the types of Signal bear the message trait.
+
+```
++--------------------------------------+
+| a type declared in an Ethos file     |
++--------------------------------------+
+     |            |            |
+     | in Memory  | in Signal  | in Operation
+     v            v            v
++----------+ +----------+ +----------+
+| bears    | | bears    | | bears    |
+| the      | | the      | | the      |
+| memory   | | message  | | operation|
+| trait    | | trait    | | trait    |
++----------+ +----------+ +----------+
+     |            |            |
+     | generated with the type, never written
+     v            v            v
++--------------------------------------+
+| the Rust type and its trait impl     |
++--------------------------------------+
+```
+
+The memory trait is Memorizable.
+
+The Rust generated from it:
+
+```rust
+impl Memorizable for Flow { /* generated */ }
+```
 
 The Ethos:
 
