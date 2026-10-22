@@ -14,3 +14,7 @@ Psyche core keeps track of all the psyche within Psyche; a topic Secondary packa
 ## The core Secondary is the hub
 
 Psyche core Secondary is the hub: it decides what reaches a topic flow, and only matters of that topic do. Messages pass between Secondaries, and a topic Secondary has its Primary's books published. A flow that receives noise tells the sender it is noise and why.
+
+## Within an aspect, a flow speaks to the layer next to it
+
+Within an aspect, a flow speaks only to the layer next to it: a Quaternary to its Tertiary, a Tertiary to its Secondary, a Secondary to its Primary, never past one. When the flow next to it is not up, it starts one, or has a flow that is not a Primary start one.

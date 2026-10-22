@@ -54,6 +54,7 @@ title names the layer, never the model.
 Horizontal communication joins aspects at the same layer.
 Vertical communication stays within one aspect and normally advances one layer
 at a time.
+A message never crosses aspect and layer at once; it goes across at its own layer, or up or down within its aspect, and the flow it reaches carries it on.
 
 Aspect, topic, layer, exact model identifier, Flow ID, and native binding
 remain separate typed facts. The title grants none of the identity,
