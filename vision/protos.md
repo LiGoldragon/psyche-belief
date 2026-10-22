@@ -117,12 +117,10 @@ Structure is the word for every unit of the text; its type is the
 `Protos` enum: headed, enclosed, opaque, or bare.
 
 A headed structure is a head, a separator and a body. The separators
-are period, exclamation and colon. Whitespace, a line break included, may follow a separator; the body is the next structure read.
+are period, exclamation and colon. The body is written right after its separator; no whitespace stands between them.
 
 ```
 Head.body
-Head.
-   body
 ```
 
 The head is a symbol. The body is
