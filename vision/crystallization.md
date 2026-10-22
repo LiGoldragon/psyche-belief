@@ -36,8 +36,9 @@ clarity.
 
 ## No useless negatives
 
-A crystallized statement carries no useless negative. Such negatives
-stay in the archive, which remains linkable.
+A crystallized statement says what is and what is wanted, in positive
+terms only. A negative the living spoke stays in the archive, which
+remains linkable.
 
 ## A statement never attributes itself to the psyche
 
