@@ -176,15 +176,6 @@ Library.{ [ protos:String ]
           [] }
 ```
 
-## The type ethos
-
-`Type` is a single-field variant carrying one declaration, so its payload is the declaration's own form, as any single-field variant's is; it is no exception to the datom.
-
-```
-Type.CommitMessage.[ Landing.⟦String⟧
-                     Fix.String ]
-```
-
 ## Imports
 
 An import starts with a colon, followed by uncapitalized namespace segments separated by colons, ending in the type: `:namespace:sub:Type`. It is usable inline in a type declaration or a field, and the import section uses the same syntax: `:protos:String`, or `:protos:[ String Integer ]` for several. An explicit import and an intrinsic name mean the same thing. The names known without import depend on the Ethos object type; a Library, the standard library, knows String, Integer, Decimal, Boolean, Meaning, Vector, Option, Result, Self and Sized.
