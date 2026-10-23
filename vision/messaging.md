@@ -44,8 +44,6 @@ A hash or an identifier in a message is its first six characters.
 
 A message between flows says what the sender intends to do and what it has done.
 
-## Work goes straight to the next hand
-
 ## A messaging test sends one message
 
 A messaging test sends one message, to a flow that needs it anyway or to a Quaternary started for it and stopped after; it never goes to every flow and never wakes a Primary.
