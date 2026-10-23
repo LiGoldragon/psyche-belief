@@ -48,3 +48,7 @@ An unlabelled fence holds a box-and-arrow sketch and nothing else; each one need
 ## Code in a proposal
 
 Code the proposed lines land is shown in labelled fences, the Datom it reads or writes and the Ethos that types it, checked against the source before it is sent.
+
+## Commented books
+
+A book the living has commented on is never changed and never republished. Its redo is a new book at a new link, and the commented one stays as he left it.
