@@ -37,7 +37,9 @@ A module line is shown whole. A change to a hard-wrapped paragraph shows every p
 
 ## Marks inside a proposal
 
-Inside a proposal a source holds only its change lines, one Comment, its Alternatives, its Destroy or Archive mark, module headings at level two, and code that the proposed lines themselves land.
+Inside a proposal a source holds only its change lines, one Comment, its Alternatives, its Destroy or Archive mark, path headings at level four, and code that the proposed lines themselves land. Inside a proposal every path heading is level four, `#### repo › path`, as the moved-line form has it.
+
+Every fence inside a proposal is signed line by line: red, green, or two spaces for a line kept in place, code-file proposals included, because code shown in a proposal is either what stands at origin main or what is proposed. An unsigned fence inside a proposal is refused.
 
 One `**Comment**` paragraph at most, before every change: the machine's word, in its own colour. `**Alternative 1**`, `**Alternative 2**` and on, two or more, in order, each alone on its line and followed by the exact lines it lands. `**Destroy**` or `**Archive**` opening a paragraph marks a deleted module or record. Prose never sits inside a change; it is a separate paragraph, a blank line apart.
 
