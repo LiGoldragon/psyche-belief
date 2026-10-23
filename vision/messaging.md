@@ -40,6 +40,10 @@ Send only messages that require the recipient's action, deliver a result it awai
 
 A hash or an identifier in a message is its first six characters.
 
+## A message says what the sender intends and what it has done
+
+A message between flows says what the sender intends to do and what it has done, in plain sentences. Timestamps, hashes, revisions, pane ids, process ids and counts stay in the sender's records unless the recipient must act on that exact value.
+
 ## Work goes straight to the next hand
 
 Work goes straight to the flow that acts on it next; the ordering flow hears only of a blocker, a needed ruling, or a finished deliverable it must act on itself.
