@@ -51,9 +51,7 @@ Person { name: String::from("Ada"), born: 1990 }
 
 ## Every layer carries its own context
 
-A value at a layer contains the context it makes sense in, in both
-directions, and no layer carries a fact that belongs to another. The
-extent, where a structure sits in the text, is a fact of the protosic
+The extent, where a structure sits in the text, is a fact of the protosic
 layer, and every `Protos` node carries one. The path, where a datom
 sits in its tree, is a fact of the datomic layer, and every datom
 carries one, read down from text or built up from a composition
@@ -63,10 +61,7 @@ the layer where context has been consumed. There is no site and no
 situated pair; an error's locus is the datom's path, and its extent
 is found by following that path into the protos the reader holds.
 
-## Kinds are borne by the type converted and named for the layer it becomes
-
-No type bears a kind two layers away. A chain is written in the open
-where it is used, never folded into a kind on its first type.
+## Kinds
 
 | type | kind | becomes |
 |---|---|---|

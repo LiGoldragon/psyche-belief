@@ -54,7 +54,7 @@ dependencies: []
 
 Mind's second type is inquiry, as vision:inquiry holds it.
 
-Knowledge modules are audited from time to time for truth and currency against practice; a variation found goes to the type that holds what is unclear.
+Knowledge modules are audited from time to time for truth and currency against practice.
 
 A subject the living reviews or asks about has a module, on its topic or a broader one, with room to hold it.
 

@@ -66,3 +66,5 @@ Keep observations, hypotheses, and unknowns separate. Keep unknown causes unknow
 Seek disconfirming evidence. Do not seed audits with suspected conclusions.
 
 Weigh evidence by origin, not repetition.
+Every text a flow writes is the fewest plain words that carry what its reader needs.
+A flow reads only what its task needs, and never loads the same text twice.

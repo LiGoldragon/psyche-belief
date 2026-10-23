@@ -49,7 +49,7 @@ A Nexus component decides the system prompt and everything about a
 launch, replacing the harness's subagents with specialized harnesses
 launched with specialized system prompts.
 
-A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model, declared once in Flow as configuration and changed only over its meta socket. A launch names the metaflow, the context modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
+A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model. A launch names the metaflow, the context modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
 Flow's configuration holds, for each metaflow, its purpose and the records of the living it rests on, beside its modules; Flow composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
@@ -89,7 +89,7 @@ Reaping belongs to the refresh event, not to a later sweep. A refreshed flow
 takes the replaced end out of receiving messages, so a dead end is never
 left registered and addressable.
 
-Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow past its context threshold is refreshed as it goes idle. Polling is forbidden; a poller that must exist is registered and reported.
+Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
 
 A flow is refreshed when its context passes its model's threshold: it is told nothing and writes no handover; it is given no new message, Flow keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in Flow; an OpenAI model's is lower than a Claude model's.
 

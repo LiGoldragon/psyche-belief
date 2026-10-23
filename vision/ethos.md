@@ -407,8 +407,6 @@ Reply.[ Accepted ]   ; refused: one variant
 
 An open enum is an Ethos object whose capitalized words are its fixed variants. A word that is not capitalized is its implied extensible variant, a camel ID: a word-based camel-case identifier, written bare, with no variant head before it. The name camel ID is temporary. A check that a word is a word-based camel-case identifier comes long term; short term, none is made.
 
-The metaflow topic is an open enum: its fixed variants are a constant set, such as the core topic, and the users or the machine extend it with camel IDs as they need topics.
-
 The same mechanism carries an object that is represented unconventionally, such as a word-based hash.
 
 ```

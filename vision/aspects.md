@@ -17,4 +17,4 @@ Psyche core Secondary is the hub: it decides what reaches a topic flow, and only
 
 ## Within an aspect, a flow speaks to the layer next to it
 
-Within an aspect, a flow speaks only to the layer next to it: a Quaternary to its Tertiary, a Tertiary to its Secondary, a Secondary to its Primary, never past one. When the flow next to it is not up, it starts one, or has a flow that is not a Primary start one.
+Within an aspect, a flow speaks only to the layer next to it: a Quaternary to its Tertiary, a Tertiary to its Secondary, a Secondary to its Primary, never past one.

@@ -41,7 +41,7 @@ A line moved between modules is one proposal headed by both paths: the line in r
 
 A dependency changed shows in the module's front matter: the dependency removed in red, the dependency added in green.
 
-A module is leaned out by removing a line that repeats another, shown beside the line that makes it unnecessary; the compensation module is leaned out first, because vision replaces it.
+A line removed from a module is shown beside the line that makes it unnecessary; the compensation module is leaned out first, because vision replaces it.
 
 A question between alternative lines shows each alternative as its own proposal, with the exact lines it lands; the living rules land, amend or reject.
 

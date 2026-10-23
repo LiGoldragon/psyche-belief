@@ -14,8 +14,6 @@ Roles are explained by layer, not by model; one skill maps layer to model.
 | Tertiary | Sonnet | Luna |
 | Quaternary | Haiku | Luna, low effort |
 
-Every metaflow runs at medium effort, except the OpenAI Quaternary.
-
 ## Delegation ceiling
 
 A complex judgment is made by Opus, Fable or
@@ -51,9 +49,6 @@ Every native main session is titled `{ <Aspect> <Topic> <Layer> <FLOW_ID> }`.
 The layer selects the configured model through the table above, so the
 title names the layer, never the model.
 
-Horizontal communication joins aspects at the same layer.
-Vertical communication stays within one aspect and normally advances one layer
-at a time.
 A message never crosses aspect and layer at once; it goes across at its own layer, or up or down within its aspect, and the flow it reaches carries it on.
 
 Aspect, topic, layer, exact model identifier, Flow ID, and native binding
@@ -74,7 +69,7 @@ A simple job — a book rebuilt, a page published, a module located, a file move
 
 ## A design decision goes up, to the Primary
 
-A Secondary passes every design decision through its own Primary, with all the context the Primary needs to decide it, and acts on the Primary's decision. A Secondary uses its Primary freely.
+A Secondary passes every design decision through its own Primary and acts on the Primary's decision. A Secondary uses its Primary freely.
 
 ## A Fable flow is served
 
