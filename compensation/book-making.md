@@ -5,10 +5,10 @@ dependencies: [vision-book]
 
 ## The two tools
 
-A book source is a Markdown file that `tools/book-check.mjs` and `tools/book-build.clj`, in Primary, both accept; these two tools are the whole check. A book is sent for publication only with the clean output of `tools/book-check.mjs` on that exact source, run by the sender; the publisher refuses a book sent without it. The author runs the check until it reports no error, then the build; the publisher runs both again and publishes only what passes both. A refusal returns the source to its author with the tool's words. `tools/book-check.mjs` refuses a removed line that is not a whole line of the module at origin main, and a change that cuts a hard-wrapped paragraph.
+A book source is a Markdown file that `tools/book-check.clj` and `tools/book-build.clj`, in Primary, both accept; these two tools are the whole check. A book is sent for publication only with the clean output of `tools/book-check.clj` on that exact source, run by the sender; the publisher refuses a book sent without it. The author runs the check until it reports no error, then the build; the publisher runs both again and publishes only what passes both. A refusal returns the source to its author with the tool's words. `tools/book-check.clj` refuses a removed line that is not a whole line of the module at origin main, and a change that cuts a hard-wrapped paragraph.
 
 ```sh
-node tools/book-check.mjs /absolute/path/to/book.md        # {"checked":true,...} when clean; else {"errors":[...]} by line
+bb tools/book-check.clj /absolute/path/to/book.md        # {"checked":true,...} when clean; else {"errors":[...]} by line
 bb tools/book-build.clj /absolute/path/to/book.md out.html --figures /absolute/path/to/figures
 ```
 
