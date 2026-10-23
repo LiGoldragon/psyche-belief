@@ -43,3 +43,7 @@ remains linkable.
 ## A statement never attributes itself to the psyche
 
 Vision is the psyche's; a crystallized statement never says so of itself.
+
+## Cutting records from a file
+
+A flow that cuts records from a file keeps a copy of the file in its own flow directory until the cut is verified, and a file title is never a record.
