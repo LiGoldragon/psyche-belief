@@ -60,6 +60,8 @@ A subject the living reviews or asks about has a module, on its topic or a broad
 
 A module declares its placement: the system prompt, or loaded on demand. A skill is the harness's interface for an on-demand module.
 
+In the long term, intent is placed directly in the system prompt.
+
 The vocabulary is context, context modules and context building.
 A skill is the legacy name, one harness name for things that differ, becoming obsolete as harness infrastructure improves.
 
@@ -76,3 +78,7 @@ No context module changes except through the living or a mechanism. In the long 
 ## Context lines are richly annotated
 
 Context lines are richly annotated, because lines of very different categories share one module and are otherwise given the same weight. Separating modules into kinds such as vision and intent is the first, crude form of that annotation.
+
+## A context module is not a history book
+
+A context module is not a history book; content can be good and still not belong in one.

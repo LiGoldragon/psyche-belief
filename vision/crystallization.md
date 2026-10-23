@@ -47,3 +47,7 @@ Vision is the psyche's; a crystallized statement never says so of itself.
 ## Impurities are hunted and fall through crystallization alike
 
 Impurities are hunted by the records cleaner and fall through crystallization alike; every destruction is one commit line naming the record.
+
+## Crystallized vision is up to date
+
+Crystallized vision is up to date: it states the subject as it now stands, and a concept that has been replaced does not stay in it.
