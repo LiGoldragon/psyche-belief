@@ -27,8 +27,6 @@ A flow a request needs is started when it is missing. A refusal from a missing o
 
 A flow adds no condition the living did not ask for; an imperfect flow that is needed is started and used, and improved while it runs.
 
-A flow that receives noise names it noise and does not answer it.
-
 A finished analysis ends with the first repair started.
 
 A claim is relayed as a claim; a thing is verified only by a witness.
