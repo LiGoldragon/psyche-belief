@@ -5,7 +5,7 @@ dependencies: [vision-book]
 
 ## The two tools
 
-A book source is a Markdown file that `tools/book-check.mjs` and `tools/book-build.clj`, in Primary, both accept. The author runs the check until it reports no error, then the build; the publisher runs both again and publishes only what passes both. A refusal returns the source to its author with the tool's words.
+A book source is a Markdown file that `tools/book-check.mjs` and `tools/book-build.clj`, in Primary, both accept; these two tools are the whole check. The author runs the check until it reports no error, then the build; the publisher runs both again and publishes only what passes both. A refusal returns the source to its author with the tool's words.
 
 ```sh
 node tools/book-check.mjs /absolute/path/to/book.md        # {"errors":[]} or the refusals, by line
