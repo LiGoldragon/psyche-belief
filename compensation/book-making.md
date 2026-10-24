@@ -50,8 +50,6 @@ Every figure in a book is headed by the module it lives in and one of three stat
 
 An unlabelled fence holds a box-and-arrow sketch and nothing else; each one has its figure, `fig-N.svg` in the figures directory, drawn by the illustrator from the sketch with every box, label and arrow kept. A figure shows how a thing moves, one question per figure, is at most 52 columns wide, and is drawn in the figure grammar of vision-book. Every other fence carries its language: `ethos`, `datom`, `rust`, `edn`, `sh`, `yaml`, `text`. An `ethos` fence is code that passes ethos-zero's Check, run by the author before the book is sent. A module written in Markdown is shown as rendered text, never in a fence. A book holds no quote block.
 
-Every figure in a book is headed by the module it lives in and one of three states: as it stands, proposed added in green, or proposed removed in red; a figure with no module and no state is refused by the checker.
-
 ## Code in a proposal
 
 Code the proposed lines land is shown in labelled fences, the Datom it reads or writes and the Ethos that types it, run against the source by the author before the book is sent.
