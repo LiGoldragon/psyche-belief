@@ -16,6 +16,8 @@ A flow runs one model, linear and very limited, and the model is not always a la
 
 The Capsule is the component that makes where a flow runs. Its first embodiment is the semi-sandbox: only the credential files are copied, everything else is recreated, with its own sockets and store, running light models. Later it encrypts the sensitive parts of the filesystem under a volatile key.
 
+Herdr is one backend of the Capsule, the component that gives a flow its place to run; the backend may be exchanged.
+
 Flow manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run, and what is addressed is always the metaflow, never a flow. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
@@ -129,6 +131,12 @@ An abandoned, duplicated or superseded flow is closed, archived and deregistered
 ## Herdr holds the panes
 
 Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Flow starts a flow in a pane of its own, names a sender by the pane it runs in, and delivers an abrupt message by typing it into the recipient's pane. Herdr is used as it is and never modified.
+
+## A real-world test of Flow
+
+A build of Flow is tested in a testing capsule of its own: its own Herdr pane and session, the testing store, built in Nix. In it, several cheap, low-effort Codex and Claude flows message one another and start flows. The test shows whether the prompts, the system prompts and the tools are right, and which features are missing. Its findings return to the reimplementation, which is tested again.
+
+The stable Flow keeps running while variants are tested.
 
 ## A permission prompt is a launch failure
 
