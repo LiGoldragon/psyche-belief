@@ -1,14 +1,13 @@
 ---
-description: A book for the living is written, checked, built or published.
+description: A book for the living is written, built or published.
 dependencies: [vision-book]
 ---
 
-## The two tools
+## The author makes the book
 
-A book source is a Markdown file that `tools/book-check.clj` and `tools/book-build.clj`, in Primary, both accept; these two tools are the whole check. A book is sent for publication only with the clean output of `tools/book-check.clj` on that exact source, run by the sender; the publisher refuses a book sent without it. The author runs the check until it reports no error, then the build; the publisher runs both again and publishes only what passes both. A refusal returns the source to its author with the tool's words. `tools/book-check.clj` refuses a removed line that is not a whole line of the module at origin main, and a change that cuts a hard-wrapped paragraph.
+The author makes the book properly and sends the source as made. The builder renders what it is given and enforces nothing; the author's own care is the whole of the book's correctness. The publisher builds the source and publishes the page.
 
 ```sh
-bb tools/book-check.clj /absolute/path/to/book.md        # {"checked":true,...} when clean; else {"errors":[...]} by line
 bb tools/book-build.clj /absolute/path/to/book.md out.html --figures /absolute/path/to/figures
 ```
 
@@ -24,34 +23,38 @@ Colour comes only from signed lines. In a change every line opens with `- ` (red
 
 A module line is shown whole. A change to a hard-wrapped paragraph shows every physical line of that paragraph, so no sentence is cut at a wrap. A replaced paragraph is diffed as one paragraph: its removal and its addition together, with only the changed words marked.
 
+A code line in a book is at most 52 characters.
+
 ```text
 ### Proposal 1: A message names its sender · psyche-context › vision/messaging.md
 
 **Comment** The sender is resolved from the calling process.
 
   ## A message is a datom, and it arrives as one
-  
+
 - The message body is a datom.
 + The message body is a datom; Flow names its sender.
 ```
 
 ## Marks inside a proposal
 
-Inside a proposal a source holds only its change lines, one Comment, its Alternatives, its Destroy or Archive mark, path headings at level four, and code that the proposed lines themselves land. Inside a proposal every path heading is level four, `#### repo › path`, as the moved-line form has it.
+Inside a proposal a source holds only its change lines, one Comment, its Alternatives, its Destroy or Archive mark, path headings at level four, `#### repo › path`, as the moved-line form has them, and code that the proposed lines themselves land.
 
-Every fence inside a proposal is signed line by line: red, green, or two spaces for a line kept in place, code-file proposals included, because code shown in a proposal is either what stands at origin main or what is proposed. An unsigned fence inside a proposal is refused.
+Every fence inside a proposal is signed line by line: red, green, or two spaces for a line kept in place, code-file proposals included, because code shown in a proposal is either what stands at origin main or what is proposed.
 
 One `**Comment**` paragraph at most, before every change: the machine's word, in its own colour. `**Alternative 1**`, `**Alternative 2**` and on, two or more, in order, each alone on its line and followed by the exact lines it lands. `**Destroy**` or `**Archive**` opening a paragraph marks a deleted module or record. Prose never sits inside a change; it is a separate paragraph, a blank line apart.
 
-## Fences
+## Figures and fences
 
-An unlabelled fence holds a box-and-arrow sketch and nothing else; each one needs its figure, `fig-N.svg` in the figures directory, drawn by the illustrator from the sketch with every box, label and arrow kept. Every other fence carries its language: `ethos`, `datom`, `rust`, `edn`, `sh`, `yaml`, `text`. An `ethos` fence passes ethos-zero's Check. A figure is at most 52 columns wide. A module written in Markdown is shown as rendered text, never in a fence. No quote block.
+Every figure in a book is headed by the module it lives in and one of three states: as it stands, proposed added in green, or proposed removed in red.
+
+An unlabelled fence holds a box-and-arrow sketch and nothing else; each one has its figure, `fig-N.svg` in the figures directory, drawn by the illustrator from the sketch with every box, label and arrow kept. A figure shows how a thing moves, one question per figure, is at most 52 columns wide, and is drawn in the figure grammar of vision-book. Every other fence carries its language: `ethos`, `datom`, `rust`, `edn`, `sh`, `yaml`, `text`. An `ethos` fence is code that passes ethos-zero's Check, run by the author before the book is sent. A module written in Markdown is shown as rendered text, never in a fence. A book holds no quote block.
 
 Every figure in a book is headed by the module it lives in and one of three states: as it stands, proposed added in green, or proposed removed in red; a figure with no module and no state is refused by the checker.
 
 ## Code in a proposal
 
-Code the proposed lines land is shown in labelled fences, the Datom it reads or writes and the Ethos that types it, checked against the source before it is sent.
+Code the proposed lines land is shown in labelled fences, the Datom it reads or writes and the Ethos that types it, run against the source by the author before the book is sent.
 
 ## Commented books
 
