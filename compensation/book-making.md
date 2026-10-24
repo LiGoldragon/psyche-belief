@@ -5,7 +5,7 @@ dependencies: [vision-book]
 
 ## The author makes the book
 
-The author makes the book properly and sends the source as made. The builder renders what it is given and enforces nothing; the author's own care is the whole of the book's correctness. The publisher builds the source and publishes the page.
+The author makes the book properly and sends the source as made. The builder renders what it is given and enforces nothing; the book is as correct as the author made it. The publisher builds the source and publishes the page.
 
 ```sh
 bb tools/book-build.clj \
@@ -34,8 +34,8 @@ A code line in a book is at most 52 characters.
 
   ## A message is a datom
 
-- The message body is a datom.
-+ The message body is a datom; Flow names its sender.
+- The body is a datom.
++ The body is a datom; Flow names it.
 ```
 
 ## Marks inside a proposal
