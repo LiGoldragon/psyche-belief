@@ -53,6 +53,8 @@ A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the laye
 
 Flow's configuration holds, for each metaflow, its purpose and the records of the living it rests on, beside its modules; Flow composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
+A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the context modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
+
 A fresh flow starts with every context module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
 
 A simplified flow is a kind of flow made for judgment alone: it starts with a system prompt of its own, it has no regular tool, and its response is its message.
