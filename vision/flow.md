@@ -141,3 +141,11 @@ The stable Flow keeps running while variants are tested.
 ## A permission prompt is a launch failure
 
 A permission prompt reaching the living is a launch failure.
+
+## The heartbeat
+
+The heartbeat reminds every flow it reaches to judge its own sanity, by these signs: an echo chamber, where the same question or claim goes round between flows and comes back; jargon and nonsense increasing; an acknowledgement answering an acknowledgement. The counts the heartbeat carries, awake metaflows, working panes, messages sent and queue growth per metaflow, are evidence under the reminder; the judgment is the flow's.
+
+The heartbeat reaches only a flow for which something changed that bears on it.
+
+The number of running flows is kept low: a topic flow no longer used is retired.
