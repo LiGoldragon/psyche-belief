@@ -8,7 +8,9 @@ dependencies: [vision-book]
 The author makes the book properly and sends the source as made. The builder renders what it is given and enforces nothing; the author's own care is the whole of the book's correctness. The publisher builds the source and publishes the page.
 
 ```sh
-bb tools/book-build.clj /absolute/path/to/book.md out.html --figures /absolute/path/to/figures
+bb tools/book-build.clj \
+  /abs/book.md out.html \
+  --figures /abs/figures
 ```
 
 ## What a source holds
@@ -26,11 +28,11 @@ A module line is shown whole. A change to a hard-wrapped paragraph shows every p
 A code line in a book is at most 52 characters.
 
 ```text
-### Proposal 1: A message names its sender · psyche-context › vision/messaging.md
+### Proposal 1: A sender · psyche › messaging.md
 
-**Comment** The sender is resolved from the calling process.
+**Comment** Flow names the sender.
 
-  ## A message is a datom, and it arrives as one
+  ## A message is a datom
 
 - The message body is a datom.
 + The message body is a datom; Flow names its sender.
