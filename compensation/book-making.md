@@ -47,6 +47,8 @@ One `**Comment**` paragraph at most, before every change: the machine's word, in
 
 An unlabelled fence holds a box-and-arrow sketch and nothing else; each one needs its figure, `fig-N.svg` in the figures directory, drawn by the illustrator from the sketch with every box, label and arrow kept. Every other fence carries its language: `ethos`, `datom`, `rust`, `edn`, `sh`, `yaml`, `text`. An `ethos` fence passes ethos-zero's Check. A figure is at most 52 columns wide. A module written in Markdown is shown as rendered text, never in a fence. No quote block.
 
+Every figure in a book is headed by the module it lives in and one of three states: as it stands, proposed added in green, or proposed removed in red; a figure with no module and no state is refused by the checker.
+
 ## Code in a proposal
 
 Code the proposed lines land is shown in labelled fences, the Datom it reads or writes and the Ethos that types it, checked against the source before it is sent.
