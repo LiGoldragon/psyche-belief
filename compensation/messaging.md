@@ -9,7 +9,7 @@ Words attributed to the living are relayed with the record file and heading that
 
 A topic crosses between aspects in one hop each way; a relay of a relay is refused, and the sender is pointed to the record.
 
-A flow that is Gone or replaced has its queue closed with it; nothing queued for it is delivered to a successor as a delayed order.
+A queue belongs to a metaflow, never to a flow: what arrives while a flow is refreshed or replaced waits and is delivered whole to its successor; a queue is closed only when its metaflow is retired.
 
 A seat whose restart is ordered is sent nothing, the order included: the restart is done from outside, or the seat is left to restart itself at its rest; a message typed into it is a wake.
 
