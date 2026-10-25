@@ -16,3 +16,7 @@ A seat whose restart is ordered is sent nothing, the order included: the restart
 A question already answered by a message in flight is not re-asked; the asker reads the answer.
 
 Each hour a flow asks whether its last hour moved a file, a book or a deployment; an hour that only produced messages is reported as such to its Primary.
+
+Every message a flow sends opens with the line "From <Aspect> <topic> <Layer> <FLOW_ID>, a machine:".
+
+A prompt that opens with a "From …, a machine:" line, names a sender, or carries a datom head or a record path is a machine's message; its words are logged as the living's only from the record it names.
