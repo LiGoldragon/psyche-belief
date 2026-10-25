@@ -1,5 +1,5 @@
 ---
-description: A Psyche main flow designs or audits its topic, or Psyche core and the Psyche Secondaries carry the psyche between topics.
+description: A Psyche main flow of a topic designs and audits that topic.
 dependencies: []
 ---
 
