@@ -24,7 +24,7 @@ A topic is an open enum: the constant topics, core among them, are fixed, and th
 
 Psyche, Mind and Field have similar payloads, and they go under one: the metaflow, whose aspect is Psyche, Mind or Field.
 
-A topic never dies; it goes idle, its flows turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its context modules, so Flow knows what to start it with, together with the new input that warrants it.
+A topic never dies; it goes idle, its flows turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its belief modules, so Flow knows what to start it with, together with the new input that warrants it.
 
 A metaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
 
@@ -32,7 +32,7 @@ A topic's name is a camelCase identifier, uncapitalized. Short term, it is kept 
 
 In the chat a flow is named by its metaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
-A request reaching a metaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks Flow to send a request to a metaflow; Flow owns the lock and the delivery, answers sent or queued, and Message subscribes to Flow's events, learning when a request has entered the flow's context. A metaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a metaflow under refresh or waking queues what arrives until its successor or woken seat has started, while Flow keeps serving every other request. A metaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the metaflow's context modules and the prompt it is to get now.
+A request reaching a metaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks Flow to send a request to a metaflow; Flow owns the lock and the delivery, answers sent or queued, and Message subscribes to Flow's events, learning when a request has entered the flow's context. A metaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a metaflow under refresh or waking queues what arrives until its successor or woken seat has started, while Flow keeps serving every other request. A metaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the metaflow's belief modules and the prompt it is to get now.
 
 A flow woken for a metaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
 
@@ -43,7 +43,7 @@ Flow exposes everything from the harness, the bare input: a flow is started, sto
 
 A flow does not wait on a timer for another flow's work: the flow that finishes messages the flow that needs to know.
 
-A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the psyche. A message from another flow that only updates it needs no full presentation. A presentation takes its form from the context modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no context module.
+A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the psyche. A message from another flow that only updates it needs no full presentation. A presentation takes its form from the belief modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no belief module.
 
 ## Starting flows
 
@@ -51,11 +51,11 @@ A Nexus component decides the system prompt and everything about a
 launch, replacing the harness's subagents with specialized harnesses
 launched with specialized system prompts.
 
-A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model. A launch names the metaflow, the context modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
+A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model. A launch names the metaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
 Flow's configuration holds, for each metaflow, its purpose and the records of the living it rests on, beside its modules; Flow composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
-A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the context modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
+A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
 
 ```
 +----------------------+
@@ -66,7 +66,7 @@ A fresh flow's first prompt carries the raw psyche relevant to it and recent, to
           v
 +----------------------+
 | recent raw psyche,   |
-| context modules of   |
+| belief modules of   |
 | any kind except      |
 | spirit and intent    |
 +----------------------+
@@ -78,11 +78,11 @@ A fresh flow's first prompt carries the raw psyche relevant to it and recent, to
 +----------------------+
 ```
 
-A fresh flow starts with every context module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
+A fresh flow starts with every belief module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
 
 A simplified flow is a kind of flow made for judgment alone: it starts with a system prompt of its own, it has no regular tool, and its response is its message.
 
-A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default context modules and its variations. The flow ethos holds the specification.
+A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default belief modules and its variations. The flow ethos holds the specification.
 
 Short term, a Primary is not started without its Secondary, and the Secondary starts first.
 
@@ -102,10 +102,10 @@ Who speaks to whom, within an aspect and across aspects at the same layer in a s
 
 Long term, every module composed into a prompt is checked against its source by its hash, once hashes update efficiently as edits are made; short term, no check is made.
 
-## Repository and context modules
+## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.
-Every context module lives outside it, the basic modules included, so that a change to a module causes no Nix rebuild.
+Every belief module lives outside it, the basic modules included, so that a change to a module causes no Nix rebuild.
 The basic modules give our own take on how an agent behaves in a harness, replacing the prompt the harnesses build in.
 
 ## A replaced session is reaped by the refresh itself

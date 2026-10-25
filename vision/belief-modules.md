@@ -1,9 +1,9 @@
 ---
-description: The context modules and how the living reviews them.
+description: The belief modules and how the living reviews them.
 dependencies: []
 ---
 
-## Context modules and their review
+## Belief modules and their review
 
 ```
 +--------------------------------------------+
@@ -62,7 +62,7 @@ A module declares its placement: the system prompt, or loaded on demand. A skill
 
 In the long term, intent is placed directly in the system prompt.
 
-The vocabulary is context, context modules and context building.
+The vocabulary is context, belief modules and context building.
 A skill is the legacy name, one harness name for things that differ, becoming obsolete as harness infrastructure improves.
 
 A context repository holds one folder per module type; no folder is called skills. A file is named by its subject alone, and its folder gives its type.
@@ -73,12 +73,12 @@ A context repository holds one section of role modules per layer, Primary, Secon
 
 ## No change except through the living or a mechanism
 
-No context module changes except through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
+No belief module changes except through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
 
 ## Context lines are richly annotated
 
 Context lines are richly annotated, because lines of very different categories share one module and are otherwise given the same weight. Separating modules into kinds such as vision and intent is the first, crude form of that annotation.
 
-## A context module is not a history book
+## A belief module is not a history book
 
-A context module is not a history book; content can be good and still not belong in one.
+A belief module is not a history book; content can be good and still not belong in one.

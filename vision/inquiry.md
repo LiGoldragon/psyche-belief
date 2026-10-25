@@ -1,6 +1,6 @@
 ---
 description: An inquiry is written or judged, a flow designing a proposal needs what Mind is still working out, or Mind implementing vision needs the inquiry it closes.
-dependencies: [vision-context-modules]
+dependencies: [vision-belief-modules]
 ---
 
 ## What inquiry is about
