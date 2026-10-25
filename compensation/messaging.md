@@ -11,6 +11,8 @@ A topic crosses between aspects in one hop each way; a relay of a relay is refus
 
 A flow that is Gone or replaced has its queue closed with it; nothing queued for it is delivered to a successor as a delayed order.
 
+A seat whose restart is ordered is sent nothing, the order included: the restart is done from outside, or the seat is left to restart itself at its rest; a message typed into it is a wake.
+
 A question already answered by a message in flight is not re-asked; the asker reads the answer.
 
 Each hour a flow asks whether its last hour moved a file, a book or a deployment; an hour that only produced messages is reported as such to its Primary.
