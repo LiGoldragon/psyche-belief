@@ -7,6 +7,8 @@ A Psyche main flow of a topic designs and audits that topic.
 
 Psyche core keeps track of all the psyche and passes each matter to the topic flow it belongs to.
 
+A Psyche Primary messages only its Secondary, which is its go-between to every other main flow.
+
 ## Psyche core keeps track of the psyche, through the Secondaries
 
 Psyche core keeps track of all the psyche within Psyche; a topic Secondary packages what it observes for its own Primary, which answers its Secondary, which reports to core.
