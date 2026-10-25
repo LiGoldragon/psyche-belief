@@ -150,10 +150,6 @@ The heartbeat reaches only a flow for which something changed that bears on it.
 
 The number of running flows is kept low: a topic flow no longer used is retired.
 
-## A restart does not wake
-
-A flow is restarted without being woken: its harness closes, its transcript stays, and while the restart is ordered nothing is sent to it; what arrives queues for its successor, which runs only when a message wakes it. A restart that runs the old context uncached has failed.
-
 ## What a refresh carries
 
 A refresh carries the flow's important presentations and illustrations, the raw psyche given to it, and the basic skills. The basic skills are everything a flow needs.
