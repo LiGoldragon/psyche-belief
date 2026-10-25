@@ -47,6 +47,8 @@ A question between alternative lines shows each alternative as its own proposal,
 
 A figure shows as proposed for the module it will live in.
 
+A figure proposed for a module shows under that module's path in green, as an added line does; a figure it replaces shows beside it in red.
+
 ```
 +--------------------------------------------+
 | belief module                             |
