@@ -298,36 +298,6 @@ pub enum LockRejection { DuplicateName(Lock), PathOverlap(PathOverlap_Data) }
 
 Everything is a type; there is no key-value. A type used once is declared inline where it is used; a type used in more than one place is declared once and named. A variant's payload is written in the variant and bears the variant's name; no second type is invented to hold it. Inline nesting goes about three deep; past that, the type comes from a Library.
 
-## White braces define a struct
-
-White braces define a struct, so a struct definition looks different from a struct value. The definition, in ethos, names the types of its positions inside white braces; the value, in datom, fills them inside plain braces.
-
-```
-Library
-[]                              ; imports
-[ LockId.Integer                ; types
-  LockName.String
-  Lock.⦃ LockId LockName ⦄ ]    ; a definition
-[]                              ; traits
-[]                              ; associations
-```
-```
-{ 7 renew }
-```
-
-```
-+--------------------------------------------+
-| a struct                                   |
-+--------------------------------------------+
-         |                          |
-         | is defined in            | is filled in
-         v                          v
-+-------------------+  +---------------------+
-| white braces,     |  | plain braces,       |
-| in ethos          |  | in datom            |
-+-------------------+  +---------------------+
-```
-
 ## A variant named as a defined type carries that type
 
 When a variant's name is a type already defined in the library, that
@@ -500,24 +470,6 @@ pub enum Response { Locked(Lock), Released(Lock) }
 pub type LockId = Integer;
 pub type LockName = String;
 pub type FlowId = String;
-```
-
-## White square brackets define a vector
-
-White square brackets around an item type define a vector type, replacing the word Vector, which is so common: `⟦String⟧` is the vector of String. The vector value keeps its plain brackets in datom.
-
-```
-+--------------------------------------------+
-| a vector type                              |
-+--------------------------------------------+
-         |                          |
-         | was written as           | is written as
-         v                          v
-+-------------------+  +---------------------+
-| the word Vector   |  | white square        |
-| and angle         |  | brackets around     |
-| brackets          |  | the item type       |
-+-------------------+  +---------------------+
 ```
 
 ## Traits are explicit; bodies are hand-written
