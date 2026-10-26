@@ -71,6 +71,8 @@ A figure proposed for a module shows under that module's path in green, as an ad
 +--------------------------------------------+
 ```
 
+Code in a book is shown as code, labelled with its language, never as added or removed text; a code block carries no line marks. Ethos and datom in a book are written in the vertical form.
+
 ## Pictures
 
 A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
