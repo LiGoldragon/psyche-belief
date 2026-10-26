@@ -51,6 +51,8 @@ Each flow answers for everything every other flow says, does or leaves undone.
 Start with the smallest shape that works. Add machinery only where the
 requested behavior needs it.
 
+Configurable behavior over hardwired behavior. A behavior a person might want otherwise is a configuration the running system takes, never a literal in its code; what the code fixes is only what cannot differ.
+
 Backward compatibility is never a design variable. Do not preserve an older shape for compatibility's sake; if the current system is not designed to do what we want, it is replaced — every consumer updated — never extended with a parallel compatibility path.
 
 A machine does not misbehave. Its output is a function of its context and prompt — when an output looks wrong, determine the lacking or incorrect context which produced it.
