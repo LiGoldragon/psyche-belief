@@ -76,5 +76,3 @@ Crystallization is proposed on encounter, dispatched proactively by
 the flow working a subject, or done in dedicated passes.
 
 What the living says fresh while a crystallization is being composed is logged as a raw record as it is spoken, like any other psyche, and the crystallization draws on it like any other record.
-
-Impurities are never hunted: they fall only through crystallization.
