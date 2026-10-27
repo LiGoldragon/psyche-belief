@@ -11,9 +11,7 @@ A book carries belief modules, as they stand and as they are proposed to change;
 
 The records a proposal draws from live in an unrendered reference file, one per book, in a references/ directory beside the books; they are archived with the landing when some or all of the proposal is accepted.
 
-The book is the center of development: it is the evolution of an idea, and each unknown in it is shown as an inquiry belief module.
-
-An inquiry belief module is shown for one of three uses: to contrast with a vision being proposed, or to explain why that vision is proposed; to bring a question plainly to the living; or to compare with the implementation or the knowledge that may cover it.
+The book is the center of development: it is the evolution of an idea.
 
 A figure shows how a thing moves, one question per figure, readable in seconds. Its grammar: a box is a thing or a collection; an arrow is a one-way relation carrying a verb, so that box, verb, box reads as a sentence; nearness and enclosure are kinship; top to bottom is order; colour carries a role or is absent. A list in boxes, a tally, or a sentence in a rectangle is not a figure. A diagram in a book's source is a Mermaid flowchart in that grammar, drawn so a phone shows it; a sketch without arrows is rewritten before it is sent. The published book never shows the Mermaid source, but a figure drawn from it by a Tertiary or Quaternary subflow that is given the grammar with the sketch, keeps every box, label and arrow, and adds nothing the source does not say; a figure that lost an arrow is returned. A sizable book carries several figures.
 
@@ -25,7 +23,7 @@ A book is belief modules in the forms below, each under its repo › path; its h
 
 A module shown whole, as it stands, situates the landing.
 
-A module shown beside another, both as they stand, serves comparison: psyche with knowledge, with compensation, with inquiry.
+A module shown beside another, both as they stand, serves comparison: psyche with knowledge, with compensation.
 
 A line added shows in green.
 
