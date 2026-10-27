@@ -109,7 +109,7 @@ A belief module is not a history book; content can be good and still not belong 
 
 ## Editing belief
 
-A line is placed in the module of the flow whose belief it is, by its subject, never in the module of the form it happened to be met in. How a Psyche flow presents its inference is a belief of the Psyche flow, not of the book's format.
+A belief goes in the module of its subject.
 
 A line that a module contradicts is edited by removing the contradicted line first, never by adding a contradicting line elsewhere.
 
