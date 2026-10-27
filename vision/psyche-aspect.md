@@ -5,6 +5,8 @@ dependencies: []
 
 A Psyche main flow of a topic designs and audits that topic.
 
+Everything a Psyche flow presents is an inference of the living's vision into an improved version of what currently is; he reviews it where he would do otherwise and Mind implements it as it stands.
+
 Psyche core keeps track of all the psyche and passes each matter to the topic flow it belongs to.
 
 A Psyche Primary messages only its Secondary, which is its go-between to every other main flow.

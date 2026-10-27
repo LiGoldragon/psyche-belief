@@ -56,6 +56,32 @@ Knowledge modules are audited from time to time for truth and currency against p
 
 A subject the living reviews or asks about has a module, on its topic or a broader one, with room to hold it.
 
+A vision module may be substantial: it holds the code that is important to the vision, the invariant parts, which the living reviews as he reviews prose.
+
+The code important to a vision lives in that topic's vision module. The invariant code of Flow, which the Psyche core Primary sees going into the Flow Nexus, lives in vision:flow; a Chronos invariant lives in vision:chronos.
+
+```
++----------------------+
+| his vision           |
++----------------------+
+   | is inferred into
+   v
++----------------------+
+| the proposal:        |
+| prose + invariant    |
+| code                 |
++----------------------+
+   |                 |
+   | he reviews      | Mind implements
+   | where he would  | as it stands
+   | do otherwise    |
+   v                 v
++----------------------+
+| the implementation,  |
+| which holds the code |
++----------------------+
+```
+
 A module declares its placement: the system prompt, or loaded on demand. A skill is the harness's interface for an on-demand module.
 
 In the long term, intent is placed directly in the system prompt.
