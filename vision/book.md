@@ -77,6 +77,4 @@ A figure shows one thing, where the idea has a shape, and its colours and marks 
 
 A proposal is drawn as well as written: what it adds, removes and keeps, in one frame.
 
-A proposal that touches a code component shows the code it changes or adds.
-
 Every word of his, in a book comment or anywhere else, redoes the book it bears on, unless it closes the topic; a book his words affect is redone as well. Words that open a topic of their own get a book of their own.
