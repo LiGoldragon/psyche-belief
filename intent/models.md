@@ -3,13 +3,12 @@ description: Quality is sought by raising a model's effort, or a flow's tier nam
 dependencies: []
 ---
 
-## Better models, not higher effort
+## Better models
 
-Capability comes from choosing a better model, not from raising a model's
-effort setting. Raising effort costs a great deal and changes little.
+Capability comes from choosing a better model.
+Raising effort costs a great deal and changes little.
 Harness calls go out at medium effort by default. Effort may be set light
-where a task needs speed — voice among them — but it is never raised to buy
-quality.
+where a task needs speed — voice among them.
 
 ## Two scales share the words high and medium
 
