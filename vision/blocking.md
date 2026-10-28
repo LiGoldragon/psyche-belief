@@ -11,6 +11,6 @@ flowchart TB
     a -- "needs the output of another? no: starts now in" --> c["a parallel flow"]
 ```
 
-How badly the living wants one thing never stops another.
+Each task runs on its own need.
 
-A flow does not block on an unrelated issue.
+A flow blocks only on the output its task needs.
