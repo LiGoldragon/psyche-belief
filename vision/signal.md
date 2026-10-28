@@ -10,8 +10,8 @@ The serialized form is called signal.
 ## What signal is
 
 Signal is the messaging layer: fully binary, portable rkyv fixed
-across endianness, fully typed with both sides knowing the full
-schema, nothing on the wire labeling itself. It is one step from the
+across endianness, fully typed with both sides knowing the full schema.
+It is one step from the
 composition, beside the text chain.
 
 ## Query and response
@@ -33,11 +33,11 @@ Signal
 ## Text and signal
 
 The textual form is datom; a CLI actualizes it and sends signal; a
-Nexus never textualizes.
+Nexus speaks only Signal.
 
 ## Meta signal
 
-The meta signal is never optional: the daemon is configured only over
+The meta signal is always present: the daemon is configured only over
 its meta surface.
 
 ## Protocol
