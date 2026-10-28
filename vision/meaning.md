@@ -11,7 +11,7 @@ for a meaning rather than for a sound. Its signs are typed structs
 and enums forming one ontology, defined in Ethos and backed by Rust,
 and held as a datom graph — a body of datom values, data written in
 the strictly typed positional notation datom, joined to one another
-by links rather than laid out as a tree of separate files. The
+by links. The
 ontology is meant to reach as far as meaning does, so the best
 ontology available in the world is taken and put into a data shape of
 enums and structs that carry qualities. The language may take a
