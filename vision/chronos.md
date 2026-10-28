@@ -19,7 +19,7 @@ Everything is reckoned around the ecliptic of the Sun.
 
 ## Positions are arcs
 
-Chronos answers arcs. Sign and nakṣatra are not kept: they are derived from an arc, absolute or relative, by the trait methods of the Library, which any client calls on an arc it holds.
+Chronos answers arcs. Sign and nakṣatra are derived from an arc, absolute or relative, by the trait methods of the Library, which any client calls on an arc it holds.
 A lunation of 31° between the Sun and the Moon reads as Taurus.
 
 ## The golden example
