@@ -64,3 +64,5 @@ Code in a book is shown as code, labelled with its language, never as added or r
 ## Pictures
 
 A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
+
+No figure is ASCII, in a book or in a module; its source is a Mermaid flowchart in the figure grammar and what is shown is the SVG drawn from it. An ASCII sketch met anywhere is converted, never copied.
