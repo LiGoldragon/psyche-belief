@@ -8,7 +8,6 @@ dependencies: []
 A proof of concept is worked on and deployed on the host the flow is
 running on. Another host is used only when the living names it.
 
-## A stable node is not used for testing
+## Testing happens on test nodes
 
-Zeus is a stable node, and stable nodes are not where testing
-happens.
+Zeus is a stable node; testing happens on test nodes.
