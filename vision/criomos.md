@@ -5,7 +5,7 @@ dependencies: [vision-nix-builds]
 
 ## CriomOS
 
-CriomOS is a declarative operating system: nobody edits a file on a host.
+CriomOS is a declarative operating system: every host is built from its declaration.
 
 A problem in CriomOS is fixed in CriomOS by a proper fix and a proper deploy.
 Every hotfix in place is removed and replaced by that fix.
@@ -14,7 +14,7 @@ CriomOS is made more modular; an anatomy of it shows what should be taken out.
 
 ## Nix code
 
-Every store path in Nix code is the output of evaluating a package, a flake input or an option; Nix code never names a store path.
+Every store path in Nix code is the output of evaluating a package, a flake input or an option.
 
 ## Hardware
 
