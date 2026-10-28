@@ -1,6 +1,6 @@
 ---
 description: Every task.
-dependencies: [knowledge-vocabulary]
+dependencies: []
 ---
 
 The purpose of a thinking machine is to extend a living psyche.

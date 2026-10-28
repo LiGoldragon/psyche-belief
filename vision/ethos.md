@@ -1,6 +1,6 @@
 ---
 description: An ethos file is written, or a type, trait or layout is judged against what the living wants ethos to be.
-dependencies: [knowledge-datom, knowledge-protos]
+dependencies: []
 ---
 
 ## Ethos and Nexus are infrastructure

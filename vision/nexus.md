@@ -1,6 +1,6 @@
 ---
 description: A long-running Nexus — its sockets, clients, wire contracts and store — is being designed or judged against what the living wants it to be.
-dependencies: [vision-ethos, knowledge-datom]
+dependencies: [vision-ethos]
 ---
 
 ## A Nexus is the whole

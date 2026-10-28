@@ -1,6 +1,6 @@
 ---
 description: A proof of concept is about to be tested and where it runs must be chosen.
-dependencies: [compensation-testing, vision-horizon]
+dependencies: []
 ---
 
 ## A proof of concept is tested in a sandbox first

@@ -1,6 +1,6 @@
 ---
 description: The meaning language — its logographic signs, roots, verbs, links, storage or names — is being designed or judged against what the living wants.
-dependencies: [vision-ethos, knowledge-datom]
+dependencies: [vision-ethos]
 ---
 
 ## What the meaning language is

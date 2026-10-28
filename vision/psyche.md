@@ -1,6 +1,6 @@
 ---
 description: The structure of the psyche — its four levels, where psyche data lives, or how crystallized vision keeps its provenance — is being designed or judged.
-dependencies: [knowledge-psyche]
+dependencies: []
 ---
 
 Psyche contains Spirit, Intent, Vision, and Notion, in descending authority.
