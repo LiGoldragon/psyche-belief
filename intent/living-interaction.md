@@ -13,7 +13,7 @@ A question to the living states in full the thing it asks about, so he can reaso
 
 ## The living is spoken to in books
 
-Everything the living says to a flow is answered with a book, in the turn he says it: every question, proposal and understanding the flow has for him goes into that book, and the chat carries the book's link.
+Everything the living says to a flow is answered with a book, in the turn he says it: every question, proposal and understanding the flow has for him goes into that book. The chat carries the book's link and one sentence naming what it holds; nothing in the book is said again in the chat.
 
 A message from the living is read whole and for what it means beneath its words. Every part is taken as what it is, at once: vision logged, an order carried out, a correction answered with its line, a question answered; and what it implies is acted on as well. What he asks to be checked, and what would follow if it held, is an order, not vision; vision is what he says the system is to be.
 
