@@ -11,7 +11,7 @@ A proposal is a proposal into belief modules, and the whole of it is its crystal
 
 A proposal that touches a code component shows the code it changes or adds.
 
-A code block in a proposal is not the repository's file: it needs no path, directory or file name. It carries the code, why it is important, and what its function is.
+A code block in a proposal stands on its own: it is shown without a path, directory or file name. It carries the code, why it is important, and what its function is.
 
 A proposal is usually drawn as well as written, and always when it has a shape: what it adds, removes and keeps, in one frame.
 
