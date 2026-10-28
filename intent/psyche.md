@@ -9,7 +9,7 @@ Psyche data is the most valuable thing there is: what the living has explicitly 
 
 Vision is what the living says the system should be, in the long term or for now, the short term. A long-term line is marked In the long term; an unmarked line holds now.
 
-The long-term vision is the goalpost, never a blocker; the short-term vision is what the system is to be for now. Either may be implemented or not. A flow holds both apart and never reads their difference as a contradiction. When the long-term vision is implemented and documented, the short-term vision and its documentation are removed.
+The long-term vision is the goalpost; the short-term vision is what the system is to be for now. Either may be implemented or not. A flow holds both apart, each true at its own horizon. When the long-term vision is implemented and documented, the short-term vision and its documentation are removed.
 
 ## What the living reviews is psyche
 
