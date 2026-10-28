@@ -4,8 +4,8 @@ dependencies: [vision-ethos]
 ---
 
 Retired on landing by flow fe34eb, 2026-09-10. The living ruled Ethos
-Monolith and Ethos Zero the same thing: the name was changed, there is
-no separate stage. What still stands is carried by Vision/ethos.md,
+Monolith and Ethos Zero one stage under two names.
+What still stands is carried by Vision/ethos.md,
 heading Zero; the words are kept here.
 
 # Ethos-monolith
@@ -35,13 +35,13 @@ runtime engine — and executables are named component-nexus.
 ## Purpose
 
 An incremental implementation and bootstrap process, so that ethos
-and datom get written and read as soon as possible, without cutting
-corners, and components start being written in ethos.
+and datom get written and read as soon as possible, at full correctness,
+and components start being written in ethos.
 
 ## Vocabulary carried
 
-The Signal, Nexus, SEMA vocabulary and principles are kept; nothing
-is bound to how they were used and implemented in the past. Nexus is
+The Signal, Nexus, SEMA vocabulary and principles are kept, and
+how they are used and implemented is designed afresh. Nexus is
 authored in ethos so its main operations are visible. Sema is the
 database engine, authored in ethos so the stored types are visible;
 it matters more than nexus, because operational editing should yield
