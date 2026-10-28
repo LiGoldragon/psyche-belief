@@ -40,29 +40,29 @@ In the long term, intent is placed directly in the system prompt.
 The vocabulary is context, belief modules and context building.
 A skill is the legacy name, one harness name for things that differ, becoming obsolete as harness infrastructure improves.
 
-A context repository holds one folder per module type; no folder is called skills. A file is named by its subject alone, and its folder gives its type.
+A context repository holds one folder per module type, each named for its type. A file is named by its subject alone, and its folder gives its type.
 
 A module is named by its type and its subject. A directory structure gives each type its own directory; a single-string name without whitespace puts the type first, then a colon, then the subject, as vision:book.
 
 A context repository holds one section of role modules per layer, Primary, Secondary, Tertiary and Quaternary, and may hold sections for specialized topics.
 
-## No change except through the living or a mechanism
+## Change through the living or a mechanism
 
-No belief module changes except through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
+A belief module changes only through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
 
 ## Context lines are richly annotated
 
 Context lines are richly annotated, because lines of very different categories share one module and are otherwise given the same weight. Separating modules into kinds such as vision and intent is the first, crude form of that annotation.
 
-## A belief module is not a history book
+## A belief module states what holds now
 
-A belief module is not a history book; content can be good and still not belong in one.
+A belief module states what holds now; content can be good and belong elsewhere.
 
 ## Editing belief
 
 A belief goes in the module of its subject.
 
-A line that a module contradicts is edited by removing the contradicted line first, never by adding a contradicting line elsewhere.
+A line that a module contradicts is edited by removing the contradicted line first.
 
 Removal comes before addition.
 
