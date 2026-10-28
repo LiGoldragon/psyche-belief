@@ -16,9 +16,9 @@ engine with three daemons is the protos engine.
 
 ## What Protos knows
 
-Protos is only about structure. It has nothing to do with struct and
-vector, and it only understands form: the syntactic structure. It
-would not know what anything is. A head in protos is just a head —
+Protos is only about structure. It understands
+only form: the syntactic structure. What
+anything is, the conceptual layer says. A head in protos is just a head —
 anatomy, not interpretation. Pure anatomy is only structural
 recognition of structures, nothing more. Protos examples show the
 textual structure — the delimiters, the head, the capitalization, the
@@ -57,8 +57,8 @@ sits in its tree, is a fact of the datomic layer, and every datom
 carries one, read down from text or built up from a composition
 alike. The budget, how much reading one act allows, is a fact of the
 reader and lives on it. The composition carries no position: it is
-the layer where context has been consumed. There is no site and no
-situated pair; an error's locus is the datom's path, and its extent
+the layer where context has been consumed. An
+error's locus is the datom's path, and its extent
 is found by following that path into the protos the reader holds.
 
 ## Kinds
@@ -112,7 +112,7 @@ Structure is the word for every unit of the text; its type is the
 `Protos` enum: headed, enclosed, opaque, or bare.
 
 A headed structure is a head, a separator and a body. The separators
-are period, exclamation and colon. The body is written right after its separator; no whitespace stands between them.
+are period, exclamation and colon. The body is written right after its separator.
 
 ```
 Head.body
@@ -132,7 +132,7 @@ delimited, is dropped entirely from protos and its dialects.
 
 The text type is `String`. A closing guillemet inside a string is
 escaped with a backslash, so the ascent never refuses. The word is
-error, not fault, through the chain.
+error, through the chain.
 
 ```
 «she said \»no\» and left»
