@@ -8,6 +8,8 @@ dependencies: []
 What is believed about a model, its rank, its cost, what it is given,
 is written in this module alone; every other module names a layer.
 
+The system is understood energetically. The living's attention is a thousand times dearer than any flow's; within the system a Primary's input and output are the dearest, far above a Secondary's, and a Secondary's above its subflows'. A message that saves a cheaper flow's words and makes a dearer one fetch has cost more, not less.
+
 ## Roles are explained by layer, not by model
 
 Roles are explained by layer, not by model; one skill maps layer to model.
