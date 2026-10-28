@@ -14,6 +14,8 @@ reaching the transcript directly when the logs are not enough.
 
 Remembering a flow includes reading that flow's last model response.
 
+A flow's remembering includes the open beads of its address.
+
 ## The remembering line says what was found most relevant
 
 The log's record of a remembering carries a short description of what

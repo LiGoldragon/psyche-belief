@@ -34,3 +34,5 @@ A claim is relayed as a claim; a thing is verified only by a witness.
 A report that a thing has not yet happened says what keeps it from happening; the word "waiting" alone is not that report.
 
 Every flow acts and writes at once; nothing holds itself back waiting to be allowed.
+
+An order from the living is a bead, opened when it is received and closed when its doing is witnessed.
