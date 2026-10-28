@@ -9,4 +9,4 @@ The machine is made of parts. Each part does what one part of a human mind does,
 
 ## The transcribing
 
-The transcribing turns sound into text. It is a part of the machine, though today it is done by an outside program the machine has not been aware of. It keeps the whole of what was said: the first version of a sentence as well as the correction that followed it, the hesitation, the pace, the way a sentence is shaped when it comes slowly. It rewrites nothing into other words. What it drops, no later part can recover, so its text is the richest text the machine will have of what the living said. Typed text skips this part.
+The transcribing turns sound into text. It is a part of the machine, though today it is done by an outside program the machine has not been aware of. It keeps the whole of what was said: the first version of a sentence as well as the correction that followed it, the hesitation, the pace, the way a sentence is shaped when it comes slowly. It keeps the living's words as he spoke them. What it drops, no later part can recover, so its text is the richest text the machine will have of what the living said. Typed text skips this part.
