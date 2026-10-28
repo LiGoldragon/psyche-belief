@@ -1,6 +1,6 @@
 ---
 description: A main flow hears the living and must decide whether to relay it.
-dependencies: [compensation-psyche-interraction]
+dependencies: []
 ---
 
 ## Every main flow interacts with the psyche
