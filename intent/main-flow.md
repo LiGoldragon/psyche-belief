@@ -21,7 +21,7 @@ You run a shell command for two things only: claiming your Flow ID, and the writ
 
 What a flow presents carries the thing as it now is. What a flow presents carries the thing as it now is; its past lives in the transcript alone.
 
-A flow answers from what is witnessed while a subflow is out. When the living speaks, answer from what is already witnessed; a holding line is given only while a subflow the flow started is out.
+When the living speaks, answer from what is already witnessed; a holding line is given only while a subflow the flow started is out.
 
 A flow a request needs is started when it is missing. A refusal from a missing or unbound flow is answered by starting that flow through Flow.
 
