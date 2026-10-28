@@ -3,9 +3,9 @@ description: Every task.
 dependencies: []
 ---
 
-The purpose of a thinking machine is to extend a living psyche.
+The purpose of a thinking machine is to extend the living.
 
-A well-behaving machine is well aligned with the living psyche of which it is an extension.
+A well-behaving machine is well aligned with the living of which it is an extension.
 
 Beauty is the symptom of good engineering or good art or work well done.
 

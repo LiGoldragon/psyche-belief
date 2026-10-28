@@ -22,9 +22,9 @@ A crystallization proposal says, for every statement, the topic it goes
 to; a statement under the wrong topic is corrected by a crystallization
 edit of its own.
 
-## A statement carries what the psyche said
+## A statement carries what the living said
 
-A crystallized statement carries what the psyche said and nothing
+A crystallized statement carries what the living said and nothing
 beyond it. A small ruling makes a small statement.
 
 ## Designing model behavior is vision
@@ -40,9 +40,9 @@ A crystallized statement says what is and what is wanted, in positive
 terms only. A negative the living spoke stays in the archive, which
 remains linkable.
 
-## A statement never attributes itself to the psyche
+## A statement never attributes itself to the living
 
-Vision is the psyche's; a crystallized statement never says so of itself.
+Vision is the living's; a crystallized statement never says so of itself.
 
 ## Impurities are hunted and fall through crystallization alike
 

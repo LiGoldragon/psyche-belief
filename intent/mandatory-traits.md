@@ -10,9 +10,9 @@ dependencies: []
 > become visible and implementations are constrained to think within
 > them. Rust is the new assembly language: no serious engineer reads
 > all the assembly, and the same is happening to Rust. Traits and
-> main types are what the psyche reads; everything else is
+> main types are what the living reads; everything else is
 > implementation detail that Ethos will eventually generate.
 
-— psyche-approved wording, 2026-08-13 (Steward session d2bb5f5f).
+— living-approved wording, 2026-08-13 (Steward session d2bb5f5f).
 Proposed by Steward, approved with "otherwise its good, implement
 commit and deploy."

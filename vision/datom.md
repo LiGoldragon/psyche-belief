@@ -5,7 +5,7 @@ dependencies: [vision-ethos]
 
 ## Name
 
-Datom is the psyche’s own coinage for the new data notation, the
+Datom is the living’s own coinage for the new data notation, the
 successor to NOTA and to the rejected name Dotos. The name was
 chosen for its energetic power and to echo what the notation is:
 data, strictly typed, super dense, no field names. The library is
