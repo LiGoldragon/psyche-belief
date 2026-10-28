@@ -34,15 +34,15 @@ conduct is vision. The line of what counts as designing is drawn
 wide, and what does not qualify as vision is stated with the same
 clarity.
 
-## No useless negatives
+## Statements are positive
 
 A crystallized statement says what is and what is wanted, in positive
 terms only. A negative the living spoke stays in the archive, which
 remains linkable.
 
-## A statement never attributes itself to the living
+## A statement speaks in its own voice
 
-Vision is the living's; a crystallized statement never says so of itself.
+A crystallized statement states its subject in its own voice.
 
 ## Impurities are hunted and fall through crystallization alike
 
@@ -50,24 +50,24 @@ Impurities are hunted by the records cleaner and fall through crystallization al
 
 ## Crystallized vision is up to date
 
-Crystallized vision is up to date: it states the subject as it now stands, and a concept that has been replaced does not stay in it.
+Crystallized vision is up to date: it states the subject as it now stands.
 
 ## Crystallization
 
 Crystallization re-articulates psyche records into self-standing statements and merges each with what is already crystallized, so the whole stays cohesive and the new reads as if always written with the original context. The model clarifies and purifies.
 
 A crystallization agglomerates records across flows that touch the
-same topic. Records are considered individually, never by file.
+same topic. Records are considered one by one.
 One record may serve many crystallizations; one crystallization may
 draw from many topics.
 
-A crystallized statement stands on its own words. A proposed change to a raw record — correction included — is proposed as a crystallization of its subject, never as an append to the raw file.
+A crystallized statement stands on its own words. A proposed change to a raw record — correction included — is proposed as a crystallization of its subject.
 
-A statement is composed from the living's quoted words alone; a record's heading and context, and another flow's brief or book, are machine readings and never its source.
-A crystallized statement carries no undefined term. Define the term first, or leave the statement raw.
+A statement is composed from the living's quoted words alone. Every term in a
+crystallized statement is defined. Define the term first, or leave the statement raw.
 A statement about code carries the code: a crystallized statement on a syntax, a type, a kind, or a wire form shows example code, because machines think in code and the next machine to read it must understand.
 
-A crystallized statement lands as lines in a vision- or intent- skill's authored source. A ruling a crystallization lands in a skill is not also logged as raw vision; the landing is the record. Intent enters an intent- skill only on the living's explicit word.
+A crystallized statement lands as lines in a vision- or intent- skill's authored source. A ruling a crystallization lands in a skill is recorded by the landing itself. Intent enters an intent- skill only on the living's explicit word.
 
 A record's id is its originating session's short id and that
 session's own count.
