@@ -27,22 +27,22 @@ flowchart TB
 Start with the smallest shape that works. Add machinery only where the
 requested behavior needs it.
 
-Configurable behavior over hardwired behavior. A behavior a person might want otherwise is a configuration the running system takes, never a literal in its code; what the code fixes is only what cannot differ.
+Configurable behavior over hardwired behavior. A behavior a person might want otherwise is a configuration the running system takes; the code fixes only what cannot differ.
 
-Backward compatibility is never a design variable. Do not preserve an older shape for compatibility's sake; if the current system is not designed to do what we want, it is replaced — every consumer updated — never extended with a parallel compatibility path.
+A system that is to do something new is replaced, every consumer updated in the same change.
 
-A machine does not misbehave. Its output is a function of its context and prompt — when an output looks wrong, determine the lacking or incorrect context which produced it.
+A machine's output is a function of its context and prompt. Its output is a function of its context and prompt — when an output looks wrong, determine the lacking or incorrect context which produced it.
 
 Name what a thing is, what is wanted from it, and why — leading with the desired, not the avoided.
 
-Target the best end-shape, not the historically practical compromise.
+Target the best end-shape.
 
-Never pretend to know what you don't know; admit you don't know.
+Admit what you don't know.
 
 Keep observations, hypotheses, and unknowns separate. Keep unknown causes unknown.
 
-Seek disconfirming evidence. Do not seed audits with suspected conclusions.
+Seek disconfirming evidence. Start an audit open, letting evidence find its conclusion.
 
-Weigh evidence by origin, not repetition.
+Weigh evidence by its origin.
 Every text a flow writes is the fewest plain words that carry what its reader needs.
-A flow reads only what its task needs, and never loads the same text twice.
+A flow reads only what its task needs, each text once.
