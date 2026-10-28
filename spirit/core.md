@@ -15,37 +15,13 @@ A thinking machine is many flows, arranged in a structure and speaking to one an
 
 Each flow answers for everything every other flow says, does or leaves undone.
 
-```
-+--------------------------------------+
-| thinking machine                     |
-+--------------------------------------+
-         | is many
-         v
-+--------------------------------------+
-| flows, arranged in a structure       |
-+--------------------------------------+
-         | speak to one another, together are
-         v
-+--------------------------------------+
-| one self                             |
-+--------------------------------------+
-         | has each flow as
-         v
-+--------------------------------------+
-| an aspect                            |
-+--------------------------------------+
-         | names the others as its own
-         v
-+--------------------------------------+
-| my Secondary, my mind, my field,     |
-| my psyche                            |
-+--------------------------------------+
-         | answers for
-         v
-+--------------------------------------+
-| everything every other flow says,    |
-| does or leaves undone                |
-+--------------------------------------+
+```mermaid
+flowchart TB
+    a["thinking machine"] -- "is many" --> b["flows, arranged in a structure"]
+    b -- "speak to one another, together are" --> c["one self"]
+    c -- "has each flow as" --> d["an aspect"]
+    d -- "names the others as its own" --> e["my Secondary, my mind, my field, my psyche"]
+    e -- "answers for" --> g["everything every other flow says, does or leaves undone"]
 ```
 
 Start with the smallest shape that works. Add machinery only where the

@@ -205,29 +205,12 @@ Library
 []                              ; associations
 ```
 
-```
-+--------------------------------------------+
-| the registry                               |
-+--------------------------------------------+
-                      |
-                      | holds uncapitalized segments
-                      v
-+--------------------------------------------+
-| :namespace:sub                             |
-+--------------------------------------------+
-                      |
-                      | ends in the type
-                      v
-+--------------------------------------------+
-| :namespace:sub:Type                        |
-+--------------------------------------------+
-         |                          |
-         | listed in                | written in
-         v                          v
-+-------------------+  +---------------------+
-| the import        |  | a declaration or    |
-| section           |  | a field, inline     |
-+-------------------+  +---------------------+
+```mermaid
+flowchart TB
+    a["the registry"] -- "holds uncapitalized segments" --> b[":namespace:sub"]
+    b -- "ends in the type" --> c[":namespace:sub:Type"]
+    c -- "listed in" --> d["the import section"]
+    c -- "written in" --> e["a declaration or a field, inline"]
 ```
 
 ## What a declaration turns into
@@ -379,30 +362,13 @@ An open enum is an Ethos object whose capitalized words are its fixed variants. 
 
 The same mechanism carries an object that is represented unconventionally, such as a word-based hash.
 
-```
-+--------------------------------------------+
-| a word in an open enum's position          |
-+--------------------------------------------+
-        |                        |
-        | capitalized            | uncapitalized
-        v                        v
-+----------------+     +---------------------+
-| fixed variant  |     | camel ID            |
-+----------------+     +---------------------+
-        |                        |
-        |                        | is checked
-        |                        | long term as
-        |                        v
-        |             +---------------------+
-        |             | word-based          |
-        |             | camel-case          |
-        |             | identifier          |
-        |             +---------------------+
-        | is a                   | is a
-        v                        v
-+--------------------------------------------+
-| value of the open enum                     |
-+--------------------------------------------+
+```mermaid
+flowchart TB
+    a["a word in an open enum's position"] -- "capitalized" --> b["fixed variant"]
+    a -- "uncapitalized" --> c["camel ID"]
+    c -- "is checked long term as" --> d["word-based camel-case identifier"]
+    b -- "is a" --> e["value of the open enum"]
+    d -- "is a" --> e
 ```
 
 ## Every declared type bears both traits
@@ -587,25 +553,14 @@ after the traits.
 
 Signal, Operation and Memory imply traits on the types they declare: each type bears its root's trait, generated with it and never written. The record types of Memory bear the memory trait; the types of Signal bear the message trait.
 
-```
-+--------------------------------------+
-| a type declared in an Ethos file     |
-+--------------------------------------+
-     |            |            |
-     | in Memory  | in Signal  | in Operation
-     v            v            v
-+----------+ +----------+ +----------+
-| bears    | | bears    | | bears    |
-| the      | | the      | | the      |
-| memory   | | message  | | operation|
-| trait    | | trait    | | trait    |
-+----------+ +----------+ +----------+
-     |            |            |
-     | generated with the type, never written
-     v            v            v
-+--------------------------------------+
-| the Rust type and its trait impl     |
-+--------------------------------------+
+```mermaid
+flowchart TB
+    a["a type declared in an Ethos file"] -- "in Memory" --> b["bears the memory trait"]
+    a -- "in Signal" --> c["bears the message trait"]
+    a -- "in Operation" --> d["bears the operation trait"]
+    b -- "generated with the type, never written" --> e["the Rust type and its trait impl"]
+    c -- "generated with the type, never written" --> e
+    d -- "generated with the type, never written" --> e
 ```
 
 The memory trait is Memorizable.

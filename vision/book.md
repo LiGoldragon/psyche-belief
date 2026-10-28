@@ -37,26 +37,13 @@ A figure shows as proposed for the module it will live in.
 
 A figure proposed for a module shows under that module's path in green, as an added line does; a figure it replaces shows beside it in red.
 
-```
-+--------------------------------------------+
-| belief module                             |
-+--------------------------------------------+
-    |              |                |
-    | stays        | changes        | is born or
-    |              |                | is deleted
-    v              v                v
-+-----------+ +------------+ +--------------+
-| shown     | | line added | | shown whole, |
-| whole or  | | in green,  | | in green or  |
-| beside    | | removed in | | in red       |
-| another   | | red        | +--------------+
-+-----------+ +------------+        |
-                    |               |
-                    | proposed as   | proposed as
-                    v               v
-+--------------------------------------------+
-| a proposal: land, amend or reject          |
-+--------------------------------------------+
+```mermaid
+flowchart TB
+    a["belief module"] -- "stays" --> b["shown whole or beside another"]
+    a -- "changes" --> c["line added in green, removed in red"]
+    a -- "is born or is deleted" --> d["shown whole, in green or in red"]
+    c -- "proposed as" --> e["a proposal: land, amend or reject"]
+    d -- "proposed as" --> e
 ```
 
 Code in a book is shown as code, labelled with its language, never as added or removed text; a code block carries no line marks. Ethos and datom in a book are written in the vertical form.

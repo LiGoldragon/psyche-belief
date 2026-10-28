@@ -57,25 +57,10 @@ Flow's configuration holds, for each metaflow, its purpose and the records of th
 
 A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
 
-```
-+----------------------+
-| Flow                 |
-+----------------------+
-          |
-          | composes into the first prompt
-          v
-+----------------------+
-| recent raw psyche,   |
-| belief modules of   |
-| any kind except      |
-| spirit and intent    |
-+----------------------+
-          |
-          | starts
-          v
-+----------------------+
-| a fresh flow         |
-+----------------------+
+```mermaid
+flowchart TB
+    a["Flow"] -- "composes into the first prompt" --> b["recent raw psyche, belief modules of any kind except spirit and intent"]
+    b -- "starts" --> c["a fresh flow"]
 ```
 
 A fresh flow starts with every belief module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.

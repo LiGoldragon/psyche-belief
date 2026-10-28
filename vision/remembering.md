@@ -25,22 +25,11 @@ from the remembered flow was found most relevant to the current one.
 
 A fresh flow receives the living's content weighed by importance, and only the important part; not his messages one by one, and not a summary of everything.
 
-```
-+-------------------------+
-| living content          |
-+-------------------------+
-   | weighed by       | the rest stays in
-   | importance       v
-   v                +------------------+
-+---------------+   | records and      |
-| important part|   | transcript       |
-+---------------+   +------------------+
-   |
-   | passes to
-   v
-+---------------+
-| fresh flow    |
-+---------------+
+```mermaid
+flowchart TB
+    a["living content"] -- "weighed by importance" --> b["important part"]
+    a -- "the rest stays in" --> c["records and transcript"]
+    b -- "passes to" --> d["fresh flow"]
 ```
 
 ## A flow is started with a remembering

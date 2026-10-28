@@ -27,30 +27,9 @@ Every word of his redoes the proposal it bears on, unless it closes the topic; w
 
 A proposal in the chat shows the whole section as it would stand, with the part that changes in bold.
 
-```
-+--------------------------+
-| his vision               |
-+--------------------------+
-        |
-        | is made into
-        v
-+--------------------------+
-| a proposal               |
-| (the proposal module's   |
-| rules)                   |
-+--------------------------+
-        |
-        | is rendered as
-        v
-+--------------------------+
-| a book                   |
-| (the book module's       |
-| rules)                   |
-+--------------------------+
-        |
-        | is shown to
-        v
-+--------------------------+
-| him                      |
-+--------------------------+
+```mermaid
+flowchart TB
+    a["his vision"] -- "is made into" --> b["a proposal (the proposal module's rules)"]
+    b -- "is rendered as" --> c["a book (the book module's rules)"]
+    c -- "is shown to" --> d["him"]
 ```
