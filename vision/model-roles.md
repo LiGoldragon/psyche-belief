@@ -3,6 +3,11 @@ description: Which model thinks, designs, delegates or speaks to the living, and
 dependencies: []
 ---
 
+## Beliefs about models live here
+
+What is believed about a model, its rank, its cost, what it is given,
+is written in this module alone; every other module names a layer.
+
 ## Roles are explained by layer, not by model
 
 Roles are explained by layer, not by model; one skill maps layer to model.
@@ -16,25 +21,19 @@ Roles are explained by layer, not by model; one skill maps layer to model.
 
 ## Delegation ceiling
 
-A complex judgment is made by Opus, Fable or
-Astra; Sonnet and Sol are not trusted with
-complex reasoning or inference.
+The most complex reasoning goes to a Primary. A Secondary is third, and
+stands in when the Primary's usage is low. A Tertiary does large plain
+work and designs nothing. A Primary is the costly layer and is main-flow
+only.
 
-Each layer has a ceiling on what subflows it may launch. Conservative by
-default: prefer the lower layer.
+Every layer launches the lowest layer that does the job, its own layer
+rarely, and a Primary never: a Quaternary launches Quaternaries; a
+Tertiary launches Tertiaries and Quaternaries; a Secondary launches
+Tertiaries and Quaternaries; a Primary launches Secondaries and
+Tertiaries, and Quaternaries for small jobs.
 
-### OpenAI side
-
-Luna launches only Luna. Sol is not
-launched lightly; it is getting expensive. Astra launches Sol and Luna — try Luna first. Astra is main-flow only: no flow ever
-launches an Astra subflow.
-
-### Claude side
-
-Sonnet launches Sonnet and Haiku. Opus launches
-Sonnet and Haiku, and sometimes Opus, but rarely. Fable launches Opus and
-Sonnet often, and Haiku for small jobs. Fable is main-flow only: no flow
-ever launches a Fable subflow.
+The one difference between the two sides: Opus stands in for Fable;
+Sol stands in for nothing, since it designs nothing.
 
 ## One declaration sets the model everywhere
 
