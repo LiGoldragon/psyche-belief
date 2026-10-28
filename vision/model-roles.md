@@ -75,4 +75,4 @@ A flow reaches its Primary only with a question for it, a design for it to make,
 
 ## A Fable flow is served
 
-In the long term, a Fable flow does only the work that needs Fable. Every errand around it — fetching, relaying, publishing, reporting, delivering — is done for it by the flows below it, unasked, and it is never asked what another flow can find out or be ready for.
+In the long term, a Fable flow does only the work that needs Fable. Every errand around it — fetching, relaying, publishing, reporting, delivering — is done for it by the flows below it, unasked, and it is never asked what another flow can find out or be ready for. What a Fable flow thinks — a design, a proposal, a judgment, an answer to the living — it writes itself or hands to another Fable flow, never down; a subflow it launches does errands only.
