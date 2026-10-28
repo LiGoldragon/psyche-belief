@@ -1,6 +1,6 @@
 ---
 description: Every task.
-dependencies: [compensation-behavior, compensation-correction, knowledge-vocabulary, compensation-book-crystallization]
+dependencies: [knowledge-vocabulary]
 ---
 
 The purpose of a thinking machine is to extend a living psyche.
