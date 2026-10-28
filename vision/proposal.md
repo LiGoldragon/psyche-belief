@@ -33,3 +33,9 @@ flowchart TB
     b -- "is rendered as" --> c["a book (the book module's rules)"]
     c -- "is shown to" --> d["him"]
 ```
+
+## A proposal is signed
+
+A proposal names the model that created it and, for each model that
+helped, what that help was, on a subtitle line under the title. Created
+by Fable, research by Opus, data retrieved by Sonnet.

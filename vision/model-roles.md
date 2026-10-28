@@ -22,9 +22,9 @@ Roles are explained by layer, not by model; one skill maps layer to model.
 ## Delegation ceiling
 
 The most complex reasoning goes to a Primary. A Secondary is third, and
-stands in when the Primary's usage is low. A Tertiary does large plain
-work and designs nothing. A Primary is the costly layer and is main-flow
-only.
+stands in only when there is no Primary usage left for the design. A
+Tertiary does large plain work and designs nothing. A Primary is the
+costly layer and is main-flow only.
 
 Every layer launches the lowest layer that does the job, its own layer
 rarely, and a Primary never: a Quaternary launches Quaternaries; a
