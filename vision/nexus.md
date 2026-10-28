@@ -5,7 +5,7 @@ dependencies: [vision-ethos]
 
 ## A Nexus is the whole
 
-A Nexus is the whole long-running component: the process, its sockets, and the signal contracts it is compiled with. Nexus is its name; daemon is not. A Nexus is like a daemon, said only so that a thinking machine which thinks in daemons understands what a Nexus is. Every Nexus is named component-nexus — orchestrate-nexus, ethos-nexus — and in everyday speech orchestrate-nexus is called orchestrate.
+A Nexus is the whole long-running component: the process, its sockets, and the signal contracts it is compiled with. Nexus is its name. A Nexus is like a daemon, said only so that a thinking machine which thinks in daemons understands what a Nexus is. Every Nexus is named component-nexus — orchestrate-nexus, ethos-nexus — and in everyday speech orchestrate-nexus is called orchestrate.
 
 ## A kind of thing
 
@@ -57,7 +57,7 @@ default client serves bootstrap first, then debugging and testing,
 long after production has stopped using it. The meta CLI is named
 component-meta.
 
-A CLI turns text into Signal and nothing more: it takes one inline datom, no flags, no subcommands; it identifies the process that called it and carries that identity in the message, so a Nexus knows its caller by the process, never by a claim. A CLI speaks to one Nexus, opens no store, stays thin; datom and all text handling are compiled out of the Nexus, which decodes only known types in their rkyv form and so stays small, since it keeps running and there may be many.
+A CLI turns text into Signal: it takes one inline datom as its whole input; it identifies the process that called it and carries that identity in the message, so a Nexus knows its caller by the process. A CLI speaks to one Nexus and stays thin; datom and all text handling are compiled out of the Nexus, which decodes only known types in their rkyv form and so stays small, since it keeps running and there may be many.
 
 ## Signal only
 
@@ -67,9 +67,9 @@ are its own, one per socket. A Nexus thinks in typed values — enums,
 structs, scalars — and the string fields it still carries are
 records on the way to a fully typed form.
 
-The running Nexus holds its whole domain as typed values, a specific type for every kind; no text arrives on its wire and none leaves it. Its Memory is its own typed store, reached only through the memory engine; there is no central store; policy state and working state live in that one store, and policy changes only over the meta socket.
+The running Nexus holds its whole domain as typed values, a specific type for every kind, and its wire carries typed values alone. Its Memory is its own typed store, reached only through the memory engine; policy state and working state live in that one store, and policy changes only over the meta socket.
 
-Signal is the messaging layer: an rkyv binary archive, typed, validated on receive, length-prefixed on the socket; nothing else rides the wire. Every reply is typed, refusals included: errors are vocabulary, never strings. The wire vocabulary's version is its contract crate's semver.
+Signal is the messaging layer and the wire's only traffic: an rkyv binary archive, typed, validated on receive, length-prefixed on the socket. Every reply is typed, refusals included: errors are vocabulary. The wire vocabulary's version is its contract crate's semver.
 
 ## The graph
 
@@ -78,7 +78,7 @@ vertices and carries one contract. Every connected pair has an
 ordinary edge; only some pairs have a meta edge. A Nexus is compiled
 with the contracts of its own sockets and of every edge it has.
 
-Peers depend on each other's wire repositories, never on each other's Nexuses.
+Peers depend on each other's wire repositories.
 
 ## Routing
 
@@ -115,9 +115,9 @@ its code, and two signal repositories — one for the ordinary
 socket's contract, one for the meta socket's. Shared kinds go into
 reusable libraries, which are encouraged.
 
-`<nexus>` is the repository holding the Nexus; `signal-<nexus>` its wire vocabulary; `meta-signal-<nexus>` the owner's vocabulary, never optional, since configuration flows through it. The CLI is `<nexus>`.
+`<nexus>` is the repository holding the Nexus; `signal-<nexus>` its wire vocabulary; `meta-signal-<nexus>` the owner's vocabulary, always present, since configuration flows through it. The CLI is `<nexus>`.
 
-A wire type repository is written in ethos and declares vocabulary only: the frame envelope, the protocol version, a closed enum of operations with their paired replies, the typed payload of each; no catch-all. Operations are verbs, `Submit`; replies the past tense, `Submitted`; rejections name themselves. Storage vocabulary never appears on the public wire.
+A wire type repository is written in ethos and declares vocabulary only: the frame envelope, the protocol version, a closed enum of operations with their paired replies, the typed payload of each. Operations are verbs, `Submit`; replies the past tense, `Submitted`; rejections name themselves. Storage vocabulary stays inside the Nexus.
 
 ## Why everything is a Nexus
 
@@ -146,10 +146,9 @@ Each Nexus runs on its own and is recompiled on its own, toward zero-downtime se
 State is observed by subscription: the subscriber receives the state
 on open, then each change as it happens.
 
-## Polling is forbidden
+## Change is pushed
 
-Polling is forbidden; a correct system goes quiet when nothing
-changes.
+A correct system goes quiet when nothing changes; every change arrives as an event.
 
 ## Three parts and one path
 
