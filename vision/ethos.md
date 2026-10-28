@@ -5,7 +5,7 @@ dependencies: []
 
 ## Ethos and Nexus are infrastructure
 
-Ethos and Nexus are basic infrastructure, not examples: the wood houses are built from. Chronos is the example project built with them, short term.
+Ethos and Nexus are basic infrastructure: the wood houses are built from. Chronos is the example project built with them, short term.
 
 ## Where the golden ethos lives
 
@@ -54,7 +54,7 @@ in one swoop.
 
 ## Roots
 
-For now, Library, Signal, Operation, Memory. No version in a file.
+For now, Library, Signal, Operation, Memory. A version lives in a manifest.
 Signal's sections are queries and responses, since there is
 communication; Memory's are record types, the rest to be decided.
 Signal gives a Nexus its main types and Memory its database types.
@@ -66,7 +66,7 @@ Four roots: Library, Signal, Operation, Memory. Signal declares what a Nexus say
 Any repetition in ethos syntax is an implementation failure. Ethos
 aims to be the most terse, non-repetitive syntax ever made.
 
-Terseness is in the low amount of noise, never in shortened words.
+Terseness is in the low amount of noise, with words written whole.
 
 ## Self-description
 
@@ -87,7 +87,7 @@ enables — generator emission among it — comes in its time.
 
 Trait is the word for the bearer of capabilities, the same word in
 ethos and in Rust; kind might be used to also mean traits.
-In ethos there are no generics, only traits. Declaring a new trait
+In ethos, every constraint is a trait. Declaring a new trait
 declares a new trait in the Rust world and might imply more in the
 ethos world.
 
@@ -111,11 +111,11 @@ A trait is identified as a Rust trait is, by its name and its
 constraints, written as one head: Processable<[Clonable Sendable]
 Serializable>. A constraint is a trait, or a bracket of traits: what
 Rust writes as a generic parameter with its bounds, ethos writes as
-the bounds alone, since in ethos there are no generics, only traits; a
-constraint in a trait declaration is a trait, never a type. Two heads
-that differ in a constraint are two traits. Which constraints belong
-to the identity is not a decision to make: the ethos compiles to
-Rust, and what identifies the trait identifies the trait. What else a
+the bounds alone.
+Two heads
+that differ in a constraint are two traits. The constraints that belong
+to the identity are those that identify the trait in the Rust the ethos compiles to.
+What else a
 trait declares, its supertraits, its associated types and constants,
 its capabilities, is its definition. Angle brackets hold the
 constraints; they are a protos delimiter, recycled from Rust as
@@ -145,8 +145,8 @@ pub trait Processable<A: Clone + Send, B: Serialize> { /* … */ }
 
 ## Declaration: File
 
-The unit is File: one file, one Rust module. No namespace inside a
-file. An ethos file is written in the sweet form: the root's head,
+The unit is File: one file, one Rust module. A file is one namespace.
+An ethos file is written in the sweet form: the root's head,
 then the sections as siblings, the outer braces omitted. The braced
 form — the root's head opening braces that hold every section — is
 the canonical form. The sweet form is kept out of the main logic run:
@@ -154,8 +154,8 @@ before the text is read as ethos at all, the file is converted
 mechanically to the canonical form, so the ethos reader sees only
 proper ethos.
 
-An ethos file carries no version; datom has no versions. What is
-versioned is versioned in a manifest of some kind, never in the file.
+An ethos file is unversioned data, as datom is. What is
+versioned is versioned in a manifest of some kind.
 
 A Library's sections, in order, are imports, types, traits and
 associations. Every root's first section is its imports; its own
@@ -189,8 +189,8 @@ Library
 [ Record.[ Textualizable ] ]         ; associations: Textualizable, imported
 ```
 
-The generated code carries no `use` statements; each imported name is
-written fully qualified: `:protos:String` appears as `protos::String`,
+The generated code writes each imported name
+fully qualified: `:protos:String` appears as `protos::String`,
 `:datom:Datom` as `datom::Datom`.
 
 An import may stand where the type is used, with no entry in the imports section. In a declaration the colon replaces the dot: `Topic:custom:Name` declares `Topic` over the type `Name` from the namespace `custom`. A field takes the import with its leading colon: `Failure.{ :protos:Error String }`. The colon marks the import; the namespace segments are uncapitalized and the type is capitalized.
@@ -279,7 +279,7 @@ pub struct PathOverlap_Data { pub first_lock: Lock, pub second_lock: Lock }
 pub enum LockRejection { DuplicateName(Lock), PathOverlap(PathOverlap_Data) }
 ```
 
-Everything is a type; there is no key-value. A type used once is declared inline where it is used; a type used in more than one place is declared once and named. A variant's payload is written in the variant and bears the variant's name; no second type is invented to hold it. Inline nesting goes about three deep; past that, the type comes from a Library.
+Everything is a type, positioned. A type used once is declared inline where it is used; a type used in more than one place is declared once and named. A variant's payload is written in the variant and bears the variant's name. Inline nesting goes about three deep; past that, the type comes from a Library.
 
 ## A variant named as a defined type carries that type
 
@@ -374,8 +374,8 @@ flowchart TB
 ## Every declared type bears both traits
 
 Ethos Zero emits `Datomizable` and `Compositional` on every struct and
-enum it generates, so every ethos-declared type always bears both
-traits and no declared type can exist without them. An alias bears them
+enum it generates, so every ethos-declared type always bears both traits.
+An alias bears them
 through the type it names: an alias is not a new type and cannot carry
 a derive.
 
@@ -440,7 +440,7 @@ pub type FlowId = String;
 
 ## Traits are explicit; bodies are hand-written
 
-A trait is declared, never inferred; an association asserts the type
+A trait is declared; an association asserts the type
 bears it. The generated Rust carries a compile-time assertion that the
 type bears the trait; the interaction body is hand-written Rust.
 
@@ -467,7 +467,7 @@ const _: () = {
 };
 ```
 
-An ethos declares the traits its types bear. Types that bear no trait describe a system that does nothing; such an ethos is not written.
+An ethos declares the traits its types bear. Every ethos declares the traits its types bear.
 
 The Ethos:
 
@@ -597,8 +597,8 @@ const _: () = {
 Interactions — the term for trait implementations — use the type
 itself in all cases.
 
-No tuple in the code we design; if some parts require it (standard
-traits, dependencies), then it is allowed at that contact point only.
+The code we design composes structs; a tuple appears only at a contact point that requires it (standard
+traits, dependencies).
 
 ## Spacing
 
@@ -606,7 +606,7 @@ Space the delimiters and the inner content. Ethos follows the
 canonical protos print: a space inside every bracket and brace
 at both ends when non-empty.
 
-Ethos expands vertically: a structure with more than one element opens on its line and its elements hang beneath the first, aligned; the closing delimiter ends the last element's line. Nothing that has a next layer sits on one line.
+Ethos expands vertically: a structure with more than one element opens on its line and its elements hang beneath the first, aligned; the closing delimiter ends the last element's line. Everything that has a next layer opens it on a new line.
 
 Ethos carries a comment on every section and on every line that has a next layer, saying in plain words what the machine reads there; a comment runs from ; to the end of the line.
 
