@@ -9,8 +9,7 @@ Datom is the living’s own coinage for the new data notation, the
 successor to NOTA and to the rejected name Dotos. The name was
 chosen for its energetic power and to echo what the notation is:
 data, strictly typed, super dense, no field names. The library is
-datom-codec. Datomic names the conceptual layer abstractly; it is
-not a term of the code.
+datom-codec. Datomic names the conceptual layer abstractly, in speech about it.
 
 ## Nature
 
@@ -38,7 +37,7 @@ pub enum Form { Struct(Vec<Datom>), Vector(Vec<Datom>), Variant(Symbol, Box<Dato
 
 Two string forms. The bare form, whose name is bare: a run with no
 space and no delimiter glyph, which may be a whole sentence written
-without spaces in any casing; "word" does not do it justice. It is a
+without spaces in any casing. It is a
 bare string, undelimited because it needs no delimiters. The delimited
 form: guillemets, which keep the doubleness of the double quote,
 cannot be mistyped for it, and point, so the ends are visible at any
@@ -58,14 +57,14 @@ head is a symbol. In datom a head is always a variant, so it is
 capitalized. Which head a structure carries is part of its type:
 `Accepted.{ … }` and `Refused.{ … }` are two types. When an enum value
 is textualized, its variant's name is written as the head every time,
-a variant carrying nothing included: `Pending`, never an empty
-structure. A brace structure is a struct and a bracket structure is a
+a variant carrying nothing included: `Pending`.
+A brace structure is a struct and a bracket structure is a
 vector. A head in front of a structure makes a variant that carries
 it: `Reviewer.{ 2024 17 }` is the Reviewer variant carrying a struct
 of two positions, and `Observed.Locks.[]` is the Observed variant
 carrying the Locks variant carrying an empty vector. A symbol alone,
 in a position expecting an enum, is a variant carrying nothing. A
-datom is not preceded by a Datom root; a comment may say it is datom.
+datom begins with its own form; a comment may say it is datom.
 Guillemets are the string delimiter, and parentheses are reserved for
 Meaning. A string is a string only in a position where the type
 defines a string. In such a position a string is written bare when it
@@ -104,8 +103,7 @@ Observed.             ; or going down
 
 The whole is a structure, and so is every part of it, down to the
 unenclosed ones, which hold nothing. What a structure means, struct,
-vector, string, integer, variant, is said by the position it sits in,
-never by the structure alone.
+vector, string, integer, variant, is said by the position it sits in.
 
 ```
 ; Reply: an enum of Accepted.{ id Integer  at String }, Refused.{ reason String  code Integer }, Pending
@@ -122,7 +120,7 @@ Pending                                      ; a variant carrying nothing
 The descent into a composition is the datom's act, written once. What
 only the type can supply, its positions in order, is stated by the
 type through the derive, so the reading of the tree, arity, budget,
-locus, lives in one place and no type repeats it.
+locus, lives in one place.
 
 ```rust
 impl Composable for Datom {
@@ -262,8 +260,8 @@ Accepted.42
 
 ## Repository
 
-Everything moves to Datom: all of the stack, Horizon, Lojix, everything;
-no Dotos file remains. Datom's own line of descent is NOTA, which also
+Everything moves to Datom: all of the stack, Horizon, Lojix, everything.
+Datom's own line of descent is NOTA, which also
 passed through the temporary name Dotos; that old notation stays
 behind, frozen, and may be called legacy. Schema is the abandoned
 ancestor of Ethos, not of Datom. The library is named datom-codec so
@@ -277,18 +275,16 @@ A map is a container whose keys are known only from the data: the
 reader learns the shape by reading, where a struct's shape is known
 before reading. Datom is typed from the position down: a position
 knows its type before the text is read, and a container that reveals
-its shape only in the text contradicts that. So datom has no map. Most
-of what is called a map is not one: an object with fixed fields, a
-configuration table, a record written as a dictionary. These are
-structs whose notation declined to declare their fields, and every
-such notation ends up adding a way to declare them; that the word
-covers so much that is not a map shows how little a map is actually
-used. The map that remains, its keys minted at run time and its values
+its shape only in the text contradicts that. So a datom collection
+is a struct or a vector. What is commonly written as a keyed collection is usually a struct: an object with fixed fields, a
+configuration table, a record written as a dictionary. Such structs are fields left undeclared,
+and every
+such notation ends up declaring them.
+The map that remains, its keys minted at run time and its values
 all of one type, is a vector of structs, which is how the typed data
 formats already write it; that keys do not repeat is a rule the type
 states. What a map would hold is a struct when its keys are fixed, and
-a vector of structs when they are not. Datom does not implement a
-thing because it has been standard in the past.
+a vector of structs when they are not.
 
 ## Meaning
 
