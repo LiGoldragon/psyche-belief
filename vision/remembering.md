@@ -23,7 +23,7 @@ from the remembered flow was found most relevant to the current one.
 
 ## A fresh flow receives his content weighed by importance
 
-A fresh flow receives the living's content weighed by importance, and only the important part; not his messages one by one, and not a summary of everything.
+A fresh flow receives the living's content weighed by importance, and only the important part.
 
 ```mermaid
 flowchart TB
@@ -34,9 +34,9 @@ flowchart TB
 
 ## A flow is started with a remembering
 
-A launch names how far back the new flow remembers: the raw vision and notion logs of its predecessors to a depth, or of flows named one by one. The remembering is a field of the launch; the belief modules come from the declaration, from main; the brief comes last and carries no vision. There is no handover; the logs are the record.
+A launch names how far back the new flow remembers: the raw vision and notion logs of its predecessors to a depth, or of flows named one by one. The remembering is a field of the launch; the belief modules come from the declaration, from main; the brief comes last and carries the task alone. The logs are the record.
 
-A refreshed flow receives its beliefs and the raw vision and notion logs named at its launch, and nothing from its predecessor's own hand: no summary, no handover. The predecessor's biases end with it.
+A refreshed flow receives its beliefs and the raw vision and notion logs named at its launch, and those alone. The predecessor's biases end with it.
 
 ```
 RememberingDepth.Integer
