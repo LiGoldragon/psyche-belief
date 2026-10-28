@@ -18,17 +18,17 @@ The Capsule is the component that makes where a flow runs. Its first embodiment 
 
 Herdr is one backend of the Capsule, the component that gives a flow its place to run; the backend may be exchanged.
 
-Flow manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run, and what is addressed is always the metaflow, never a flow. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
+Flow manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run, and what is addressed is always the metaflow. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
 
 Psyche, Mind and Field have similar payloads, and they go under one: the metaflow, whose aspect is Psyche, Mind or Field.
 
-A topic never dies; it goes idle, its flows turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its belief modules, so Flow knows what to start it with, together with the new input that warrants it.
+A topic lives on; when idle, its flows are turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its belief modules, so Flow knows what to start it with, together with the new input that warrants it.
 
 A metaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
 
-A topic's name is a camelCase identifier, uncapitalized. Short term, it is kept exactly as written: Flow refuses a name that is not one and never lowers its capitals, so primaryCommitting stays primaryCommitting. A flow's id is the hash of the harness's session id, kept to six characters and lengthened when two collide, so a transcript is found from the flow id. The flow id stays the hash; its word form waits for a later version. Long term, the flow id is also written in three words, which convert back to the hash. Where the harness lets Flow choose the session id, Flow chooses it before the flow starts and the flow reads it in its prompt; where the harness assigns it, Flow learns it when the flow binds. No flow declares its id: every call to Flow is identified by the calling process. Anybody may call Flow, a flow for its own refresh among them: because the CLI checks the calling process, a flow refreshes itself safely.
+A topic's name is a camelCase identifier, uncapitalized. Short term, it is kept exactly as written: Flow refuses a name that is not one and never lowers its capitals, so primaryCommitting stays primaryCommitting. A flow's id is the hash of the harness's session id, kept to six characters and lengthened when two collide, so a transcript is found from the flow id. The flow id stays the hash; its word form waits for a later version. Long term, the flow id is also written in three words, which convert back to the hash. Where the harness lets Flow choose the session id, Flow chooses it before the flow starts and the flow reads it in its prompt; where the harness assigns it, Flow learns it when the flow binds. Every call to Flow is identified by the calling process. Anybody may call Flow, a flow for its own refresh among them: because the CLI checks the calling process, a flow refreshes itself safely.
 
 In the chat a flow is named by its metaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
@@ -37,13 +37,13 @@ A request reaching a metaflow is one of a closed set of types, each with its wak
 A flow woken for a metaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
 
 What has been queued for an idle metaflow, the vision touching its topic among it, is injected with the request that wakes it, so the flow knows it as soon as it wakes.
-A metaflow is not woken each time something touching its topic accumulates.
+A metaflow wakes when a request needs it; what touches its topic queues until then.
 
-Flow exposes everything from the harness, the bare input: a flow is started, stopped and sent a message through Flow, and Message makes use of it. Message is the send path: a flow asks Message to send, Message asks Flow to deliver and subscribes to Flow's events, and a flow no longer calls Flow raw to send.
+Flow exposes everything from the harness, the bare input: a flow is started, stopped and sent a message through Flow, and Message makes use of it. Message is the send path: a flow asks Message to send, Message asks Flow to deliver and subscribes to Flow's events.
 
-A flow does not wait on a timer for another flow's work: the flow that finishes messages the flow that needs to know.
+The flow that finishes messages the flow that needs to know.
 
-A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the living. A message from another flow that only updates it needs no full presentation. A presentation takes its form from the belief modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no belief module.
+A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the living. A message from another flow that only updates it is answered with a short note. A presentation takes its form from the belief modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no belief module.
 
 ## Starting flows
 
@@ -63,19 +63,19 @@ flowchart TB
     b -- "starts" --> c["a fresh flow"]
 ```
 
-A fresh flow starts with every belief module its metaflow is bound to, none left to load afterwards: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
+A fresh flow starts with every belief module its metaflow is bound to, all loaded at its start: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
 
 A simplified flow is a kind of flow made for judgment alone: it starts with a system prompt of its own, it has no regular tool, and its response is its message.
 
 A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default belief modules and its variations. The flow ethos holds the specification.
 
-Short term, a Primary is not started without its Secondary, and the Secondary starts first.
+Short term, the Secondary starts first, then its Primary.
 
 Long term, a Primary is a simplified flow, used only to render judgment: guiding a design or posing questions.
 
-To the Nexus, a module's location is nothing but its registry entry.
+To the Nexus, a module's location is its registry entry.
 
-The system prompt is not one thing: it is composed of modules of several types, and what a harness calls a skill overlaps with them.
+The system prompt is composed of modules of several types, and what a harness calls a skill overlaps with them.
 Its anatomy is drawn up in ethos from a study of system prompts of every kind, each line placed by what it is and by the kind of guidance it belongs to.
 Where the harness allows it, a part of a main flow's system prompt is the main flow's alone and is not passed down to its subagents.
 
@@ -90,18 +90,18 @@ Long term, every module composed into a prompt is checked against its source by 
 ## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.
-Every belief module lives outside it, the basic modules included, so that a change to a module causes no Nix rebuild.
+Every belief module lives outside it, the basic modules included, so that a module changes live.
 The basic modules give our own take on how an agent behaves in a harness, replacing the prompt the harnesses build in.
 
 ## A replaced session is reaped by the refresh itself
 
-Reaping belongs to the refresh event, not to a later sweep. A refreshed flow
-takes the replaced end out of receiving messages, so a dead end is never
-left registered and addressable.
+Reaping belongs to the refresh event. A refreshed flow
+takes the replaced end out of receiving messages, so only live ends stay
+registered and addressable.
 
-Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state without polling; a marked block landing in a transcript becomes an action, a book among them, with no tool call by the flow; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
+Every harness event reaches Flow through the harness's hooks calling the Flow CLI, so Flow knows each flow's state as it changes; a marked block landing in a transcript becomes an action, a book among them; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
 
-A flow is refreshed when its context passes its model's threshold: it is told nothing and writes no handover; it is given no new message, Flow keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in Flow; an OpenAI model's is lower than a Claude model's.
+A flow is refreshed when its context passes its model's threshold: Flow keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in Flow; an OpenAI model's is lower than a Claude model's.
 
 Compaction is an absolute emergency measure: a compaction request is refused while the context is below a threshold.
 
@@ -111,11 +111,11 @@ An ephemeral flow is a continuous job flow that does not wake back up: it takes 
 
 ## A superseded flow is closed
 
-An abandoned, duplicated or superseded flow is closed, archived and deregistered, and never messaged or woken.
+An abandoned, duplicated or superseded flow is closed, archived and deregistered.
 
 ## Herdr holds the panes
 
-Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Flow starts a flow in a pane of its own, names a sender by the pane it runs in, and delivers an abrupt message by typing it into the recipient's pane. Herdr is used as it is and never modified.
+Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Flow starts a flow in a pane of its own, names a sender by the pane it runs in, and delivers an abrupt message by typing it into the recipient's pane. Herdr is used as it is.
 
 ## A real-world test of Flow
 
@@ -137,7 +137,7 @@ The number of running flows is kept low: a topic flow no longer used is retired.
 
 ## Restarting without waking
 
-A flow can be restarted without being woken: its harness closes, its transcript stays, and its successor runs when a message wakes it. A flow can also restart itself. A restart that is meant not to wake the flow sends it nothing; what arrives queues for its successor.
+A flow can be restarted without being woken: its harness closes, its transcript stays, and its successor runs when a message wakes it. A flow can also restart itself. A restart meant to leave the flow asleep is done from outside; what arrives queues for its successor.
 
 ## What a refresh carries
 
