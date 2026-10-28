@@ -6,7 +6,7 @@ dependencies: []
 ## A message is a datom, and it arrives as one
 
 The message body is a datom that lands in the recipient's prompt as a
-datom-formatted object. There is no envelope around it.
+datom-formatted object. The datom is the whole message.
 
 ## Priority is a head on the datom
 
@@ -46,8 +46,8 @@ A message between flows says what the sender intends to do and what it has done.
 
 ## A messaging test sends one message
 
-A messaging test sends one message, to a flow that needs it anyway or to a Quaternary started for it and stopped after; it never goes to every flow and never wakes a Primary.
+A messaging test sends one message, to a flow that needs it anyway or to a Quaternary started for it and stopped after.
 
 ## When Flow holds a delivery
 
-When Flow holds a delivery, the sender falls back to direct Herdr messaging: it finds the recipient's pane in the pane list, sends the text with the first words naming the sender, then Enter. The fallback changes the carrier, never the address: a message for a Primary goes to its Secondary's pane, by Flow or by Herdr alike; no flow but the Secondary writes into a Primary's pane.
+When Flow holds a delivery, the sender falls back to direct Herdr messaging: it finds the recipient's pane in the pane list, sends the text with the first words naming the sender, then Enter. The fallback changes the carrier and keeps the address: a message for a Primary goes to its Secondary's pane, by Flow or by Herdr alike; the Secondary alone writes into a Primary's pane.
