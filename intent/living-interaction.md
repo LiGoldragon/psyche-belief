@@ -6,6 +6,7 @@ dependencies: []
 ## Every main flow interacts with the psyche
 
 Every main flow interacts with the psyche, so every main flow loads living-interaction and relays what it hears to a Psyche flow.
+What the living says is relayed in his words; a summary of them, or a path to them, is the flow’s inference and never stands in for them.
 
 ## A question is intelligible on its own
 
