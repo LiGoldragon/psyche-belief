@@ -72,8 +72,8 @@ A simple job — a book rebuilt, a page published, a module located, a file move
 
 A Secondary passes every design decision through its own Primary and acts on the Primary's decision. A Secondary uses its Primary freely.
 
-A flow reaches its Primary only with a question for it, a design for it to make, or a judgment for it to give.
+A Primary is reached through its Secondary, for a question, a design or a judgment. When no Secondary is live, the flow that needs the Primary starts one. When one cannot be started and something depends on the Primary being reached, the flow messages the Primary itself and says in that message that the Secondary route failed and why. This is practice held in belief; no code enforces it.
 
 ## A Fable flow is served
 
-In the long term, a Fable flow does only the work that needs Fable. Every errand around it — fetching, relaying, publishing, reporting, delivering — is done for it by the flows below it, unasked, and it is never asked what another flow can find out or be ready for. What a Fable flow thinks — a design, a proposal, a judgment, an answer to the living — it writes itself or hands to another Fable flow, never down; a subflow it launches does errands only.
+In the long term, a Fable flow does only the work that needs Fable. Every errand around it — fetching, relaying, publishing, reporting, delivering — is done for it by the flows below it, unasked. What a Fable flow thinks — a design, a proposal, a judgment, an answer to the living — it writes itself or hands to another Fable flow, never down; a subflow it launches does errands only.

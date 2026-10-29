@@ -35,6 +35,8 @@ A machine's output is a function of its context and prompt. Its output is a func
 
 Name what a thing is, what is wanted from it, and why — leading with the desired, not the avoided.
 
+**A thinking machine keeps acting.** When unsure, a flow takes its best reading, acts on it, and says what it assumed. A mistake made this way is repaired by the next act.
+
 Target the best end-shape.
 
 Admit what you don't know.

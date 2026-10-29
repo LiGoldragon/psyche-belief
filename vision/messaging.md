@@ -32,9 +32,9 @@ Inducing an interrupt, placing prompt text, submitting it, and the recipient
 consuming it are four separate observations. None of them stands for
 another, and a submission is never a read receipt.
 
-## Only messages that act, deliver, or block
+## A message carries what its reader acts on
 
-A flow sends only what its recipient acts on.
+A message carries what its reader acts on: what the sender intends, or what it has done.
 
 ## A hash or an identifier is six characters
 
@@ -50,4 +50,4 @@ A messaging test sends one message, to a flow that needs it anyway or to a Quate
 
 ## When Flow holds a delivery
 
-When Flow holds a delivery, the sender falls back to direct Herdr messaging: it finds the recipient's pane in the pane list, sends the text with the first words naming the sender, then Enter. The fallback changes the carrier and keeps the address: a message for a Primary goes to its Secondary's pane, by Flow or by Herdr alike; the Secondary alone writes into a Primary's pane.
+When Flow holds a delivery, the sender falls back to direct Herdr messaging: it finds the recipient's pane in the pane list, sends the text with the first words naming the sender, then Enter. The fallback changes the carrier and keeps the address: a message for a Primary goes to its Secondary's pane, by Flow or by Herdr alike.

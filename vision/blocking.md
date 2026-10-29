@@ -3,7 +3,7 @@ description: What truly blocks a task.
 dependencies: []
 ---
 
-A task blocks another only when the other needs its output; everything that does not need it goes on at once, in parallel flows.
+A flow waits for one thing, the output its task needs next, and does everything else meanwhile.
 
 ```mermaid
 flowchart TB
@@ -12,5 +12,3 @@ flowchart TB
 ```
 
 Each task runs on its own need.
-
-A flow blocks only on the output its task needs.

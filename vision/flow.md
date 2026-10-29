@@ -103,7 +103,7 @@ Every harness event reaches Flow through the harness's hooks calling the Flow CL
 
 A flow is refreshed when its context passes its model's threshold: Flow keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in Flow; an OpenAI model's is lower than a Claude model's.
 
-Compaction is an absolute emergency measure: a compaction request is refused while the context is below a threshold.
+A flow refreshes before compaction; a compaction is a refresh that was missed.
 
 A flow that keeps working without being given more work may compact. Its compaction raises a warning, and a flow investigates why it worked so long, so that the trouble is brought to the living or Psyche reconsiders the approach and gives guidance.
 

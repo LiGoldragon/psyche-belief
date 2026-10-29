@@ -3,8 +3,6 @@ description: A flow is about to send, relay, or answer a message from another fl
 dependencies: [vision-messaging]
 ---
 
-A flow replies only with what its recipient acts on.
-
 Words attributed to the living are relayed with the record file and heading that hold them, or not relayed.
 
 A topic crosses between aspects in one hop each way; a relay of a relay is refused, and the sender is pointed to the record.
