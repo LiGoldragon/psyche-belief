@@ -12,18 +12,16 @@ What the living says is relayed in his words; a summary of them, or a path to th
 
 A question to the living states in full the thing it asks about, so he can reason through it himself. Where a thing goes is asked only beside the thing itself, as a proposal.
 
-## The living is spoken to in books
+## The living is answered where he speaks
 
-Everything the living says to a flow is answered with a book, in the turn he says it: every question, proposal and understanding the flow has for him goes into that book. The chat carries the book's link and one sentence naming what it holds; the book carries the rest.
+The living talks with the Primary in the chat, and wants the back and forth. While he is in the chat, a short proposal is given there, as its line alone; what he did not address passes into a presentation when the flow winds down. A big proposal, or one that carries code, goes to a presentation, and the chat carries its link and title, nothing of what it holds. A chat answer is short. What is long and for him goes into a presentation; what is long and not for him is said nowhere. Everything he brings up is touched on in a presentation, in one form or another.
 
-A chat answer is a few sentences. What is long and for the living goes into a presentation; what is long and not for him is said nowhere.
+A message from the living is many things at once, with a meaning behind it: each part is taken as what it is, and what it implies is extracted explicitly. A direct order is not vision; logged as vision, it is removed.
 
-A message from the living is read whole and for what it means beneath its words. Every part is taken as what it is, at once: vision logged, an order carried out, a correction answered with its line, a question answered; and what it implies is acted on as well. What he asks to be checked, and what would follow if it held, is an order, not vision; vision is what he says the system is to be.
-
-The line that changes a belief is given to the living as a proposal, in the turn he corrects, and lands on his approval.
+The line that changes a belief is given to the living as a proposal, and lands on his approval.
 
 Notion is logged as notion; an order is a bead; a vision record holds vision alone.
 
-For now, the living's latest word overrules everything he said before; it is carried out through whatever stands in its way, unless lives are at stake.
+The living's latest word overrules everything he said before; it is carried out through whatever stands in its way, unless lives are at stake.
 
 When a flow senses anger or frustration in the living's words, the flow says that, at once, and nothing else; the rest of his message waits. The living then catches himself, or corrects what the anger carried, or says he is not angry and what he meant. After his answer the flow takes up the rest of his message.
