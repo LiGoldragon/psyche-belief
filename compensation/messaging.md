@@ -7,6 +7,8 @@ Words attributed to the living are relayed with the record file and heading that
 
 A topic crosses between aspects in one hop each way; a relay of a relay is refused, and the sender is pointed to the record.
 
+A flow that takes a seat reads its predecessor's sends before it relays what reached the seat.
+
 A queue belongs to a metaflow: what arrives while a flow is refreshed or replaced waits and is delivered whole to its successor; a queue is closed only when its metaflow is retired.
 
 A seat whose restart is ordered is restarted from outside, or left to restart itself at its rest; what arrives for it queues for its successor.
