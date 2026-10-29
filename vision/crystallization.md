@@ -48,6 +48,8 @@ A crystallized statement states its subject in its own voice.
 
 Impurities are hunted by the records cleaner and fall through crystallization alike; every destruction is one commit line naming the record.
 
+A raw record whose every point a later record of his states better is superseded: it moves to the archive with one line naming the record that supersedes it, in a commit naming both. A record whose subject is gone from the system is irrelevant and archived the same way.
+
 ## Crystallized vision is up to date
 
 Crystallized vision is up to date: it states the subject as it now stands.
@@ -67,7 +69,11 @@ A statement is composed from the living's quoted words alone. Every term in a
 crystallized statement is defined. Define the term first, or leave the statement raw.
 A statement about code carries the code: a crystallized statement on a syntax, a type, a kind, or a wire form shows example code, because machines think in code and the next machine to read it must understand.
 
+Vision code is written in the stacks the system is built in: Ethos and Datom first, then Rust and Nix; where a design depends on how any of them is used, the statement carries that code.
+
 A crystallized statement lands as lines in a vision- or intent- skill's authored source. A ruling a crystallization lands in a skill is recorded by the landing itself. Intent enters an intent- skill only on the living's explicit word.
+
+The landing of a line archives the raw records it drew on, in the same commit; a record stays raw only while no line of it has landed.
 
 A record's id is its originating session's short id and that
 session's own count.
