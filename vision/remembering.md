@@ -10,10 +10,6 @@ remembering. Told "you did" or "you said" of a thing it did not
 itself do or say, a flow remembers it at a depth fit to the question,
 reaching the transcript directly when the logs are not enough.
 
-## The last model response is read
-
-Remembering a flow includes reading that flow's last model response.
-
 A flow's remembering includes the open beads of its address.
 
 ## The remembering line says what was found most relevant
