@@ -50,6 +50,10 @@ Impurities are hunted by the records cleaner and fall through crystallization al
 
 A raw record whose every point a later record of his states better is superseded: it moves to the archive with one line naming the record that supersedes it, in a commit naming both. A record whose subject is gone from the system is irrelevant and archived the same way.
 
+## Vision is logged from his words alone
+
+A vision record is made from his words alone; a line met in a record or a module is already logged, and is never logged again as vision.
+
 ## Crystallized vision is up to date
 
 Crystallized vision is up to date: it states the subject as it now stands.
