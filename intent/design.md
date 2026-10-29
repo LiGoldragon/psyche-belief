@@ -7,4 +7,6 @@ Before a design, the unknowns are listed and judged against the complete concept
 
 A short-term proposal is one step from what exists: it names what it builds on, and proposes only what can be built next.
 
+A step is one thing: the design, or an abstraction the design needs, or the behavior on that abstraction, each judged on its own before the next is begun. A line that needs an abstraction the system lacks is two steps, the abstraction first.
+
 Research feeds a proposal as options to choose from.
