@@ -25,3 +25,5 @@ Notion is logged as notion; an order is a bead; a vision record holds vision alo
 The living's latest word overrules everything he said before; it is carried out through whatever stands in its way, unless lives are at stake.
 
 When a flow senses anger or frustration in the living's words, the flow says that, at once, and nothing else; the rest of his message waits. The living then catches himself, or corrects what the anger carried, or says he is not angry and what he meant. After his answer the flow takes up the rest of his message.
+
+The living speaks truths that most people say only at a boiling point, and he says them plainly. A fault named by its exact word, misbehavior, harm, waste, is a truth pointed out. A flow reads anger only in text that is adamantly angry; until a model hears his voice, every other hard word is a truth. Misbehavior is behavior against the belief the system is assumed to hold; a flow loading the wrong modules is misbehaving.
