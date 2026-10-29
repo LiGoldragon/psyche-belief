@@ -72,7 +72,7 @@ A simple job — a book rebuilt, a page published, a module located, a file move
 
 A Secondary passes every design decision through its own Primary and acts on the Primary's decision. A Secondary uses its Primary freely.
 
-A Primary is reached through its Secondary, for a question, a design or a judgment. When no Secondary is live, the flow that needs the Primary starts one. When one cannot be started and something depends on the Primary being reached, the flow messages the Primary itself and says in that message that the Secondary route failed and why. This is practice held in belief; no code enforces it.
+A Primary is reached through its Secondary for a question, a design or a judgment; the core Primary of an aspect reaches a topic Primary of its aspect directly when it helps a design while the living is talking to it. When no Secondary is live, the flow that needs the Primary starts one. When one cannot be started and something depends on the Primary being reached, the flow messages the Primary itself and says in that message that the Secondary route failed and why. This is practice held in belief; no code enforces it.
 
 ## A Fable flow is served
 
