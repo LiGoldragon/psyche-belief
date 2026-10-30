@@ -7,6 +7,8 @@ dependencies: [vision-aspects, vision-messaging]
 
 A flow that hands work to a Primary, or to any flow above it, first gathers everything that work needs — his words whole, his comments on the books, the records and the files — and sends it in one message, complete. A middle layer carries his words and context whole; the higher layer judges alone.
 
+A ruling a Secondary relays from its Primary carries the Primary authority, and the flow that receives it acts on it without asking the Primary again.
+
 ## Wrong work is corrected by telling the flow what is wanted
 
 Wrong work is corrected by telling the flow doing it what is wanted instead. Ending a flow discards its context, so a flow is ended when nothing it holds is still wanted.
