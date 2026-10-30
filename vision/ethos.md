@@ -198,7 +198,7 @@ An import may stand where the type is used, with no entry in the imports section
 ```
 Library
 []                              ; imports
-[ Topic:custom:Name             ; an alias, inline
+[ Topic:custom:Name             ; a newtype, inline
   Failure.{ :protos:Error       ; a field, inline
             String } ]
 []                              ; traits
@@ -293,7 +293,7 @@ The Ethos:
 ```
 Library
 []                                         ; imports
-[ FilePath.String                          ; types: FilePath is an alias of String
+[ FilePath.String                          ; types: FilePath is a newtype of String
   SyntaxError.Vector<FilePath>             ;        SyntaxError is a vector of FilePath
   GenerationFailure.[ SyntaxError          ;        an enum: the variant SyntaxError is bare here,
                       Unwritable ] ]       ;        but SyntaxError is a defined type, so it carries one
@@ -406,7 +406,7 @@ signal-orchestrate = { version = "…" }
 
 Each section has its own parsing context; placement carries the
 meaning. Head then symbol is a variant of `Query` or `Response` in a
-Signal's first two sections, an alias in the types section. An enum
+Signal's first two sections, a newtype in the types section. An enum
 declaration is a vector of its variants, and uses the vector's
 delimiters. Ethos may generate default implementations for Query and
 Response, which is why Signal is its own root.
