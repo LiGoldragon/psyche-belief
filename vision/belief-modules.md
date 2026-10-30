@@ -24,7 +24,7 @@ A subject the living reviews or asks about has a module, on its topic or a broad
 
 A vision module may be substantial: it holds the code that is important to the vision, the invariant parts, which the living reviews as he reviews prose.
 
-The code important to a vision lives in that topic's vision module. The invariant code of Flow, which the Psyche core Primary sees going into the Flow Nexus, lives in vision:flow; a Chronos invariant lives in vision:chronos.
+The code important to a vision lives in that topic's vision module. The invariant code of the Flow Nexus, which the Psyche core Primary sees going into the Flow Nexus, lives in vision:flow-nexus; a Chronos invariant lives in vision:chronos.
 
 ```mermaid
 flowchart TB

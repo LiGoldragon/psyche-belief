@@ -25,4 +25,4 @@ A lunation of 31° between the Sun and the Moon reads as Taurus.
 ## The golden example
 
 Chronos is the golden example: a simple, idiomatic Nexus with a full ethos specification, built on Ethos and the Nexus.
-Flow is implemented from it, then the other nexuses.
+The Flow Nexus is implemented from it, then the other nexuses.

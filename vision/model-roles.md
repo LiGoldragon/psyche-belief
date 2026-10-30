@@ -39,7 +39,7 @@ Sol stands in for nothing, since it designs nothing.
 
 ## One declaration sets the model everywhere
 
-The model is declared once, as typed configuration in Flow, mutated only
+The model is declared once, as typed configuration in the Flow Nexus, mutated only
 through the meta wire. Skill variables carry that value by name into every
 skill, launcher and brief. Nothing else holds a model name, so a launcher
 never writes one by hand and no flow is started in a metaflow by accident.

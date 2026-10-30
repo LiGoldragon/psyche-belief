@@ -170,7 +170,7 @@ Library
 []
 ```
 
-Signal, what Flow says:
+Signal, what the Flow Nexus says:
 
 ```ethos
 Signal
@@ -184,7 +184,7 @@ Signal
 []
 ```
 
-Operation, what Flow does:
+Operation, what the Flow Nexus does:
 
 ```ethos
 Operation
@@ -198,7 +198,7 @@ Operation
             Login.Vector<String> } ]
 ```
 
-Memory, what Flow remembers:
+Memory, what the Flow Nexus remembers:
 
 ```ethos
 Memory

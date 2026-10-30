@@ -32,7 +32,7 @@ Ethos and Nexus are basic infrastructure: the wood houses are built from. Chrono
 ```
 
 The anatomy of ethos lives in vision-ethos itself, as
-the first golden ethos; Flow's ethos is one example,
+the first golden ethos; the Flow Nexus's ethos is one example,
 in its own skill.
 
 ## What Ethos is
