@@ -19,3 +19,7 @@ Every build, test and compile runs through Nix on Prometheus, the remote builder
 ## Outside declarative deployment, call by store path
 
 A thing tested outside declarative deployment is called by its full store path; the environment, PATH, links and session files, is changed only by a declared activation, never by hand.
+
+## A working stack runs beside development
+
+A working stack runs in parallel to development at all times: the stable Flow, Curriculum and Message keep serving while a new version is built and tested beside them, and nothing in development changes what the living or a live flow depends on until the new stack is proven.
