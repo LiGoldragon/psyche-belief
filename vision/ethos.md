@@ -7,8 +7,6 @@ dependencies: []
 
 Ethos and Nexus are basic infrastructure: the wood houses are built from. Chronos is the example project built with them, short term.
 
-## Where the golden ethos lives
-
 ## What Ethos is
 
 Ethos is the schema language. Of the two main syntaxes most agents
