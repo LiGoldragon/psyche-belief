@@ -1,4 +1,4 @@
-# psyche-context
+# psyche-belief
 
 This repository holds the Psyche aspect's authored belief modules in
 `vision/`, `intent/` and `spirit/`, with subject-only filenames. Stable
