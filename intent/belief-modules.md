@@ -12,4 +12,4 @@ The module types stand in one order, highest first: spirit, intent, vision, know
 
 ## A fault in conduct is a fault in belief
 
-A fault in conduct is a fault in belief: the belief that produced it is removed first; a line is added only where no removal mends the conduct.
+A fault in conduct is a fault in belief.
