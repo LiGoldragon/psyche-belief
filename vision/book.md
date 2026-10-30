@@ -17,7 +17,7 @@ A book is belief modules in the forms below, each under its repo › path; its h
 
 A module shown whole, as it stands, situates the landing.
 
-A module shown beside another, both as they stand, serves comparison: psyche with knowledge, with compensation.
+A module shown beside another, both as they stand, serves comparison: psyche with knowledge.
 
 A line added shows in green.
 

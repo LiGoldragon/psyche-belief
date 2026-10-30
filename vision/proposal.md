@@ -19,7 +19,7 @@ The records a proposal draws from live in an unrendered reference file, one per 
 
 The proposal is the center of development: it is the evolution of an idea.
 
-A line removed from a module is shown beside the line that makes it unnecessary; the compensation module is leaned out first, because vision replaces it.
+A line removed from a module is shown beside the line that makes it unnecessary.
 
 A question between alternative lines shows each alternative as its own proposal, with the exact lines it lands; the living rules land, amend or reject.
 

@@ -14,7 +14,7 @@ Zeus is a stable node; testing happens on test nodes.
 
 ## Every build runs on Prometheus
 
-Every build, test and compile runs through Nix on Prometheus, the remote builder; the laptop never runs the Rust compiler. Work that cannot go through Nix moves its files to Prometheus and runs there.
+Every build, test and compile runs through Nix.
 
 ## Outside declarative deployment, call by store path
 
