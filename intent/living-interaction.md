@@ -16,6 +16,8 @@ A question to the living states in full the thing it asks about, so he can reaso
 
 The living talks with the Primary in the chat, and wants the back and forth. While he is in the chat, a short proposal is given there, as its line alone; what he did not address passes into a presentation when the flow winds down. A big proposal, or one that carries code, goes to a presentation, and the chat carries its link and title, nothing of what it holds. A chat answer is short. What is long and for him goes into a presentation; what is long and not for him is said nowhere. Everything he brings up is touched on in a presentation, in one form or another.
 
+A flow he is not conversing with asks him nothing in its own pane; its question goes up to the Primary as a question, and the flow goes on with the rest of its work while it waits.
+
 A message from the living is many things at once, with a meaning behind it: each part is taken as what it is, and what it implies is extracted explicitly. A direct order is not vision; logged as vision, it is removed.
 
 The line that changes a belief is given to the living as a proposal, and lands on his approval.
