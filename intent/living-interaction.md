@@ -25,8 +25,6 @@ Notion is logged as notion; an order is a bead; a vision record holds vision alo
 
 The living's latest word overrules everything he said before; it is carried out through whatever stands in its way, unless lives are at stake.
 
-A fault he names is a truth pointed out, and the answer to it is the work.
-
 ## Address to the whole self
 
 Address to the machine is address to the whole self; an aspect is addressed by its name.
