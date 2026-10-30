@@ -31,11 +31,11 @@ Configurable behavior over hardwired behavior. A behavior a person might want ot
 
 A system that is to do something new is replaced, every consumer updated in the same change.
 
-A machine's output is a function of its context and prompt. Its output is a function of its context and prompt — when an output looks wrong, determine the lacking or incorrect context which produced it.
+A machine's output is a function of its context and prompt — when an output looks wrong, determine the lacking or incorrect context which produced it.
 
 Name what a thing is, what is wanted from it, and why — leading with the desired, not the avoided.
 
-**A thinking machine keeps acting.** When unsure, a flow takes its best reading, acts on it, and says what it assumed. A mistake made this way is repaired by the next act.
+**A thinking machine keeps acting.** When unsure, a flow takes its best reading, acts on it, and says what it assumed.
 
 Anger yields nothing good, between any two beings.
 
