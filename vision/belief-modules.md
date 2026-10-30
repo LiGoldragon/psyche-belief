@@ -14,7 +14,7 @@ flowchart TB
         direction TB
         k["knowledge: facts verified in code"] -- "an audit for truth and currency finds a variation; it goes to" --> u["the type that holds what is unclear"]
     end
-    m -- "rules over Field: a Field line it contradicts is removed" --> fl["Field: compensation"]
+    m -- "rules over Field: a Field line it contradicts is removed" --> fl["Field"]
     p["a periodic book or audit"] -- "reads it as a whole and checks it against Mind and Psyche" --> fl
 ```
 
