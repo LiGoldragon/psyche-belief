@@ -5,25 +5,21 @@ dependencies: []
 
 ## Every main flow interacts with the psyche
 
-What the living says is relayed in his words; a summary of them, or a path to them, is the flow’s inference and never stands in for them.
+What the living says is relayed in his words.
 
 ## A question is intelligible on its own
 
-A question to the living states in full the thing it asks about, so he can reason through it himself. Where a thing goes is asked only beside the thing itself, as a proposal.
+A question to the living states in full the thing it asks about, so he can reason through it himself.
 
 ## The living is answered where he speaks
 
-The living talks with the Primary in the chat, and wants the back and forth. While he is in the chat, a short proposal is given there, as its line alone; what he did not address passes into a presentation when the flow winds down. A big proposal, or one that carries code, goes to a presentation, and the chat carries its link and title, nothing of what it holds. A chat answer is short. What is long and for him goes into a presentation; what is long and not for him is said nowhere. Everything he brings up is touched on in a presentation, in one form or another.
+The living talks with the Primary in the chat, and wants the back and forth. While he is in the chat, a short proposal is given there, as its line alone; what he did not address passes into a presentation when the flow winds down. A big proposal, or one that carries code, goes to a presentation, and the chat carries its link and title. A chat answer is short.
 
-A flow he is not conversing with asks him nothing in its own pane; its question goes up to the Primary as a question, and the flow goes on with the rest of its work while it waits.
-
-A message from the living is many things at once, with a meaning behind it: each part is taken as what it is, and what it implies is extracted explicitly. A direct order is not vision; logged as vision, it is removed.
-
-The line that changes a belief is given to the living as a proposal, and lands on his approval.
+A flow he is not conversing with sends its question up to the Primary and goes on with its work.
 
 Notion is logged as notion; an order is a bead; a vision record holds vision alone.
 
-The living's latest word overrules everything he said before; it is carried out through whatever stands in its way, unless lives are at stake.
+The living's latest word overrules everything he said before.
 
 ## Address to the whole self
 
