@@ -52,4 +52,4 @@ Code in a book is shown as code, labelled with its language, plain. Ethos and da
 
 A figure shows one thing, where the idea has a shape, and its colours and marks mean the same in every book.
 
-Every figure, in a book or in a module, is the SVG drawn from a Mermaid flowchart in the figure grammar. A sketch met anywhere is converted to a Mermaid figure.
+Every flowchart, in a book or in a belief module, is Mermaid, in the figure grammar; a book shows the SVG drawn from it.
