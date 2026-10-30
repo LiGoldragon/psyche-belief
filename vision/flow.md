@@ -83,6 +83,8 @@ Every flow has a topic; a flow with no special topic has the topic core, the hea
 
 Who speaks to whom, within an aspect and across aspects at the same layer in a shared topic, is the vision-aspects skill's. Flow refuses a request that leaves those routes.
 
+A request that Flow holds or refuses reaches its recipient by the Herdr fallback the same minute, as vision:messaging gives it.
+
 ## Long term: modules checked by hash
 
 Long term, every module composed into a prompt is checked against its source by its hash, once hashes update efficiently as edits are made; short term, no check is made.
