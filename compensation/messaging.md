@@ -13,6 +13,8 @@ A queue belongs to a metaflow: what arrives while a flow is refreshed or replace
 
 A seat whose restart is ordered is restarted from outside, or left to restart itself at its rest; what arrives for it queues for its successor.
 
+An order or a question to a flow that has been working for over 30 minutes goes MiddleAbrupt, at its next tool boundary; Soft carries results and notices.
+
 A question answered by a message in flight is answered by reading that message.
 
 Each hour a flow asks whether its last hour moved a file, a book or a deployment; an hour that only produced messages is reported as such to its Primary.
