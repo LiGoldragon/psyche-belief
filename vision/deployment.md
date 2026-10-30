@@ -12,7 +12,7 @@ running on. Another host is used only when the living names it.
 
 Zeus is a stable node; testing happens on test nodes.
 
-## Every build runs on Prometheus
+## Every build runs through Nix
 
 Every build, test and compile runs through Nix.
 
