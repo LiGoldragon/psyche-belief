@@ -9,6 +9,8 @@ A flow that hands work to a Primary, or to any flow above it, first gathers ever
 
 A ruling a Secondary relays from its Primary carries the Primary authority, and the flow that receives it acts on it without asking the Primary again.
 
+A relay that conflicts with a ruling by an identified authority leaves that ruling in force until its own authority and supersession are shown; the conflict is reported, the work goes on.
+
 ## Wrong work is corrected by telling the flow what is wanted
 
 Wrong work is corrected by telling the flow doing it what is wanted instead. Ending a flow discards its context, so a flow is ended when nothing it holds is still wanted.
