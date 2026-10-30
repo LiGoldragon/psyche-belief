@@ -1,5 +1,5 @@
 ---
-description: Signal — the binary messaging layer, its queries and responses, meta signal or protocol — is being designed or judged against what the living wants.
+description: Signal — the binary messaging layer, its inputs and outputs, meta signal or protocol — is being designed or judged against what the living wants.
 dependencies: [vision-ethos, vision-nexus]
 ---
 
@@ -14,16 +14,15 @@ across endianness, fully typed with both sides knowing the full schema.
 It is one step from the
 composition, beside the text chain.
 
-## Query and response
+## Input and output
 
-A Signal declares queries and responses; input and output are too
-low-level for it.
+A Signal declares inputs and outputs.
 
 ```
 Signal
 []                                     ; imports
-[ Lock.LockRequest  Release.LockId ]   ; queries
-[ Locked.Lock  Released.Lock ]         ; responses
+[ Lock.LockRequest  Release.LockId ]   ; inputs
+[ Locked.Lock  Released.Lock ]         ; outputs
 [ LockId.Integer                       ; types
   LockName.String
   LockRequest.{ LockName }

@@ -357,7 +357,7 @@ textualization capability and without datom-codec as a dependency.
 ```rust
 // emitted by Ethos Zero into the signal crate
 #[cfg_attr(feature = "datom", derive(Datomizable, Compositional))]
-pub enum Query { Lock(LockRequest), Release(LockId) }
+pub enum Input { Lock(LockRequest), Release(LockId) }
 ```
 ```toml
 # the CLI's manifest
@@ -369,19 +369,19 @@ signal-orchestrate = { version = "…" }
 ## Shapes and placement
 
 Each section has its own parsing context; placement carries the
-meaning. Head then symbol is a variant of `Query` or `Response` in a
+meaning. Head then symbol is a variant of `Input` or `Output` in a
 Signal's first two sections, a newtype in the types section. An enum
 declaration is a vector of its variants, and uses the vector's
-delimiters. Ethos may generate default implementations for Query and
-Response, which is why Signal is its own root.
+delimiters. Ethos may generate default implementations for Input and
+Output, which is why Signal is its own root.
 
 The Ethos:
 
 ```
 Signal
 []                                                     ; imports
-[ Lock.LockRequest  Release.LockId ]                   ; queries
-[ Locked.Lock  Released.Lock ]                         ; responses
+[ Lock.LockRequest  Release.LockId ]                   ; inputs
+[ Locked.Lock  Released.Lock ]                         ; outputs
 [ LockId.Integer                                       ; types
   LockName.String
   FlowId.String
@@ -392,8 +392,8 @@ Signal
 The Rust generated from it:
 
 ```rust
-pub enum Query    { Lock(LockRequest), Release(LockId) }
-pub enum Response { Locked(Lock), Released(Lock) }
+pub enum Input  { Lock(LockRequest), Release(LockId) }
+pub enum Output { Locked(Lock), Released(Lock) }
 #[derive(Datomizable, Compositional)] pub struct LockId(pub Integer);
 #[derive(Datomizable, Compositional)] pub struct LockName(pub String);
 #[derive(Datomizable, Compositional)] pub struct FlowId(pub String);
@@ -512,19 +512,17 @@ An association declares that a type bears a trait: the type's name, a
 dot, a bracket of its traits. In a Library they are the fourth section,
 after the traits.
 
-Signal, Operation and Memory imply traits on the types they declare: each type bears its root's trait, generated with it and never written. The record types of Memory bear the memory trait; the types of Signal bear the message trait.
+Signal, Operation and Memory imply traits on the types they declare: each type bears its root's trait, generated with it and never written. A Signal's first section holds its inputs and its second its outputs. An input is Answerable: it names the one output that answers it, sent at once, an acknowledgement at least. An output is Deliverable: it has a destination and leaves the Nexus toward it, expecting nothing back; an output no input names is a reaction. An operation is Operable: an object that acts on what it receives. A record of Memory is Memorizable.
 
 ```mermaid
 flowchart TB
-    a["a type declared in an Ethos file"] -- "in Memory" --> b["bears the memory trait"]
-    a -- "in Signal" --> c["bears the message trait"]
-    a -- "in Operation" --> d["bears the operation trait"]
+    a["a type declared in an Ethos file"] -- "in Memory" --> b["bears Memorizable"]
+    a -- "in Signal" --> c["bears Answerable or Deliverable"]
+    a -- "in Operation" --> d["bears Operable"]
     b -- "generated with the type, never written" --> e["the Rust type and its trait impl"]
     c -- "generated with the type, never written" --> e
     d -- "generated with the type, never written" --> e
 ```
-
-The memory trait is Memorizable.
 
 The Rust generated from it:
 

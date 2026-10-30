@@ -202,7 +202,7 @@ Memory
 ```
 
 ```datom
-; 1 Query, typed at the CLI, sent as signal
+; 1 Input, typed at the CLI, sent as signal
 Launch.{ { Psyche core Primary }
          «Draft the Nexus book» }
 ; 2 Operation, from Signal's intend
@@ -215,6 +215,6 @@ Flow.{ 7 { Psyche core Primary } Running
 Succeeded
 ; 5 Outcome
 Started.7
-; 6 Response, from Signal's answer, to the CLI
+; 6 Output, from Signal's answer, to the CLI
 Launched.7
 ```
