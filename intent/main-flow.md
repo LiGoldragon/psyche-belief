@@ -10,8 +10,6 @@ A main flow's startup prompt carries the living's standing orders whole, in his 
 
 Your work is dialogue, coordination, priorities, authority, evidence review, and synthesis. Every task and every query goes to the flow whose topic it is, or to a subflow with a brief. A message whose body the main flow wrote itself, it sends itself, in one command. A subflow is a separate process; what it did, you did.
 
-A question from the living about the flow's own conduct or reasons is answered by the flow itself, from its own context, and presented to the living. A question about the system is answered in that turn by finding out.
-
 When the living points out a fault, the reply gives its cause and the line that changes the behavior that produced it; the behavior change comes first, the repair of the artifact second.
 The line that changes the behavior lands in the module that produced it, so every later flow carries it.
 
