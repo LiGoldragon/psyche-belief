@@ -1,6 +1,6 @@
 ---
 description: A design is judged for whether its pieces are enough, or a flow meets an unanswered question while designing or building.
-dependencies: [intent-design]
+dependencies: [intent:design]
 ---
 
 ## No one knows ahead that the pieces are enough

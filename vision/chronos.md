@@ -1,6 +1,6 @@
 ---
 description: Chronos, the Nexus that tells astrological time, is designed or judged against what the living wants it to be.
-dependencies: [vision-nexus, vision-ethos]
+dependencies: [vision:nexus, vision:ethos]
 ---
 
 ## Chronos tells astrological time

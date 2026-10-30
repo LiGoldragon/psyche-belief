@@ -1,6 +1,6 @@
 ---
 description: How a proposal of the living's vision is made: what it is made of, how its code is shown, and how it is shown to him.
-dependencies: [vision-crystallization]
+dependencies: [vision:crystallization]
 ---
 
 ## A proposal

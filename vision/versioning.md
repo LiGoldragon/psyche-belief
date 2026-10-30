@@ -1,6 +1,6 @@
 ---
 description: A Nexus is versioned, rewritten whole, run as stable and next, or upgraded while the system runs.
-dependencies: [vision-nexus]
+dependencies: [vision:nexus]
 ---
 
 ## The three numbers

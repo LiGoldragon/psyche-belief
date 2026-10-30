@@ -1,6 +1,6 @@
 ---
 description: The Flow Nexus — the Nexus that launches, names, tracks and ends flows — or a metaflow, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
-dependencies: [vision-nexus, vision-ethos]
+dependencies: [vision:nexus, vision:ethos]
 ---
 
 ## What it does
