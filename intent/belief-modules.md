@@ -10,6 +10,4 @@ An instruction names what the work must achieve; it leaves the means to the one 
 
 The module types stand in one order, highest first: spirit, intent, vision, knowledge. A module depends only on its own type or a higher one.
 
-## A fault in conduct is a fault in belief
-
 A fault in conduct is a fault in belief.
