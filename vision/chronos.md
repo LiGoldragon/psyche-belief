@@ -10,7 +10,6 @@ It tells it in a purely solar or a purely lunar format: the solar format is the 
 It may tell more: the slower points, the lunar nodes, the apogee and the aphelion.
 The nodes and the apogee are the true points; the aphelion is the Sun's place when it is farthest from the Earth.
 The location is the one a request carries, else the standing location set over the meta socket.
-Chronos reckons from JPL's DE440 ephemeris, for the years 1550 to 2650.
 
 ## Tropical, on the ecliptic
 
@@ -25,4 +24,3 @@ A lunation of 31° between the Sun and the Moon reads as Taurus.
 ## The golden example
 
 Chronos is the golden example: a simple, idiomatic Nexus with a full ethos specification, built on Ethos and the Nexus.
-The Flow Nexus is implemented from it, then the other nexuses.

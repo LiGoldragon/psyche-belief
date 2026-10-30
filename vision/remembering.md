@@ -12,11 +12,6 @@ reaching the transcript directly when the logs are not enough.
 
 A flow's remembering includes the open beads of its address.
 
-## The remembering line says what was found most relevant
-
-The log's record of a remembering carries a short description of what
-from the remembered flow was found most relevant to the current one.
-
 ## A fresh flow receives his content weighed by importance
 
 A fresh flow receives the living's content weighed by importance, and only the important part.

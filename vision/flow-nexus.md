@@ -22,13 +22,11 @@ The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Laye
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
 
-Psyche, Mind and Field have similar payloads, and they go under one: the metaflow, whose aspect is Psyche, Mind or Field.
-
 A topic lives on; when idle, its flows are turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its belief modules, so the Flow Nexus knows what to start it with, together with the new input that warrants it.
 
 A metaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
 
-A topic's name is a camelCase identifier, uncapitalized. Short term, it is kept exactly as written: the Flow Nexus refuses a name that is not one and never lowers its capitals, so primaryCommitting stays primaryCommitting. A flow's id is the hash of the harness's session id, kept to six characters and lengthened when two collide, so a transcript is found from the flow id. The flow id stays the hash; its word form waits for a later version. Long term, the flow id is also written in three words, which convert back to the hash. Where the harness lets the Flow Nexus choose the session id, the Flow Nexus chooses it before the flow starts and the flow reads it in its prompt; where the harness assigns it, the Flow Nexus learns it when the flow binds. Every call to the Flow Nexus is identified by the calling process. Anybody may call the Flow Nexus, a flow for its own refresh among them: because the CLI checks the calling process, a flow refreshes itself safely.
+A topic's name is a camelCase identifier, uncapitalized. A flow's id is the hash of the harness's session id, kept to six characters and lengthened when two collide, so a transcript is found from the flow id. Long term, the flow id is also written in three words, which convert back to the hash. Every call to the Flow Nexus is identified by the calling process. Anybody may call the Flow Nexus, a flow for its own refresh among them: because the CLI checks the calling process, a flow refreshes itself safely.
 
 In the chat a flow is named by its metaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
@@ -73,8 +71,6 @@ Short term, the Secondary starts first, then its Primary.
 
 Long term, a Primary is a simplified flow, used only to render judgment: guiding a design or posing questions.
 
-To the Nexus, a module's location is its registry entry.
-
 The system prompt is composed of modules of several types, and what a harness calls a skill overlaps with them.
 Its anatomy is drawn up in ethos from a study of system prompts of every kind, each line placed by what it is and by the kind of guidance it belongs to.
 Where the harness allows it, a part of a main flow's system prompt is the main flow's alone and is not passed down to its subagents.
@@ -83,33 +79,21 @@ Every flow has a topic; a flow with no special topic has the topic core, the hea
 
 Who speaks to whom, within an aspect and across aspects at the same layer in a shared topic, is the vision-aspects skill's. The Flow Nexus refuses a request that leaves those routes.
 
-A request that the Flow Nexus holds or refuses reaches its recipient by the Herdr fallback the same minute, as vision:messaging gives it.
-
-## Long term: modules checked by hash
-
-Long term, every module composed into a prompt is checked against its source by its hash, once hashes update efficiently as edits are made; short term, no check is made.
-
 ## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.
 Every belief module lives outside it, the basic modules included, so that a module changes live.
 The basic modules give our own take on how an agent behaves in a harness, replacing the prompt the harnesses build in.
 
-## A replaced session is reaped by the refresh itself
-
-Reaping belongs to the refresh event. A refreshed flow
-takes the replaced end out of receiving messages, so only live ends stay
-registered and addressable.
-
 Every harness event reaches the Flow Nexus through the harness's hooks calling the Flow CLI, so the Flow Nexus knows each flow's state as it changes; a marked block landing in a transcript becomes an action, a book among them; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
 
-A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus; an OpenAI model's is lower than a Claude model's.
+A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus.
 
 A flow refreshes before compaction; a compaction is a refresh that was missed.
 
 A flow that keeps working without being given more work may compact. Its compaction raises a warning, and a flow investigates why it worked so long, so that the trouble is brought to the living or Psyche reconsiders the approach and gives guidance.
 
-An ephemeral flow is a continuous job flow that does not wake back up: it takes jobs while it runs, up to a ceiling on its context, and past the ceiling it is given no new job and another ephemeral flow takes it. With Claude the ceiling is 300,000 tokens, and the flow is wound down at 250,000.
+An ephemeral flow is a continuous job flow that does not wake back up: it takes jobs while it runs, up to a ceiling on its context, and past the ceiling it is given no new job and another ephemeral flow takes it.
 
 ## A superseded flow is closed
 
@@ -117,7 +101,7 @@ An abandoned, duplicated or superseded flow is closed, archived and deregistered
 
 ## Herdr holds the panes
 
-Herdr is the third-party terminal workspace every flow runs in, one pane per flow. The Flow Nexus starts a flow in a pane of its own, names a sender by the pane it runs in, and delivers an abrupt message by typing it into the recipient's pane. Herdr is used as it is.
+Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Herdr is used as it is.
 
 ## A real-world test of the Flow Nexus
 

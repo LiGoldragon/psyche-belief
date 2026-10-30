@@ -11,8 +11,7 @@ structure — this is the code that can be shared between all parsers
 and belongs in protos. Datom is a protos dialect, carrying only
 pure typed data; it does not take part in the multi-pass
 rust-generation engine that ethos, nomos and logos are slated to
-become, but it shares the protos style. The final fully-decomposed
-engine with three daemons is the protos engine.
+become, but it shares the protos style.
 
 ## What Protos knows
 
@@ -101,11 +100,6 @@ enum, and none of them means anything on its own: whether an
 enclosure is a struct or a vector, whether a bare run is a name or a
 number, is said by the conceptual layer that reads it.
 
-```rust
-Protos::Enclosed(Braced, vec![Protos::Bare("Ada"), Protos::Bare("1990")])   // structure: an enclosure of two runs
-Datom::Struct(vec![Datom::Bare("Ada"), Datom::Bare("1990")])                // meaning: a struct of two positions
-```
-
 ## Structure
 
 Structure is the word for every unit of the text; its type is the
@@ -125,8 +119,7 @@ too.
 An enclosed structure stands between its delimiters; a bare structure
 has no delimiters. A brace-enclosed structure's arity is anatomical;
 a bracket-enclosed structure's arity is not. Angle brackets are a
-real protos delimiter. The key-value map, which the guillemets once
-delimited, is dropped entirely from protos and its dialects.
+real protos delimiter.
 
 ## String, escape, error
 

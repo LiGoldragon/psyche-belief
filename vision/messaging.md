@@ -12,15 +12,7 @@ datom-formatted object. The datom is the whole message.
 
     Priority.[HardAbrupt MiddleAbrupt Soft]
 
-## Delivery is harness-specific, and the mechanism differs per tier
-
-Hard abrupt on Codex is one Escape, and the prompt submits itself. Hard
-abrupt on Claude is two Escapes — the first is taken by the input editor in
-vim mode and never reaches the harness — then the prompt, then an explicit
-Enter, because after an interrupt the prompt is placed in the composer
-without being submitted. Middle abrupt is the terminal prompt, which a
-Claude recipient receives at its next tool boundary. Soft waits for the
-recipient to finish.
+## Delivery is harness-specific
 
 A pressing message wakes its recipient; a message that only queues carries what may wait.
 
@@ -35,19 +27,3 @@ another, and a submission is never a read receipt.
 ## A message carries what its reader acts on
 
 A message carries what its reader acts on: what the sender intends, or what it has done.
-
-## A hash or an identifier is six characters
-
-A hash or an identifier in a message is its first six characters.
-
-## A message says what the sender intends and what it has done
-
-A message between flows says what the sender intends to do and what it has done.
-
-## A messaging test sends one message
-
-A messaging test sends one message, to a flow that needs it anyway or to a Quaternary started for it and stopped after.
-
-## When the Flow Nexus holds a delivery
-
-When the Flow Nexus holds a delivery, the sender falls back to direct Herdr messaging: it finds the recipient's pane in the pane list, sends the text with the first words naming the sender, then Enter. The fallback changes the carrier and keeps the address: a message for a Primary goes to its Secondary's pane, by the Flow Nexus or by Herdr alike.

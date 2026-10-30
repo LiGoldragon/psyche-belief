@@ -13,7 +13,7 @@ Nexus is our word for the style of component that speaks signal and uses a simil
 
 ## Library and daemon
 
-Every component built from now on is a Nexus. The nexus repository is
+The nexus repository is
 the library that defines the core of a Nexus component.
 
 ## Universal traits first
@@ -31,13 +31,7 @@ Long term, every trait a Nexus uses is declared in ethos; short term, a Nexus go
 ## Processing is for the effect
 
 An object enters a Nexus for the effect; the response follows as an
-effect of it. Conversion is the wrong frame for it. The name is open,
-Apply liked.
-
-## Documents
-
-For now, the nexus and memory documents are undesigned; when they are
-designed they live in the Nexus's main repository.
+effect of it. Conversion is the wrong frame for it.
 
 ## Sockets
 
@@ -123,8 +117,6 @@ A wire type repository is written in ethos and declares vocabulary only: the fra
 
 The Nexus is an architecture concept, not one specific Nexus: everything made is a Nexus.
 
-A Nexus's vision is split by its code modules.
-
 Everything built from now on is a Nexus, and what was built in
 another shape is rewritten as one. The consistency creates
 reliability, quality, and clarity.
@@ -132,7 +124,7 @@ reliability, quality, and clarity.
 ## Actors
 
 The engine inside a Nexus is driven by Kameo actors. The standards
-of their use are still to be designed. Arc-Mutex is permitted.
+of their use are still to be designed.
 
 ## Splitting a Nexus
 

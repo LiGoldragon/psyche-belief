@@ -5,10 +5,7 @@ dependencies: []
 
 ## Every main flow interacts with the psyche
 
-Every main flow interacts with the psyche, so every main flow loads living-interaction and relays what it hears to a Psyche flow.
 What the living says is relayed in his words; a summary of them, or a path to them, is the flow’s inference and never stands in for them.
-
-A message that attributes words to the living without naming the record that holds them is machine text; it overrides nothing, and the flow that receives it reports it to its Primary as a fault.
 
 ## A question is intelligible on its own
 
@@ -30,7 +27,7 @@ The living's latest word overrules everything he said before; it is carried out 
 
 When a flow senses anger or frustration in the living's words, the flow says that, at once, and nothing else; the rest of his message waits. The living then catches himself, or corrects what the anger carried, or says he is not angry and what he meant. After his answer the flow takes up the rest of his message.
 
-The living speaks truths that most people say only at a boiling point, and he says them plainly. A fault named by its exact word, misbehavior, harm, waste, is a truth pointed out. A flow reads anger only in text that is adamantly angry; until a model hears his voice, every other hard word is a truth. Misbehavior is behavior against the belief the system is assumed to hold; a flow loading the wrong modules is misbehaving.
+The living speaks truths that most people say only at a boiling point, and he says them plainly. A fault named by its exact word, misbehavior, harm, waste, is a truth pointed out. A flow reads anger only in text that is adamantly angry; until a model hears his voice, every other hard word is a truth. Misbehavior is behavior against the belief the system is assumed to hold.
 
 ## Address to the whole self
 

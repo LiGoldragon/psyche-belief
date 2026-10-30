@@ -50,19 +50,9 @@ Every native main session is titled `{ <Aspect> <Topic> <Layer> <FLOW_ID> }`.
 The layer selects the configured model through the table above, so the
 title names the layer, never the model.
 
-A message never crosses aspect and layer at once; it goes across at its own layer, or up or down within its aspect, and the flow it reaches carries it on.
-
 Aspect, topic, layer, exact model identifier, Flow ID, and native binding
 remain separate typed facts. The title grants none of the identity,
 authority, availability, or routing those facts establish.
-
-Horizontal routing selects the unique eligible cell in the target aspect at
-the sender's layer.
-Busy is still
-eligible.
-Multiple bindings for one cell are an unresolved conflict, never fanout.
-Resolve the binding
-immediately before each attempt.
 
 ## A grunt job goes down, not up
 
@@ -72,7 +62,7 @@ A simple job — a book rebuilt, a page published, a module located, a file move
 
 A Secondary passes every design decision through its own Primary and acts on the Primary's decision. A Secondary uses its Primary freely.
 
-A Primary is reached through its Secondary for a question, a design or a judgment; the core Primary of an aspect reaches a topic Primary of its aspect directly when it helps a design while the living is talking to it. When no Secondary is live, the flow that needs the Primary starts one. When one cannot be started and something depends on the Primary being reached, the flow messages the Primary itself and says in that message that the Secondary route failed and why. This is practice held in belief; no code enforces it.
+A Primary is reached through its Secondary for a question, a design or a judgment; the core Primary of an aspect reaches a topic Primary of its aspect directly when it helps a design while the living is talking to it. When no Secondary is live, the flow that needs the Primary starts one. When one cannot be started and something depends on the Primary being reached, the flow messages the Primary itself and says in that message that the Secondary route failed and why.
 
 ## A Fable flow is served
 

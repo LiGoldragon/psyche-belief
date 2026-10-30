@@ -39,8 +39,3 @@ Nexus speaks only Signal.
 
 The meta signal is always present: the daemon is configured only over
 its meta surface.
-
-## Protocol
-
-Signal is portable rkyv plus whatever protocol is standardized on top
-of it. The protocol is to be decided.

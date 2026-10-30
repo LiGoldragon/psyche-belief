@@ -18,13 +18,6 @@ carries data, strictly typed, and its whole work is serialization and
 deserialization: carrying data between text and typed form. Datom is
 signal's form at the edge: our components speak signal, and datom lets
 text-based systems, LLMs and every existing editor, read and write it.
-Generating Rust is Ethos's duty, in today's division of labor. When
-Ethos becomes the full authoring language, with Rustlang as its
-assembly layer, Datom, the data dialect of the Protos family, may gain
-an inline place in authored Ethos, the way Rustlang composes data
-directly in code. That road is reached, or even floated, only with
-explicit context: how, when, and where data yields Rust, stated
-without ambiguity; until then the division stands as spoken.
 
 ## A datom is a form at a path
 
@@ -261,10 +254,7 @@ Accepted.42
 ## Repository
 
 Everything moves to Datom: all of the stack, Horizon, Lojix, everything.
-Datom's own line of descent is NOTA, which also
-passed through the temporary name Dotos; that old notation stays
-behind, frozen, and may be called legacy. Schema is the abandoned
-ancestor of Ethos, not of Datom. The library is named datom-codec so
+The library is named datom-codec so
 that datom is free for the datom nexus, which comes when there is more
 to do: translating datom objects between formats, and a parsing cache
 keyed by the content-addressed hash of normalized text.
@@ -307,10 +297,6 @@ annotations are enums used throughout the tree, Emphasis among them;
 its shape is still open. Meaning is datom. Strings are strings and
 Meaning is Meaning: a position of type String expects a plain string
 and nothing else, and a position of type Meaning expects a Meaning.
-Meaning is postponed so that a working syntax lands as soon as
-possible: today a parenthesized text lands as a plain String, with
-the later type marked in code. The name Meaning smells of a verb; it
-stands provisionally and is reopened together with the type.
 
 ```
 ; datom, in a position expecting Note: a struct of author String, body Meaning.
@@ -331,6 +317,3 @@ stands provisionally and is reopened together with the type.
   [ (Ada fixed the flaky test (the one with the timeout))
     (Bo is out (back Monday)) ] }
 ```
-
-The meaning language is now developed, and is defined in
-Vision/meaning.md; that supersedes the postponement stated above.

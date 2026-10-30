@@ -9,32 +9,6 @@ Ethos and Nexus are basic infrastructure: the wood houses are built from. Chrono
 
 ## Where the golden ethos lives
 
-```
-┌──────────────────────────────────────────┐
-│ vision-ethos                             │
-│                                          │
-│  what ethos is · its layout              │
-│  its two anatomies: types and traits     │
-│                                          │
-│  ┌────────────────────────────────────┐  │
-│  │ the ethos of ethos                 │  │
-│  │ the types an ethos file is made of │  │
-│  │ the first golden ethos             │  │
-│  └────────────────────────────────────┘  │
-└───────────────────┬──────────────────────┘
-                    │ example
-                    ▼
-        ┌───────────────────────┐
-        │ vision-flow-ethos     │
-        │ the Flow Nexus, in    │
-        │ ethos; its own skill  │
-        └───────────────────────┘
-```
-
-The anatomy of ethos lives in vision-ethos itself, as
-the first golden ethos; the Flow Nexus's ethos is one example,
-in its own skill.
-
 ## What Ethos is
 
 Ethos is the schema language. Of the two main syntaxes most agents
@@ -54,12 +28,7 @@ in one swoop.
 
 ## Roots
 
-For now, Library, Signal, Operation, Memory. A version lives in a manifest.
-Signal's sections are queries and responses, since there is
-communication; Memory's are record types, the rest to be decided.
-Signal gives a Nexus its main types and Memory its database types.
-
-Four roots: Library, Signal, Operation, Memory. Signal declares what a Nexus says; Operation what it does, one operation type for every effect; Memory what it remembers; Library what they share. A memory trait carries a standard successful-or-unsuccessful change and, for each version, the upgrade from the previous format; that upgrade is the very edit the type needs.
+Four roots: Library, Signal, Operation, Memory. Signal declares what a Nexus says; Operation what it does, one operation type for every effect; Memory what it remembers; Library what they share. A memory trait carries a standard successful-or-unsuccessful change and, for each version, the upgrade from the previous format; that upgrade is the very edit the type needs. A version lives in a manifest.
 
 ## Non-repetition
 
@@ -309,9 +278,6 @@ The Rust generated from it:
 #[derive(Datomizable, Compositional)]
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
-```
-GenerationFailure.SyntaxError.[ /abs/orchestrate.ethos ]     ; the datom
-```
 
 ## A variant may declare its payload inline
 
@@ -360,7 +326,7 @@ Reply.[ Accepted ]   ; refused: one variant
 
 ## An open enum
 
-An open enum is an Ethos object whose capitalized words are its fixed variants. A word that is not capitalized is its implied extensible variant, a camel ID: a word-based camel-case identifier, written bare, with no variant head before it. The name camel ID is temporary. A check that a word is a word-based camel-case identifier comes long term; short term, none is made.
+An open enum is an Ethos object whose capitalized words are its fixed variants. A word that is not capitalized is its implied extensible variant, a camel ID: a word-based camel-case identifier, written bare, with no variant head before it.
 
 The same mechanism carries an object that is represented unconventionally, such as a word-based hash.
 
@@ -606,17 +572,3 @@ at both ends when non-empty.
 Ethos expands vertically: a structure with more than one element opens on its line and its elements hang beneath the first, aligned; the closing delimiter ends the last element's line. Everything that has a next layer opens it on a new line.
 
 Ethos carries a comment on every section and on every line that has a next layer, saying in plain words what the machine reads there; a comment runs from ; to the end of the line.
-
-## Zero
-
-Ethos Zero was first named Ethos Monolith; the two are the same thing.
-Zero as in version 0: no daemon yet, no Nexus. The ethos repository is
-for the ethos nexus that follows.
-
-## Generation
-
-By request to ethos-zero, which is not a daemon, hence its name; committed, held fresh by a test.
-
-```
-ethos-zero 'Generate.{ /abs/orchestrate.ethos /abs/out }'
-```

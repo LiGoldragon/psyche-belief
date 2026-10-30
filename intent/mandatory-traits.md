@@ -12,7 +12,3 @@ dependencies: []
 > all the assembly, and the same is happening to Rust. Traits and
 > main types are what the psyche reads; everything else is
 > implementation detail that Ethos will eventually generate.
-
-— living-approved wording, 2026-08-13 (Steward session d2bb5f5f).
-Proposed by Steward, approved with "otherwise its good, implement
-commit and deploy."

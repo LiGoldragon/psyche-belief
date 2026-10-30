@@ -22,7 +22,7 @@ poetic Latin or Greek name of its own.
 The roots of the ontology are the seven Vaiśeṣika categories, and
 its verbs follow the Aṣṭādhyāyī of Pāṇini, which an earlier ruling
 makes the base for how the system thinks, communicates, and
-classifies things in the world (flow 5851f4). How the two divide
+classifies things in the world. How the two divide
 beyond that is not yet ruled.
 
 ## Verbs

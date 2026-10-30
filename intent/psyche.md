@@ -11,14 +11,6 @@ Vision is what the living says the system is to be, and a topic's vision is divi
 
 A line in a marked module is unimplemented by definition: a medium line stands because a short line is the compromise in its place, and a long line stands beyond the medium the same way. The far vision is never implemented: what comes within reach of it has already moved to long. When the medium vision is implemented, the short is irrelevant and is removed, and the horizons move up: the medium is now the short term, the long the medium, the far the long.
 
-A metaflow's declaration names the horizons it loads. A flow that implements or repairs loads the unmarked and the short; a flow that designs loads the medium and the long beside them; a flow designing the far vision loads the far.
-
-```datom
-; a declaration, as datom, naming the horizons a metaflow loads
-{ { Field core Tertiary } [ vision:flow-nexus vision:short:flow-nexus ] }
-{ { Psyche flow Primary } [ vision:flow-nexus vision:short:flow-nexus vision:medium:flow-nexus vision:long:flow-nexus vision:far:flow-nexus ] }
-```
-
 A medium, long or far line reaches an implementer through a proposal that moves it to the short or unmarked module with its design: the abstractions it is made of, how they compose, and the configuration the running system takes it through, shown as vision code. A proof of concept may implement the medium while the short implementation is kept, improved or fixed, so several horizons may be in implementation at once; the focus, generally and now, is the short term.
 
 ## What the living reviews is psyche

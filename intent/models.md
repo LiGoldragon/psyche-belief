@@ -7,11 +7,3 @@ dependencies: []
 
 Capability comes from choosing a better model.
 Raising effort costs a great deal and changes little.
-Harness calls go out at medium effort by default. Effort may be set light
-where a task needs speed — voice among them.
-
-## Two scales share the words high and medium
-
-The harness's model-effort setting is one scale. The naming of a flow's
-layer is another. A flow named Primary is named by layer, not by effort setting;
-a flow that reads its layer as an effort setting has misread it.

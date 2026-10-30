@@ -10,12 +10,6 @@ sit in a log beside valid vision; when crystallization finds it, the
 impurity is dissected out of the log and destroyed, and the valid
 vision around it stays.
 
-## Impurities fall out through crystallization
-
-Impurities come out in the course of crystallization: a crystallization
-proposal points out the impurities it dissects out, and the living
-rules on them with the statements.
-
 ## A proposal names each statement's destination
 
 A crystallization proposal says, for every statement, the topic it goes
@@ -39,10 +33,6 @@ clarity.
 A crystallized statement says what is and what is wanted, in positive
 terms only. A negative the living spoke stays in the archive, which
 remains linkable.
-
-## A statement speaks in its own voice
-
-A crystallized statement states its subject in its own voice.
 
 ## Impurities are hunted and fall through crystallization alike
 
@@ -78,9 +68,6 @@ Vision code is written in the stacks the system is built in: Ethos and Datom fir
 A crystallized statement lands as lines in a vision- or intent- skill's authored source. A ruling a crystallization lands in a skill is recorded by the landing itself. Intent enters an intent- skill only on the living's explicit word.
 
 The landing of a line archives the raw records it drew on, in the same commit; a record stays raw only while no line of it has landed.
-
-A record's id is its originating session's short id and that
-session's own count.
 
 Crystallization is proposed on encounter, dispatched proactively by
 the flow working a subject, or done in dedicated passes.
