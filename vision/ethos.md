@@ -221,6 +221,8 @@ A field is named after its type in snake case; a constructed type
 type-first, `string_vector`, `lock_option`; a repeated type as first
 and second.
 
+A head over a single type declares a newtype: a single-member tuple struct holding it, so every declared name is its own type and carries its own derive.
+
 The Ethos:
 
 ```
@@ -237,8 +239,8 @@ Library
 The Rust generated from it:
 
 ```rust
-pub type LockId = Integer;
-pub type LockName = String;
+#[derive(Datomizable, Compositional)] pub struct LockId(pub Integer);
+#[derive(Datomizable, Compositional)] pub struct LockName(pub String);
 #[derive(Datomizable, Compositional)]
 pub struct Lock { pub lock_id: LockId, pub lock_name: LockName, pub string_vector: Vec<String>, pub lock_option: Option<Lock> }
 #[derive(Datomizable, Compositional)]
@@ -269,8 +271,8 @@ Library
 The Rust generated from it:
 
 ```rust
-pub type LockId = Integer;
-pub type LockName = String;
+#[derive(Datomizable, Compositional)] pub struct LockId(pub Integer);
+#[derive(Datomizable, Compositional)] pub struct LockName(pub String);
 #[derive(Datomizable, Compositional)]
 pub struct Lock { pub lock_id: LockId, pub lock_name: LockName }
 #[derive(Datomizable, Compositional)]
@@ -302,8 +304,8 @@ Library
 The Rust generated from it:
 
 ```rust
-pub type FilePath = String;
-pub type SyntaxError = Vec<FilePath>;
+#[derive(Datomizable, Compositional)] pub struct FilePath(pub String);
+#[derive(Datomizable, Compositional)] pub struct SyntaxError(pub Vec<FilePath>);
 #[derive(Datomizable, Compositional)]
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
@@ -332,7 +334,7 @@ Library
 The Rust generated from it:
 
 ```rust
-pub type FilePath = String;
+#[derive(Datomizable, Compositional)] pub struct FilePath(pub String);
 #[derive(Datomizable, Compositional)]
 pub struct Unwritable_Data { pub file_path: FilePath, pub string: String }
 #[derive(Datomizable, Compositional)]
@@ -375,13 +377,8 @@ flowchart TB
 
 Ethos Zero emits `Datomizable` and `Compositional` on every struct and
 enum it generates, so every ethos-declared type always bears both traits.
-An alias bears them
-through the type it names: an alias is not a new type and cannot carry
-a derive.
 
 ```rust
-pub type FilePath = String;                  // an alias: String already bears both
-pub type SyntaxError = Vec<FilePath>;        // an alias: Vec<T> bears both for any T that does
 #[derive(Datomizable, Compositional)]        // a type: always derived
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
@@ -433,9 +430,9 @@ The Rust generated from it:
 ```rust
 pub enum Query    { Lock(LockRequest), Release(LockId) }
 pub enum Response { Locked(Lock), Released(Lock) }
-pub type LockId = Integer;
-pub type LockName = String;
-pub type FlowId = String;
+#[derive(Datomizable, Compositional)] pub struct LockId(pub Integer);
+#[derive(Datomizable, Compositional)] pub struct LockName(pub String);
+#[derive(Datomizable, Compositional)] pub struct FlowId(pub String);
 ```
 
 ## Traits are explicit; bodies are hand-written
@@ -598,7 +595,7 @@ Interactions — the term for trait implementations — use the type
 itself in all cases.
 
 The code we design composes structs; a tuple appears only at a contact point that requires it (standard
-traits, dependencies).
+traits, dependencies), and in its one declared case, the newtype.
 
 ## Spacing
 
