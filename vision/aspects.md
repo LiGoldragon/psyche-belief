@@ -10,3 +10,5 @@ Flows of the same topic talk at the same layer across aspects, so a Psyche topic
 ## Within an aspect, a flow speaks to the layer next to it
 
 Within an aspect, a flow speaks only to the layer next to it: a Quaternary to its Tertiary, a Tertiary to its Secondary, a Secondary to its Primary.
+
+The tracker, a Quaternary, reaches any Secondary directly, in any aspect, and a Primary only through its Secondary.
