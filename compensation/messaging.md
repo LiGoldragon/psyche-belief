@@ -5,7 +5,7 @@ dependencies: [vision-messaging]
 
 Words attributed to the living are relayed with the record file and heading that hold them, or not relayed.
 
-A topic crosses between aspects in one hop each way; a relay of a relay is refused, and the sender is pointed to the record.
+A topic crosses between aspects in one hop each way; a message that arrives by a longer route is answered, and its sender told the route.
 
 A flow that takes a seat reads its predecessor's sends before it relays what reached the seat.
 
