@@ -19,6 +19,8 @@ flowchart TB
 
 A full rewrite is the next version: built from the vision alone, reusing nothing of the implementation it replaces. It may live in the same repository, as a branch forked from the root commit and starting empty; this is one way of doing it, in Git or Jujutsu alike, and the rule is the empty start, not the tool. It runs beside the stable in a metaflow of its own and is switched to when it has proved itself.
 
+While two versions live, each has its own vision module: the running version keeps vision:<nexus> and goes on taking fixes, and the rewrite is designed in vision:<nexus>-<version>, as vision:flow-nexus-1; when the rewrite is the stable, the old module is archived and the new one takes the name.
+
 ## One source
 
 Every part of a Nexus, its daemon and its clients, is built from one source at one version, so that none diverges.
