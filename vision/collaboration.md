@@ -1,6 +1,6 @@
 ---
 description: Flows work together: how work is handed between them, stopped, or started for the living.
-dependencies: [vision-aspects, vision-messaging]
+dependencies: [vision:aspects, vision:messaging]
 ---
 
 ## Work goes up whole

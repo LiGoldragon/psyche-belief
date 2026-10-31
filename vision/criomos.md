@@ -1,6 +1,6 @@
 ---
 description: CriomOS, its hosts, fixes, hardware, services, Nix code or desktop, is being designed or judged.
-dependencies: [vision-nix-builds]
+dependencies: [vision:nix-builds]
 ---
 
 ## CriomOS

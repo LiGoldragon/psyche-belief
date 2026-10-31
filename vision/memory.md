@@ -1,6 +1,6 @@
 ---
 description: Memory, the database engine of a Nexus, or its record types are being designed or judged.
-dependencies: [vision-ethos, vision-nexus]
+dependencies: [vision:ethos, vision:nexus]
 ---
 
 ## What memory is, long term

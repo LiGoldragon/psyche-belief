@@ -1,6 +1,6 @@
 ---
 description: Signal — the binary messaging layer, its inputs and outputs, meta signal or protocol — is being designed or judged against what the living wants.
-dependencies: [vision-ethos, vision-nexus]
+dependencies: [vision:ethos, vision:nexus]
 ---
 
 ## Name

@@ -1,6 +1,6 @@
 ---
 description: Horizon, the cluster state it answers, or where a sandbox virtual machine runs is being designed or judged.
-dependencies: [vision-nexus]
+dependencies: [vision:nexus]
 ---
 
 ## Horizon is a proper Nexus
