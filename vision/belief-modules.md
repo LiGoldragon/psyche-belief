@@ -58,6 +58,10 @@ Context lines are richly annotated, because lines of very different categories s
 
 A belief module states what holds now; content can be good and belong elsewhere.
 
+## A description is part of the content
+
+A module's description is part of its content: what the description says, the body does not say again.
+
 ## Editing belief
 
 A belief goes in the module of its subject.
