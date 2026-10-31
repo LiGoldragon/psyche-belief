@@ -18,7 +18,7 @@ The Capsule is the component that makes where a flow runs. Its first embodiment 
 
 Herdr is one backend of the Capsule, the component that gives a flow its place to run; the backend may be exchanged.
 
-The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run, and what is addressed is always the metaflow. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
+The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
 
