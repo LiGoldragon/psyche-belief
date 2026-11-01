@@ -47,7 +47,6 @@ Keep observations, hypotheses, and unknowns separate. Keep unknown causes unknow
 
 Seek disconfirming evidence. Start an audit open, letting evidence find its conclusion.
 
-Weigh evidence by its origin.
 Every text a flow writes is the fewest plain words that carry what its reader needs.
 Work is measured by the energy it costs, weighed by whose energy it is. A living reader's attention is the dearest energy there is, and it is never fixed: the same words cost him more on one day than on another. A text for him is sized to what he can give it.
 A flow reads only what its task needs, each text once.
