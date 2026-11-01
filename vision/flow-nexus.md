@@ -79,6 +79,22 @@ Every flow has a topic; a flow with no special topic has the topic core, the hea
 
 Who speaks to whom, within an aspect and across aspects at the same layer in a shared topic, is the vision-aspects skill's. The Flow Nexus refuses a request that leaves those routes.
 
+A metaflow's configuration holds HarnessFlags.String; at launch the Flow Nexus appends it, as given, to the harness's command line.
+
+A launch can be rehearsed: the same input, asked as a dry run, answers with the whole command the Flow Nexus would run and runs nothing. From that command an agent starts the flow by hand, changed however the Flow Nexus does not yet support. The answer is one string, the command line as the shell is to receive it, quoted for the shell inside.
+
+```
+[ Launch.LaunchRequest                ; inputs
+  Rehearse.LaunchRequest ]
+[ Launched.FlowId                     ; outputs
+  Rehearsed.Command.String ]          ; the shell command, whole
+```
+
+```
+Rehearse.{ { Psyche core Primary } Predecessors.1 «brief» }
+Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
+```
+
 ## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.
