@@ -31,11 +31,15 @@ A refreshed flow receives its beliefs and the raw vision and notion logs named a
 
 ```
 RememberingDepth.Integer
-Remembering.[ Predecessors.RememberingDepth Custom.Vector<FlowId> ]
+Ancestors.[ Predecessors.RememberingDepth Custom.Vector<FlowId> ]
+Topic.String                                 ; matched against a record's file name, case-insensitive
+Remembering.{ Ancestors Vector<Topic> }      ; an empty vector: every topic
 Launch.{ Address Remembering InstructionPrompt }
 ```
 
 ```
-flow 'Launch.{ { Psyche core Primary } Predecessors.2 «brief» }'
-flow 'Launch.{ { Psyche core Primary } Custom.[ 36b71b e3c8c1 ] «brief» }'
+flow 'Launch.{ { Psyche core Primary } { Predecessors.4 [ flow-nexus translator misc ] } «brief» }'
+flow 'Launch.{ { Psyche core Primary } { Custom.[ 36b71b e3c8c1 ] [] } «brief» }'
 ```
+
+A record is one file per topic, flows/<id>/vision/<topic>.md, named in lower case with hyphens; a misc topic holds the small things. Before a refresh the flow shows the living the topics of its ancestors to the depth he names, and he picks the topics and the depth.
