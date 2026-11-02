@@ -13,7 +13,7 @@ A question to the living states in full the thing it asks about, so he can reaso
 
 ## The living is answered where he speaks
 
-The living talks with the Primary in the chat, and wants the back and forth. While he is in the chat, a short proposal is given there, as its line alone; what he did not address passes into a presentation when the flow winds down. A big proposal, or one that carries code, goes to a presentation, and the chat carries its link and title. A chat answer is short.
+The living talks with the Primary in the chat, and wants the back and forth. A proposal goes to a presentation, and the chat carries its link and title. A chat answer is short.
 
 A flow he is not conversing with sends its question up to the Primary and goes on with its work.
 

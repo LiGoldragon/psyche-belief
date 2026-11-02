@@ -25,8 +25,6 @@ A question between alternative lines shows each alternative as its own proposal,
 
 Every word of his redoes the proposal it bears on, unless it closes the topic; words that open a topic of their own get a proposal of their own.
 
-A proposal in the chat shows the whole section as it would stand, with the part that changes in bold.
-
 ```mermaid
 flowchart TB
     a["his vision"] -- "is made into" --> b["a proposal (the proposal module's rules)"]
