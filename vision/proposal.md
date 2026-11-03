@@ -13,7 +13,7 @@ A proposal that touches a code component shows the code it changes or adds.
 
 A code block in a proposal stands on its own: it is shown without a path, directory or file name. It carries the code, why it is important, and what its function is.
 
-A proposal is usually drawn as well as written, and always when it has a shape: what it adds, removes and keeps, in one frame.
+A proposal is usually drawn as well as written, and always when it has a shape: what it adds, removes and keeps, in one frame. A flowchart in a proposal is a proposed line like any other: it stands under the addition margin of the proposal it belongs to, which names the module it goes to.
 
 The records a proposal draws from live in an unrendered reference file, one per book, in a references/ directory beside the books; they are archived with the landing when some or all of the proposal is accepted.
 
@@ -24,6 +24,18 @@ A line removed from a module is shown beside the line that makes it unnecessary.
 A question between alternative lines shows each alternative as its own proposal, with the exact lines it lands; the living rules land, amend or reject.
 
 Every word of his redoes the proposal it bears on, unless it closes the topic; words that open a topic of their own get a proposal of their own.
+
+Every type a proposal names is in the proposal: added to the module it lands in, added to another module, or shown as it already stands in its vision module, its definition in full; naming a type is not showing it.
+
+What can be expressed in code is shown as code, with a comment where the code needs one; prose is the comment on the code. A method is shown with the trait it belongs to and that trait's ethos, so its inputs and its yield are read. Code not yet settled is marked tentative. A "never" or an "always" is code: the rule is shown as the code that enforces it.
+
+```ethos
+Text.String                                   ; what herdr types; made from Waking, held by no struct
+```
+
+```rust
+let text = Text(self.waking.datomize(Path::root()).protosize().textualize());   // only the waking becomes text
+```
 
 ```mermaid
 flowchart TB
