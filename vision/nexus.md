@@ -51,7 +51,7 @@ default client serves bootstrap first, then debugging and testing,
 long after production has stopped using it. The meta CLI is named
 component-meta.
 
-A CLI turns text into Signal: it takes one inline datom as its whole input; it identifies the process that called it and carries that identity in the message, so a Nexus knows its caller by the process. A CLI speaks to one Nexus and stays thin; datom and all text handling are compiled out of the Nexus, which decodes only known types in their rkyv form and so stays small, since it keeps running and there may be many.
+A CLI takes one inline datom as its whole input and writes it to its translator's socket on one connection, reading the reply on the same connection; the translator turns the text into Signal, identifies the calling process from the connection and carries that identity in the envelope, so a Nexus knows its caller by the process. A CLI holds one socket path and no type; datom and all text handling are compiled out of the Nexus, which decodes only known types in their rkyv form and so stays small, since it keeps running and there may be many.
 
 ## Signal only
 
@@ -104,10 +104,7 @@ what gives the socket path on which the Configure signal arrives.
 
 ## Repositories
 
-A component has three repositories: its main repository, holding all
-its code, and two signal repositories — one for the ordinary
-socket's contract, one for the meta socket's. Shared kinds go into
-reusable libraries, which are encouraged.
+A Nexus's parts live in multiple repositories, each part in its own; the repository of a part is named where the part is defined. Shared kinds go into reusable libraries, which are encouraged.
 
 `<nexus>` is the repository holding the Nexus; `signal-<nexus>` its wire vocabulary; `meta-signal-<nexus>` the owner's vocabulary, always present, since configuration flows through it. The CLI is `<nexus>`.
 
@@ -144,77 +141,6 @@ A correct system goes quiet when nothing changes; every change arrives as an eve
 
 ## Three parts and one path
 
-A Nexus has three parts, each its own ethos specification: Signal is what it says, Operation is what it does, Memory is what it remembers. Nexus always names the whole; the part that does is Operation. Every effect has a matching operation type. A signal reaches memory only through operation; memory answers operation that the change succeeded or failed; the answer returns through operation and leaves as a signal. Reading a Nexus's ethos alone shows every object and process on that path.
+A Nexus has four parts, each its own ethos specification: Signal is what it says, Operation is what it does, Memory is what it remembers, Emission is what it sends into the world. The translator is the part that carries Emission and turns text into Signal: its own process, speaking datom natively. Nexus always names the whole; the part that does is Operation. Every effect has a matching operation type. A signal reaches memory only through operation; memory answers operation that the change succeeded or failed; the answer returns through operation and leaves as a signal. Reading a Nexus's ethos alone shows every object and process on that path.
 
-The library, shared by the three parts:
-
-```ethos
-Library
-[]
-[ FlowId.Integer
-  Topic.String
-  Aspect.[ Psyche Mind Field ]
-  Layer.[ Primary Secondary Tertiary
-          Quaternary ]
-  Address.{ Aspect Topic Layer }
-  Event.[ Started Stopped ] ]
-[]
-[]
-```
-
-Signal, what the Flow Nexus says:
-
-```ethos
-Signal
-[ flow:[ FlowId Address Event ] ]
-[ Launch.{ Address Brief.String }
-  Report.{ FlowId Event } ]
-[ Launched.FlowId
-  Refused.[ NoCapsule
-            AddressBusy.Address ]
-  Reported ]
-[]
-```
-
-Operation, what the Flow Nexus does:
-
-```ethos
-Operation
-[ flow:[ FlowId Address Event ] ]
-[ Start.{ Address Capsule }
-  Record.{ FlowId Event } ]
-[ Started.FlowId
-  Recorded
-  Failed.[ CapsuleRefused StoreRefused ] ]
-[ Capsule.{ Home.String
-            Login.Vector<String> } ]
-```
-
-Memory, what the Flow Nexus remembers:
-
-```ethos
-Memory
-[ flow:[ FlowId Address Event ] ]
-[ Flow.{ FlowId Address
-         State.[ Running Ended ]
-         Vector<Event> }
-  Answer.[ Succeeded Failed ] ]
-```
-
-```datom
-; 1 Input, typed at the CLI, sent as signal
-Launch.{ { Psyche core Primary }
-         «Draft the Nexus book» }
-; 2 Operation, from Signal's intend
-Start.{ { Psyche core Primary }
-        { /home/li/primary [] } }
-; 3 the Change Operation hands Memory
-Flow.{ 7 { Psyche core Primary } Running
-       [ Started ] }
-; 4 Memory's answer to Operation
-Succeeded
-; 5 Outcome
-Started.7
-; 6 Output, from Signal's answer, to the CLI
-Launched.7
-```
+Examples are found in the vision of an actual Nexus.
