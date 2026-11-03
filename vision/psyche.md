@@ -15,6 +15,8 @@ coordinates concurrent work across those repositories.
 
 The belief modules belong in a context repository; Psyche's is psyche-belief.
 
+Vision is what is wanted; it is neither real nor unreal, and it documents nothing. Vision refers only to vision: every type a vision names is defined in a vision module. The horizons separate what he sees long term from what he pursues now so that it arrives more quickly.
+
 ## A settled record moves to the archive
 
 A raw record is written in the vision or notion records of the flow that heard it and is open there. When it is landed,
