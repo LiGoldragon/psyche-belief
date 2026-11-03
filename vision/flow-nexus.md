@@ -95,6 +95,18 @@ Rehearse.{ { Psyche core Primary } Predecessors.1 «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
+A metaflow's configuration holds its workspace and the tools its flows are launched without; a metaflow that sets no workspace runs in the Nexus's.
+
+```ethos
+Tool.String
+Metaflow.{ Address Option<Root> LeaveOuts.Vector<Tool> }     ; Root: the directory, Proposal 1
+```
+
+```datom
+{ { Psyche book Quaternary } Some.«/home/li/book» [] }        ; the bookmaker: its own workspace, every tool
+{ { Psyche core Primary } None [ Artifact ] }                 ; the Primary: the Nexus's workspace, no artifact tool
+```
+
 ## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.
@@ -117,7 +129,7 @@ An abandoned, duplicated or superseded flow is closed, archived and deregistered
 
 ## Herdr holds the panes
 
-Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Herdr is used as it is.
+Herdr is the third-party terminal workspace every flow runs in, one pane per flow. Herdr is used as it is: a low-level tool that receives finished commands from the translator and holds no logic of ours; every fact about a launch is the Nexus's, decided on the Nexus's types.
 
 ## A real-world test of the Flow Nexus
 
@@ -144,3 +156,78 @@ A flow can be restarted without being woken: its harness closes, its transcript 
 ## What a refresh carries
 
 A refresh carries the flow's important presentations and illustrations, the raw psyche given to it, and the basic skills. The basic skills are everything a flow needs.
+
+## The Flow Nexus's parts
+
+The library, shared by the three parts:
+
+```ethos
+Library
+[]
+[ FlowId.Integer
+  Topic.String
+  Aspect.[ Psyche Mind Field ]
+  Layer.[ Primary Secondary Tertiary
+          Quaternary ]
+  Address.{ Aspect Topic Layer }
+  Event.[ Started Stopped ] ]
+[]
+[]
+```
+
+Signal, what the Flow Nexus says:
+
+```ethos
+Signal
+[ flow:[ FlowId Address Event ] ]
+[ Launch.{ Address Brief.String }
+  Report.{ FlowId Event } ]
+[ Launched.FlowId
+  Refused.[ NoCapsule
+            AddressBusy.Address ]
+  Reported ]
+[]
+```
+
+Operation, what the Flow Nexus does:
+
+```ethos
+Operation
+[ flow:[ FlowId Address Event ] ]
+[ Start.{ Address Capsule }
+  Record.{ FlowId Event } ]
+[ Started.FlowId
+  Recorded
+  Failed.[ CapsuleRefused StoreRefused ] ]
+[ Capsule.{ Home.String
+            Login.Vector<String> } ]
+```
+
+Memory, what the Flow Nexus remembers:
+
+```ethos
+Memory
+[ flow:[ FlowId Address Event ] ]
+[ Flow.{ FlowId Address
+         State.[ Running Ended ]
+         Vector<Event> }
+  Answer.[ Succeeded Failed ] ]
+```
+
+```datom
+; 1 Input, typed at the CLI, sent as signal
+Launch.{ { Psyche core Primary }
+         «Draft the Nexus book» }
+; 2 Operation, from Signal's intend
+Start.{ { Psyche core Primary }
+        { /home/li/primary [] } }
+; 3 the Change Operation hands Memory
+Flow.{ 7 { Psyche core Primary } Running
+       [ Started ] }
+; 4 Memory's answer to Operation
+Succeeded
+; 5 Outcome
+Started.7
+; 6 Output, from Signal's answer, to the CLI
+Launched.7
+```
