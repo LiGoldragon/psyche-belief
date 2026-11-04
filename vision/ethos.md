@@ -262,6 +262,30 @@ The Rust generated from it:
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
 
+A variant or a position that carries a defined type carries it under that type's own name, bare: Living, never Living.Said. A struct whose only content is one other struct is that struct, and is written as it. The form is refused in review, not by ethos-zero.
+
+The Ethos refused:
+
+```ethos
+SendableRequest.[ Living.Said ]             ; refused: Living only wraps Said
+```
+
+The Ethos wanted:
+
+```ethos
+Living.{ Context.String                     ; declared once: what his words were about,
+         Verbatim.String }                  ;   and his words whole
+SendableRequest.[ Living ]                  ; the variant carries Living, bare
+```
+
+The datom, the same either way:
+
+```datom
+Living.{ «context» «verbatim» }
+```
+
+The newtype, a head over a single scalar, stands as the Declaration section declares it.
+
 ## A variant may declare its payload inline
 
 Instead of naming a defined type, a variant may declare what it
