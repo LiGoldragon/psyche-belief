@@ -20,7 +20,7 @@ flowchart TB
 
 ## A metaflow is a directory
 
-A metaflow has a name and two directories, and nothing of it is read from the environment. Runtime holds the sockets of its Nexuses and defaults to `$XDG_RUNTIME_DIR/metaflow/<name>/`; State holds their memories and defaults to `~/.local/state/metaflow/<name>/`. A Nexus is started with one datom, its place. The registry is the runtime root, `$XDG_RUNTIME_DIR/metaflow/`, one directory per name; a CLI resolves `<metaflow>` there and finds the sockets. Two metaflows are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
+A metaflow has a name and two directories, and a Nexus reads nothing from the environment; the CLI's two default roots come from the standard XDG variables and from nothing else. Runtime holds the sockets of its Nexuses and defaults to `$XDG_RUNTIME_DIR/metaflow/<name>/`; State holds their memories and defaults to `~/.local/state/metaflow/<name>/`. A Nexus is started with one datom, its place. The registry is the runtime root, `$XDG_RUNTIME_DIR/metaflow/`, one directory per name; a CLI resolves `<metaflow>` there and finds the sockets. Two metaflows are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
 
 ```ethos
 Library
@@ -61,7 +61,7 @@ nix develop github:LiGoldragon/metaflow -- metaflow start next
 
 ## Everything in a metaflow is a definition
 
-The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom, given to the Flow Nexus by Define and replaced the same way; the running set of definitions is the metaflow's memory, and a change to one definition touches no other. The Rust knows no layer, role, model name or topic.
+The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define; the running set is the Flow Nexus's Memory in the State directory. A change to one definition touches no other. The Rust knows no layer, role, model name or topic.
 
 ```datom
 ; definitions/designer.datom: one complex
