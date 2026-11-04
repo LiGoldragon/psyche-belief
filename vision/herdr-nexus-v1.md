@@ -13,7 +13,7 @@ The herdr Nexus also observes: a pane's state is read from herdr and pushed to s
 ```ethos
 Signal
 [ herdr:[ Session PaneId Pane Workspace
-          Command Text Keys Outcome Label ] ]
+          Command Text Keys Outcome Label State ] ]
 [ Create.Workspace
   Start.{ Pane Command Label }
   Prompt.{ Pane Text }
