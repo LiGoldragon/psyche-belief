@@ -25,9 +25,14 @@ While two versions live, each has its own vision module: the running version kee
 
 Every part of a Nexus, its daemon and its clients, is built from one source at one version, so that none diverges.
 
-## Stable and next
+## Versions side by side
 
-Every Nexus runs as a stable and a next, each declared in Nix and each on its own sockets; the stable is declared with the Nexuses it pairs with, as the fallback. A configuration names which of the two a new flow or a refresh starts on, and a running flow keeps running where it is. When every flow has moved onto next, next becomes stable and the newer version takes next. An upgrade is never all-or-nothing: the stable is there to fall back on, and a big change carries a countdown rollback that is cancelled once the new stack is seen working. Before the first deployment there is nothing to roll back to, and the system rolls forward.
+Every version of a Nexus is its own declared unit, on its own sockets and store, and as many run at once as are wanted: two, three, five, since they are cheap to run. Each version has its raw CLI, named by the component and the version, `flow-0.44`; the bare name, `flow`, is a wrapper that points at one version. A flow calls a version by its CLI. Which flow runs on which version is state, moved by signal, outside the declaration. A version that proves to have problems is removed from the declaration and another added; the versions beside it keep running.
+
+```sh
+flow-0.48 'Send.{ … }'   # this version
+flow 'Send.{ … }'        # the one the wrapper points at
+```
 
 ## Metaflows
 

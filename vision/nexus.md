@@ -106,7 +106,7 @@ what gives the socket path on which the Configure signal arrives.
 
 A Nexus's parts live in multiple repositories, each part in its own; the repository of a part is named where the part is defined. Shared kinds go into reusable libraries, which are encouraged.
 
-`<nexus>` is the repository holding the Nexus; `signal-<nexus>` its wire vocabulary; `meta-signal-<nexus>` the owner's vocabulary, always present, since configuration flows through it. The CLI is `<nexus>`.
+`<nexus>` is the repository holding the Nexus; `signal-<nexus>` its wire vocabulary; `meta-signal-<nexus>` the owner's vocabulary, always present, since configuration flows through it. The raw CLI is `<nexus>-<version>`; `<nexus>` is the wrapper that points at one version.
 
 A wire type repository is written in ethos and declares vocabulary only: the frame envelope, the protocol version, a closed enum of operations with their paired replies, the typed payload of each. Operations are verbs, `Submit`; replies the past tense, `Submitted`; rejections name themselves. Storage vocabulary stays inside the Nexus.
 
