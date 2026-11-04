@@ -193,11 +193,12 @@ Signal
 [ Defined.ComplexName
   Undefined.ComplexName
   Described.Complex
+  Listed.Vector<ComplexName>
   Launched.FlowId
   Stopped.FlowId
   Sent.[ Delivered Queued ]
   Said.[ Delivered Queued ]
-  Listed.Vector<FlowId>              ; the hot flows
+  Hot.Vector<FlowId>                 ; the hot flows
   Broadcast.Vector<FlowId>           ; who received it
   Reported
   Subscribed
