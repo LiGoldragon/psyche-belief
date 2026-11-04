@@ -79,8 +79,6 @@ Every flow has a topic; a flow with no special topic has the topic core, the hea
 
 Who speaks to whom, within an aspect and across aspects at the same layer in a shared topic, is the vision-aspects skill's. The Flow Nexus refuses a request that leaves those routes.
 
-A metaflow's configuration holds HarnessFlags.String; at launch the Flow Nexus appends it, as given, to the harness's command line.
-
 A launch can be rehearsed: the same input, asked as a dry run, answers with the whole command the Flow Nexus would run and runs nothing. From that command an agent starts the flow by hand, changed however the Flow Nexus does not yet support. The answer is one string, the command line as the shell is to receive it, quoted for the shell inside.
 
 ```
@@ -95,16 +93,53 @@ Rehearse.{ { Psyche core Primary } Predecessors.1 «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
-A metaflow's configuration holds its workspace and the tools its flows are launched without; a metaflow that sets no workspace runs in the Nexus's.
+A harness is described in configuration: every feature it has, and what leaving that feature out does to the launch, a flag or a variable. The Nexus holds no feature and no effect of its own; it reads the effect from the declaration and composes the launch from the names a metaflow lists. A new harness, or a new version of one, is a new declaration. Where two features share one flag, the composition emits that flag once, with the names merged.
 
 ```ethos
-Tool.String
-Metaflow.{ Address Option<Root> LeaveOuts.Vector<Tool> }     ; Root: the directory, Proposal 1
+Harness.{
+   Name.[ Claude Codex ]
+   Features.Vector<Feature> }
+Feature.{
+   Name.String
+   Effect.[
+      Flag.String
+      Environment.{
+         Name.String
+         Value.String } ] }
+Metaflow.{
+   Address
+   Option<Root>
+   Harness.Name
+   LeaveOuts.Vector<String> }
 ```
 
 ```datom
-{ { Psyche book Quaternary } Some.«/home/li/book» [] }        ; the bookmaker: its own workspace, every tool
-{ { Psyche core Primary } None [ Artifact ] }                 ; the Primary: the Nexus's workspace, no artifact tool
+Configure.Harness.{
+   Claude
+   [ { Artifact
+       Flag.«--disallowedTools Artifact,ArtifactComments,ArtifactData» }
+     { Bash
+       Flag.«--disallowedTools Bash» }
+     { ClaudeMd
+       Environment.{
+          CLAUDE_CODE_DISABLE_CLAUDE_MDS
+          1 } }
+     { GitInstructions
+       Environment.{
+          CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS
+          1 } } ] }
+
+Configure.Metaflow.{
+   { Psyche book Quaternary }
+   Some.«/home/li/book»
+   Claude
+   [ ClaudeMd GitInstructions ] }
+
+Configure.Metaflow.{
+   { Psyche core Primary }
+   None
+   Claude
+   [ Artifact ClaudeMd GitInstructions ] }
 ```
 
 ## Repository and belief modules
