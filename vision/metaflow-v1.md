@@ -61,7 +61,7 @@ nix develop github:LiGoldragon/metaflow -- metaflow start next
 
 ## Everything in a metaflow is a definition
 
-The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in the State directory. A change to one definition touches no other. The Rust knows no layer, role, model name or topic.
+The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in the State directory. A change to one definition touches no other. The Rust knows no role, model name or topic.
 
 ```datom
 ; definitions/designer.datom: one complex

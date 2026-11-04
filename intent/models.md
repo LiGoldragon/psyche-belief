@@ -1,5 +1,5 @@
 ---
-description: Quality is sought by raising a model's effort, or a flow's tier name is read as an effort setting.
+description: Quality is sought by raising a model's effort.
 dependencies: []
 ---
 

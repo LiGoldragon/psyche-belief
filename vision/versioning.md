@@ -46,6 +46,6 @@ flow 'Send.{ … }'        # the one the wrapper points at
 
 ## Metaflows
 
-A metaflow is one whole running system: its Nexuses, their stores and their panes; it is what was called a capsule. A permaflow is one persistent address, { Aspect topic Layer }, with its succession of flows; it is what was called a metaflow. Several metaflows run side by side, each on its own sockets and store, and nothing in them depends on an environment variable: a flow is bound to its metaflow by configuration. A new version is tested in a metaflow of its own, with cheap flows messaging one another and starting flows, while the stable metaflow keeps running.
+A metaflow is one whole running system: its Nexuses, their stores and their panes; it is what was called a capsule. A permaflow is one persistent address, { Aspect topic Model }, with its succession of flows; it is what was called a metaflow. Several metaflows run side by side, each on its own sockets and store, and nothing in them depends on an environment variable: a flow is bound to its metaflow by configuration. A new version is tested in a metaflow of its own, with cheap flows messaging one another and starting flows, while the stable metaflow keeps running.
 
 Metaflows talk to each other through an inter-metaflow interface, so that the flows of a new version speak with the permaflows of the metaflow being upgraded from. An upgrade then proceeds flow by flow, each new flow started in the new metaflow, and needs no store compatibility between the two.

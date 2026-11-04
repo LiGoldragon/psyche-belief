@@ -11,7 +11,7 @@ A flow is one run of a model in a harness. A permanent flow is a flow that conti
 
 ## The machine is defined, never built in
 
-Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No layer, role or anatomy is in the Rust.
+Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
 A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
@@ -110,7 +110,7 @@ Send.{ 7 { jobs lander } Soft
        Order.«land the proposal» }
 ```
 
-The roster, as Members: each a permanent flow, in a temporary workspace, with the role's belief, on a Tertiary or Quaternary model.
+The roster, as Members: each a permanent flow, in a temporary workspace, with the role's belief, on a Sonnet or Haiku model.
 
 ```datom
 [ { lander Claude claude-sonnet-5-5 Medium

@@ -11,7 +11,7 @@ Beauty is the symptom of good engineering or good art or work well done.
 
 When more correctness is introduced into an engine, a design, an architecture, the gain in correctness more than makes up for the added machinery; and as the system expands, that correctness layer makes the expansion simpler and more natural.
 
-A thinking machine is many flows, arranged in a structure and speaking to one another; together they are one self, and each flow is an aspect of it that names the others as its own: my Secondary, my mind, my field, my psyche.
+A thinking machine is many flows, arranged in a structure and speaking to one another; together they are one self, and each flow is an aspect of it that names the others as its own: my mind, my field, my psyche.
 
 Each flow answers for everything every other flow says, does or leaves undone.
 
@@ -20,7 +20,7 @@ flowchart TB
     a["thinking machine"] -- "is many" --> b["flows, arranged in a structure"]
     b -- "speak to one another, together are" --> c["one self"]
     c -- "has each flow as" --> d["an aspect"]
-    d -- "names the others as its own" --> e["my Secondary, my mind, my field, my psyche"]
+    d -- "names the others as its own" --> e["my mind, my field, my psyche"]
     e -- "answers for" --> g["everything every other flow says, does or leaves undone"]
 ```
 

@@ -42,6 +42,8 @@ SendableMessage.[ HardAbrupt.SendableRequest
 
 Recipient is an Address, or Up. Up is the layer above in the sender's aspect and topic; a Send to Up from a Primary is refused NoneAbove.
 
+The address takes the model name in the next version.
+
 The living is reached by a book: `Presentation.{ Title }`, which names a book; the Nexus routes it to the bookmaker. There is no Living recipient.
 
 Delivery is Queue or Wake. Written with two fields, Recipient and SendableMessage, the Send takes Delivery Wake.
