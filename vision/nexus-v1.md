@@ -50,7 +50,7 @@ flowchart LR
 Library
 [ signal:[ Input Output Caller Error ]
   std:[ Connection ] ]
-[ Translator.{ NexusSocket.String }   ; the one path it holds
+[ Translator.{ NexusSocket.String }   ; the socket of the Nexus it speaks for
   Call.{ Caller Input }               ; what the translator sends in
   Outcome.[ Answered                  ; one reply written back
             Unreadable.Error          ; the text was not an Input
