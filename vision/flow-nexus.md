@@ -41,8 +41,6 @@ The Flow Nexus exposes everything from the harness, the bare input: a flow is st
 
 The flow that finishes messages the flow that needs to know.
 
-A flow gives a presentation, a response that could fit into a book, whenever it is given significant new context to consider: its first turn ends in one, and so does every task, goal or question that originates in the living. A message from another flow that only updates it is answered with a short note. A presentation takes its form from the belief modules the flow was loaded with and from its prompt, the one string given to that flow alone, which is no belief module.
-
 ## Starting flows
 
 A Nexus component decides the system prompt and everything about a
