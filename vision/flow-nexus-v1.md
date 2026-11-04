@@ -99,7 +99,7 @@ A perma flow is refreshed when its context passes its model's threshold, configu
 Signal
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Brief ModuleName Message
-         Request Priority Tool ] ]
+         Request Priority Tool Harness ] ]
 [ Define.Complex                     ; add or replace one
   Undefine.ComplexName
   Launch.{ ComplexName FlowName Brief }
