@@ -31,6 +31,19 @@ The harnesses and their desktop apps are kept stock in at least one version, und
 A new service lives in CriomOS.
 A service is updated by bringing it up at its latest version.
 
+A Nexus runs as one home unit declared in CriomOS-home, started with its Place datom, its whole configuration; the unit sets no environment.
+
+```nix
+systemd.user.services.flow-nexus = {
+  Unit.Description = "Flow Nexus";
+  Service = {
+    ExecStart = ''${inputs.flow.packages.${system}.default}/bin/flow-nexus "{ main %t/metaflow/main %h/.local/state/metaflow/main }"'';   # the Place: name, Runtime, State
+    Restart = "on-failure";
+  };
+  Install.WantedBy = [ "default.target" ];
+};
+```
+
 ## Desktop
 
 A new artifact does not open a browser tab on its own.
