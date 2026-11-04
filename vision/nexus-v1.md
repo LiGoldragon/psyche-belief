@@ -18,7 +18,7 @@ flowchart LR
 
 ## An operation is an attempt
 
-A signal in is an attempt at something; the attempt is the operation. Operation declares one attempt per input, named as the doing, and the outcome each attempt ends in; Signal's output is made from that outcome.
+A signal in is an attempt at something; the attempt is the operation. Operation declares each attempt named as the doing, and the outcome each attempt ends in; Signal's output is made from that outcome. One attempt per input; an attempt may compose several typed emissions, each emission one external call.
 
 ```mermaid
 flowchart LR
