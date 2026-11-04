@@ -97,7 +97,7 @@ flowchart TB
 
 ## A permanent flow continues
 
-A permanent flow continues through runs under its address and is kept hot: it is not stopped between works, so no restart pays the full cost of starting again. Past its model's threshold, configured per model in the Flow Nexus, it is replaced by a successor started from its modules, with the queue that gathered meanwhile; the predecessor ends. A handover is written by a Primary alone. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
+A permanent flow continues through runs under its address and is kept hot: it is not stopped between works, so no restart pays the full cost of starting again. It is warned when its context reaches the Warning share of its model's threshold, configured per model in the Flow Nexus: a HardAbrupt Notice naming its handover path, flows/<id>/handover.md. When the context passes the threshold its successor is launched with the same definition, that file as its first prompt, and the queue that gathered meanwhile; the predecessor ends. An absent file means the successor starts from its definition and the queue alone. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
 
 The lander, the bookmaker, the readers and the rest of the roster are permanent flows; any flow sends work to them directly, with Send. The harness subagent is used only for what no running flow holds.
 
@@ -207,7 +207,14 @@ Signal
             Running.Address ] ]
 [ Event.[ Started Idle Working Ended
           Responded.String            ; the response, whole
+          Warned                     ;   the handover asked
           Threshold ] ]              ;   context past its mark
+```
+
+```datom
+; the Nexus, to the flow, at the Warning share
+HardAbrupt.Notice.«Write your handover at
+flows/f54886/handover.md»
 ```
 
 ## Emission
@@ -246,7 +253,8 @@ Memory
          State.[ Running Idle Ended ]
          Vector<Event> }
   Queue.{ Address Vector<Message> }
-  Threshold.{ Model.String Tokens.Integer }
+  Threshold.{ Model.String Tokens.Integer
+              Warning.Integer }        ; share left, 20
   Answer.[ Succeeded Failed ] ]
 ```
 

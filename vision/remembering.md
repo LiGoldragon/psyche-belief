@@ -44,4 +44,11 @@ flow 'Launch.{ { Psyche core Primary } { Custom.[ 36b71b e3c8c1 ] [] } «brief»
 
 A record is one file per topic, flows/<id>/vision/<topic>.md, named in lower case with hyphens; a misc topic holds the small things. Before a refresh the flow shows the living the topics of its ancestors to the depth he names, and he picks the topics and the depth.
 
-A flow is refreshed after its landings: what he approved is landed and live before the handover is written, and the handover holds only what is not landed. The flow that had the conversation writes it, in his words verbatim, composed in inline quotes into what he wants and nothing else, by ancestor, each section marked with the model and the process that made it. It is published as a book of its own kind, `Handover.{ «title» }`, which he reviews as he reviews psyche; the successor's first prompt is that file as reviewed.
+A flow is refreshed after its landings: what he approved is landed and live before the handover is written. A handover is a broad overview of what the flow is still trying to do, and only that: the successor starts with a fresh point of view. The raw logs pass to a flow so that it may write its handover; the Psyche core Primary, the flow that speaks with the living, is their main user. The flow writes the handover at flows/<id>/handover.md when the Flow Nexus warns it, and the successor's first prompt is that file.
+
+```mermaid
+flowchart TB
+    n["Flow Nexus"] -- "warns, before the threshold" --> f["the flow"]
+    f -- "writes" --> h["handover: what it is still trying to do"]
+    h -- "first prompt of" --> s["the successor, fresh"]
+```
