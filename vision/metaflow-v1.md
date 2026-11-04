@@ -66,7 +66,8 @@ The Nexuses hold vocabulary; the owner writes definitions in datom. A definition
 ```datom
 ; definitions/designer.datom: one complex
 { designer
-  [ { fable Claude claude-fable-5-1 Medium Perma
+  [ { fable Claude claude-fable-5-1 Medium
+      Permanent
       Path.«/home/li/primary»
       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
       { [ Bash Edit ] [ Artifact ] }

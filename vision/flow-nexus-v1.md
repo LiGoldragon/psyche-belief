@@ -7,14 +7,14 @@ dependencies: [vision-ethos]
 
 ## Vocabulary
 
-A flow is one run of a model in a harness. A perma flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is every complex running on one host, with that host's keys and roles; a laptop runs one, a server may run several.
+A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is every complex running on one host, with that host's keys and roles; a laptop runs one, a server may run several.
 
 ## The machine is defined, never built in
 
 Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No layer, role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
-A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a perma flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
+A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
 
 ```ethos
 Library
@@ -25,7 +25,7 @@ Library
   Harness.[ Claude Codex ]
   ModelName.String
   Effort.[ Low Medium High ]
-  Continuity.[ Perma                 ; continues through runs
+  Continuity.[ Permanent  ; keeps its address
                Ephemeral ]           ; one run, then gone
   Workspace.[ Path.String
               Temporary ]            ; made at launch, removed at end
@@ -44,7 +44,8 @@ Library
   Complex.{ ComplexName Vector<Member>
             Speaker.FlowName }
   FlowId.Integer
-  Address.{ ComplexName FlowName }   ; a perma flow's standing name
+  Address.{ ComplexName
+            FlowName }  ; a permanent flow's name
   Brief.String ]
 []
 []
@@ -61,7 +62,7 @@ flowchart TB
 
 ## A message takes a route
 
-A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A perma flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
+A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
 
 ```ethos
 Library
@@ -94,9 +95,81 @@ flowchart TB
     y --> f["Flow Nexus acts"]
 ```
 
-## A perma flow continues
+## A permanent flow continues
 
-A perma flow is refreshed when its context passes its model's threshold, configured per model in the Flow Nexus: the flow is told to write its handover, its successor is launched with the same definition, the handover as its first prompt, and the queue that gathered meanwhile; the predecessor ends. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
+A permanent flow continues through runs under its address and is kept hot: it is not stopped between works, so no restart pays the full cost of starting again. Past its model's threshold, configured per model in the Flow Nexus, it is replaced by a successor started from its modules, with the queue that gathered meanwhile; the predecessor ends. A handover is written by a Primary alone. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
+
+The lander, the bookmaker, the readers and the rest of the roster are permanent flows; any flow sends work to them directly, with Send. The harness subagent is used only for what no running flow holds.
+
+His words: "we do not want flows that are idle because they go cold and when we restart them we pay the full cost again"
+
+Work goes straight to a permanent flow by its standing address, in the Signal's Send form `Send.{ FlowId Address Priority Request }`:
+
+```datom
+Send.{ 7 { jobs lander } Soft
+       Order.«land the proposal» }
+```
+
+The roster, as Members: each a permanent flow, in a temporary workspace, with the role's belief, on a Tertiary or Quaternary model.
+
+```datom
+[ { lander Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role lander } ] Refuse }
+      HarnessDefault [] }
+  { bookmaker Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role book } ] Refuse }
+      HarnessDefault [] }
+  { bookPager Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role book-page } ] Refuse }
+      HarnessDefault [] }
+  { bookReader Claude claude-haiku-4-5 Medium
+      Permanent Temporary
+      { [ { Role book-reader } ] Refuse }
+      HarnessDefault [] }
+  { commentRelay Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role comment-relay } ] Refuse }
+      HarnessDefault [] }
+  { contextualizer Claude claude-haiku-4-5 Medium
+      Permanent Temporary
+      { [ { Role contextualizer } ] Refuse }
+      HarnessDefault [] }
+  { illustrator Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role illustrator } ] Refuse }
+      HarnessDefault [] }
+  { scripter Claude claude-haiku-4-5 Medium
+      Permanent Temporary
+      { [ { Role scripter } ] Refuse }
+      HarnessDefault [] }
+  { tester Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role tester } ] Refuse }
+      HarnessDefault [] }
+  { reader Claude claude-haiku-4-5 Medium
+      Permanent Temporary
+      { [ { Role read } ] Refuse }
+      HarnessDefault [] }
+  { writer Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role write } ] Refuse }
+      HarnessDefault [] }
+  { worker Claude claude-sonnet-5-5 Medium
+      Permanent Temporary
+      { [ { Role worker } ] Refuse }
+      HarnessDefault [] } ]
+```
+
+```mermaid
+flowchart TB
+    f["any flow"] -- "Send" --> p["permanent flow, hot"]
+    p -- "answers as a message" --> f
+    f -. "only if no running flow holds the work" .-> h["harness subagent"]
+    p -- "past threshold, replaced by" --> s["successor, from its modules"]
+```
 
 ## Signal
 
@@ -181,7 +254,7 @@ Memory
 ; the user defines a complex: one datom, added alone
 Define.{ designer
          [ { fable Claude claude-fable-5-1 Medium
-             Perma
+             Permanent
              Path.«/home/li/primary»
              { [ spirit:core vision:nexus-v1 ] Refuse }
              HarnessDefault
