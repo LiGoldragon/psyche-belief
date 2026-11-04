@@ -40,13 +40,24 @@ Configure sets one value of the configuration at a time, never the whole; a subs
 Signal
 []                                   ; imports
 [ Configure.Set ]                    ; inputs: one value at a time
-[ Configured.Set                     ; outputs: the value set
+[ Configured.{ Set Owner }           ; outputs: the value set
+                                     ;   and its owner
   Refused.{ Set Message } ]          ;   or why it was not
-[ Set.[ PollingMilliseconds.Integer  ; types: one per field
-        CallTimeoutMilliseconds.Integer
-        StartTimeoutMilliseconds.Integer
-        FrameCapacityBytes.Integer
-        ExternalOutputLimitBytes.Integer ]
+[ Set.[ HerdrPath.PathValue          ; types: one per field;
+        CallTimeout.Timeout          ;   translator-owned
+        OutputLimit.ByteLimit
+        TextBudget.BudgetValue
+        StartTimeout.Timeout         ;   Nexus-owned
+        Polling.Timeout
+        FrameCapacity.ByteLimit
+        TransportTimeout.Timeout ]
+  Owner.[ Nexus Translator ]         ; who answers for a field
+  PathValue.String
+  Timeout.Integer
+  ByteLimit.Integer
+  NodeLimit.Integer
+  DepthLimit.Integer
+  BudgetValue.{ NodeLimit DepthLimit }
   Message.String ]
 ```
 
@@ -85,6 +96,9 @@ Library
             Option<ExitStatus>
             Message }
   MemoryRefusal.Message
+  SocketPath.String
+  TransportRefusal.{ SocketPath      ; the connection was refused
+                     Message }
   Label.String
   State.[ Open Busy Idle Dead ]
   Attempt.[ Settled                  ; how the last attempt on
@@ -104,6 +118,8 @@ Library
             Listed.Vector<Known>
             Refused.Refusal
             Unknown.Pane
+            AttemptInProgress.Pane
+            Unavailable.TransportRefusal
             Uncertain
             StoreRefused.StoreRefusal ] ]
 []
