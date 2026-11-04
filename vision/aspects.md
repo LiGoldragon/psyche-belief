@@ -3,12 +3,17 @@ description: Flows of different aspects work on one topic, or Field reaches Psyc
 dependencies: []
 ---
 
-## Flows of one topic talk at the same layer across aspects
+## Routes are the definition's
 
-Flows of the same topic talk at the same layer across aspects, so a Psyche topic Secondary and the Mind Secondary of that topic speak directly. Field reaches Psyche through Mind, unless Psyche has just spoken to Field. This holds for every aspect.
+Who speaks to whom, within an aspect and across aspects, is the routes each complex names in its definition; a message off the routes is refused. Field reaches Psyche through Mind, unless Psyche has just spoken to Field.
 
-## Within an aspect, a flow speaks to the layer next to it
-
-Within an aspect, a flow speaks only to the layer next to it: a Quaternary to its Tertiary, a Tertiary to its Secondary, a Secondary to its Primary.
-
-The tracker, a Quaternary, reaches any Secondary directly, in any aspect, and a Primary only through its Secondary.
+```datom
+; a complex, each member by its model
+{ designer
+  [ { fable Claude claude-fable-5-1 Medium
+      Perma Path.«/home/li/primary»
+      { [ spirit:core ] Refuse }
+      HarnessDefault
+      [ Speaks.opus Speaks.Living ] } ]
+  fable }
+```
