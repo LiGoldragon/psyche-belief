@@ -170,8 +170,12 @@ Memory
 ; the user defines a complex: one datom, added alone
 Define.{ designer
          [ { fable Claude claude-fable-5-1 Medium
-              Path.«/home/li/primary»
-              { [ spirit:core vision:nexus-v1 ] Refuse } } ] }
+             Perma
+             Path.«/home/li/primary»
+             { [ spirit:core vision:nexus-v1 ] Refuse }
+             HarnessDefault
+             [ Living ] } ]
+         fable }
 Defined.designer
 ; and launches a flow of it
 Launch.{ designer fable «Read the version one book» }
