@@ -1,6 +1,6 @@
 ---
 description: How a flow sends a message through the Flow CLI.
-placement: system prompt
+placement: system
 dependencies: []
 ---
 
@@ -49,7 +49,7 @@ Delivery is Queue or Wake. Written with two fields, Recipient and SendableMessag
 
 SendableMessage is HardAbrupt, MiddleAbrupt or Soft, carrying Order, Question, Psyche, Psyches, Result, Notice, Task or Done.
 
-Text is a String, written in guillemets: «text». Parentheses (text) are a Meaning, not a String.
+Text is a String, written in guillemets: «text».
 
 ## Examples
 
@@ -92,7 +92,7 @@ Sent.VisibleSendReceipt
 Failed.VisibleSendFailure
 ```
 
-- SendAccepted: the Nexus admitted the send, with a DeliveryCursor and a DeliveryState (Queued, Attempting, Retryable, Uncertain, Delivered, Failed or Withdrawn).
-- Sent: the recipient's seat received the message; the receipt is a NativeReceipt.
+- SendAccepted: a VisibleSendAcceptance, a DeliveryCursor and a DeliveryState (Queued, Attempting, Retryable, Uncertain, Delivered, Failed or Withdrawn).
+- Sent: a VisibleSendReceipt, a NativeReceipt.
 - SendRefused: a VisibleRefusal, among them Locked, Asleep, NoLayer, NoneAbove, TopicRefused, Unresolved, Ambiguous and MinutesRefused.
 - Failed: a SendFailure reason: RecipientUnavailable, QueueNotPermitted, Refused, ReceiptUncertain or NotSent.
