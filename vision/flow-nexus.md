@@ -5,6 +5,12 @@ dependencies: [vision-nexus, vision-ethos]
 
 ## What it does
 
+```mermaid
+flowchart TB
+    a["Address: Aspect, Topic, Model"] -- "{ Psyche core Fable }" --> f["one metaflow"]
+    a -- "{ Mind core Opus }, { Psyche core Astra }" --> g["any model in any aspect"]
+```
+
 The Flow Nexus sets up and starts a model flow: its working
 directory, system prompt, training files and instruction prompt.
 

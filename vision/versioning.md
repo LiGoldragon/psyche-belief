@@ -27,6 +27,16 @@ Every part of a Nexus, its daemon and its clients, is built from one source at o
 
 ## Versions side by side
 
+```mermaid
+flowchart TB
+    d["the declaration"] -- "one unit per version" --> a["flow-0.44"]
+    d -- "one unit per version" --> b["flow-0.48"]
+    w["flow, the wrapper"] -- "points at one" --> b
+    f["a flow"] -- "calls a version by its CLI" --> a
+    f -- "or the wrapper" --> w
+    x["a version with problems"] -- "is removed; another is added" --> d
+```
+
 Every version of a Nexus is its own declared unit, on its own sockets and store, and as many run at once as are wanted: two, three, five, since they are cheap to run. Each version has its raw CLI, named by the component and the version, `flow-0.44`; the bare name, `flow`, is a wrapper that points at one version. A flow calls a version by its CLI. Which flow runs on which version is state, moved by signal, outside the declaration. A version that proves to have problems is removed from the declaration and another added; the versions beside it keep running.
 
 ```sh
