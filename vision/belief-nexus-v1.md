@@ -8,20 +8,23 @@ dependencies: [vision-ethos]
 The Belief Nexus holds the belief modules and furnishes workspaces with them. Belief is the word: what a model believes when it starts. It replaces Curriculum. Its memory is its own; a definition in the Flow Nexus refers to a module by name only, and a name may resolve to nothing: the Belief Nexus answers which names are missing, and what is done about it is the definition's policy, never the Nexus's.
 
 ## Signal
-A registered repository is watched: when its main moves, every workspace furnished with a module it changed is furnished again, and the Flow Nexus is told which flows now run on old belief, so a perma flow can be refreshed on it. A module is named by kind and subject; its placement, system prompt or skill, is read from the module's own front matter.
+A registered repository is watched: when its main moves, every workspace furnished with a module it changed is furnished again, and the Flow Nexus is told which flows now run on old belief, so a perma flow can be refreshed on it. A module is named by kind and subject; its front matter names its placement, system prompt or skill. The skills directory is the harness's.
 
 ```ethos
 Signal
-[ belief:[ Repository ModuleName
-           Workspace Placement ] ]
-[ Register.Repository
+[ belief:[ Repository ModuleName      ; imports
+           Workspace Location ]
+  flow:[ Harness ] ]
+[ Register.Repository                ; inputs: a module source
   Resolve.Vector<ModuleName>
-  Furnish.{ Workspace Vector<ModuleName> }
+  Furnish.{ Workspace Harness        ; the harness's
+            Vector<ModuleName> }     ;   skills directory
   Subscribe ]
-[ Registered.Repository
-  Resolved.{ Vector<ModuleName>
-             Vector<ModuleName> }
-  Furnished.{ Placement Vector<ModuleName> }
+[ Registered.Repository              ; outputs
+  Resolved.{ Vector<ModuleName>      ; found
+             Vector<ModuleName> }    ; missing
+  Furnished.{ Location
+              Vector<ModuleName> }   ; missing, left out
   Subscribed
   Changed.{ Repository                ; pushed: main moved
             Vector<ModuleName>        ;   modules changed
@@ -31,21 +34,17 @@ Signal
 []
 ```
 
+## Meta
+
+A module's front matter names its placement; the default per Kind is a meta setting, set one value at a time, never in the Rust.
+
 ```ethos
 Signal
-[ belief:[ Repository ModuleName
-           Workspace Placement ] ]
-[ Register.Repository                ; a module source
-  Resolve.Vector<ModuleName>
-  Furnish.{ Workspace Vector<ModuleName> } ]
-[ Registered.Repository
-  Resolved.{ Vector<ModuleName>       ; found
-             Vector<ModuleName> }     ; missing
-  Furnished.{ Placement
-              Vector<ModuleName> }    ; missing, left out
-  Refused.[ UnknownRepository.Repository
-            Unwritable.Workspace ] ]
-[]
+[ belief:[ Kind Placement ] ]        ; imports
+[ Configure.Set ]                    ; inputs: one value at a time
+[ Configured.Set ]                   ; outputs: the value set
+[ Set.[ Placement.{ Kind             ; types: the default
+                    Placement } ] ]  ;   placement per Kind
 ```
 
 ## Library
@@ -59,21 +58,23 @@ Library
          Knowledge Role ]
   ModuleName.{ Kind Subject.String }
   Workspace.String                   ; the flow's directory
-  Placement.{ SystemPrompt.String    ; the bundle file written
-              Skills.String } ]      ; the skills directory
+  Placement.[ SystemPrompt Skill ]   ; named in front matter;
+                                     ;   default per Kind: meta
+  Location.{ SystemPrompt.String     ; the bundle file written
+             Skills.String } ]       ; the skills directory
 []
 []
 ```
 
 ## Emission
 
-Furnishing is writing: the spirit and intent modules into one system-prompt bundle, every other module into the harness's skills directory of the workspace.
+Furnishing is writing: each module into the workspace's system-prompt bundle or the harness's skills directory, as its placement says.
 
 ```ethos
 Emission
-[ belief:[ Workspace ModuleName Placement ] ]
+[ belief:[ Workspace ModuleName Location ] ]
 [ Write.{ Workspace Vector<ModuleName> } ]
-[ Written.Placement ]
+[ Written.Location ]
 []
 ```
 
@@ -87,7 +88,7 @@ Memory
 ```
 
 ```datom
-Furnish.{ /home/li/primary
+Furnish.{ /home/li/primary Claude
           [ { Spirit core } { Vision nexus-v1 }
             { Vision none } ] }
 Furnished.{ { /home/li/primary/.bundle
