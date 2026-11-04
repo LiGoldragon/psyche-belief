@@ -108,6 +108,10 @@ impl Emittable for Command {           // trait: generated
 }
 ```
 
+## A meta surface sets one value at a time
+
+A Nexus's meta surface sets one value at a time, and a subscription sees the configuration as it changes.
+
 ## Two Nexuses
 
 ```mermaid
