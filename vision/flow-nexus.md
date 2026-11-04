@@ -32,6 +32,23 @@ In the chat a flow is named by its metaflow, and the flow id almost disappears f
 
 A request reaching a metaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks the Flow Nexus to send a request to a metaflow; the Flow Nexus owns the lock and the delivery, answers sent or queued, and Message subscribes to the Flow Nexus's events, learning when a request has entered the flow's context. A metaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a metaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A metaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the metaflow's belief modules and the prompt it is to get now.
 
+```ethos
+SendableRequest.[ Order.String                  ; a request: what the recipient is to act on
+                  Question.String
+                  Living.{ Context.String       ;   what his words were about
+                           Verbatim.String }    ;   his words whole
+                  Result.{ Answerable String }
+                  Notice.String
+                  Task.AnswerableTask
+                  Done.{ Answerable String } ]
+AnswerableTask.{ Minutes String }               ; a task, with the minutes it is given
+Minutes.Integer
+```
+
+```datom
+Send.{ Address.{ Psyche core Secondary } Soft.Living.{ «context» «verbatim» } }
+```
+
 A flow woken for a metaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
 
 What has been queued for an idle metaflow, the vision touching its topic among it, is injected with the request that wakes it, so the flow knows it as soon as it wakes.
