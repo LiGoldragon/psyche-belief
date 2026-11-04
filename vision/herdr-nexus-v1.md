@@ -21,13 +21,13 @@ Signal
   Close.Pane
   List.Session
   Subscribe.Session ]
-[ Created.Pane
+[ Created.Outcome
   Started.Outcome
   Prompted.Outcome
   Pressed.Outcome
   Closed.Outcome
-  Listed.Vector<Known>
-  Subscribed
+  Listed.Outcome
+  Subscribed.Outcome
   Changed.{ Pane State } ]           ; pushed, each change
 [ Label.String
   State.[ Open Busy Idle Dead ]
@@ -43,7 +43,7 @@ Signal
   Prompt.{ Pane Text }
   Press.{ Pane Keys }
   Close.Pane ]
-[ Created.Pane                       ; outputs
+[ Created.Outcome                    ; outputs
   Started.Outcome
   Prompted.Outcome
   Pressed.Outcome
@@ -63,34 +63,66 @@ Library
   Variable.{ Name.String Value.String }
   Workspace.{ Session Root
               Vector<Variable> }
-  Command.{ Program.String
-            Vector<String> }         ; what starts in the pane
+  Command.{ AgentName                ; what starts in the pane
+            AgentKind
+            Executable
+            Vector<String> }         ;   its arguments
+  AgentName.String
+  AgentKind.[ Pi Claude Codex Gemini ; herdr's agent kinds
+              Cursor Devin Agy Cline
+              Omp Mastracode Opencode
+              Copilot Kimi Kiro Droid
+              Amp Grok Hermes Kilo
+              Qodercli Qwen Maki ]
+  Program.String
+  Executable.[ Configured            ; the kind's program
+               Explicit.Program ]
   Text.String                        ; what is typed
   Keys.Vector<String>
-  Outcome.[ Done
+  ErrorCode.String
+  ExitStatus.Integer
+  Message.String
+  Refusal.{ ErrorCode                ; herdr refused
+            Option<ExitStatus>
+            Message }
+  MemoryRefusal.Message
+  ObservedEffect.[ Done              ; what herdr was seen to do
+                   Created.Pane
+                   Listed.Vector<Known> ]
+  StorePhase.[ BeforeEmission        ; when the store failed
+               Observed.ObservedEffect
+               Uncertain ]
+  StoreRefusal.{ MemoryRefusal       ; the store failed
+                 StorePhase }
+  Outcome.[ Done                     ; how every attempt ends
+            Created.Pane
+            Listed.Vector<Known>
+            Refused.Refusal
+            Unknown.Pane
             Uncertain
-            Refused.{ Code.Integer
-                      Message.String } ] ]
+            StoreRefused.StoreRefusal ] ]
 []
 []
 ```
 
 ## Operation
 
-One attempt per input. An attempt reads and writes Memory and sends one Emission; it ends in its outcome.
+One attempt per input. An attempt reads and writes Memory and sends one Emission; every attempt ends in the shared Outcome.
 
 ```ethos
 Operation
-[ herdr:[ Pane Workspace Command Text Keys ] ]
+[ herdr:[ Pane Workspace Command Text Keys ]
+  :herdr:AttemptOutcome.Outcome ]
 [ Creating.Workspace                 ; attempts
   Starting.{ Pane Command }
   Prompting.{ Pane Text }
   Pressing.{ Pane Keys }
   Closing.Pane ]
-[ Created.Pane                       ; what each ends in
-  Ended                              ;   the emission went out
-  Failed.[ Unknown.Pane              ;   not in Memory
-           StoreRefused ] ]
+[ Created.AttemptOutcome             ; every attempt ends in
+  Started.AttemptOutcome             ;   the shared Outcome
+  Prompted.AttemptOutcome
+  Pressed.AttemptOutcome
+  Closed.AttemptOutcome ]
 []
 ```
 
