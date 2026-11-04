@@ -95,6 +95,9 @@ Signal
 Library
 []
 [ Session.String                     ; the herdr session
+  InstanceId.String
+  Sequence.Integer
+  CreationId.{ InstanceId Sequence } ; marks a creation
   PaneId.String                      ; herdr's name for a pane
   Pane.{ Session PaneId }
   Root.String                        ; a directory
@@ -156,7 +159,7 @@ Library
 
 ## Operation
 
-One attempt per input. An attempt reads and writes Memory and sends one Emission; every attempt ends in the shared Outcome. The Operation turns what the Emission observed into the shared Outcome.
+One attempt per input. An attempt reads and writes Memory and may compose several Emissions, each one herdr call; every attempt ends in the shared Outcome. The Operation turns what the Emission observed into the shared Outcome.
 
 ```ethos
 Operation
@@ -182,38 +185,45 @@ Operation
 
 ## Emission
 
-The herdr command line, as a type. The translator turns it into the call. Its outcome is what the translator observed, raw and its own type. Listing is two emissions, PaneList and AgentList, one herdr call each.
+The herdr command line, as a type. The translator turns it into the call. Its outcome is what the translator observed, raw and its own type. Listing composes PaneList and AgentList, and WorkspaceList while a creation is pending; each is one herdr call.
 
 ```ethos
 Emission
 [ herdr:[ Session PaneId Pane Root   ; imports
           Variable Command Text
-          Keys State Refusal ] ]
+          Keys State Refusal
+          CreationId ] ]
 [ Herdr.{ Session Verb } ]           ; emissions: one call
 [ ExternalOutcome ]                  ; outcomes: observed, raw
-[ Verb.[ WorkspaceCreate.{ Root      ; types
+[ Verb.[ WorkspaceCreate.{ CreationId ; types
+                           Root
                            Vector<Variable> }
+         WorkspaceList               ; while a creation is pending
          AgentStart.{ PaneId         ; Timeout comes from
                       Command        ;   the configuration
                       Timeout.Integer }
          AgentPrompt.{ PaneId Text }
          Keys.{ PaneId Keys }
          PaneClose.PaneId
-         PaneList                    ; Listing's two calls
+         PaneList                    ; Listing's calls
          AgentList ]
   TerminalId.String
   WorkspaceId.String
+  WorkspaceLabel.String
   TabId.String
   PaneListing.{ Pane TerminalId      ; a pane herdr listed
                 WorkspaceId TabId }
   AgentListing.{ Pane TerminalId     ; an agent herdr listed
                  WorkspaceId TabId
                  State }
+  WorkspaceListing.{ WorkspaceId     ; a workspace herdr listed
+                     WorkspaceLabel }
   ExternalOutcome.[ Done             ; what the translator
                     Started.State    ;   observed
                     Created.Pane
                     Panes.Vector<PaneListing>
                     Agents.Vector<AgentListing>
+                    Workspaces.Vector<WorkspaceListing>
                     Refused.Refusal
                     Uncertain ] ]
 ```
@@ -236,9 +246,18 @@ For the proof of concept, Memory lasts as long as the process.
 
 ```ethos
 Memory
-[ herdr:[ Known ] ]                  ; imports
-[ Owned.Known                        ; records: each owned pane
-  Answer.[ Succeeded Failed ] ]      ; every change returns it
+[ herdr:[ Pane Workspace Label      ; imports
+          State Attempt
+          MemoryRefusal CreationId ]
+  translator:[ Principal ] ]
+[ OwnedPane.{ Pane Workspace         ; records: each owned pane
+              Option<Label>
+              State Attempt }
+  Answer.[ Succeeded                 ; every change returns it
+           Failed.MemoryRefusal ]
+  PendingCreation.{ CreationId       ; a creation not yet
+                    Principal        ;   joined to its pane
+                    Workspace } ]
 ```
 
 ```datom
