@@ -32,7 +32,7 @@ flowchart LR
 
 ## The translator
 
-The Nexus decodes signal and nothing else. The translator is the process in front of it that speaks text: a datom typed at the CLI comes in through it, and every emission goes out through it.
+The Nexus decodes signal and nothing else. The translator is the process in front of it that speaks text: a datom typed at the CLI comes in through it, and every emission goes out through it. Every translator carries the Caller, from the connection's peer credentials, in `Call.{ Caller Input }`.
 
 ```mermaid
 flowchart LR
@@ -48,9 +48,11 @@ flowchart LR
 
 ```ethos
 Library
-[ signal:[ Input Output Caller Error ]
+[ signal:[ Input Output Error ]
   std:[ Connection ] ]
 [ Translator.{ NexusSocket.String }   ; the socket of the Nexus it speaks for
+  Caller.{ ProcessId.Integer          ; the connection's
+           UserId.Integer }           ;   peer credentials
   Call.{ Caller Input }               ; what the translator sends in
   Outcome.[ Answered                  ; one reply written back
             Unreadable.Error          ; the text was not an Input
