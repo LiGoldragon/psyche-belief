@@ -43,7 +43,9 @@ SendableMessage.[ HardAbrupt.SendableRequest
                   Soft.SendableRequest ]
 ```
 
-Recipient is an Address, or Up.
+Recipient is an Address, or Up. Up is the layer above in the sender's aspect and topic; a Send to Up from a Primary is refused NoneAbove.
+
+The living is reached by a book: `Presentation.{ Title }`, which names a book; the Nexus routes it to the bookmaker. There is no Living recipient.
 
 Delivery is Queue or Wake. Written with two fields, Recipient and SendableMessage, the Send takes Delivery Wake.
 
@@ -67,12 +69,6 @@ A Question that interrupts at the next tool boundary:
 
 ```sh
 flow Send.{ Address.{ Mind core Secondary } MiddleAbrupt.Question.«Which revision?» }
-```
-
-A Psyche carrying context and the verbatim words:
-
-```sh
-flow Send.{ Address.{ Mind core Secondary } Soft.Psyche.{ «context» «verbatim» } }
 ```
 
 A Task with its Minutes:
