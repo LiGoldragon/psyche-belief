@@ -123,3 +123,5 @@ flowchart LR
     b -- "Emission, signal" --> tb["translator B"]
     tb -- "the call" --> w["world"]
 ```
+
+Signal between Nexuses, never text. A Nexus admits signal from the peers its meta configuration names: a typed peer list, each peer bound by kernel credentials as its own translator is; ownership stays per caller.
