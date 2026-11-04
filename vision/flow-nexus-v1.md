@@ -186,16 +186,19 @@ Signal
   Stop.FlowId
   Send.{ FlowId Address Priority Request }
   Say.{ ComplexName Request }        ; the living, to a speaker
+  Hot                                ; the flows whose harness is up
+  Broadcast.Request                  ; one request to every hot flow
   Report.{ FlowId Event }            ; from a harness hook
   Subscribe ]                        ; events, as they happen
 [ Defined.ComplexName
   Undefined.ComplexName
   Described.Complex
-  Listed.Vector<ComplexName>
   Launched.FlowId
   Stopped.FlowId
   Sent.[ Delivered Queued ]
   Said.[ Delivered Queued ]
+  Listed.Vector<FlowId>              ; the hot flows
+  Broadcast.Vector<FlowId>           ; who received it
   Reported
   Subscribed
   Refused.[ UnknownComplex.ComplexName
@@ -215,6 +218,18 @@ Signal
 ; the Nexus, to the flow, at the Warning share
 HardAbrupt.Notice.«Write your handover at
 flows/f54886/handover.md»
+```
+
+```datom
+Broadcast.Notice.«Search with knowledge:search»
+Broadcast.[ 7 9 12 ]
+```
+
+```mermaid
+flowchart TB
+    m["Memory: each flow's state"] -- "Running or Idle" --> h["the hot flows"]
+    b["Broadcast.Request"] -- "one prompt into each" --> h
+    h -- "who received it" --> r["Broadcast.Vector of FlowId"]
 ```
 
 ## Emission
