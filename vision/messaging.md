@@ -28,6 +28,8 @@ another, and a submission is never a read receipt.
 
 A message carries what its reader acts on: what the sender intends, or what it has done.
 
+A message carries no hash: a flow is named by its metaflow, a book by its title, a commit by what it landed.
+
 ## A message addresses a metaflow
 
 A message is addressed to a metaflow and reaches the flow running when it arrives.
