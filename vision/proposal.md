@@ -9,7 +9,9 @@ A proposal is the prose and the code that describe the system.
 
 A proposal lives in its source file and is edited on his comments. A book is one publication of a proposal, at one link; the edited proposal is published as a new book, and the commented one stays as he left it.
 
-A proposal states what is wanted of the system; it documents nothing. A proof, a test, a milestone or a sequence of work is an order, and goes to a bead; written into a proposal it is a vision impurity.
+A proposal states what is wanted of the system; it documents nothing.
+
+A proposal is the vision as it will be. A removed line is shown as the text it was, in red, so the edit can be seen, and nothing else is made of it: it is not drawn, not summarised and not shown as a state of anything. A proof, a test, a milestone or a sequence of work is an order, and goes to a bead; written into a proposal it is a vision impurity.
 
 A versioned module is self-contained: everything true of that version is in it, and the version is named once, in its description. Another version is not mentioned.
 
@@ -19,7 +21,7 @@ A proposal that touches a code component shows the code it changes or adds.
 
 A code block in a proposal stands on its own: it is shown without a path, directory or file name. It carries the code, why it is important, and what its function is.
 
-A proposal is usually drawn as well as written, and always when it has a shape: what it adds, removes and keeps, in one frame. A flowchart in a proposal is a proposed line like any other: it stands under the addition margin of the proposal it belongs to, which names the module it goes to.
+A proposal is usually drawn as well as written, and always when it has a shape; a figure draws what is wanted, and nothing of what goes. A flowchart in a proposal is a proposed line like any other: it stands under the addition margin of the proposal it belongs to, which names the module it goes to.
 
 The records a proposal draws from live in an unrendered reference file, one per book, in a references/ directory beside the books; they are archived with the landing when some or all of the proposal is accepted.
 
@@ -56,7 +58,7 @@ flowchart TB
 
 ## A proposal is signed
 
-A proposal is written by Fable; Opus publishes it and lands it.
+Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. Opus publishes it and lands it.
 
 A proposal names the model that created it and, for each model that
 helped, what that help was, on a subtitle line under the title. Created

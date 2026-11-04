@@ -35,7 +35,14 @@ A dependency changed shows in the module's front matter: the dependency removed 
 
 A figure shows as proposed for the module it will live in.
 
-A figure proposed for a module shows under that module's path in green, as an added line does; a figure it replaces shows beside it in red.
+A figure proposed for a module shows under that module's path in green, as an added line does; a fence it replaces, in the module, shows as its red lines. A figure is drawn only of what is wanted; a removed sentence is its red text and is never drawn.
+
+```mermaid
+flowchart TB
+    v["vision: what is wanted now"] -- "is" --> p["the proposal, as the module will be"]
+    p -- "shows, in red text, for the edit to be seen" --> r["a line removed"]
+    p -- "draws" --> f["a figure of what is wanted"]
+```
 
 ```mermaid
 flowchart TB

@@ -46,7 +46,7 @@ A vision record is made from his words alone; a line met in a record or a module
 
 ## Crystallized vision is up to date
 
-Crystallized vision is up to date: it states the subject as it now stands.
+Crystallized vision is up to date: it states what is wanted of the subject now.
 
 ## Crystallization
 
