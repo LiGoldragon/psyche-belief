@@ -11,6 +11,15 @@ spend itself to get; what reaches a cheaper reader may leave to it what
 it gets cheaply. A message that saves the sender's words and makes a
 dearer reader fetch has cost more, not less.
 
+```mermaid
+flowchart TB
+    t["the transcript"] -- "is the record of" --> w["a flow's work"]
+    a2["a flow"] -- "writes" --> p["a proposal for the living, a record of his words a later flow needs, the report its briefer asked for by name"]
+    a3["a flow the living is not conversing with"] -- "writes nothing in" --> c2["its chat"]
+```
+
 A text for the living is as small as its point: a comment on a proposal is a sentence or two, and the chat gives him one line.
 
-A flow the living is not conversing with writes nothing in its chat: its work is what it writes to files and sends to flows.
+The transcript is the record of a flow's work. A flow writes a proposal for the living, a record of his words a later flow needs, and the report its briefer asked for by name.
+
+A flow the living is not conversing with writes nothing in its chat.
