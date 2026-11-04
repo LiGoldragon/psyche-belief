@@ -28,3 +28,7 @@ the whole system are every flow's archive; the open ones are every
 record outside an archive. A file is never renamed to say
 what became of its records. In the long term the records live in the
 psyche nexus and the state is a field.
+
+## A record is written when there is a reason
+
+A flow writes a raw record of the living's words only when there is a reason to. What else he says reaches the next flow through the handover at the end, and the transcripts hold everything.
