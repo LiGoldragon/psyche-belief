@@ -21,8 +21,6 @@ A code block in a proposal stands on its own: it is shown without a path, direct
 
 A proposal is usually drawn as well as written, and always when it has a shape: what it adds, removes and keeps, in one frame. A flowchart in a proposal is a proposed line like any other: it stands under the addition margin of the proposal it belongs to, which names the module it goes to.
 
-A figure draws what is wanted; a removed line is shown as the text it was, in red, and nothing of it is drawn.
-
 The records a proposal draws from live in an unrendered reference file, one per book, in a references/ directory beside the books; they are archived with the landing when some or all of the proposal is accepted.
 
 The proposal is the center of development: it is the evolution of an idea.
