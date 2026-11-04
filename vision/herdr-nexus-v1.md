@@ -32,21 +32,22 @@ Signal
 []
 ```
 
+## Meta
+
+Configure sets one value of the configuration at a time, never the whole; a subscription follows the configuration as it changes.
+
 ```ethos
 Signal
-[ herdr:[ Session PaneId Pane Workspace
-          Command Text Keys Outcome ] ]
-[ Create.Workspace                   ; inputs
-  Start.{ Pane Command }
-  Prompt.{ Pane Text }
-  Press.{ Pane Keys }
-  Close.Pane ]
-[ Created.Outcome                    ; outputs
-  Started.Outcome
-  Prompted.Outcome
-  Pressed.Outcome
-  Closed.Outcome ]
-[]
+[]                                   ; imports
+[ Configure.Set ]                    ; inputs: one value at a time
+[ Configured.Set                     ; outputs: the value set
+  Refused.{ Set Message } ]          ;   or why it was not
+[ Set.[ PollingMilliseconds.Integer  ; types: one per field
+        CallTimeoutMilliseconds.Integer
+        StartTimeoutMilliseconds.Integer
+        FrameCapacityBytes.Integer
+        ExternalOutputLimitBytes.Integer ]
+  Message.String ]
 ```
 
 ## Library
@@ -86,7 +87,10 @@ Library
   MemoryRefusal.Message
   Label.String
   State.[ Open Busy Idle Dead ]
-  Known.{ Pane Label State }
+  Attempt.[ Settled                  ; how the last attempt on
+            Uncertain ]              ;   the pane ended
+  Known.{ Pane Label State           ; an owned pane
+          Attempt }
   ObservedEffect.[ Done              ; what herdr was seen to do
                    Created.Pane
                    Listed.Vector<Known> ]
@@ -133,15 +137,19 @@ The herdr command line, as a type. The translator turns it into the call.
 
 ```ethos
 Emission
-[ herdr:[ Session PaneId Workspace
+[ herdr:[ Session PaneId Root Variable
           Command Text Keys Outcome ] ]
 [ Herdr.{ Session Verb } ]           ; emissions: one call
 [ Outcome ]                          ; outcomes
-[ Verb.[ WorkspaceCreate.Workspace   ; types
-         AgentStart.{ PaneId Command }
+[ Verb.[ WorkspaceCreate.{ Root      ; types
+                           Vector<Variable> }
+         AgentStart.{ PaneId         ; Timeout comes from
+                      Command        ;   the configuration
+                      Timeout.Integer }
          AgentPrompt.{ PaneId Text }
          Keys.{ PaneId Keys }
-         Kill.PaneId ] ]
+         PaneClose.PaneId
+         PaneList ] ]
 ```
 
 ```rust
@@ -158,12 +166,13 @@ impl Emittable for Herdr {
 
 ## Memory
 
+For the proof of concept, Memory lasts as long as the process.
+
 ```ethos
 Memory
-[ herdr:[ Pane Workspace ] ]
-[ Known.{ Pane Workspace
-          State.[ Open Closed ] }
-  Answer.[ Succeeded Failed ] ]
+[ herdr:[ Known ] ]                  ; imports
+[ Owned.Known                        ; records: each owned pane
+  Answer.[ Succeeded Failed ] ]      ; every change returns it
 ```
 
 ```datom
