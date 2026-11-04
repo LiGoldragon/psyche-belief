@@ -8,6 +8,28 @@ dependencies: [vision-ethos]
 The Belief Nexus holds the belief modules and furnishes workspaces with them. Belief is the word: what a model believes when it starts. It replaces Curriculum. Its memory is its own; a definition in the Flow Nexus refers to a module by name only, and a name may resolve to nothing: the Belief Nexus answers which names are missing, and what is done about it is the definition's policy, never the Nexus's.
 
 ## Signal
+A registered repository is watched: when its main moves, every workspace furnished with a module it changed is furnished again, and the Flow Nexus is told which flows now run on old belief, so a perma flow can be refreshed on it. A module is named by kind and subject; its placement, system prompt or skill, is read from the module's own front matter.
+
+```ethos
+Signal
+[ belief:[ Repository ModuleName
+           Workspace Placement ] ]
+[ Register.Repository
+  Resolve.Vector<ModuleName>
+  Furnish.{ Workspace Vector<ModuleName> }
+  Subscribe ]
+[ Registered.Repository
+  Resolved.{ Vector<ModuleName>
+             Vector<ModuleName> }
+  Furnished.{ Placement Vector<ModuleName> }
+  Subscribed
+  Changed.{ Repository                ; pushed: main moved
+            Vector<ModuleName>        ;   modules changed
+            Vector<Workspace> }       ;   workspaces refurnished
+  Refused.[ UnknownRepository.Repository
+            Unwritable.Workspace ] ]
+[]
+```
 
 ```ethos
 Signal

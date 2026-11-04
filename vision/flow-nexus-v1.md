@@ -14,6 +14,154 @@ A flow is one run of a model in a harness. A perma flow is a flow that continues
 Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No layer, role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
+A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a perma flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
+
+```ethos
+Library
+[ herdr:[ Pane ]
+  belief:[ ModuleName ] ]
+[ ComplexName.String
+  FlowName.String
+  Harness.[ Claude Codex ]
+  ModelName.String
+  Effort.[ Low Medium High ]
+  Continuity.[ Perma                 ; continues through runs
+               Ephemeral ]           ; one run, then gone
+  Workspace.[ Path.String
+              Temporary ]            ; made at launch, removed at end
+  Missing.[ Refuse Notice ]
+  Beliefs.{ Vector<ModuleName> Missing }
+  Tool.String                        ; the harness's name for it
+  Tools.{ Allow.Vector<Tool> Deny.Vector<Tool> }
+  Route.[ Speaks.FlowName             ; a member of this complex
+          Complex.ComplexName         ;   that complex's speaker
+          Living ]
+  Member.{ FlowName Harness ModelName Effort
+           Continuity Workspace Beliefs Tools
+           Vector<Route> }
+  Complex.{ ComplexName Vector<Member>
+            Speaker.FlowName }
+  FlowId.Integer
+  Address.{ ComplexName FlowName }   ; a perma flow's standing name
+  Brief.String ]
+[]
+[]
+```
+
+```mermaid
+flowchart TB
+    c["complex: designer"] --> s["speaker: fable"]
+    s -- "Speaks.opus" --> o["member: opus"]
+    o -- "Speaks.Complex.implementer" --> i["complex: implementer, its speaker"]
+    s -- "Speaks.Living" --> l["the living"]
+    x["anything else"] -. "refused" .-> s
+```
+
+## A message takes a route
+
+A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A perma flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
+
+```ethos
+Library
+[ flow:[ FlowId Address ComplexName ] ]
+[ Priority.[ HardAbrupt MiddleAbrupt Soft ]
+  Request.[ Order.String Question.String
+            Words.Vector<String>
+            Result.String Notice.String ]
+  Sender.[ Flow.FlowId Living Nexus ]
+  Message.{ Priority Sender Request }
+  Waking.Vector<Message> ]           ; a queue delivered whole
+[]
+[]
+```
+
+## The Nexus reads what a flow says
+
+Every harness event reaches the Flow Nexus through a hook calling the CLI: Report carries the flow's state, and a flow's finished response. A response that actualizes as an Input of the Flow Nexus, a Send among them, is acted on as if the flow had typed it at the CLI; any other response is kept as the flow's word and acted on by nobody. So a member that only thinks and talks, with no tool, still sends, launches and stops by writing a datom.
+
+```mermaid
+flowchart TB
+    r["flow's response, as text"] -- "Report, from the hook" --> t["translator"]
+    t -- "actualizes as Input?" --> y["yes: the Input, as signal"]
+    t -- "no" --> n["Heard: kept, nothing acted"]
+    y --> f["Flow Nexus acts"]
+```
+
+## A perma flow continues
+
+A perma flow is refreshed when its context passes its model's threshold, configured per model in the Flow Nexus: the flow is told to write its handover, its successor is launched with the same definition, the handover as its first prompt, and the queue that gathered meanwhile; the predecessor ends. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
+
+## Signal
+
+```ethos
+Signal
+[ flow:[ Complex ComplexName FlowName FlowId
+         Address Brief ModuleName Message
+         Request Priority Tool ] ]
+[ Define.Complex                     ; add or replace one
+  Undefine.ComplexName
+  Launch.{ ComplexName FlowName Brief }
+  Stop.FlowId
+  Send.{ FlowId Address Priority Request }
+  Say.{ ComplexName Request }        ; the living, to a speaker
+  Report.{ FlowId Event }            ; from a harness hook
+  Subscribe ]                        ; events, as they happen
+[ Defined.ComplexName
+  Undefined.ComplexName
+  Launched.FlowId
+  Stopped.FlowId
+  Sent.[ Delivered Queued ]
+  Said.[ Delivered Queued ]
+  Reported
+  Subscribed
+  Refused.[ UnknownComplex.ComplexName
+            UnknownFlow.FlowName
+            NoRoute.{ FlowId Address }
+            NoBelief.Vector<ModuleName>
+            HerdrDown BeliefDown
+            Running.Address ] ]
+[ Event.[ Started Idle Working Ended
+          Responded.String            ; the response, whole
+          Threshold ] ]              ;   context past its mark
+```
+
+## Emission
+
+The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them.
+
+```ethos
+Emission
+[ flow:[ Member FlowId Brief Waking Tools ]
+  herdr:[ Pane Outcome ] ]
+[ Furnish.{ Member FlowId }           ; beliefs into the workspace
+  Settle.{ Member FlowId }            ; the harness's settings file
+  Open.{ Member FlowId Brief }        ; pane made, harness started
+  Wake.{ Pane Waking }                ; the queue typed in
+  Close.{ Pane Workspace } ]          ; pane killed, Temporary removed
+[ Furnished.Outcome
+  Settled.Outcome
+  Opened.{ Pane Outcome }
+  Woken.Outcome
+  Closed.Outcome ]
+[ Settings.[ Claude.{ Tools Model.String }   ; what the translator writes
+             Codex.{ Tools Model.String } ] ]
+```
+
+## Memory
+
+```ethos
+Memory
+[ flow:[ Complex ComplexName FlowName FlowId
+         Address Message Event ]
+  herdr:[ Pane ] ]
+[ Definition.Complex
+  Flow.{ FlowId Address Pane
+         State.[ Running Idle Ended ]
+         Vector<Event> }
+  Queue.{ Address Vector<Message> }
+  Threshold.{ Model.String Tokens.Integer }
+  Answer.[ Succeeded Failed ] ]
+```
 
 ```ethos
 Library

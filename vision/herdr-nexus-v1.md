@@ -8,6 +8,30 @@ dependencies: [vision-ethos]
 The herdr Nexus owns every pane. It is the one component that runs herdr; when herdr changes, it changes, and nothing else does. It is built first, because it proves the translator and the CLI alone, and it is kept usable by hand: any flow, or the living, drives a pane through `herdr-nexus 'Prompt.{ … }'`.
 
 ## Signal
+The herdr Nexus also observes: a pane's state is read from herdr and pushed to subscribers as it changes, so the Flow Nexus learns a harness has died without a hook. A pane carries a label, the address of the flow in it, so a listing reads as the metaflow does.
+
+```ethos
+Signal
+[ herdr:[ Session PaneId Pane Workspace
+          Command Text Keys Outcome Label ] ]
+[ Create.Workspace
+  Start.{ Pane Command Label }
+  Prompt.{ Pane Text }
+  Press.{ Pane Keys }
+  Close.Pane
+  List.Session
+  Subscribe.Session ]
+[ Created.Pane
+  Started.Outcome
+  Prompted.Outcome
+  Pressed.Outcome
+  Closed.Outcome
+  Listed.Vector<{ Pane Label State }>
+  Subscribed
+  Changed.{ Pane State } ]           ; pushed, each change
+[ Label.String
+  State.[ Open Busy Idle Dead ] ]
+```
 
 ```ethos
 Signal

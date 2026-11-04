@@ -1,0 +1,76 @@
+---
+description: The metaflow, version 1, everything running on one host for one owner: three Nexuses, their definitions, and how several run side by side, is being designed or judged against what the living wants it to be.
+dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-v1]
+---
+
+# The metaflow
+
+Version 1. A metaflow is everything running on one host for one owner: three Nexuses, the definitions they run, and the flows running from them. A host may run several, each under its own name and directory.
+
+```mermaid
+flowchart TB
+    d["definitions: one datom file per complex"] -- "Define, through the CLI" --> f["Flow Nexus"]
+    f -- "Furnish, signal" --> b["Belief Nexus"]
+    f -- "Create, Start, Prompt, signal" --> h["herdr Nexus"]
+    b -- "writes the bundle and the skills" --> w["workspace"]
+    h -- "runs herdr" --> p["pane: the harness, the flow"]
+    p -- "Report, through the CLI, from a hook" --> f
+    l["the living, at a CLI"] -- "Say" --> f
+```
+
+## A metaflow is a directory
+
+A metaflow has a name and a directory, and nothing of it is read from the environment. The directory holds the sockets of its Nexuses, their memories and its definitions. A Nexus is started with one datom, its place; a CLI takes the metaflow's name and finds the sockets in the directory. Two metaflows are two directories, and the stable one keeps running while the next is tried.
+
+```ethos
+Library
+[]
+[ MetaflowName.String                ; main, next
+  Directory.String                   ; …/metaflow/main
+  Place.{ MetaflowName Directory } ] ; what every Nexus starts with
+[]
+[]
+```
+
+```datom
+; each Nexus, started by the metaflow's shell
+{ main /run/user/1001/metaflow/main }
+; the sockets it makes there
+; flow.sock  flow-meta.sock  flow-translator.sock
+; herdr.sock herdr-meta.sock herdr-translator.sock
+; belief.sock belief-meta.sock belief-translator.sock
+```
+
+```sh
+# the CLI: the metaflow's name, then one datom
+flow main 'Launch.{ designer fable «Read the book» }'
+herdr main 'Prompt.{ { main wQ:pT } «hello» }'
+```
+
+## The metaflow is a Nix shell
+
+The repository metaflow holds the Nix that builds the three Nexuses, their translators and CLIs, and a shell that starts them in a named directory under the owner's login. It is not a sandbox: a flow in it has the owner's credentials and files. A second shell with a second name is a second metaflow.
+
+```sh
+nix develop github:LiGoldragon/metaflow -- metaflow start next
+```
+
+## Everything in a metaflow is a definition
+
+The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom, given to the Flow Nexus by Define and replaced the same way; the running set of definitions is the metaflow's memory, and a change to one definition touches no other. The Rust knows no layer, role, model name or topic.
+
+```datom
+; definitions/designer.datom: one complex
+{ designer
+  [ { fable Claude claude-fable-5-1 Medium Perma
+      Path.«/home/li/primary»
+      { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
+      { [ Bash Edit ] [ Artifact ] }
+      [ Speaks.opus Speaks.Living ] }
+    { opus Claude claude-opus-4 Medium Ephemeral
+      Temporary
+      { [ { Spirit core } { Role worker } ] Notice }
+      { [] [] }
+      [ Speaks.fable Speaks.Complex.implementer ] } ]
+  fable }                            ; the speaker
+```
