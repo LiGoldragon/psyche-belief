@@ -34,7 +34,7 @@ Signal
 
 ## Meta
 
-Configure sets one value of the configuration at a time, never the whole; a subscription follows the configuration as it changes. SubscriberCapacity is positive, and an active subscription follows it.
+Configure sets one value of the configuration at a time, never the whole; a subscription follows the configuration as it changes. SubscriberCapacity is positive, and an active subscription follows it. The meta surface, the root of the Nexus, may act on any pane; the ordinary surface acts only on the panes its caller owns.
 
 ```ethos
 Signal
@@ -85,6 +85,7 @@ Signal
   ConfigurationRefusal.[ Invalid.{ Owner ; why a value was refused
                                    SettingName
                                    Message }
+                         UnknownPeer.PeerId ; no such peer to remove
                          Unavailable.BootstrapRefusal ] ]
 ```
 
