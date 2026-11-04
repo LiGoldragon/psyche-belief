@@ -62,7 +62,8 @@ Signal
                 Polling
                 FrameCapacity
                 TransportTimeout
-                SubscriberCapacity ]
+                SubscriberCapacity
+                Peers ]
   Readiness.[ Awaiting.Vector<SettingName> ; fields still unset
               Ready ]
   PathValue.String
