@@ -56,7 +56,7 @@ flowchart TB
 
 ## A proposal is signed
 
-A proposal is written by a Primary; a Secondary publishes it and lands it.
+A proposal is written by Fable; Opus publishes it and lands it.
 
 A proposal names the model that created it and, for each model that
 helped, what that help was, on a subtitle line under the title. Created
