@@ -20,7 +20,7 @@ flowchart TB
 
 ## A metaflow is a directory
 
-A metaflow has a name and a directory, and nothing of it is read from the environment. The directory holds the sockets of its Nexuses, their memories and its definitions. A Nexus is started with one datom, its place; a CLI takes the metaflow's name and finds the sockets in the directory. Two metaflows are two directories, and the stable one keeps running while the next is tried.
+A metaflow has a name and a directory, and nothing of it is read from the environment. The directory holds the sockets of its Nexuses, their memories and its definitions. A Nexus is started with one datom, its place; a CLI takes the metaflow's name and finds the sockets in the directory. Two metaflows are two directories, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance; the registry's location is the CLI's fixed default, never an argument.
 
 ```ethos
 Library
@@ -45,8 +45,8 @@ Library
 
 ```sh
 # the CLI: the metaflow's name, then one datom
-flow main 'Launch.{ designer fable «Read the book» }'
-herdr main 'Prompt.{ { main wQ:pT } «hello» }'
+flow-nexus main 'Launch.{ designer fable «Read the book» }'
+herdr-nexus main 'Prompt.{ { main wQ:pT } «hello» }'
 ```
 
 ## The metaflow is a Nix shell
