@@ -40,9 +40,9 @@ Configure sets one value of the configuration at a time, never the whole; a subs
 Signal
 []                                   ; imports
 [ Configure.Set ]                    ; inputs: one value at a time
-[ Configured.{ Set Owner }           ; outputs: the value set
-                                     ;   and its owner
-  Refused.{ Set Message } ]          ;   or why it was not
+[ Configured.{ Set Owner             ; outputs: the value set,
+               Readiness }           ;   its owner, readiness
+  ConfigureRefused.ConfigurationRefusal ] ; or why it was not
 [ Set.[ HerdrPath.PathValue          ; types: one per field;
         CallTimeout.Timeout          ;   translator-owned
         OutputLimit.ByteLimit
@@ -51,15 +51,39 @@ Signal
         Polling.Timeout
         FrameCapacity.ByteLimit
         TransportTimeout.Timeout
-        SubscriberCapacity.Integer ] ;   positive
+        SubscriberCapacity.Integer   ;   positive
+        Peers.Vector<Peer> ]         ;   the peers admitted
   Owner.[ Nexus Translator ]         ; who answers for a field
+  SettingName.[ HerdrPath            ; a field, by name
+                CallTimeout
+                OutputLimit
+                TextBudget
+                StartTimeout
+                Polling
+                FrameCapacity
+                TransportTimeout
+                SubscriberCapacity ]
+  Readiness.[ Awaiting.Vector<SettingName> ; fields still unset
+              Ready ]
   PathValue.String
   Timeout.Integer
   ByteLimit.Integer
   NodeLimit.Integer
   DepthLimit.Integer
   BudgetValue.{ NodeLimit DepthLimit }
-  Message.String ]
+  Message.String
+  SocketPath.String
+  UserId.Integer
+  ProcessId.Integer
+  Peer.{ SocketPath                  ; tentative: a peer
+         UserId                      ;   translator, checked
+         ProcessId }                 ;   by kernel credentials
+  BootstrapRefusal.{ SocketPath      ; the target is not up
+                     Message }
+  ConfigurationRefusal.[ Invalid.{ Owner ; why a value was refused
+                                   SettingName
+                                   Message }
+                         Unavailable.BootstrapRefusal ] ]
 ```
 
 ## Library
