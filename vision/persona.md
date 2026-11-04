@@ -5,7 +5,7 @@ dependencies: []
 
 ## What the root does
 
-By default Persona manages all the clusters and all the layers. It keeps a harness instance of each of the triad running: Psyche, Mind and Field.
+By default Persona manages all the clusters and all the hosts. It keeps a harness instance of each of the triad running: Psyche, Mind and Field.
 
 Its first use is a service that checks every service and keeps it running. It is changed through the configuration it takes in, or through what it is sent; nothing else changes until a nexus is added or its behaviour is to change at the root.
 
