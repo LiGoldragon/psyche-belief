@@ -52,7 +52,8 @@ Signal
         FrameCapacity.ByteLimit
         TransportTimeout.Timeout
         SubscriberCapacity.Integer   ;   positive
-        Peers.Vector<Peer> ]         ;   the peers admitted
+        Peer.PeerBinding             ;   a peer admitted
+        RemovePeer.PeerId ]          ;   a peer removed
   Owner.[ Nexus Translator ]         ; who answers for a field
   SettingName.[ HerdrPath            ; a field, by name
                 CallTimeout
@@ -63,7 +64,7 @@ Signal
                 FrameCapacity
                 TransportTimeout
                 SubscriberCapacity
-                Peers ]
+                Peer ]
   Readiness.[ Awaiting.Vector<SettingName> ; fields still unset
               Ready ]
   PathValue.String
@@ -76,9 +77,9 @@ Signal
   SocketPath.String
   UserId.Integer
   ProcessId.Integer
-  Peer.{ SocketPath                  ; tentative: a peer
-         UserId                      ;   translator, checked
-         ProcessId }                 ;   by kernel credentials
+  PeerId.String                      ; a peer's name
+  PeerIdentity.{ UserId ProcessId }  ; checked by kernel credentials
+  PeerBinding.{ PeerId PeerIdentity }
   BootstrapRefusal.{ SocketPath      ; the target is not up
                      Message }
   ConfigurationRefusal.[ Invalid.{ Owner ; why a value was refused
@@ -129,7 +130,7 @@ Library
   State.[ Open Busy Idle Dead ]
   Attempt.[ Settled                  ; how the last attempt on
             Uncertain ]              ;   the pane ended
-  Known.{ Pane Label State           ; an owned pane
+  Known.{ Pane Option<Label> State   ; an owned pane
           Attempt }
   ObservedEffect.[ Done              ; what herdr was seen to do
                    Created.Pane
