@@ -27,13 +27,10 @@ Recipient.[ Address Up ]
 Delivery.[ Queue Wake ]
 Aspect.[ Psyche Mind Field ]
 Layer.[ Primary Secondary Tertiary Quaternary ]
-Said.{ Context.String Verbatim.String }
 AnswerableTask.{ Minutes String }
 Minutes.Integer
 SendableRequest.[ Order.String
                   Question.String
-                  Psyche.Said
-                  Psyches.Vector<Said>
                   Result.{ Answerable String }
                   Notice.String
                   Task.AnswerableTask
@@ -49,7 +46,7 @@ The living is reached by a book: `Presentation.{ Title }`, which names a book; t
 
 Delivery is Queue or Wake. Written with two fields, Recipient and SendableMessage, the Send takes Delivery Wake.
 
-SendableMessage is HardAbrupt, MiddleAbrupt or Soft, carrying Order, Question, Psyche, Psyches, Result, Notice, Task or Done.
+SendableMessage is HardAbrupt, MiddleAbrupt or Soft, carrying Order, Question, Result, Notice, Task or Done.
 
 Text is a String, written in guillemets: «text».
 
