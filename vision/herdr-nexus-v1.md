@@ -29,9 +29,7 @@ Signal
   Listed.Outcome
   Subscribed.Outcome
   Changed.{ Pane State } ]           ; pushed, each change
-[ Label.String
-  State.[ Open Busy Idle Dead ]
-  Known.{ Pane Label State } ]
+[]
 ```
 
 ```ethos
@@ -86,6 +84,9 @@ Library
             Option<ExitStatus>
             Message }
   MemoryRefusal.Message
+  Label.String
+  State.[ Open Busy Idle Dead ]
+  Known.{ Pane Label State }
   ObservedEffect.[ Done              ; what herdr was seen to do
                    Created.Pane
                    Listed.Vector<Known> ]
