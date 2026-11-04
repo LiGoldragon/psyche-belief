@@ -38,11 +38,28 @@ Configure sets one value of the configuration at a time, never the whole; a subs
 
 ```ethos
 Signal
-[]                                   ; imports
-[ Configure.Set ]                    ; inputs: one value at a time
-[ Configured.{ Set Owner             ; outputs: the value set,
-               Readiness }           ;   its owner, readiness
-  ConfigureRefused.ConfigurationRefusal ] ; or why it was not
+[ herdr:[ Session Pane Workspace     ; imports: the pane vocabulary
+          Command Text Keys Outcome
+          Label State UserId PeerId ] ]
+[ Configure.Set                      ; inputs: one value at a time,
+  Create.Workspace                   ;   and every pane input,
+  Start.{ Pane Command Label }       ;   on any pane
+  Prompt.{ Pane Text }
+  Press.{ Pane Keys }
+  Close.Pane
+  List.Session
+  Subscribe.Session ]
+[ Configured.{ Set Keeper            ; outputs: the value set,
+               Readiness }           ;   its keeper, readiness
+  ConfigureRefused.ConfigurationRefusal ; or why it was not
+  Created.Outcome
+  Started.Outcome
+  Prompted.Outcome
+  Pressed.Outcome
+  Closed.Outcome
+  Listed.Outcome
+  Subscribed.Outcome
+  Changed.{ Pane State } ]           ; pushed, each change
 [ Set.[ HerdrPath.PathValue          ; types: one per field;
         CallTimeout.Timeout          ;   translator-owned
         OutputLimit.ByteLimit
@@ -54,7 +71,7 @@ Signal
         SubscriberCapacity.Integer   ;   positive
         Peer.PeerBinding             ;   a peer admitted
         RemovePeer.PeerId ]          ;   a peer removed
-  Owner.[ Nexus Translator ]         ; who answers for a field
+  Keeper.[ Nexus Translator ]        ; who keeps a setting
   SettingName.[ HerdrPath            ; a field, by name
                 CallTimeout
                 OutputLimit
@@ -75,14 +92,12 @@ Signal
   BudgetValue.{ NodeLimit DepthLimit }
   Message.String
   SocketPath.String
-  UserId.Integer
   ProcessId.Integer
-  PeerId.String                      ; a peer's name
   PeerIdentity.{ UserId ProcessId }  ; checked by kernel credentials
   PeerBinding.{ PeerId PeerIdentity }
   BootstrapRefusal.{ SocketPath      ; the target is not up
                      Message }
-  ConfigurationRefusal.[ Invalid.{ Owner ; why a value was refused
+  ConfigurationRefusal.[ Invalid.{ Keeper ; why a value was refused
                                    SettingName
                                    Message }
                          UnknownPeer.PeerId ; no such peer to remove
@@ -131,6 +146,10 @@ Library
   TransportRefusal.{ SocketPath      ; the connection was refused
                      Message }
   Label.String
+  UserId.Integer                     ; a login
+  PeerId.String                      ; a peer's name
+  Owner.[ Login.UserId               ; a text caller, by its login
+          Peer.PeerId ]              ; a signal peer, by its binding
   State.[ Open Busy Idle Dead ]
   Attempt.[ Settled                  ; how the last attempt on
             Uncertain ]              ;   the pane ended
@@ -242,16 +261,18 @@ impl Emittable for Herdr {
 
 ## Memory
 
+A pane is owned by an Owner. A text caller, through the translator, owns by its login, since a CLI is a new process each call and one person drives a pane across many. A signal peer, such as the Flow Nexus's translator, owns by its Peer entry, bound by kernel credentials. The envelope carries the Caller, its ProcessId and UserId, and ownership derives from it.
+
 For the proof of concept, Memory lasts as long as the process.
 
 ```ethos
 Memory
-[ herdr:[ Pane Workspace Label      ; imports
+[ herdr:[ Owner Pane Workspace Label ; imports
           State Attempt
           MemoryRefusal CreationId ]
   translator:[ Principal ] ]
-[ OwnedPane.{ Pane Workspace         ; records: each owned pane
-              Option<Label>
+[ OwnedPane.{ Owner Pane Workspace   ; records: each owned pane,
+              Option<Label>          ;   and who owns it
               State Attempt }
   Answer.[ Succeeded                 ; every change returns it
            Failed.MemoryRefusal ]
