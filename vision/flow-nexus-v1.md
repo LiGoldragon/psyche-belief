@@ -68,13 +68,18 @@ Library
 [ flow:[ FlowId Address ComplexName ] ]
 [ Priority.[ HardAbrupt MiddleAbrupt Soft ]
   Request.[ Order.String Question.String
-            Words.Vector<String>
+            Living.{ Context.String    ; what his words were about
+                     Verbatim.String }  ; his words whole
             Result.String Notice.String ]
   Sender.[ Flow.FlowId Living Nexus ]
   Message.{ Priority Sender Request }
   Waking.Vector<Message> ]           ; a queue delivered whole
 []
 []
+```
+
+```datom
+Send.{ 7 { designer fable } Soft Living.{ «context» «verbatim» } }
 ```
 
 ## The Nexus reads what a flow says
