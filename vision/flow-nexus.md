@@ -18,11 +18,11 @@ The Capsule is the component that makes where a flow runs. Its first embodiment 
 
 Herdr is one backend of the Capsule, the component that gives a flow its place to run; the backend may be exchanged.
 
-The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Layer }, that continues through several flows one after another; the flow is its current run. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
+The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Model }, that continues through several flows one after another; the flow is its current run. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
 
-A topic lives on; when idle, its flows are turned off. When the living touches on it again, whether to wake a flow for it, and at which layer, is a judgment, made by a small model; a topic is bound to its belief modules, so the Flow Nexus knows what to start it with, together with the new input that warrants it.
+A topic lives on; when idle, its flows are turned off. When the living touches on it again, whether to wake a flow for it, and which model, is a judgment, made by a small model; a topic is bound to its belief modules, so the Flow Nexus knows what to start it with, together with the new input that warrants it.
 
 A metaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
 
@@ -46,7 +46,7 @@ Minutes.Integer
 ```
 
 ```datom
-Send.{ Address.{ Psyche core Secondary } Soft.Living.{ «context» «verbatim» } }
+Send.{ Address.{ Psyche core Opus } Soft.Living.{ «context» «verbatim» } }
 ```
 
 A flow woken for a metaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
@@ -64,7 +64,7 @@ A Nexus component decides the system prompt and everything about a
 launch, replacing the harness's subagents with specialized harnesses
 launched with specialized system prompts.
 
-A layer is Primary, Secondary, Tertiary or Quaternary, in every aspect; the layer decides the model. A launch names the metaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
+The address names the model, Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna or Terra, in every aspect: a Psyche core Astra and a Mind core Fable are both addresses. A launch names the metaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
 The Flow Nexus's configuration holds, for each metaflow, its purpose and the records of the living it rests on, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
@@ -82,17 +82,17 @@ A simplified flow is a kind of flow made for judgment alone: it starts with a sy
 
 A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default belief modules and its variations. The flow ethos holds the specification.
 
-Short term, the Secondary starts first, then its Primary.
+Short term, Opus starts first, then Fable.
 
-Long term, a Primary is a simplified flow, used only to render judgment: guiding a design or posing questions.
+Long term, Fable is a simplified flow, used only to render judgment: guiding a design or posing questions.
 
 The system prompt is composed of modules of several types, and what a harness calls a skill overlaps with them.
 Its anatomy is drawn up in ethos from a study of system prompts of every kind, each line placed by what it is and by the kind of guidance it belongs to.
 Where the harness allows it, a part of a main flow's system prompt is the main flow's alone and is not passed down to its subagents.
 
-Every flow has a topic; a flow with no special topic has the topic core, the heart of its aspect. A topic is a core:Name, a camelCaseExpression checked when created. A flow's title is one datom struct of its aspect, topic, layer and flow id: { Psyche core Secondary <id> }.
+Every flow has a topic; a flow with no special topic has the topic core, the heart of its aspect. A topic is a core:Name, a camelCaseExpression checked when created. A flow's title is one datom struct of its aspect, topic, model and flow id: { Psyche core Opus <id> }.
 
-Who speaks to whom, within an aspect and across aspects at the same layer in a shared topic, is the vision-aspects skill's. The Flow Nexus refuses a request that leaves those routes.
+Who speaks to whom is vision:aspects'. Version 0 refuses no request by its address; the routes are version 1's, in the complex definition.
 
 A launch can be rehearsed: the same input, asked as a dry run, answers with the whole command the Flow Nexus would run and runs nothing. From that command an agent starts the flow by hand, changed however the Flow Nexus does not yet support. The answer is one string, the command line as the shell is to receive it, quoted for the shell inside.
 
@@ -104,7 +104,7 @@ A launch can be rehearsed: the same input, asked as a dry run, answers with the 
 ```
 
 ```
-Rehearse.{ { Psyche core Primary } Predecessors.1 «brief» }
+Rehearse.{ { Psyche core Fable } Predecessors.1 «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
@@ -145,13 +145,13 @@ Configure.Harness.{
           1 } } ] }
 
 Configure.Metaflow.{
-   { Psyche book Quaternary }
+   { Psyche book Haiku }
    Some.«/home/li/book»
    Claude
    [ ClaudeMd GitInstructions ] }
 
 Configure.Metaflow.{
-   { Psyche core Primary }
+   { Psyche core Fable }
    None
    Claude
    [ Artifact ClaudeMd GitInstructions ] }
@@ -217,9 +217,9 @@ Library
 [ FlowId.Integer
   Topic.String
   Aspect.[ Psyche Mind Field ]
-  Layer.[ Primary Secondary Tertiary
-          Quaternary ]
-  Address.{ Aspect Topic Layer }
+  Model.[ Fable Opus Sonnet Haiku
+          Astra Sol Luna Terra ]
+  Address.{ Aspect Topic Model }
   Event.[ Started Stopped ] ]
 []
 []
@@ -266,13 +266,13 @@ Memory
 
 ```datom
 ; 1 Input, typed at the CLI, sent as signal
-Launch.{ { Psyche core Primary }
+Launch.{ { Psyche core Fable }
          «Draft the Nexus book» }
 ; 2 Operation, from Signal's intend
-Start.{ { Psyche core Primary }
+Start.{ { Psyche core Fable }
         { /home/li/primary [] } }
 ; 3 the Change Operation hands Memory
-Flow.{ 7 { Psyche core Primary } Running
+Flow.{ 7 { Psyche core Fable } Running
        [ Started ] }
 ; 4 Memory's answer to Operation
 Succeeded
