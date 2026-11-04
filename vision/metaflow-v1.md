@@ -5,7 +5,7 @@ dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-
 
 # The metaflow
 
-Version 1. A metaflow is everything running on one host for one owner: three Nexuses, the definitions they run, and the flows running from them. A host may run several, each under its own name and directory.
+Version 1. A metaflow is everything running on one host for one owner: three Nexuses, the definitions they run, and the flows running from them. A host may run several, each under its own name and directories.
 
 ```mermaid
 flowchart TB
@@ -20,21 +20,23 @@ flowchart TB
 
 ## A metaflow is a directory
 
-A metaflow has a name and a directory, and nothing of it is read from the environment. The directory holds the sockets of its Nexuses, their memories and its definitions. A Nexus is started with one datom, its place; a CLI takes the metaflow's name and finds the sockets in the directory. Two metaflows are two directories, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance; the registry's location is the CLI's fixed default, never an argument.
+A metaflow has a name and two directories, and nothing of it is read from the environment. Runtime holds the sockets of its Nexuses and defaults to `$XDG_RUNTIME_DIR/metaflow/<name>/`; State holds their memories and defaults to `~/.local/state/metaflow/<name>/`. A Nexus is started with one datom, its place. The registry is the runtime root, `$XDG_RUNTIME_DIR/metaflow/`, one directory per name; a CLI resolves `<metaflow>` there and finds the sockets. Two metaflows are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
 
 ```ethos
 Library
 []
 [ MetaflowName.String                ; main, next
-  Directory.String                   ; …/metaflow/main
-  Place.{ MetaflowName Directory } ] ; what every Nexus starts with
+  Place.{ MetaflowName               ; what every Nexus starts with
+          Runtime.String             ; the sockets
+          State.String } ]           ; the memories
 []
 []
 ```
 
 ```datom
 ; each Nexus, started by the metaflow's shell
-{ main /run/user/1001/metaflow/main }
+{ main /run/user/1001/metaflow/main
+  /home/li/.local/state/metaflow/main }
 ; the sockets it makes there
 ; <nexus>.sock  <nexus>-meta.sock  <nexus>-translator.sock  <nexus>-meta-translator.sock
 ; the meta CLI's text arrives at <nexus>-meta-translator.sock and becomes signal for <nexus>-meta.sock; the ordinary translator refuses meta text
