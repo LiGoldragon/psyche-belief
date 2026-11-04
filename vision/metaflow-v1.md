@@ -36,9 +36,11 @@ Library
 ; each Nexus, started by the metaflow's shell
 { main /run/user/1001/metaflow/main }
 ; the sockets it makes there
-; flow.sock  flow-meta.sock  flow-translator.sock
-; herdr.sock herdr-meta.sock herdr-translator.sock
-; belief.sock belief-meta.sock belief-translator.sock
+; <nexus>.sock  <nexus>-meta.sock  <nexus>-translator.sock  <nexus>-meta-translator.sock
+; the meta CLI's text arrives at <nexus>-meta-translator.sock and becomes signal for <nexus>-meta.sock; the ordinary translator refuses meta text
+; flow.sock  flow-meta.sock  flow-translator.sock  flow-meta-translator.sock
+; herdr.sock herdr-meta.sock herdr-translator.sock herdr-meta-translator.sock
+; belief.sock belief-meta.sock belief-translator.sock belief-meta-translator.sock
 ```
 
 ```sh
