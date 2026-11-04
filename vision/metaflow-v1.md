@@ -1,11 +1,11 @@
 ---
-description: The metaflow, version 1, everything running on one host for one owner: three Nexuses, their definitions, and how several run side by side, is being designed or judged against what the living wants it to be.
+description: The metaflow, version 1, several complexes defined together and running as one self for one owner: three Nexuses, their definitions, and the place each Nexus starts in, is being designed or judged against what the living wants it to be.
 dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-v1]
 ---
 
 # The metaflow
 
-Version 1. A metaflow is everything running on one host for one owner: three Nexuses, the definitions they run, and the flows running from them. A host may run several, each under its own name and directories.
+Version 1. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex. Three Nexuses run it, from the definitions given them, and the flows run from those.
 
 ```mermaid
 flowchart TB
@@ -18,15 +18,15 @@ flowchart TB
     l["the living, at a CLI"] -- "Say" --> f
 ```
 
-## A metaflow is a directory
+## A Nexus starts in its place
 
-A metaflow has a name and two directories, and a Nexus reads nothing from the environment; the CLI's two default roots come from the standard XDG variables and from nothing else. Runtime holds the sockets of its Nexuses and defaults to `$XDG_RUNTIME_DIR/metaflow/<name>/`; State holds their memories and defaults to `~/.local/state/metaflow/<name>/`. A Nexus is started with one datom, its place. The registry is the runtime root, `$XDG_RUNTIME_DIR/metaflow/`, one directory per name; a CLI resolves `<metaflow>` there and finds the sockets. Two metaflows are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <metaflow> '<datom>'`: named after the Nexus; the metaflow name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
+A Nexus reads nothing from the environment; the CLI's two default roots come from the standard XDG variables and from nothing else. A Nexus is started with one datom, its place. Runtime holds the sockets of the Nexus and defaults to `$XDG_RUNTIME_DIR/metaflow/<place-name>/`; State holds its memory and defaults to `~/.local/state/metaflow/<place-name>/`. A CLI resolves `<place-name>` under the runtime root and finds the sockets. Two places are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
 
 ```ethos
 Library
 []
-[ MetaflowName.String                ; main, next
-  Place.{ MetaflowName               ; what every Nexus starts with
+[ PlaceName.String                   ; main, next
+  Place.{ PlaceName                  ; what every Nexus starts with
           Runtime.String             ; the sockets
           State.String } ]           ; the memories
 []
@@ -34,7 +34,7 @@ Library
 ```
 
 ```datom
-; each Nexus, started by the metaflow's shell
+; each Nexus, started by the shell
 { main /run/user/1001/metaflow/main
   /home/li/.local/state/metaflow/main }
 ; the sockets it makes there
@@ -46,14 +46,14 @@ Library
 ```
 
 ```sh
-# the CLI: the metaflow's name, then one datom
+# the CLI: the place's name, then one datom
 flow-nexus main 'Launch.{ designer fable «Read the book» }'
 herdr-nexus main 'Prompt.{ { main wQ:pT } «hello» }'
 ```
 
 ## The metaflow is a Nix shell
 
-The repository metaflow holds the Nix that builds the three Nexuses, their translators and CLIs, and a shell that starts them in a named directory under the owner's login. It is not a sandbox: a flow in it has the owner's credentials and files. A second shell with a second name is a second metaflow.
+The repository metaflow holds the Nix that builds the three Nexuses, their translators and CLIs, and a shell that starts each of them with its place under the owner's login. It is not a sandbox: a flow in it has the owner's credentials and files.
 
 ```sh
 nix develop github:LiGoldragon/metaflow -- metaflow start next
@@ -61,7 +61,7 @@ nix develop github:LiGoldragon/metaflow -- metaflow start next
 
 ## Everything in a metaflow is a definition
 
-The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in the State directory. A change to one definition touches no other. The Rust knows no role, model name or topic.
+The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in its State directory. A change to one definition touches no other. The Rust knows no role, model name or topic.
 
 ```datom
 ; definitions/designer.datom: one complex

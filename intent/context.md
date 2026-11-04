@@ -13,7 +13,7 @@ layer carries only its own facts.
 A system of ours takes every value as typed configuration or as a field of the datom it is given. A variable is set only for a third-party program, and the value set is itself configuration.
 
 ```datom
-; the metaflow name picks the sockets
+; the place name picks the sockets
 flow-nexus main 'Send.{ … }'
 ```
 

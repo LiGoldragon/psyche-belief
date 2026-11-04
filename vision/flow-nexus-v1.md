@@ -7,7 +7,7 @@ dependencies: [vision-ethos]
 
 ## Vocabulary
 
-A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is every complex running on one host, with that host's keys and roles; a laptop runs one, a server may run several.
+A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex.
 
 ## The machine is defined, never built in
 
@@ -257,7 +257,7 @@ Emission
 
 ## Memory
 
-Definitions persist: the Memory lives in the metaflow's State directory and survives a restart.
+Definitions persist: the Memory lives in the Flow Nexus's State directory and survives a restart.
 
 ```ethos
 Memory
