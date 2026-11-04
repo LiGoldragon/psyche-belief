@@ -167,13 +167,19 @@ The Ethos:
 
 ```
 Library
-[]                                            ; imports
-[ LockId.Integer                              ; types
+[]                                       ; imports
+[ LockId.Integer                         ; types
   LockName.String
-  Lock.{ LockId LockName Vector<String> Option<Lock> }
-  Generation.{ String String } ]
-[]                                            ; traits
-[]                                            ; associations
+  Lock.{                                 ;   a struct of four fields
+     LockId
+     LockName
+     Vector<String>
+     Option<Lock> }
+  Generation.{                           ;   a struct of two strings
+     String
+     String } ]
+[]                                       ; traits
+[]                                       ; associations
 ```
 
 The Rust generated from it:
@@ -198,14 +204,19 @@ The Ethos:
 
 ```
 Library
-[]                                                       ; imports
-[ LockId.Integer                                         ; types
+[]                                       ; imports
+[ LockId.Integer                         ; types
   LockName.String
-  Lock.{ LockId LockName }
-  LockRejection.[ DuplicateName.Lock                     ;   an enum: one variant naming a defined type,
-                  PathOverlap.{ Lock Lock } ] ]          ;   one declaring its payload inline
-[]                                                       ; traits
-[]                                                       ; associations
+  Lock.{
+     LockId
+     LockName }
+  LockRejection.[                        ;   an enum: one variant naming a defined type,
+     DuplicateName.Lock                  ;   one declaring its payload inline
+     PathOverlap.{
+        Lock
+        Lock } ] ]
+[]                                       ; traits
+[]                                       ; associations
 ```
 
 The Rust generated from it:
@@ -232,13 +243,14 @@ The Ethos:
 
 ```
 Library
-[]                                         ; imports
-[ FilePath.String                          ; types: FilePath is a newtype of String
-  SyntaxError.Vector<FilePath>             ;        SyntaxError is a vector of FilePath
-  GenerationFailure.[ SyntaxError          ;        an enum: the variant SyntaxError is bare here,
-                      Unwritable ] ]       ;        but SyntaxError is a defined type, so it carries one
-[]                                         ; traits
-[]                                         ; associations
+[]                                    ; imports
+[ FilePath.String                     ; types: FilePath is a newtype of String
+  SyntaxError.Vector<FilePath>        ;        SyntaxError is a vector of FilePath
+  GenerationFailure.[                 ;        an enum: the variant SyntaxError is bare here,
+     SyntaxError                      ;        but SyntaxError is a defined type, so it carries one
+     Unwritable ] ]
+[]                                    ; traits
+[]                                    ; associations
 ```
 
 The Rust generated from it:
@@ -260,12 +272,15 @@ The Ethos:
 
 ```
 Library
-[]                                                        ; imports
-[ FilePath.String                                         ; types
-  GenerationFailure.[ SyntaxError.Vector<FilePath>        ;   the payload declared inline: a vector
-                      Unwritable.{ FilePath String } ] ]  ;   declared inline: a struct, derived name
-[]                                                        ; traits
-[]                                                        ; associations
+[]                                         ; imports
+[ FilePath.String                          ; types
+  GenerationFailure.[
+     SyntaxError.Vector<FilePath>          ;   the payload declared inline: a vector
+     Unwritable.{                          ;   declared inline: a struct, derived name
+        FilePath
+        String } ] ]
+[]                                         ; traits
+[]                                         ; associations
 ```
 
 The Rust generated from it:
@@ -352,14 +367,20 @@ The Ethos:
 
 ```
 Signal
-[]                                                     ; imports
-[ Lock.LockRequest  Release.LockId ]                   ; inputs
-[ Locked.Lock  Released.Lock ]                         ; outputs
-[ LockId.Integer                                       ; types
+[]                                 ; imports
+[ Lock.LockRequest                 ; inputs
+  Release.LockId ]
+[ Locked.Lock                      ; outputs
+  Released.Lock ]
+[ LockId.Integer                   ; types
   LockName.String
   FlowId.String
-  LockRequest.{ LockName FlowId }
-  Lock.{ LockId LockName } ]
+  LockRequest.{
+     LockName
+     FlowId }
+  Lock.{
+     LockId
+     LockName } ]
 ```
 
 The Rust generated from it:
@@ -382,10 +403,12 @@ The Ethos:
 
 ```
 Library
-[]                                                ; imports
-[ Record.{ String Integer } ]                     ; types
-[ Summarizable.[ summarize.[ String ] ] ]         ; traits
-[ Record.[ Summarizable ] ]                       ; associations
+[]                                      ; imports
+[ Record.{                              ; types
+     String
+     Integer } ]
+[ Summarizable.[ summarize.[ String ] ] ] ; traits
+[ Record.[ Summarizable ] ]             ; associations
 ```
 
 The Rust generated from it:
@@ -408,7 +431,9 @@ The Ethos:
 ```
 Library
 []                            ; imports
-[ Record.{ String Integer } ] ; types
+[ Record.{                    ; types
+     String
+     Integer } ]
 [ Summarizable.[              ; traits
     summarize.[ String ] ] ]
 [ Record.[ Summarizable ] ]   ; associations
@@ -455,14 +480,15 @@ The Ethos:
 
 ```
 Library
-[ std:Serializable ]                                ; imports
-[]                                                  ; types
-[ Fillable.[ create:[ Self ] ]                      ; traits
-  Streamable.{ [ Fillable ]
-               [ Item<Serializable> ]
-               [ CAPACITY.Integer ]
-               [ next![ Option<Item> ] ] } ]
-[]                                                  ; associations
+[ std:Serializable ]                  ; imports
+[]                                    ; types
+[ Fillable.[ create:[ Self ] ]        ; traits
+  Streamable.{
+     [ Fillable ]
+     [ Item<Serializable> ]
+     [ CAPACITY.Integer ]
+     [ next![ Option<Item> ] ] } ]
+[]                                    ; associations
 ```
 
 The Rust generated from it:
@@ -507,11 +533,15 @@ The Ethos:
 
 ```
 Library
-[]                                                       ; imports
-[ Sink.{ String Integer } ]                              ; types
-[ Summarizable.[ summarize.[ String ] ]                  ; traits
+[]                                       ; imports
+[ Sink.{                                 ; types
+     String
+     Integer } ]
+[ Summarizable.[ summarize.[ String ] ]  ; traits
   Fillable.[ create:[ Self ] ] ]
-[ Sink.[ Summarizable Fillable ] ]                       ; associations
+[ Sink.[                                 ; associations
+     Summarizable
+     Fillable ] ]
 ```
 
 The Rust generated from it:
@@ -539,5 +569,64 @@ canonical protos print: a space inside every bracket and brace
 at both ends when non-empty.
 
 Ethos expands vertically: a structure with more than one element opens on its line and its elements hang beneath the first, aligned; the closing delimiter ends the last element's line. Everything that has a next layer opens it on a new line.
+
+The Ethos, describing Ethos itself; tentative in its names:
+
+```ethos
+Library
+[]
+[ Name.String
+  Import.{
+     Namespace.String
+     Vector<Name> }
+  Shape.[
+     Named.Name
+     Struct.Vector<Shape>
+     Enum.Vector<Variant>
+     Constructed.{
+        Name
+        Vector<Shape> } ]
+  Variant.{
+     Name
+     Option<Shape> }
+  Declaration.{
+     Name
+     Shape }
+  Capability.{
+     Name
+     Inputs.Vector<Shape>
+     Yield.Shape }
+  Trait.{
+     Name
+     Vector<Capability> }
+  Association.{
+     Name
+     Vector<Name> }
+  Library.{
+     Imports.Vector<Import>
+     Types.Vector<Declaration>
+     Traits.Vector<Trait>
+     Associations.Vector<Association> } ]
+[]
+[]
+```
+
+The datom: the Lock library of the Declaration section, as that data:
+
+```datom
+{
+   []
+   [ { LockId Named.Integer }
+     { LockName Named.String }
+     { Lock
+       Struct.[
+          Named.LockId
+          Named.LockName
+          Constructed.{
+             Vector
+             [ Named.String ] } ] } ]
+   []
+   [] }
+```
 
 Ethos carries a comment on every section and on every line that has a next layer, saying in plain words what the machine reads there; a comment runs from ; to the end of the line.
