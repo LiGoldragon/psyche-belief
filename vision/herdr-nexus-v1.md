@@ -26,11 +26,12 @@ Signal
   Prompted.Outcome
   Pressed.Outcome
   Closed.Outcome
-  Listed.Vector<{ Pane Label State }>
+  Listed.Vector<Known>
   Subscribed
   Changed.{ Pane State } ]           ; pushed, each change
 [ Label.String
-  State.[ Open Busy Idle Dead ] ]
+  State.[ Open Busy Idle Dead ]
+  Known.{ Pane Label State } ]
 ```
 
 ```ethos
