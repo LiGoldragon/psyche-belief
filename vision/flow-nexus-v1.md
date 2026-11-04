@@ -14,7 +14,7 @@ A flow is one run of a model in a harness. A perma flow is a flow that continues
 Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No layer, role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
-A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a perma flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
+A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a perma flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused.
 
 ```ethos
 Library
@@ -32,7 +32,9 @@ Library
   Missing.[ Refuse Notice ]
   Beliefs.{ Vector<ModuleName> Missing }
   Tool.String                        ; the harness's name for it
-  Tools.{ Allow.Vector<Tool> Deny.Vector<Tool> }
+  Tools.[ HarnessDefault              ; the Flow Nexus imposes nothing
+          Restricted.{ Allow.Vector<Tool>   ; enforced by the harness
+                       Deny.Vector<Tool> } ]  ;   or the launch is refused
   Route.[ Speaks.FlowName             ; a member of this complex
           Complex.ComplexName         ;   that complex's speaker
           Living ]
@@ -118,6 +120,7 @@ Signal
             UnknownFlow.FlowName
             NoRoute.{ FlowId Address }
             NoBelief.Vector<ModuleName>
+            Unenforceable.Harness         ; Restricted, harness cannot
             HerdrDown BeliefDown
             Running.Address ] ]
 [ Event.[ Started Idle Working Ended
