@@ -34,7 +34,7 @@ Signal
 
 ## Meta
 
-Configure sets one value of the configuration at a time, never the whole; a subscription follows the configuration as it changes.
+Configure sets one value of the configuration at a time, never the whole; a subscription follows the configuration as it changes. SubscriberCapacity is positive, and an active subscription follows it.
 
 ```ethos
 Signal
@@ -50,7 +50,8 @@ Signal
         StartTimeout.Timeout         ;   Nexus-owned
         Polling.Timeout
         FrameCapacity.ByteLimit
-        TransportTimeout.Timeout ]
+        TransportTimeout.Timeout
+        SubscriberCapacity.Integer ] ;   positive
   Owner.[ Nexus Translator ]         ; who answers for a field
   PathValue.String
   Timeout.Integer
@@ -128,35 +129,41 @@ Library
 
 ## Operation
 
-One attempt per input. An attempt reads and writes Memory and sends one Emission; every attempt ends in the shared Outcome.
+One attempt per input. An attempt reads and writes Memory and sends one Emission; every attempt ends in the shared Outcome. The Operation turns what the Emission observed into the shared Outcome.
 
 ```ethos
 Operation
-[ herdr:[ Pane Workspace Command Text Keys ]
+[ herdr:[ Session Pane Workspace     ; imports
+          Command Text Keys Label ]
   :herdr:AttemptOutcome.Outcome ]
 [ Creating.Workspace                 ; attempts
-  Starting.{ Pane Command }
+  Starting.{ Pane Command Label }
   Prompting.{ Pane Text }
   Pressing.{ Pane Keys }
-  Closing.Pane ]
+  Closing.Pane
+  Listing.Session
+  Subscribing.Session ]
 [ Created.AttemptOutcome             ; every attempt ends in
   Started.AttemptOutcome             ;   the shared Outcome
   Prompted.AttemptOutcome
   Pressed.AttemptOutcome
-  Closed.AttemptOutcome ]
+  Closed.AttemptOutcome
+  Listed.AttemptOutcome
+  Subscribed.AttemptOutcome ]
 []
 ```
 
 ## Emission
 
-The herdr command line, as a type. The translator turns it into the call.
+The herdr command line, as a type. The translator turns it into the call. Its outcome is what the translator observed, raw and its own type. Listing is two emissions, PaneList and AgentList, one herdr call each.
 
 ```ethos
 Emission
-[ herdr:[ Session PaneId Root Variable
-          Command Text Keys Outcome ] ]
+[ herdr:[ Session PaneId Pane Root   ; imports
+          Variable Command Text
+          Keys State Refusal ] ]
 [ Herdr.{ Session Verb } ]           ; emissions: one call
-[ Outcome ]                          ; outcomes
+[ ExternalOutcome ]                  ; outcomes: observed, raw
 [ Verb.[ WorkspaceCreate.{ Root      ; types
                            Vector<Variable> }
          AgentStart.{ PaneId         ; Timeout comes from
@@ -165,13 +172,29 @@ Emission
          AgentPrompt.{ PaneId Text }
          Keys.{ PaneId Keys }
          PaneClose.PaneId
-         PaneList ] ]
+         PaneList                    ; Listing's two calls
+         AgentList ]
+  TerminalId.String
+  WorkspaceId.String
+  TabId.String
+  PaneListing.{ Pane TerminalId      ; a pane herdr listed
+                WorkspaceId TabId }
+  AgentListing.{ Pane TerminalId     ; an agent herdr listed
+                 WorkspaceId TabId
+                 State }
+  ExternalOutcome.[ Done             ; what the translator
+                    Started.State    ;   observed
+                    Created.Pane
+                    Panes.Vector<PaneListing>
+                    Agents.Vector<AgentListing>
+                    Refused.Refusal
+                    Uncertain ] ]
 ```
 
 ```rust
 impl Emittable for Herdr {
-    type Outcome = Outcome;
-    fn emit(&self, t: &Translator) -> Outcome {
+    type Outcome = ExternalOutcome;
+    fn emit(&self, t: &Translator) -> ExternalOutcome {
         let mut argv = vec!["--session".into(),
                             self.session.0.clone()];
         argv.extend(self.verb.argv());
