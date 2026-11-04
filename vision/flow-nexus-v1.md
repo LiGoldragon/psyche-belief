@@ -102,6 +102,8 @@ Signal
          Request Priority Tool Harness ] ]
 [ Define.Complex                     ; add or replace one
   Undefine.ComplexName
+  Describe.ComplexName               ; one definition, read back
+  Definitions                        ; the names defined
   Launch.{ ComplexName FlowName Brief }
   Stop.FlowId
   Send.{ FlowId Address Priority Request }
@@ -110,6 +112,8 @@ Signal
   Subscribe ]                        ; events, as they happen
 [ Defined.ComplexName
   Undefined.ComplexName
+  Described.Complex
+  Listed.Vector<ComplexName>
   Launched.FlowId
   Stopped.FlowId
   Sent.[ Delivered Queued ]
@@ -151,6 +155,8 @@ Emission
 ```
 
 ## Memory
+
+Definitions persist: the Memory lives in the metaflow's State directory and survives a restart.
 
 ```ethos
 Memory
