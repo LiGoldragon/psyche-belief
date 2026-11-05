@@ -10,7 +10,7 @@ routinely.
 
 ## A view takes room
 
-A high-level view takes room and breaks everything down in-line.
+A high-level view takes room and breaks everything down in-line. It gives someone joining the project, in half an hour, a clear view of the whole engine: each repository, what it is and how much it does.
 
 ## The great advancements
 
