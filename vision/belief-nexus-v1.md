@@ -3,7 +3,7 @@ description: The Belief Nexus, version 1, which holds the belief modules and fur
 dependencies: [vision-ethos]
 ---
 
-# The Belief Nexus, version 1
+# The Belief Nexus
 
 The Belief Nexus holds the belief modules and furnishes workspaces with them. Belief is the word: what a model believes when it starts. It replaces Curriculum. Its memory is its own; a definition in the Flow Nexus refers to a module by name only, and a name may resolve to nothing: the Belief Nexus answers which names are missing, and what is done about it is the definition's policy, never the Nexus's.
 

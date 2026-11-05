@@ -5,7 +5,7 @@ dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-
 
 # The metaflow
 
-Version 1. A metaflow is a named set of complexes and the relationships between them: the layer above the complex, and the being one talks to, what people today call an agent. It is a definition, as a complex is: it names its complexes, the relationships between them and its speaker, and it has no directory, process or socket of its own. A Flow Nexus runs many metaflows. Three Nexuses run them, from the definitions given them, and the flows run from those.
+A metaflow is a named set of complexes and the relationships between them: the layer above the complex, and the being one talks to, what people today call an agent. It is a definition, as a complex is: it names its complexes, the relationships between them and its speaker, and it has no directory, process or socket of its own. A Flow Nexus runs many metaflows. Three Nexuses run them, from the definitions given them, and the flows run from those.
 
 His words: "the metaflow is all of the flows and all of the flow complexes of a particular unit. It's like a unit that living human beings can think of. It's kind of like the equivalent of what people think of today when they think of an agent: a thing they can talk to. [...] It's going to be interacting with that whole complex of complexes, which is the metaflow. [...] You can have multiple metaflows on a single host and they're all running on the same Flow Nexus." and "it is going to have to define the relationships between the complexes also."
 

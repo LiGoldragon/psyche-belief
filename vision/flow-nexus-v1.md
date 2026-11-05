@@ -3,7 +3,7 @@ description: The Flow Nexus, version 1, which launches a flow from a complex the
 dependencies: [vision-ethos]
 ---
 
-# The Flow Nexus, version 1
+# The Flow Nexus
 
 ## Vocabulary
 

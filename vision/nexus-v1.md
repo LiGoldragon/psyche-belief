@@ -5,7 +5,7 @@ dependencies: [vision-ethos]
 
 # A Nexus
 
-Version 1. Nexus is an architecture; a component built in it has four parts, each its own ethos. The translator is the process of the fourth, Emission.
+Nexus is an architecture; a component built in it has four parts, each its own ethos. The translator is the process of the fourth, Emission.
 
 ```mermaid
 flowchart LR
