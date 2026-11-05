@@ -235,7 +235,7 @@ Signal
 ```
 
 ```datom
-Adopt.{ { Psyche core Primary } 15c0cea2-aa34-508b-8e20-ece1ab7823f4 }
+Adopt.{ { designer fable } 15c0cea2-aa34-508b-8e20-ece1ab7823f4 }
 Adopted.15c0ce
 ```
 
@@ -381,7 +381,7 @@ Define.{ designer
          [ { fable claude claude-fable-5-1 Medium
              Permanent
              Path.«/home/li/primary»
-             { [ spirit:core vision:nexus-v1 ] Refuse }
+             { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
              HarnessDefault []
              [ Living ] } ]
          fable }

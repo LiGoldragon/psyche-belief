@@ -133,7 +133,7 @@ on open, then each change as it happens.
 
 A correct system goes quiet when nothing changes; every change arrives as an event.
 
-## Three parts and one path
+## Four parts and one path
 
 A Nexus has four parts, each its own ethos specification: Signal is what it says, Operation is what it does, Memory is what it remembers, Emission is what it sends into the world. The translator is the part that carries Emission and turns text into Signal: its own process, speaking datom natively. Nexus always names the whole; the part that does is Operation. Every effect has a matching operation type. A signal reaches memory only through operation; memory answers operation that the change succeeded or failed; the answer returns through operation and leaves as a signal. Reading a Nexus's ethos alone shows every object and process on that path.
 

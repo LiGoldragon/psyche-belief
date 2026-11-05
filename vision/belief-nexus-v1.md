@@ -14,33 +14,34 @@ A registered repository is watched: when its main moves, every workspace furnish
 
 ```ethos
 Signal
-[ belief:[ Repository ModuleName      ; imports
+[ belief:[ ModuleSource ModuleName    ; imports
            Workspace Location ]
   flow:[ Harness ] ]
-[ Register.Repository                ; inputs: a module source
+[ Register.ModuleSource              ; inputs: a module source
   Resolve.Vector<ModuleName>
   Furnish.{ Workspace Harness        ; the harness's
             Vector<ModuleName> }     ;   skills directory
   Subscribe ]
-[ Registered.Repository              ; outputs
+[ Registered.ModuleSource            ; outputs
   Resolved.{ Vector<ModuleName>      ; found
              Vector<ModuleName> }    ; missing
   Furnished.{ Location
               Vector<ModuleName> }   ; missing, left out
   Subscribed
-  Changed.{ Repository                ; pushed: main moved
+  Changed.{ ModuleSource              ; pushed: main moved
             Vector<ModuleName>        ;   modules changed
             Vector<Workspace> }       ;   workspaces refurnished
-  Refused.[ UnknownRepository.Repository
+  Refused.[ UnknownSource.ModuleSource
             Unwritable.Workspace ] ]
 []
 ```
 
 ```datom
-Register.
+Register.Repository.
   /git/github.com/LiGoldragon/psyche-belief
-Registered.
+Registered.Repository.
   /git/github.com/LiGoldragon/psyche-belief
+Register.Directory./home/li/psyche-belief-edits
 ```
 
 ```sh
@@ -74,8 +75,12 @@ Signal
 ```ethos
 Library
 []
-[ Repository.String                  ; a path holding
+[ Path.String                        ; a directory holding
                                      ;   <type>/<subject>.md
+  ModuleSource.[ Repository.Path     ; a git repository, watched:
+                                     ;   main moving refurnishes
+                 Directory.Path ]    ; a directory read as it
+                                     ;   stands, watched by nobody
   Kind.[ Spirit Intent Vision
          Knowledge Role ]
   ModuleName.{ Kind Subject.String }

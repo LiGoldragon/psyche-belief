@@ -129,13 +129,13 @@ for f in definitions/*.datom; do flow-nexus next "Define.$(cat "$f")"; done
       Permanent
       Path.«/home/li/primary»
       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
-      { [ Bash Edit ] [ Artifact ] }
+      Restricted.{ [ Bash Edit ] [ Artifact ] }
       [ ClaudeMd ]
       [ Speaks.opus Speaks.Living ] }
     { opus claude claude-opus-4 Medium Ephemeral
       Temporary
       { [ { Spirit core } { Role worker } ] Notice }
-      { [] [] }
+      HarnessDefault
       []
       [ Speaks.fable Speaks.Metaflow.implementer ] } ]
   fable }                            ; the speaker
