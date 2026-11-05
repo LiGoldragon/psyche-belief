@@ -34,12 +34,12 @@ A metaflow runs for one owner: the login whose Nexuses run it. The definitions a
 
 ## Where a metaflow lives
 
-A metaflow has no file and no type of its own: it is the set of complexes the Flow Nexus holds in its Memory, each given by Define and read back by Describe, the set by Definitions. A change to one complex touches no other.
+A metaflow has no file and no type of its own: it is the set of complexes the Flow Nexus holds in its Memory, each given by Define and read back by Describe, the set by Definitions; a harness is defined the same way, and a member names it. A change to one complex touches no other.
 
 ```ethos
 Memory
 [ flow:[ Complex ] ]
-[ Definition.Complex ]               ; the metaflow is every Definition held
+[ Definition.[ Complex Harness ] ]   ; the metaflow is every Complex held; a Harness is a definition its members name
 ```
 
 ```mermaid
@@ -78,16 +78,18 @@ The Nexuses hold vocabulary; the owner writes definitions in datom. A definition
 ```datom
 ; definitions/designer.datom: one complex
 { designer
-  [ { fable Claude claude-fable-5-1 Medium
+  [ { fable claude claude-fable-5-1 Medium
       Permanent
       Path.«/home/li/primary»
       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
       { [ Bash Edit ] [ Artifact ] }
+      [ ClaudeMd ]
       [ Speaks.opus Speaks.Living ] }
-    { opus Claude claude-opus-4 Medium Ephemeral
+    { opus claude claude-opus-4 Medium Ephemeral
       Temporary
       { [ { Spirit core } { Role worker } ] Notice }
       { [] [] }
+      []
       [ Speaks.fable Speaks.Complex.implementer ] } ]
   fable }                            ; the speaker
 ```

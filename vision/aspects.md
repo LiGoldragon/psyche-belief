@@ -10,10 +10,10 @@ Who speaks to whom, within an aspect and across aspects, is the routes each comp
 ```datom
 ; a complex, each member by its model
 { designer
-  [ { fable Claude claude-fable-5-1 Medium
-      Perma Path.«/home/li/primary»
+  [ { fable claude claude-fable-5-1 Medium
+      Permanent Path.«/home/li/primary»
       { [ spirit:core ] Refuse }
-      HarnessDefault
+      HarnessDefault []
       [ Speaks.opus Speaks.Living ] } ]
   fable }
 ```

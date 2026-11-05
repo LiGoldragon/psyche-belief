@@ -14,7 +14,7 @@ A flow is one run of a model in a harness. A permanent flow is a flow that conti
 Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
-A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused. What a complex is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
+A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. A harness is a definition like a complex: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a complex is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused. What a complex is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
 
 ```ethos
 Library
@@ -22,7 +22,14 @@ Library
   belief:[ ModuleName ] ]
 [ ComplexName.String
   FlowName.String
-  Harness.[ Claude Codex ]
+  HarnessName.String
+  FeatureName.String
+  Effect.[ Flag.String                ; what a feature does to the launch
+           Environment.{ Name.String  ;   a variable, set for the harness alone
+                         Value.String } ]
+  Feature.{ FeatureName Effect }
+  Harness.{ HarnessName               ; a definition, as a complex is
+            Features.Vector<Feature> }
   ModelName.String
   Effort.[ Low Medium High ]
   Continuity.[ Permanent  ; keeps its address
@@ -38,8 +45,9 @@ Library
   Route.[ Speaks.FlowName             ; a member of this complex
           Complex.ComplexName         ;   that complex's speaker
           Living ]
-  Member.{ FlowName Harness ModelName Effort
+  Member.{ FlowName HarnessName ModelName Effort
            Continuity Workspace Beliefs Tools
+           Features.Vector<FeatureName>  ; of its harness, composed into its launch
            Vector<Route> }
   Complex.{ ComplexName Vector<Member>
             Speaker.FlowName }
@@ -113,54 +121,54 @@ Send.{ 7 { jobs lander } Soft
 The roster, as Members: each a permanent flow, in a temporary workspace, with the role's belief, on a Sonnet or Haiku model.
 
 ```datom
-[ { lander Claude claude-sonnet-5-5 Medium
+[ { lander claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role lander } ] Refuse }
-      HarnessDefault [] }
-  { bookmaker Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { bookmaker claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role book } ] Refuse }
-      HarnessDefault [] }
-  { bookPager Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { bookPager claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role book-page } ] Refuse }
-      HarnessDefault [] }
-  { bookReader Claude claude-haiku-4-5 Medium
+      HarnessDefault [] [] }
+  { bookReader claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role book-reader } ] Refuse }
-      HarnessDefault [] }
-  { commentRelay Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { commentRelay claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role comment-relay } ] Refuse }
-      HarnessDefault [] }
-  { contextualizer Claude claude-haiku-4-5 Medium
+      HarnessDefault [] [] }
+  { contextualizer claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role contextualizer } ] Refuse }
-      HarnessDefault [] }
-  { illustrator Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { illustrator claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role illustrator } ] Refuse }
-      HarnessDefault [] }
-  { scripter Claude claude-haiku-4-5 Medium
+      HarnessDefault [] [] }
+  { scripter claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role scripter } ] Refuse }
-      HarnessDefault [] }
-  { tester Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { tester claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role tester } ] Refuse }
-      HarnessDefault [] }
-  { reader Claude claude-haiku-4-5 Medium
+      HarnessDefault [] [] }
+  { reader claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role read } ] Refuse }
-      HarnessDefault [] }
-  { writer Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { writer claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role write } ] Refuse }
-      HarnessDefault [] }
-  { worker Claude claude-sonnet-5-5 Medium
+      HarnessDefault [] [] }
+  { worker claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role worker } ] Refuse }
-      HarnessDefault [] } ]
+      HarnessDefault [] [] } ]
 ```
 
 ```mermaid
@@ -203,10 +211,11 @@ flowchart LR
 Signal
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Brief ModuleName Message
-         Request Priority Tool Harness ] ]
-[ Define.Complex                     ; add or replace one
-  Undefine.ComplexName
-  Describe.ComplexName               ; one definition, read back
+         Request Priority Tool
+         Harness HarnessName ] ]
+[ Define.[ Complex Harness ]         ; add or replace one
+  Undefine.Name
+  Describe.Name                      ; one definition, read back
   Definitions                        ; the names defined
   Launch.{ ComplexName FlowName Brief }
   Stop.FlowId
@@ -216,10 +225,10 @@ Signal
   Broadcast.Request                  ; one request to every hot flow
   Report.{ FlowId Event }            ; from a harness hook
   Subscribe ]                        ; events, as they happen
-[ Defined.ComplexName
-  Undefined.ComplexName
-  Described.Complex
-  Listed.Vector<ComplexName>
+[ Defined.Name
+  Undefined.Name
+  Described.[ Complex Harness ]
+  Listed.Vector<Name>
   Launched.FlowId
   Stopped.FlowId
   Sent.[ Delivered Queued ]
@@ -229,13 +238,16 @@ Signal
   Reported
   Subscribed
   Refused.[ UnknownComplex.ComplexName
+            UnknownHarness.HarnessName
             UnknownFlow.FlowName
             NoRoute.{ FlowId Address }
             NoBelief.Vector<ModuleName>
-            Unenforceable.Harness         ; Restricted, harness cannot
+            Unenforceable.HarnessName     ; Restricted, harness cannot
             HerdrDown BeliefDown
             Running.Address ] ]
-[ Event.[ Started Idle Working Ended
+[ Name.[ Complex.ComplexName         ; a definition, by name
+         Harness.HarnessName ]
+  Event.[ Started Idle Working Ended
           Responded.String            ; the response, whole
           Warned                     ;   the handover asked
           Threshold ] ]              ;   context past its mark
@@ -261,13 +273,14 @@ flowchart TB
 
 ## Emission
 
-The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them.
+The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
 
 A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 
 ```ethos
 Emission
-[ flow:[ Member Address FlowId Brief Waking Tools ]
+[ flow:[ Member Address FlowId Brief Waking Tools
+         HarnessName ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
   Settle.{ Member FlowId }            ; the harness's settings file
@@ -281,8 +294,7 @@ Emission
   Closed.Outcome ]
 [ Identity.{ Address FlowId }                ; composed into the first prompt
                                              ;   or the system prompt
-  Settings.[ Claude.{ Tools Model.String }   ; what the translator writes
-             Codex.{ Tools Model.String } ] ]
+  Settings.{ HarnessName Tools Model.String } ] ; what the translator writes
 ```
 
 ## Memory
@@ -294,7 +306,7 @@ Memory
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Message Event ]
   herdr:[ Pane ] ]
-[ Definition.Complex
+[ Definition.[ Complex Harness ]
   Flow.{ FlowId Address Pane
          State.[ Running Idle Ended ]
          Vector<Event> }
@@ -307,14 +319,24 @@ Memory
 ```datom
 ; the user defines a complex: one datom, added alone
 Define.{ designer
-         [ { fable Claude claude-fable-5-1 Medium
+         [ { fable claude claude-fable-5-1 Medium
              Permanent
              Path.«/home/li/primary»
              { [ spirit:core vision:nexus-v1 ] Refuse }
-             HarnessDefault
+             HarnessDefault []
              [ Living ] } ]
          fable }
-Defined.designer
+Defined.Complex.designer
+; defines the harness its member names: one datom, added alone
+Define.Harness.{
+   claude
+   [ { Bash
+       Flag.«--disallowedTools Bash» }
+     { ClaudeMd
+       Environment.{
+          CLAUDE_CODE_DISABLE_CLAUDE_MDS
+          1 } } ] }
+Defined.Harness.claude
 ; and launches a flow of it
 Launch.{ designer fable «Read the version one book» }
 Launched.7
