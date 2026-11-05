@@ -5,11 +5,7 @@ dependencies: [vision-ethos]
 
 ## A Nexus is the whole
 
-A Nexus is the whole long-running component: the process, its sockets, and the signal contracts it is compiled with. Nexus is its name. A Nexus is like a daemon, said only so that a thinking machine which thinks in daemons understands what a Nexus is. Every Nexus is named component-nexus — orchestrate-nexus, ethos-nexus — and in everyday speech orchestrate-nexus is called orchestrate.
-
-## A kind of thing
-
-Nexus is our word for the style of component that speaks signal and uses a similar database.
+A Nexus is the whole long-running component: the process, its sockets, and the signal contracts it is compiled with. Nexus is its name. Every Nexus is named component-nexus — orchestrate-nexus, ethos-nexus — and in everyday speech orchestrate-nexus is called orchestrate.
 
 ## Library and daemon
 
@@ -31,7 +27,7 @@ Long term, every trait a Nexus uses is declared in ethos; short term, a Nexus go
 ## Processing is for the effect
 
 An object enters a Nexus for the effect; the response follows as an
-effect of it. Conversion is the wrong frame for it.
+effect of it.
 
 ## Sockets
 
@@ -48,8 +44,7 @@ clients are packaged with the Nexus as separate crates of its
 repository, which is a multi-crate repository: one datom-converting
 CLI per socket, however many sockets the Nexus has, at least two. A
 default client serves bootstrap first, then debugging and testing,
-long after production has stopped using it. The meta CLI is named
-component-meta.
+long after production has stopped using it.
 
 A CLI takes one inline datom as its whole input and writes it to its translator's socket on one connection, reading the reply on the same connection; the translator turns the text into Signal, identifies the calling process from the connection and carries that identity in the envelope, so a Nexus knows its caller by the process. A CLI holds one socket path and no type; datom and all text handling are compiled out of the Nexus, which decodes only known types in their rkyv form and so stays small, since it keeps running and there may be many.
 
@@ -120,8 +115,7 @@ reliability, quality, and clarity.
 
 ## Actors
 
-The engine inside a Nexus is driven by Kameo actors. The standards
-of their use are still to be designed.
+The engine inside a Nexus is driven by Kameo actors.
 
 ## Splitting a Nexus
 

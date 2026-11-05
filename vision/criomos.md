@@ -22,15 +22,8 @@ CriomOS has a hardware type, so that it supports several kinds of hardware, the 
 A fix that only some hardware needs is a value in the cluster data, marked by the chip or part that makes it necessary.
 A library reads the cluster's list of its hardware and answers, by processor, model and variant, which fixes a computer needs.
 
-## Harnesses
-
-The harnesses and their desktop apps are kept stock in at least one version, under their ordinary executable names.
-
 ## Services
 
 A new service lives in CriomOS.
 A service is updated by bringing it up at its latest version.
 
-## Desktop
-
-A new artifact does not open a browser tab on its own.

@@ -5,7 +5,7 @@ dependencies: []
 
 ## Ethos and Nexus are infrastructure
 
-Ethos and Nexus are basic infrastructure: the wood houses are built from. Chronos is the example project built with them, short term.
+Ethos and Nexus are basic infrastructure: the wood houses are built from.
 
 ## What Ethos is
 
@@ -63,14 +63,14 @@ A capability speaks in Self, the trait's own parameters and other traits; a conc
 ## Naming
 
 Traits are qualifier-named: Runnable, Textualizable, Structural,
-Embodied. Run is not a trait. The verbs Rust imposes, Write and Read
+Embodied. The verbs Rust imposes, Write and Read
 among them, are tolerated as legacy, for cognitive ease while Rust
 and ethos code are switched between so often; once ethos is the
 authored language that debt is removed.
 
 ## Ethos and the Rust it generates are shown apart
 
-An example shows the Ethos file and the Rust it generates as two blocks, each named for what it is: the Ethos, then the Rust generated from it. They never share one block, because they never share one file.
+An example shows the Ethos file and the Rust it generates as two blocks, each named for what it is: the Ethos, then the Rust generated from it.
 
 ## Identity
 
@@ -447,8 +447,6 @@ const _: () = {
     let _ = assert_record_summarizable::<Record>;
 };
 ```
-
-An ethos declares the traits its types bear. Every ethos declares the traits its types bear.
 
 The Ethos:
 

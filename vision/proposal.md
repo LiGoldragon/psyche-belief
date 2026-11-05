@@ -19,7 +19,7 @@ A proposal is a proposal into belief modules, and the whole of it is its crystal
 
 A proposal that touches a code component shows the code it changes or adds.
 
-A code block in a proposal stands on its own: it is shown without a path, directory or file name. It carries the code, why it is important, and what its function is.
+A code block in a proposal stands on its own. It carries the code, why it is important, and what its function is.
 
 A proposal is usually drawn as well as written, and always when it has a shape; a figure draws what is wanted, and nothing of what goes. A flowchart in a proposal is a proposed line like any other: it stands under the addition margin of the proposal it belongs to, which names the module it goes to.
 
@@ -61,5 +61,4 @@ flowchart TB
 Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. Opus publishes it and lands it.
 
 A proposal names the model that created it and, for each model that
-helped, what that help was, on a subtitle line under the title. Created
-by Fable, research by Opus, data retrieved by Sonnet.
+helped, what that help was, on a subtitle line under the title.

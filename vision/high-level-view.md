@@ -18,4 +18,3 @@ In the long term, the great advancements are the improvements that most increase
 
 Each one unlocked raises the system's efficiency, output quality and ease of use.
 
-For now, reliable flow spawning and communication is the most important part of the system: every flow needs it to do anything, and the others follow from it.

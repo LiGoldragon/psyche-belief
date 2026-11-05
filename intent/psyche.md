@@ -11,14 +11,13 @@ Vision is what the living says the system is to be, and a topic's vision is divi
 
 A line in a marked module is unimplemented by definition: a medium line stands because a short line is the compromise in its place, and a long line stands beyond the medium the same way. The far vision is never implemented: what comes within reach of it has already moved to long. When the medium vision is implemented, the short is irrelevant and is removed, and the horizons move up: the medium is now the short term, the long the medium, the far the long.
 
-A medium, long or far line reaches an implementer through a proposal that moves it to the short or unmarked module with its design: the abstractions it is made of, how they compose, and the configuration the running system takes it through, shown as vision code. A proof of concept may implement the medium while the short implementation is kept, improved or fixed, so several horizons may be in implementation at once; the focus, generally and now, is the short term.
+A medium, long or far line reaches an implementer through a proposal that moves it to the short or unmarked module with its design: the abstractions it is made of, how they compose, and the configuration the running system takes it through, shown as vision code. A proof of concept may implement the medium while the short implementation is kept, improved or fixed, so several horizons may be in implementation at once.
 
 ## What the living reviews is psyche
 
 Anything the living has reviewed is psyche: a line he approves is a vision statement at least, whatever module proposed it, and leaves the mind or field module it sat in. A line he has not reviewed is a machine line.
 
-What the living reviews line by line becomes psyche. He may also review a knowledge proposal: it holds only facts verified in code, and he skims it.
-A raw record holds the living's words that bear on its topic, and nothing else.
+What the living reviews line by line becomes psyche.
 
 ## Spirit holds beyond this system
 

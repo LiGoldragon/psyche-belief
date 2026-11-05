@@ -7,7 +7,7 @@ dependencies: [vision-aspects, vision-messaging]
 
 A flow that hands work to Fable first gathers everything that work needs — his words whole, his comments on the books, the records and the files — and sends it in one message, complete. Opus carries his words and context whole; Fable judges alone.
 
-A ruling Opus relays from Fable carries Fable's authority, and the flow that receives it acts on it without asking Fable again.
+A ruling Opus relays from Fable carries Fable's authority.
 
 ## Wrong work is corrected by telling the flow what is wanted
 

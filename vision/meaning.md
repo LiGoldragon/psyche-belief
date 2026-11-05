@@ -14,16 +14,12 @@ the strictly typed positional notation datom, joined to one another
 by links. The
 ontology is meant to reach as far as meaning does, so the best
 ontology available in the world is taken and put into a data shape of
-enums and structs that carry qualities. The language may take a
-poetic Latin or Greek name of its own.
+enums and structs that carry qualities.
 
 ## Roots
 
 The roots of the ontology are the seven Vaiśeṣika categories, and
-its verbs follow the Aṣṭādhyāyī of Pāṇini, which an earlier ruling
-makes the base for how the system thinks, communicates, and
-classifies things in the world. How the two divide
-beyond that is not yet ruled.
+its verbs follow the Aṣṭādhyāyī of Pāṇini.
 
 ## Verbs
 
@@ -58,8 +54,6 @@ A piece that is linked to is kept by virtue of the link, and released
 when the last link to it goes, the way Nix keeps a store path while
 something still references it. What must be kept is at least the part
 that was checksummed in; the rest may go when nothing links to it.
-This is how history kept writings such as those of Heraclitus:
-through the annotations and references other authors made to them.
 
 ## Storage
 

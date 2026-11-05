@@ -5,15 +5,14 @@ dependencies: [vision-ethos]
 
 ## Name
 
-Datom is the living’s own coinage for the new data notation, the
-successor to NOTA and to the rejected name Dotos. The name was
-chosen for its energetic power and to echo what the notation is:
+Datom is the living’s own coinage for the new data notation, named
+to echo what the notation is:
 data, strictly typed, super dense, no field names. The library is
 datom-codec. Datomic names the conceptual layer abstractly, in speech about it.
 
 ## Nature
 
-Datom is the most advanced textual data format in the world. It
+It
 carries data, strictly typed, and its whole work is serialization and
 deserialization: carrying data between text and typed form. Datom is
 signal's form at the edge: our components speak signal, and datom lets
@@ -180,14 +179,6 @@ is itself datomizable.
 Corporate.{ [ 1 ] Value.x }              ; at path 1, the bare string x is not an integer
 ```
 
-## Omittable fields
-
-Not yet; a written datom gives every position.
-
-```
-Deploy.{ ouranos }     ; Arity.{ 2 1 }
-```
-
 ## The interface shape
 
 A program's configuration surface is the datom's shape itself, as the
@@ -232,9 +223,7 @@ parser. What they may share is a substrate, kinds with a shared
 implementation and types; the universal substrate machinery is homed
 in protos, all dialects ride it, and datom is the pure-data dialect on
 it. Ethos could come to depend on Datom for another reason: ethos
-might be read as datom in one pass. Whether that is even possible,
-given the situation and the actualization involved in parsing ethos,
-is not settled, and the question is set aside for now.
+might be read as datom in one pass.
 
 A datom newly made, or proposed, is shown with its Ethos specification.
 

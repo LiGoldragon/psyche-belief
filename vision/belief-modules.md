@@ -24,7 +24,7 @@ A subject the living reviews or asks about has a module, on its topic or a broad
 
 A vision module may be substantial: it holds the code that is important to the vision, the invariant parts, which the living reviews as he reviews prose.
 
-The code important to a vision lives in that topic's vision module. The invariant code of the Flow Nexus, which the Psyche core Fable sees going into the Flow Nexus, lives in vision:flow-nexus; a Chronos invariant lives in vision:chronos.
+The code important to a vision lives in that topic's vision module.
 
 ```mermaid
 flowchart TB
@@ -38,11 +38,8 @@ A module declares its placement: the system prompt, or loaded on demand. A skill
 In the long term, intent is placed directly in the system prompt.
 
 The vocabulary is context, belief modules and context building.
-A skill is the legacy name, one harness name for things that differ, becoming obsolete as harness infrastructure improves.
 
 A context repository holds one folder per module type, each named for its type. A file is named by its subject alone, and its folder gives its type.
-
-A module is named by its type and its subject. A directory structure gives each type its own directory; a single-string name without whitespace puts the type first, then a colon, then the subject, as vision:book.
 
 ## Change through the living or a mechanism
 
@@ -54,7 +51,7 @@ Context lines are richly annotated, because lines of very different categories s
 
 ## A belief module states what holds now
 
-A belief module states what holds now; content can be good and belong elsewhere.
+A belief module states what holds now.
 
 ## A description is part of the content
 
@@ -63,8 +60,6 @@ A module's description is part of its content: what the description says, the bo
 ## Editing belief
 
 A belief goes in the module of its subject.
-
-A line that a module contradicts is edited by removing the contradicted line first.
 
 Removal comes before addition.
 

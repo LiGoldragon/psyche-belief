@@ -21,12 +21,9 @@ Vision is what is wanted; it is neither real nor unreal, and it documents nothin
 
 A raw record is written in the vision or notion records of the flow that heard it and is open there. When it is landed,
 superseded or refuted it moves into the flow's archive of the same kind, under one
-line that says which: Landed, with the module and the commit, written
-by the lander in the commit that lands it; Superseded, by the record
-that overruled it; Refuted, with his reason. The archived records of
+line that says which. The archived records of
 the whole system are every flow's archive; the open ones are every
-record outside an archive. A file is never renamed to say
-what became of its records. In the long term the records live in the
+record outside an archive. In the long term the records live in the
 psyche nexus and the state is a field.
 
 ## A record is a proposal

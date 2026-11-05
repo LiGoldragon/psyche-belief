@@ -13,4 +13,4 @@ Psyche core keeps track of all the psyche within Psyche; a topic Opus packages w
 
 ## The core Opus is the hub
 
-Psyche core Opus is the hub: it decides what reaches a topic flow, and only matters of that topic do. Messages pass between Opus flows, and a topic Opus has its Fable's books published. A flow that receives noise tells the sender it is noise and why.
+Psyche core Opus is the hub: it decides what reaches a topic flow, and only matters of that topic do. Messages pass between Opus flows.

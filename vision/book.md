@@ -7,9 +7,9 @@ dependencies: []
 
 A book carries belief modules, as they stand and as they are proposed to change; its sources live in its reference file.
 
-A figure shows how a thing moves, one question per figure, readable in seconds. Its grammar: a box is a thing or a collection; an arrow is a one-way relation carrying a verb, so that box, verb, box reads as a sentence; nearness and enclosure are kinship; top to bottom is order; colour carries a role or is absent. A figure is boxes joined by verbed arrows. A diagram in a book's source is a Mermaid flowchart in that grammar, drawn so a phone shows it; every sketch carries its arrows before it is sent. The published book shows the figure drawn from the Mermaid source by a Sonnet or Haiku subflow given the grammar with the sketch; the figure keeps every box, label and arrow, and says only what the source says; a figure that lost an arrow is returned. A sizable book carries several figures.
+A figure shows how a thing moves, one question per figure, readable in seconds. Its grammar: a box is a thing or a collection; an arrow is a one-way relation carrying a verb, so that box, verb, box reads as a sentence; nearness and enclosure are kinship; top to bottom is order; colour carries a role or is absent. A figure is boxes joined by verbed arrows. A diagram in a book's source is a Mermaid flowchart in that grammar, drawn so a phone shows it. A sizable book carries several figures.
 
-Prose is shown as rendered text. A code block holds code alone, and it may scroll sideways.
+Prose is shown as rendered text.
 
 ## What a book shows
 
@@ -33,8 +33,6 @@ A line moved between modules is one proposal headed by both paths: the line in r
 
 A dependency changed shows in the module's front matter: the dependency removed in red, the dependency added in green.
 
-A figure shows as proposed for the module it will live in.
-
 A figure proposed for a module shows under that module's path in green, as an added line does; a fence it replaces, in the module, shows as its red lines. A figure is drawn only of what is wanted; a removed sentence is its red text and is never drawn.
 
 ```mermaid
@@ -53,7 +51,7 @@ flowchart TB
     d -- "proposed as" --> e
 ```
 
-Code in a book is shown as code, labelled with its language, plain. Ethos and datom in a book are written in the vertical form.
+Code in a book is shown as code, labelled with its language, plain.
 
 ## Pictures
 

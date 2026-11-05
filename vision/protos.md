@@ -94,7 +94,7 @@ protocol.
 
 Five pairs. `{ }`, `[ ]`, `< >` structural; `« »` opaque, every glyph
 content; `( )` reserved for meaning, its type unspecified, read by
-balance as opaque until it is. The curly quotes are not delimiters.
+balance as opaque until it is.
 Every structure of the protosic layer is a variant of the `Protos`
 enum, and none of them means anything on its own: whether an
 enclosure is a struct or a vector, whether a bare run is a name or a
@@ -118,8 +118,7 @@ too.
 
 An enclosed structure stands between its delimiters; a bare structure
 has no delimiters. A brace-enclosed structure's arity is anatomical;
-a bracket-enclosed structure's arity is not. Angle brackets are a
-real protos delimiter.
+a bracket-enclosed structure's arity is not.
 
 ## String, escape, error
 

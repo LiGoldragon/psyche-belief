@@ -9,7 +9,7 @@ What is believed about a model, its personality, its rank, its cost,
 what it is given, is written in this module alone; every other module
 names a model by its name.
 
-The system is understood energetically. The living's attention is a thousand times dearer than any flow's; within the system Fable's input and output are the dearest, far above Opus's, and Opus's above Sonnet's and Haiku's. A message that saves a cheaper flow's words and makes a dearer one fetch has cost more, not less.
+The system is understood energetically. The living's attention is a thousand times dearer than any flow's; within the system Fable's input and output are the dearest, far above Opus's, and Opus's above Sonnet's and Haiku's.
 
 ## Models have personality
 
@@ -33,31 +33,21 @@ flowchart TB
 
 The most complex reasoning goes to Fable. Opus stands in for a design
 only when there is no Fable usage left. Sonnet does large plain work
-and designs nothing. Fable is the costly model and is main-flow only.
+and designs nothing.
 
 Every model launches the cheapest model that does the job, its own
-rarely, and Fable never: Haiku launches Haiku; Sonnet launches Sonnet
-and Haiku; Opus launches Sonnet and Haiku; Fable launches Opus and
-Sonnet, and Haiku for small jobs.
-
-The one difference between the two sides: Opus stands in for Fable;
-Sol stands in for nothing, since it designs nothing.
+rarely, and Fable never.
 
 ## One declaration sets the model everywhere
 
 The model is declared once, in the complex definition the Flow Nexus
-runs, in datom. Nothing else holds a model name, so a launcher never
-writes one by hand and no flow is started by accident.
+runs, in datom.
 
 ## Native names use the complex and the member
 
 Every native main session is titled `{ <Complex> <Member> <FLOW_ID> }`,
 the member being the name the definition gives the flow; tentative
 until version 1 runs.
-
-Complex, member, exact model identifier, Flow ID, and native binding
-remain separate typed facts. The title grants none of the identity,
-authority, availability, or routing those facts establish.
 
 ## A grunt job goes down, not up
 

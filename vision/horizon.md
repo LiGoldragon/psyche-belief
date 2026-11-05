@@ -6,9 +6,7 @@ dependencies: [vision-nexus]
 ## Horizon is a proper Nexus
 
 Horizon becomes a proper Nexus, so that the current state of the
-cluster is queried from it. Earlier records treat Horizon as emitted
-configuration data; how that sense and this one relate is not yet
-ruled.
+cluster is queried from it.
 
 ## A sandbox virtual machine is a feature of a node
 
