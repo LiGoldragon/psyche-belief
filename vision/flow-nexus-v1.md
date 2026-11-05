@@ -66,8 +66,8 @@ Library
 flowchart TB
     c["metaflow: designer"] --> s["speaker: fable"]
     s -- "Speaks.opus" --> o["member: opus"]
-    o -- "Speaks.Metaflow.implementer" --> i["metaflow: implementer, its speaker"]
-    s -- "Speaks.Living" --> l["the living"]
+    o -- "Metaflow.implementer" --> i["metaflow: implementer, its speaker"]
+    s -- "Living" --> l["the living"]
     x["anything else"] -. "refused" .-> s
 ```
 
@@ -334,7 +334,7 @@ A flow knows itself at launch: its Identity, the name of the complex it runs in,
 ```ethos
 Emission
 [ flow:[ Member Address FlowId Brief Waking Tools
-         HarnessName Roster RosterChange
+         Workspace HarnessName Roster RosterChange
          ComplexName ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
@@ -377,14 +377,15 @@ Memory
 
 ```datom
 ; the user defines a metaflow: one datom, added alone
-Define.{ designer
-         [ { fable claude claude-fable-5-1 Medium
-             Permanent
-             Path.«/home/li/primary»
-             { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
-             HarnessDefault []
-             [ Living ] } ]
-         fable }
+Define.Metaflow.{
+   designer
+   [ { fable claude claude-fable-5-1 Medium
+       Permanent
+       Path.«/home/li/primary»
+       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
+       HarnessDefault []
+       [ Living ] } ]
+   fable }
 Defined.Metaflow.designer
 ; defines the harness its member names: one datom, added alone
 Define.Harness.{

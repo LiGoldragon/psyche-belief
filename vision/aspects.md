@@ -14,6 +14,6 @@ Who speaks to whom, within an aspect and across aspects, is the routes each meta
       Permanent Path.«/home/li/primary»
       { [ { Spirit core } ] Refuse }
       HarnessDefault []
-      [ Speaks.opus Speaks.Living ] } ]
+      [ Speaks.opus Living ] } ]
   fable }
 ```

@@ -34,7 +34,7 @@ A flow knows its complex by name: the name is set at launch, in the Identity com
 flowchart TB
     m["complex: main"] -- "names as its speaker" --> d["metaflow: designer"]
     m -- "relationship: designer may address implementer" --> i["metaflow: implementer"]
-    d -- "Speaks.Metaflow.implementer, inside that relationship" --> i
+    d -- "Metaflow.implementer, inside that relationship" --> i
     l["the living"] -- "Say.{ main … }" --> m
 ```
 
@@ -72,13 +72,14 @@ Memory
 ```
 
 ```datom
-; definitions/main.datom: one complex
-{ main
-  [ designer implementer ]
-  [ { designer implementer } ]
-  [ LongWaitReminder ]               ; a feature of the harness, for every flow of the complex
-  [ criome ]                         ; one instance, on the host criome
-  designer }                         ; the speaker
+; definitions/main.datom: one complex, headed as Define takes it
+Complex.{
+   main
+   [ designer implementer ]
+   [ { designer implementer } ]
+   [ LongWaitReminder ]              ; a feature of the harness, for every flow of the complex
+   [ criome ]                        ; one instance, on the host criome
+   designer }                        ; the speaker
 Say.{ main Order.«Read the book» }   ; the living, to its speaker
 ```
 
@@ -123,20 +124,21 @@ for f in definitions/*.datom; do flow-nexus next "Define.$(cat "$f")"; done
 ```
 
 ```datom
-; definitions/designer.datom: one metaflow
-{ designer
-  [ { fable claude claude-fable-5-1 Medium
-      Permanent
-      Path.«/home/li/primary»
-      { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
-      Restricted.{ [ Bash Edit ] [ Artifact ] }
-      [ ClaudeMd ]
-      [ Speaks.opus Speaks.Living ] }
-    { opus claude claude-opus-4 Medium Ephemeral
-      Temporary
-      { [ { Spirit core } { Role worker } ] Notice }
-      HarnessDefault
-      []
-      [ Speaks.fable Speaks.Metaflow.implementer ] } ]
-  fable }                            ; the speaker
+; definitions/designer.datom: one metaflow, headed as Define takes it
+Metaflow.{
+   designer
+   [ { fable claude claude-fable-5-1 Medium
+       Permanent
+       Path.«/home/li/primary»
+       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
+       Restricted.{ [ Bash Edit ] [ Artifact ] }
+       [ ClaudeMd ]
+       [ Speaks.opus Living ] }
+     { opus claude claude-opus-4 Medium Ephemeral
+       Temporary
+       { [ { Spirit core } { Role worker } ] Notice }
+       HarnessDefault
+       []
+       [ Speaks.fable Metaflow.implementer ] } ]
+   fable }                           ; the speaker
 ```
