@@ -1,5 +1,5 @@
 ---
-description: Which model thinks, designs, delegates or speaks to the living, and in which complex, is decided, or a model is named natively.
+description: Which model thinks, designs, delegates or speaks to the living, and in which metaflow, is decided, or a model is named natively.
 dependencies: []
 ---
 
@@ -13,11 +13,11 @@ The system is understood energetically. The living's attention is a thousand tim
 
 ## Models have personality
 
-The models have personality, and a flow is spoken of by its model's name. A complex names each member's model in its datom definition, and that is where the model is visible.
+The models have personality, and a flow is spoken of by its model's name. A metaflow names each member's model in its datom definition, and that is where the model is visible.
 
 ```mermaid
 flowchart TB
-    c["a complex, configured in datom"] -- "names each member's" --> m["model: Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna"]
+    c["a metaflow, configured in datom"] -- "names each member's" --> m["model: Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna"]
     m -- "has" --> p["personality: what it designs, does, speaks"]
     c -- "names" --> r["routes: who speaks to whom"]
 ```
@@ -40,12 +40,12 @@ rarely, and Fable never.
 
 ## One declaration sets the model everywhere
 
-The model is declared once, in the complex definition the Flow Nexus
+The model is declared once, in the metaflow definition the Flow Nexus
 runs, in datom.
 
-## Native names use the complex and the member
+## Native names use the metaflow and the member
 
-Every native main session is titled `{ <Complex> <Member> <FLOW_ID> }`,
+Every native main session is titled `{ <Metaflow> <Member> <FLOW_ID> }`,
 the member being the name the definition gives the flow; tentative
 until version 1 runs.
 
@@ -57,4 +57,4 @@ A simple job — a book rebuilt, a page published, a module located, a file move
 
 Opus passes every design decision to its Fable and acts on Fable's decision. Opus uses its Fable freely.
 
-Who reaches whom is the complex's routes, in its definition; Fable is reached through its Opus where the routes say so.
+Who reaches whom is the metaflow's routes, in its definition; Fable is reached through its Opus where the routes say so.

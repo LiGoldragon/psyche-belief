@@ -1,5 +1,5 @@
 ---
-description: The Flow Nexus, version 1, which launches a flow from a complex the user defined, is being designed or judged against what the living wants it to be.
+description: The Flow Nexus, version 1, which launches a flow from a metaflow the user defined, is being designed or judged against what the living wants it to be.
 dependencies: [vision-ethos]
 ---
 
@@ -7,20 +7,20 @@ dependencies: [vision-ethos]
 
 ## Vocabulary
 
-A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is a named set of complexes and the relationships between them, with a speaker: the layer above the complex, the being one talks to. A Flow Nexus runs many metaflows; a complex is addressed by Launch and Send, a metaflow by Say, which reaches its speaker.
+A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A metaflow is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A complex is a named set of metaflows and the relationships between them, with a speaker and its instances: the layer above the metaflow, the being a person names and talks to. A Flow Nexus runs many complexes; a metaflow is addressed by Launch and Send, a complex by Say, which reaches its speaker.
 
 ## The machine is defined, never built in
 
-Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone; a metaflow is one of them, naming its complexes. No role or anatomy is in the Rust.
+Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A metaflow is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone; a complex is one of them, naming its metaflows. No role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
-A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. A harness is a definition like a complex: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a complex is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused. What a complex is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
+A metaflow is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the metaflow from outside. A harness is a definition like a metaflow: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a metaflow is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another metaflow, or the living; a message off the routes is refused. What a metaflow is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
 
 ```ethos
 Library
 [ herdr:[ Pane ]
   belief:[ ModuleName ] ]
-[ ComplexName.String
+[ MetaflowName.String
   FlowName.String
   HarnessName.String
   FeatureName.String
@@ -28,7 +28,7 @@ Library
            Environment.{ Name.String  ;   a variable, set for the harness alone
                          Value.String } ]
   Feature.{ FeatureName Effect }
-  Harness.{ HarnessName               ; a definition, as a complex is
+  Harness.{ HarnessName               ; a definition, as a metaflow is
             Features.Vector<Feature> }
   ModelName.String
   Effort.[ Low Medium High ]
@@ -42,17 +42,17 @@ Library
   Tools.[ HarnessDefault              ; the Flow Nexus imposes nothing
           Restricted.{ Allow.Vector<Tool>   ; enforced by the harness
                        Deny.Vector<Tool> } ]  ;   or the launch is refused
-  Route.[ Speaks.FlowName             ; a member of this complex
-          Complex.ComplexName         ;   that complex's speaker
+  Route.[ Speaks.FlowName             ; a member of this metaflow
+          Metaflow.MetaflowName         ;   that metaflow's speaker
           Living ]
   Member.{ FlowName HarnessName ModelName Effort
            Continuity Workspace Beliefs Tools
-           Features.Vector<FeatureName>  ; of its harness, composed into its launch beside its metaflow's
+           Features.Vector<FeatureName>  ; of its harness, composed into its launch beside its complex's
            Vector<Route> }
-  Complex.{ ComplexName Vector<Member>
+  Metaflow.{ MetaflowName Vector<Member>
             Speaker.FlowName }
   FlowId.Integer
-  Address.{ ComplexName
+  Address.{ MetaflowName
             FlowName }  ; a permanent flow's name
   Roster.Vector<Address>             ; every hot flow, in every first prompt
   RosterChange.[ Started.Address     ; pushed to every hot flow as a flow starts
@@ -64,9 +64,9 @@ Library
 
 ```mermaid
 flowchart TB
-    c["complex: designer"] --> s["speaker: fable"]
+    c["metaflow: designer"] --> s["speaker: fable"]
     s -- "Speaks.opus" --> o["member: opus"]
-    o -- "Speaks.Complex.implementer" --> i["complex: implementer, its speaker"]
+    o -- "Speaks.Metaflow.implementer" --> i["metaflow: implementer, its speaker"]
     s -- "Speaks.Living" --> l["the living"]
     x["anything else"] -. "refused" .-> s
 ```
@@ -100,11 +100,11 @@ flowchart TB
 
 ## A message takes a route
 
-A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a metaflow with Say, which reaches its speaker.
+A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
 
 ```ethos
 Library
-[ flow:[ FlowId Address ComplexName ] ]
+[ flow:[ FlowId Address MetaflowName ] ]
 [ Priority.[ HardAbrupt MiddleAbrupt Soft ]
   Request.[ Order.String Question.String
             Living.{ Context.String    ; what his words were about
@@ -250,27 +250,27 @@ flowchart LR
 
 ```ethos
 Signal
-[ flow:[ Complex ComplexName FlowName FlowId
+[ flow:[ Metaflow MetaflowName FlowName FlowId
          Address Brief ModuleName Message
          Request Priority Tool
          Harness HarnessName FeatureName
-         Metaflow MetaflowName ] ]
-[ Define.[ Complex Harness Metaflow ] ; add or replace one
+         Complex ComplexName ] ]
+[ Define.[ Metaflow Harness Complex ] ; add or replace one
   Undefine.Name
   Describe.Name                      ; one definition, read back
   Definitions                        ; the names defined
-  Launch.{ ComplexName FlowName Brief }
-  Rehearse.{ ComplexName FlowName Brief } ; a Launch as a dry run: nothing runs
+  Launch.{ MetaflowName FlowName Brief }
+  Rehearse.{ MetaflowName FlowName Brief } ; a Launch as a dry run: nothing runs
   Stop.FlowId
   Send.{ FlowId Address Priority Request }
-  Say.{ MetaflowName Request }       ; the living, to a metaflow's speaker
+  Say.{ ComplexName Request }       ; the living, to a complex's speaker
   Hot                                ; the flows whose harness is up
   Broadcast.Request                  ; one request to every hot flow
   Report.{ FlowId Event }            ; from a harness hook
   Subscribe ]                        ; events, as they happen
 [ Defined.Name
   Undefined.Name
-  Described.[ Complex Harness Metaflow ]
+  Described.[ Metaflow Harness Complex ]
   Listed.Vector<Name>
   Launched.FlowId
   Rehearsed.Command.String           ; the shell command, whole
@@ -281,19 +281,19 @@ Signal
   Broadcast.Vector<FlowId>           ; who received it
   Reported
   Subscribed
-  Refused.[ UnknownComplex.ComplexName
+  Refused.[ UnknownMetaflow.MetaflowName
             UnknownHarness.HarnessName
-            UnknownMetaflow.MetaflowName
+            UnknownComplex.ComplexName
             UnknownFlow.FlowName
             NoRoute.{ FlowId Address }
             NoBelief.Vector<ModuleName>
             Unenforceable.HarnessName     ; Restricted, harness cannot
-            UnknownFeature.{ HarnessName FeatureName } ; named by the member or its metaflow, absent from the harness
+            UnknownFeature.{ HarnessName FeatureName } ; named by the member or its complex, absent from the harness
             HerdrDown BeliefDown
             Running.Address ] ]
-[ Name.[ Complex.ComplexName         ; a definition, by name
+[ Name.[ Metaflow.MetaflowName         ; a definition, by name
          Harness.HarnessName
-         Metaflow.MetaflowName ]
+         Complex.ComplexName ]
   Event.[ Started Idle Working Ended
           Responded.String            ; the response, whole
           Warned                     ;   the handover asked
@@ -327,15 +327,15 @@ flowchart TB
 
 ## Emission
 
-The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names and each its metaflow names, its effect, a flag or a variable.
+The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names and each its complex names, its effect, a flag or a variable.
 
-A flow knows itself at launch: its Identity, the name of the metaflow it runs in, its Address and its FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report, finds its handover path, and knows which being it is part of; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
+A flow knows itself at launch: its Identity, the name of the complex it runs in, its Address and its FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report, finds its handover path, and knows which being it is part of; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 
 ```ethos
 Emission
 [ flow:[ Member Address FlowId Brief Waking Tools
          HarnessName Roster RosterChange
-         MetaflowName ]
+         ComplexName ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
   Settle.{ Member FlowId }            ; the harness's settings file
@@ -349,7 +349,7 @@ Emission
   Woken.Outcome
   Told.Outcome
   Closed.Outcome ]
-[ Identity.{ MetaflowName Address FlowId }   ; composed into the first prompt
+[ Identity.{ ComplexName Address FlowId }   ; composed into the first prompt
                                              ;   or the system prompt
   Settings.{ HarnessName Tools Model.String } ] ; what the translator writes
 ```
@@ -360,11 +360,11 @@ Definitions persist: the Memory lives in the Flow Nexus's State directory and su
 
 ```ethos
 Memory
-[ flow:[ Complex ComplexName FlowName FlowId
-         Address Message Event Metaflow ]
+[ flow:[ Metaflow MetaflowName FlowName FlowId
+         Address Message Event Complex ]
   herdr:[ Pane ]
   belief:[ ModuleName ] ]
-[ Definition.[ Complex Harness Metaflow ]
+[ Definition.[ Metaflow Harness Complex ]
   DefaultModules.Vector<ModuleName>  ; the modules every flow gets
   Flow.{ FlowId Address Pane
          State.[ Running Idle Ended ]
@@ -376,7 +376,7 @@ Memory
 ```
 
 ```datom
-; the user defines a complex: one datom, added alone
+; the user defines a metaflow: one datom, added alone
 Define.{ designer
          [ { fable claude claude-fable-5-1 Medium
              Permanent
@@ -385,7 +385,7 @@ Define.{ designer
              HarnessDefault []
              [ Living ] } ]
          fable }
-Defined.Complex.designer
+Defined.Metaflow.designer
 ; defines the harness its member names: one datom, added alone
 Define.Harness.{
    claude
