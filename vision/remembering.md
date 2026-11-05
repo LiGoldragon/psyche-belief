@@ -14,6 +14,8 @@ reaching the transcript directly when the logs are not enough.
 
 A fresh flow receives the living's content weighed by importance, and only the important part.
 
+His comments on a book reach the flow that redoes it as a user message through the Flow Nexus, in his words, the book named by its title; a fresh flow's first prompt carries his open comments on the books its predecessors published.
+
 ```mermaid
 flowchart TB
     a["living content"] -- "weighed by importance" --> b["important part"]
