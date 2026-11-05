@@ -153,6 +153,29 @@ The older form, `namespace:[ Type ]`, holds now: `std:[ Clonable Sendable Serial
 [ std:[ Clonable Sendable Serializable ] ]   ; imports
 ```
 
+A root that generates types puts them in an implied namespace named for the root, beside the file's own namespace, which holds only what the file writes, so a generated name reserves nothing in the file. A Signal exports `signal:[ Input Output ]`; Operation and Memory export `operation:` and `memory:` when they generate. A trait is exported by name as a type is, from the written namespace; the root-implied traits, Answerable, Deliverable, Operable, Memorizable and Emittable, are defined once in the standard library.
+
+```ethos
+Library
+[ signal_flow:signal:[ Input Output ]                    ; the implied namespace: what the Signal root generated
+  signal_flow:[ Call Caller ] ]                          ; the written namespace: what the file declares
+```
+
+```rust
+pub mod signal { pub enum Input { … } pub enum Output { … } }   // the implied namespace
+pub struct Call { … }                                            // the written one
+```
+
+Ethos resolves every import while it reads, from the ethos each dependency carries beside its crate, and refuses before any Rust exists; an unresolved import or a doubled name is an Ethos error naming the file and the name.
+
+```ethos
+ImportError.[ UnknownNamespace.Namespace                 ; no such namespace is known
+              UnknownName.{ Namespace Name }             ; the namespace exists, exports no such name
+              Collision.{ Namespace Name } ]             ; two declarations of one name in one file
+Namespace.String
+Name.String
+```
+
 ## What a declaration turns into
 
 A declaration turns into the Rust type with named fields, bearing the
@@ -551,7 +574,7 @@ The Ethos, an Emission importing its Signal's Input and Output:
 
 ```ethos
 Emission
-[ signal_herdr:[ Input Output ] ]      ; imports: the Signal's inputs and outputs, by name
+[ signal_herdr:signal:[ Input Output ] ] ; imports: the Signal's inputs and outputs, from its implied namespace
 [ Command.{ Verb Vector<Argument> } ]  ; emissions: one external call each
 [ Outcome.[ Done Refused.Integer ] ]   ; outcomes: what the translator observed
 [ Verb.[ List Show ]                   ; types
