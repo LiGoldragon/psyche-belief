@@ -68,6 +68,33 @@ flowchart TB
     x["anything else"] -. "refused" .-> s
 ```
 
+## Default modules
+
+The Flow Nexus holds one configuration value, the default modules: the modules every flow gets. They are composed before each member's own Beliefs, so a definition names only its own. The value is set over the meta surface, one value at a time, as every Nexus's configuration is, and persists with the definitions.
+
+His words: "we should make a list of default modules that all flows get"
+
+```ethos
+Signal
+[ belief:[ ModuleName ]
+  flow:[ Threshold ] ]
+[ Configure.Set ]                    ; inputs: one value at a time
+[ Configured.Set ]                   ; outputs: the value set
+[ Set.[ DefaultModules.Vector<ModuleName> ; types: the modules every flow gets
+        Threshold ] ]                ;   one model's context mark
+```
+
+```datom
+Configure.DefaultModules.[ { Spirit core } { Knowledge flow-messaging } ]
+Configured.DefaultModules.[ { Spirit core } { Knowledge flow-messaging } ]
+```
+
+```mermaid
+flowchart TB
+    d["default modules: the Nexus's one configured list"] -- "composed first" --> w["the flow's workspace"]
+    m["the member's own Beliefs"] -- "composed after" --> w
+```
+
 ## A message takes a route
 
 A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
@@ -273,7 +300,7 @@ flowchart TB
 
 ## Emission
 
-The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
+The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
 
 A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 
@@ -305,8 +332,10 @@ Definitions persist: the Memory lives in the Flow Nexus's State directory and su
 Memory
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Message Event ]
-  herdr:[ Pane ] ]
+  herdr:[ Pane ]
+  belief:[ ModuleName ] ]
 [ Definition.[ Complex Harness ]
+  DefaultModules.Vector<ModuleName>  ; the modules every flow gets
   Flow.{ FlowId Address Pane
          State.[ Running Idle Ended ]
          Vector<Event> }
