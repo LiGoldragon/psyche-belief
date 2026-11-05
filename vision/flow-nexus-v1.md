@@ -7,11 +7,11 @@ dependencies: [vision-ethos]
 
 ## Vocabulary
 
-A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex. The Flow Nexus runs one metaflow: every complex it holds is of it, and the metaflow is addressed only through its complexes, by Launch, Send and Say.
+A flow is one run of a model in a harness. A permanent flow is a flow that continues through a succession of runs, one entity across them. A flow complex, said complex, is several flows defined together: each flow's model, harness, workspace and beliefs, and which flow speaks to which. A metaflow is a named set of complexes and the relationships between them, with a speaker: the layer above the complex, the being one talks to. A Flow Nexus runs many metaflows; a complex is addressed by Launch and Send, a metaflow by Say, which reaches its speaker.
 
 ## The machine is defined, never built in
 
-Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone, and the metaflow is the set of them. No role or anatomy is in the Rust.
+Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A complex is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone; a metaflow is one of them, naming its complexes. No role or anatomy is in the Rust.
 
 ## The vocabulary of a definition
 A complex is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the complex from outside. A harness is a definition like a complex: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a complex is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another complex, or the living; a message off the routes is refused. What a complex is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
@@ -100,7 +100,7 @@ flowchart TB
 
 ## A message takes a route
 
-A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a complex with Say, which reaches its speaker.
+A flow sends through the CLI; the Flow Nexus checks the route against the sender's definition, queues the message for the receiver, and delivers it through the herdr Nexus as a prompt when the receiver is idle or the priority is pressing. A permanent flow asleep is woken by a pressing message and receives its whole queue in its first prompt. The living speaks to a metaflow with Say, which reaches its speaker.
 
 ```ethos
 Library
@@ -253,8 +253,9 @@ Signal
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Brief ModuleName Message
          Request Priority Tool
-         Harness HarnessName ] ]
-[ Define.[ Complex Harness ]         ; add or replace one
+         Harness HarnessName
+         Metaflow MetaflowName ] ]
+[ Define.[ Complex Harness Metaflow ] ; add or replace one
   Undefine.Name
   Describe.Name                      ; one definition, read back
   Definitions                        ; the names defined
@@ -262,14 +263,14 @@ Signal
   Rehearse.{ ComplexName FlowName Brief } ; a Launch as a dry run: nothing runs
   Stop.FlowId
   Send.{ FlowId Address Priority Request }
-  Say.{ ComplexName Request }        ; the living, to a speaker
+  Say.{ MetaflowName Request }       ; the living, to a metaflow's speaker
   Hot                                ; the flows whose harness is up
   Broadcast.Request                  ; one request to every hot flow
   Report.{ FlowId Event }            ; from a harness hook
   Subscribe ]                        ; events, as they happen
 [ Defined.Name
   Undefined.Name
-  Described.[ Complex Harness ]
+  Described.[ Complex Harness Metaflow ]
   Listed.Vector<Name>
   Launched.FlowId
   Rehearsed.Command.String           ; the shell command, whole
@@ -282,6 +283,7 @@ Signal
   Subscribed
   Refused.[ UnknownComplex.ComplexName
             UnknownHarness.HarnessName
+            UnknownMetaflow.MetaflowName
             UnknownFlow.FlowName
             NoRoute.{ FlowId Address }
             NoBelief.Vector<ModuleName>
@@ -289,7 +291,8 @@ Signal
             HerdrDown BeliefDown
             Running.Address ] ]
 [ Name.[ Complex.ComplexName         ; a definition, by name
-         Harness.HarnessName ]
+         Harness.HarnessName
+         Metaflow.MetaflowName ]
   Event.[ Started Idle Working Ended
           Responded.String            ; the response, whole
           Warned                     ;   the handover asked
@@ -356,10 +359,10 @@ Definitions persist: the Memory lives in the Flow Nexus's State directory and su
 ```ethos
 Memory
 [ flow:[ Complex ComplexName FlowName FlowId
-         Address Message Event ]
+         Address Message Event Metaflow ]
   herdr:[ Pane ]
   belief:[ ModuleName ] ]
-[ Definition.[ Complex Harness ]
+[ Definition.[ Complex Harness Metaflow ]
   DefaultModules.Vector<ModuleName>  ; the modules every flow gets
   Flow.{ FlowId Address Pane
          State.[ Running Idle Ended ]

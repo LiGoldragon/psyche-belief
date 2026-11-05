@@ -1,31 +1,34 @@
 ---
-description: The metaflow, version 1, several complexes defined together and running as one self for one owner, is being designed or judged against what the living wants it to be.
+description: The metaflow, version 1, a named set of complexes and the relationships between them, the being one talks to, is being designed or judged against what the living wants it to be.
 dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-v1, vision-nexus-v1]
 ---
 
 # The metaflow
 
-Version 1. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex. It is a definition, as a complex is: it is made of nothing but complexes, and it has no directory, process or socket of its own. Three Nexuses run it, from the definitions given them, and the flows run from those.
+Version 1. A metaflow is a named set of complexes and the relationships between them: the layer above the complex, and the being one talks to, what people today call an agent. It is a definition, as a complex is: it names its complexes, the relationships between them and its speaker, and it has no directory, process or socket of its own. A Flow Nexus runs many metaflows. Three Nexuses run them, from the definitions given them, and the flows run from those.
+
+His words: "the metaflow is all of the flows and all of the flow complexes of a particular unit. It's like a unit that living human beings can think of. It's kind of like the equivalent of what people think of today when they think of an agent: a thing they can talk to. [...] It's going to be interacting with that whole complex of complexes, which is the metaflow. [...] You can have multiple metaflows on a single host and they're all running on the same Flow Nexus." and "it is going to have to define the relationships between the complexes also."
 
 ## The layers
 
-Each layer is defined in terms of the one below it. A flow is one run of a model in a harness. A permanent flow continues through a succession of runs, one entity under one address. A complex is several flows defined together: each flow's model, harness, workspace, beliefs and tools, and which flow speaks to which. A metaflow is several complexes defined together.
+Each layer is defined in terms of the one below it. A flow is one run of a model in a harness. A permanent flow continues through a succession of runs, one entity under one address. A complex is several flows defined together: each flow's model, harness, workspace, beliefs and tools, and which flow speaks to which. A metaflow is several complexes defined together, with the relationships between them and a speaker.
 
 ```mermaid
 flowchart TB
-    m["metaflow: several complexes, one self, one owner"] -- "is made of" --> c["complex: several flows defined together, with their routes and a speaker"]
+    m["metaflow: a named set of complexes, the relationships between them, a speaker"] -- "is made of" --> c["complex: several flows defined together, with their routes and a speaker"]
     c -- "is made of" --> f["flow: one run of a model in a harness; a permanent flow runs on under its address"]
 ```
 
 ## One self
 
-The complexes of a metaflow are one self because they speak to one another: a route may name another complex, and a message to a complex reaches its speaker. The living speaks to any complex with Say. What one complex says, does or leaves undone, the whole answers for.
+The complexes of a metaflow are one self because they speak to one another: the metaflow defines the relationships between its complexes, each one that this complex may address that one, and a member's route to another complex holds only inside them; a message to a complex reaches its speaker. The living talks to the metaflow: Say addresses it by name and reaches its speaker, the complex that receives what comes to the metaflow. What one complex says, does or leaves undone, the whole answers for.
 
 ```mermaid
 flowchart TB
-    d["complex: designer"] -- "Speaks.Complex.implementer" --> i["complex: implementer"]
-    l["the living"] -- "Say" --> d
-    l -- "Say" --> i
+    m["metaflow: main"] -- "names as its speaker" --> d["complex: designer"]
+    m -- "relationship: designer may address implementer" --> i["complex: implementer"]
+    d -- "Speaks.Complex.implementer, inside that relationship" --> i
+    l["the living"] -- "Say.{ main … }" --> m
 ```
 
 ## One owner
@@ -34,17 +37,40 @@ A metaflow runs for one owner: the login whose Nexuses run it. The definitions a
 
 ## Where a metaflow lives
 
-A metaflow has no file and no type of its own: it is the set of complexes the Flow Nexus holds in its Memory, each given by Define and read back by Describe, the set by Definitions; a harness is defined the same way, and a member names it. A change to one complex touches no other.
+A metaflow is a definition the Flow Nexus holds in its Memory, given by Define and read back by Describe, the names by Definitions, as a complex and a harness are; it names its complexes by name, and a Flow Nexus holds many. A change to one definition touches no other.
+
+```ethos
+Library
+[ flow:[ ComplexName ] ]
+[ MetaflowName.String                ; the being's name: main
+  Relationship.{ From.ComplexName    ; this complex
+                 To.ComplexName }    ;   may address that one
+  Metaflow.{ MetaflowName
+             Complexes.Vector<ComplexName>      ; its complexes, by name
+             Relationships.Vector<Relationship> ; the relationships between them
+             Speaker.ComplexName } ] ; receives what comes to the metaflow; tentative
+[]
+[]
+```
 
 ```ethos
 Memory
-[ flow:[ Complex ] ]
-[ Definition.[ Complex Harness ] ]   ; the metaflow is every Complex held; a Harness is a definition its members name
+[ flow:[ Complex Harness Metaflow ] ]
+[ Definition.[ Complex Harness Metaflow ] ] ; each held alone; a Metaflow names its complexes, a Member its harness
+```
+
+```datom
+; definitions/main.datom: one metaflow
+{ main
+  [ designer implementer ]
+  [ { designer implementer } ]
+  designer }                         ; the speaker
+Say.{ main Order.«Read the book» }   ; the living, to its speaker
 ```
 
 ```mermaid
 flowchart TB
-    d["definitions: one datom file per complex"] -- "Define, through the CLI" --> f["Flow Nexus"]
+    d["definitions: one datom file per metaflow, complex and harness"] -- "Define, through the CLI" --> f["Flow Nexus"]
     f -- "Furnish, signal" --> b["Belief Nexus"]
     f -- "Create, Start, Prompt, signal" --> h["herdr Nexus"]
     b -- "writes the bundle and the skills" --> w["workspace"]
@@ -55,7 +81,7 @@ flowchart TB
 
 ## The Nexuses that run it
 
-The Flow Nexus, the Belief Nexus and the herdr Nexus run a metaflow. Each is started in its place, a Nexus startup fact of vision:nexus-v1: the three that run one metaflow share one place name, and a CLI reaches them by it. Two place names are two sets of Nexuses, so the stable set keeps running while the next is tried; the metaflow is whatever complexes the Flow Nexus at that place holds.
+The Flow Nexus, the Belief Nexus and the herdr Nexus run a metaflow. Each is started in its place, a Nexus startup fact of vision:nexus-v1: the three that run one metaflow share one place name, and a CLI reaches them by it. Two place names are two sets of Nexuses, so the stable set keeps running while the next is tried; the metaflows are whatever the Flow Nexus at that place holds.
 
 ```sh
 # the CLI: the place's name, then one datom
@@ -75,7 +101,7 @@ nix develop github:LiGoldragon/metaflow -- metaflow start next
 
 The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in its State directory. A change to one definition touches no other. The Rust knows no role, model name or topic.
 
-A new place is told its metaflow by replaying the definition files, one Define per file, harnesses before the complexes that name them; nothing is migrated from the place before it, and the set of files is the whole of what a place needs to know.
+A new place is told its metaflows by replaying the definition files, one Define per file, harnesses before the complexes that name them and complexes before the metaflows that name them; nothing is migrated from the place before it, and the set of files is the whole of what a place needs to know.
 
 ```sh
 # the owner's definitions, replayed into a fresh place

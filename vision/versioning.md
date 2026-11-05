@@ -50,4 +50,4 @@ A permaflow is one persistent address, { Aspect topic Model }, with its successi
 
 The Nexuses of two places talk to each other through an inter-place interface, so that the flows of a new version speak with the permaflows of the place being upgraded from. An upgrade then proceeds flow by flow, each new flow started at the new place, and needs no store compatibility between the two.
 
-Side by side is the only upgrade: a new place is told its metaflow by replaying the owner's definition files, and nothing is migrated from the place before it.
+Side by side is the only upgrade: a new place is told its metaflows by replaying the owner's definition files, and nothing is migrated from the place before it.
