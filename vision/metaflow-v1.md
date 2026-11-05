@@ -23,6 +23,13 @@ flowchart TB
 
 The complexes of a metaflow are one self because they speak to one another: the metaflow defines the relationships between its complexes, each one that this complex may address that one, and a member's route to another complex holds only inside them; a message to a complex reaches its speaker. The living talks to the metaflow: Say addresses it by name and reaches its speaker, the complex that receives what comes to the metaflow. What one complex says, does or leaves undone, the whole answers for.
 
+A flow knows its metaflow by name: the name is set at launch, in the Identity composed into its first prompt or its system prompt beside its Address and FlowId, so a flow names the being it is part of.
+
+```datom
+; the Identity composed into a flow's prompt: metaflow, address, flow id
+{ main { designer fable } 7 }
+```
+
 ```mermaid
 flowchart TB
     m["metaflow: main"] -- "names as its speaker" --> d["complex: designer"]

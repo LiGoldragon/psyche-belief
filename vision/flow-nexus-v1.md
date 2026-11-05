@@ -328,12 +328,13 @@ flowchart TB
 
 The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
 
-A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
+A flow knows itself at launch: its Identity, the name of the metaflow it runs in, its Address and its FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report, finds its handover path, and knows which being it is part of; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 
 ```ethos
 Emission
 [ flow:[ Member Address FlowId Brief Waking Tools
-         HarnessName Roster RosterChange ]
+         HarnessName Roster RosterChange
+         MetaflowName ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
   Settle.{ Member FlowId }            ; the harness's settings file
@@ -347,7 +348,7 @@ Emission
   Woken.Outcome
   Told.Outcome
   Closed.Outcome ]
-[ Identity.{ Address FlowId }                ; composed into the first prompt
+[ Identity.{ MetaflowName Address FlowId }   ; composed into the first prompt
                                              ;   or the system prompt
   Settings.{ HarnessName Tools Model.String } ] ; what the translator writes
 ```
