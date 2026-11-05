@@ -20,10 +20,6 @@ new, the old code at most inspiration.
 
 Every method lives in a trait; an inherent method is a trait not yet extracted. The traits and types of a Nexus are one ontology designed before any body is written; defaults wherever expressible, through rich sub-trait chains. Traits live on data-bearing types; a zero-sized type with behaviour is a namespace pretending. Identity is trait-borne: an encoded form fingerprints itself, by default the hash of its rkyv archive, and every reference names its target by that name. `fn main()` is the only free function; a missing owner is a missing type.
 
-## Long term: traits in ethos
-
-Long term, every trait a Nexus uses is declared in ethos; short term, a Nexus goes without declared traits.
-
 ## Processing is for the effect
 
 An object enters a Nexus for the effect; the response follows as an
