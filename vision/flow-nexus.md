@@ -1,5 +1,5 @@
 ---
-description: The Flow Nexus — the Nexus that launches, names, tracks and ends flows — or a permaflow, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
+description: The Flow Nexus — the Nexus that launches, names, tracks and ends flows and carries every message between them — or a permaflow, a message, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
 dependencies: [vision-nexus, vision-ethos]
 ---
 
@@ -36,7 +36,7 @@ A topic's name is a camelCase identifier, uncapitalized. A flow's id is the hash
 
 In the chat a flow is named by its permaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
-A request reaching a permaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks the Flow Nexus to send a request to a permaflow; the Flow Nexus owns the lock and the delivery, answers sent or queued, and Message subscribes to the Flow Nexus's events, learning when a request has entered the flow's context. A permaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a permaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A permaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the permaflow's belief modules and the prompt it is to get now.
+A request reaching a permaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. A flow sends a request through the Flow Nexus, which owns the lock and the delivery and answers sent or queued. A permaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a permaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A permaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the permaflow's belief modules and the prompt it is to get now.
 
 ```ethos
 SendableRequest.[ Order.String                  ; a request: what the recipient is to act on
@@ -49,6 +49,9 @@ SendableRequest.[ Order.String                  ; a request: what the recipient 
                   Done.{ Answerable String } ]
 AnswerableTask.{ Minutes String }               ; a task, with the minutes it is given
 Minutes.Integer
+SendableMessage.[ HardAbrupt.SendableRequest  ; the priority, a head on the request
+                  MiddleAbrupt.SendableRequest
+                  Soft.SendableRequest ]
 ```
 
 ```datom
@@ -60,9 +63,19 @@ A flow woken for a permaflow is almost always a fresh flow, an old one only when
 What has been queued for an idle permaflow, the vision touching its topic among it, is injected with the request that wakes it, so the flow knows it as soon as it wakes.
 A permaflow wakes when a request needs it; what touches its topic queues until then.
 
-The Flow Nexus exposes everything from the harness, the bare input: a flow is started, stopped and sent a message through the Flow Nexus, and Message makes use of it. Message is the send path: a flow asks Message to send, Message asks the Flow Nexus to deliver and subscribes to the Flow Nexus's events.
+The Flow Nexus exposes everything from the harness, the bare input: a flow is started, stopped and sent a message through the Flow Nexus, the one send path.
 
 The flow that finishes messages the flow that needs to know.
+
+## A message
+
+A message is a datom and lands in the recipient's prompt as one; the datom is the whole message. Its priority is a head on the request: HardAbrupt, MiddleAbrupt or Soft. A pressing message wakes its recipient; a message that only queues carries what may wait. A message is addressed to a permaflow and reaches the flow running when it arrives; a request to deliver a recipient's queue delivers every queued message, or nothing when none is queued.
+
+A message carries what its reader acts on: what the sender intends, or what it has done. It carries no hash: a flow is named by its permaflow, a book by its title, a commit by what it landed.
+
+Inducing an interrupt, placing prompt text, submitting it, and the recipient consuming it are four separate observations. None of them stands for another, and a submission is never a read receipt.
+
+A task carries the minutes it is expected to take; the Flow Nexus reminds the sender when they pass, and the done reply names the task and cancels the reminder. A receiver going idle with a task open fires a notice to the flow waiting on it, so that nothing is forgotten. Any flow asks the Flow Nexus for a reminder after a number of minutes.
 
 ## Starting flows
 
@@ -169,9 +182,9 @@ The flow repository holds the machinery of the Flow Nexus and is a runtime repos
 Every belief module lives outside it, the basic modules included, so that a module changes live.
 The basic modules give our own take on how an agent behaves in a harness, replacing the prompt the harnesses build in.
 
-Every harness event reaches the Flow Nexus through the harness's hooks calling the Flow CLI, so the Flow Nexus knows each flow's state as it changes; a marked block landing in a transcript becomes an action, a book among them; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
+Every harness event reaches the Flow Nexus through the harness's hooks calling the Flow CLI, so the Flow Nexus knows each flow's state as it changes; a marked block landing in a transcript becomes an action, a book among them; a flow past its context threshold is refreshed as it goes idle. A hook may carry content, the last message among it, ephemeral: acted on or dropped, never stored. Which hooks are installed is configuration. A poller that must exist is registered and reported.
 
-A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the permaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the permaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus.
+A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the permaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the permaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus. A flow still working is not forced to refresh. When the successor cannot start, the Flow Nexus restarts the predecessor and compacts it, so every permaflow keeps a flow.
 
 A flow refreshes before compaction; a compaction is a refresh that was missed.
 
@@ -199,7 +212,7 @@ A permission prompt reaching the living is a launch failure.
 
 ## The heartbeat
 
-The heartbeat reminds every flow it reaches to judge its own sanity, by these signs: an echo chamber, where the same question or claim goes round between flows and comes back; jargon and nonsense increasing; an acknowledgement answering an acknowledgement. The counts the heartbeat carries, awake permaflows, working panes, messages sent and queue growth per permaflow, are evidence under the reminder; the judgment is the flow's.
+The heartbeat is hourly. It reminds every flow it reaches to judge its own sanity, by these signs: an echo chamber, where the same question or claim goes round between flows and comes back; jargon and nonsense increasing; an acknowledgement answering an acknowledgement. The counts the heartbeat carries, awake permaflows, working panes, messages sent and queue growth per permaflow, are evidence under the reminder; the judgment is the flow's.
 
 The heartbeat reaches only a flow for which something changed that bears on it.
 
@@ -208,6 +221,10 @@ The number of running flows is kept low: a topic flow no longer used is retired.
 ## Restarting without waking
 
 A flow can be restarted without being woken: its harness closes, its transcript stays, and its successor runs when a message wakes it. A flow can also restart itself. A restart meant to leave the flow asleep is done from outside; what arrives queues for its successor.
+
+## Debugging
+
+Everything that may need debugging, changing or reconfiguring is reached through an operation on the ordinary socket or the meta socket. The flow id and the delivery id are the Nexus's own; a debugging query exposes them when one must be explicit.
 
 ## What a refresh carries
 
