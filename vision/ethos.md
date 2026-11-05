@@ -651,9 +651,11 @@ traits, dependencies), and in its one declared case, the newtype.
 
 Space the delimiters and the inner content. Ethos follows the
 canonical protos print: a space inside every bracket and brace
-at both ends when non-empty.
-
-Ethos expands vertically: a structure with more than one element opens on its line and its elements hang beneath the first, aligned; the closing delimiter ends the last element's line. Everything that has a next layer opens it on a new line.
+at both ends when non-empty, and the vertical expansion, under which
+a structure of leaves alone sits on one line and a structure with
+more than one element, one of them with a next layer, opens on its
+line and its elements hang beneath the first, aligned, the closing
+delimiter ending the last element's line.
 
 The Ethos, describing Ethos itself; tentative in its names:
 

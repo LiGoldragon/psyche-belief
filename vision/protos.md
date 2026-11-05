@@ -120,6 +120,13 @@ An enclosed structure stands between its delimiters; a bare structure
 has no delimiters. A brace-enclosed structure's arity is anatomical;
 a bracket-enclosed structure's arity is not.
 
+A semicolon opens a comment, which runs to the end of its line; the
+reader passes it as it passes whitespace, and no structure holds it.
+
+```
+{ Ada 1990 }   ; a comment, dropped by the reader
+```
+
 ## String, escape, error
 
 The text type is `String`. A closing guillemet inside a string is
@@ -144,3 +151,28 @@ It is canonical, and it is considered good style, to leave a space
 between the delimiters and the content, except inside the guillemets,
 where every glyph is content and a space would be load-bearing. Space
 the delimiters and the inner content.
+
+The canonical print expands vertically. A brace or bracket structure
+whose elements are all leaves sits on one line. One with more than one
+element, one of which has a next layer, opens on its line and its
+elements hang beneath the first, aligned; the closing delimiter ends
+the last element's line. An element is a structure and the angled
+structures that follow it tight; it has a next layer when it is headed
+or a non-empty brace or bracket structure. Each dialect prints by this
+rule.
+
+```
+{ «12 Rue de la Paix» Paris 75002 }   ; leaves alone: one line
+[ Author
+  Reviewer.{ 2024 17 } ]              ; one element has a next layer: the elements hang
+{ FlowId
+  State.[ Running Ended ]
+  Vector<Event> }                     ; the angles stay tight against their element
+```
+
+The compact print is the same text on one line, for a reader that
+takes one line at a time.
+
+```
+{ FlowId State.[ Running Ended ] Vector<Event> }
+```
