@@ -1,5 +1,5 @@
 ---
-description: Orchestrate itself — its deployment, its meta binary, or the scope of its skill — is being designed or judged.
+description: Orchestrate itself — its deployment, its meta binary, or its locking — is being designed or judged.
 dependencies: []
 ---
 
