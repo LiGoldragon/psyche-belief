@@ -46,6 +46,8 @@ flowchart LR
     t -- "Outcome, signal" --> n
 ```
 
+The following conceptual Ethos names composed single-reply observations at the connection boundary. Each translator declares its executable capability and how request preparation and fallible execution produce those observations. The Belief ordinary single-reply contract separates preparation from checked execution and retains native failure evidence in process.
+
 ```ethos
 Library
 [ signal:[ Input Output Error ]
