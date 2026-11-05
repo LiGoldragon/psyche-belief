@@ -10,7 +10,7 @@ CriomOS is a declarative operating system: every host is built from its declarat
 A problem in CriomOS is fixed in CriomOS by a proper fix and a proper deploy.
 Every hotfix in place is removed and replaced by that fix.
 
-CriomOS is made more modular; an anatomy of it shows what should be taken out.
+CriomOS is made more modular; an anatomy of it shows what should be taken out. What CriomOS and CriomOS-home share lives in criomos-core, which supersedes CriomOS-lib and exports the namespaces both use.
 
 ## Nix code
 
@@ -33,6 +33,7 @@ flowchart TB
 CriomOS has a hardware type, so that it supports several kinds of hardware, the Librem 5 Linux smartphone among them; a module may be gated on it.
 A fix that only some hardware needs is a value in the cluster data, marked by the chip or part that makes it necessary.
 A library reads the cluster's list of its hardware and answers, by processor, model and variant, which fixes a computer needs.
+The cluster data holds a model table: from a computer's model it derives its facts, its processor architecture, display and form factor among them; a computer of unknown model is given its architecture and form factor by hand; Field verifies the hardware after boot. A form factor is a variant named for what the computer is, handheld, laptop, paper-size tablet or large tablet, in high or low pixel density. The hardware record has sections, audio, visual and interface among them.
 
 ## Services
 
