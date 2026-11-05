@@ -247,7 +247,7 @@ The library, shared by the three parts:
 ```ethos
 Library
 []
-[ FlowId.Integer
+[ FlowId.String                       ; the hash of the native session id, six characters
   Topic.String
   Aspect.[ Psyche Mind Field ]
   Model.[ Fable Opus Sonnet Haiku
@@ -305,12 +305,12 @@ Launch.{ { Psyche core Fable } { Predecessors.1 [] }
 Start.{ { Psyche core Fable }
         { /home/li/primary [] } }
 ; 3 the Change Operation hands Memory
-Flow.{ 7 { Psyche core Fable } Running
+Flow.{ 15c0ce { Psyche core Fable } Running
        [ Started ] }
 ; 4 Memory's answer to Operation
 Succeeded
 ; 5 Outcome
-Started.7
+Started.15c0ce
 ; 6 Output, from Signal's answer, to the CLI
-Launched.7
+Launched.15c0ce
 ```

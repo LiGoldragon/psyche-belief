@@ -51,7 +51,7 @@ Library
            Vector<Route> }
   Metaflow.{ MetaflowName Vector<Member>
             Speaker.FlowName }
-  FlowId.Integer
+  FlowId.String                       ; the hash of the native session id, six characters
   Address.{ MetaflowName
             FlowName }  ; a permanent flow's name
   Roster.Vector<Address>             ; every hot flow, in every first prompt
@@ -118,7 +118,7 @@ Library
 ```
 
 ```datom
-Send.{ 7 { designer fable } Soft Living.{ «context» «verbatim» } }
+Send.{ 15c0ce { designer fable } Soft Living.{ «context» «verbatim» } }
 ```
 
 ## The Nexus reads what a flow says
@@ -154,7 +154,7 @@ Stopped.{ jobs reader }
 Work goes straight to a permanent flow by its standing address, in the Signal's Send form `Send.{ FlowId Address Priority Request }`:
 
 ```datom
-Send.{ 7 { jobs lander } Soft
+Send.{ 15c0ce { jobs lander } Soft
        Order.«land the proposal» }
 ```
 
@@ -308,7 +308,7 @@ flows/f54886/handover.md»
 
 ```datom
 Broadcast.Notice.«Search with knowledge:search»
-Broadcast.[ 7 9 12 ]
+Broadcast.[ 15c0ce 9af746 a030fc ]
 ```
 
 A launch can be rehearsed: the same input, asked as a dry run, answers with the whole command the Flow Nexus would run and runs nothing. From that command an agent starts the flow by hand, changed however the Flow Nexus does not yet support. The answer is one string, the command line as the shell is to receive it, quoted for the shell inside.
@@ -399,5 +399,5 @@ Define.Harness.{
 Defined.Harness.claude
 ; and launches a flow of it
 Launch.{ designer fable «Read the version one book» }
-Launched.7
+Launched.15c0ce
 ```

@@ -27,7 +27,7 @@ A flow knows its complex by name: the name is set at launch, in the Identity com
 
 ```datom
 ; the Identity composed into a flow's prompt: complex, address, flow id
-{ main { designer fable } 7 }
+{ main { designer fable } 15c0ce }
 ```
 
 ```mermaid
