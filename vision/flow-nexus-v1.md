@@ -75,8 +75,6 @@ flowchart TB
 
 The Flow Nexus holds one configuration value, the default modules: the modules every flow gets. They are composed before each member's own Beliefs, so a definition names only its own. The value is set over the meta surface, one value at a time, as every Nexus's configuration is, and persists with the definitions.
 
-His words: "we should make a list of default modules that all flows get"
-
 ```ethos
 Signal
 [ belief:[ ModuleName ]
@@ -138,10 +136,6 @@ flowchart TB
 A permanent flow continues through runs under its address and is kept hot: it is not stopped between works, so no restart pays the full cost of starting again. It is warned when its context reaches the Warning share of its model's threshold, configured per model in the Flow Nexus: a HardAbrupt Notice naming its handover path, flows/<id>/handover.md. When the context passes the threshold its successor is launched with the same definition, that file as its first prompt, and the queue that gathered meanwhile; the predecessor ends. An absent file means the successor starts from its definition and the queue alone. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
 
 The lander, the bookmaker, the readers and the rest of the roster are permanent flows; any flow sends work to them directly, with Send. The harness subagent is used only for what no running flow holds. A flow's first prompt carries the roster, the address of every hot flow, so it knows whom to send to; when a flow starts or stops, the Nexus pushes the change to every hot flow.
-
-His words: "we do not want flows that are idle because they go cold and when we restart them we pay the full cost again"
-
-His words: "enhance the probability of flows communicating instead of using a subagent, a subagent more like a last resort; it makes even more sense for Primary to pass things over since sending a message through Flow is cheap for the main model"
 
 The roster, as it lands in a first prompt, and a change, as it is pushed:
 

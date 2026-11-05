@@ -35,7 +35,7 @@ flowchart TB
 
 A module declares its placement: the system prompt, or loaded on demand. A skill is the harness's interface for an on-demand module.
 
-In the long term, intent is placed directly in the system prompt.
+Spirit and intent are placed in the system prompt.
 
 The vocabulary is context, belief modules and context building.
 

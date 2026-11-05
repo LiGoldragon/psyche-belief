@@ -7,8 +7,6 @@ dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-
 
 A complex is the being a person names, my accountant, my coder: a named set of metaflows and the relationships between them, defined by its purpose and its beliefs, the layer above the metaflow, what people today call an agent. It is a definition, as a metaflow is: it names its metaflows, the relationships between them, its speaker and its instances, and it has no directory, process or socket of its own. A complex runs as its metaflows on a host; it may have instances, each the complex run on a host, for redundancy. A Flow Nexus runs many complexes. Three Nexuses run them, from the definitions given them, and the flows run from those.
 
-His words, spoken with the two names the other way round: "the metaflow is all of the flows and all of the flow complexes of a particular unit. It's like a unit that living human beings can think of. It's kind of like the equivalent of what people think of today when they think of an agent: a thing they can talk to. [...] It's going to be interacting with that whole complex of complexes, which is the metaflow. [...] You can have multiple metaflows on a single host and they're all running on the same Flow Nexus." and "it is going to have to define the relationships between the complexes also."
-
 ## The layers
 
 Each layer is defined in terms of the one below it. A flow is one run of a model in a harness. A permanent flow continues through a succession of runs, one entity under one address. A metaflow is several flows defined together: each flow's model, harness, workspace, beliefs and tools, and which flow speaks to which. A complex is several metaflows defined together, with the relationships between them and a speaker.
