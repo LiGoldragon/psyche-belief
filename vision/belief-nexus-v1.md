@@ -99,9 +99,10 @@ Furnishing is writing: each module into the workspace's system-prompt bundle or 
 
 ```ethos
 Emission
-[ belief:[ Workspace ModuleName Location ] ]
-[ Write.{ Workspace Vector<ModuleName> } ]
-[ Written.Location ]
+[ belief:[ Workspace ModuleName Location ]
+  flow:[ Harness ] ]                   ; imports: the harness names the skills directory
+[ Write.{ Workspace Harness Vector<ModuleName> } ] ; emissions: the bundle and the skills, written
+[ Written.Location ]                   ; outcomes
 []
 ```
 
@@ -109,8 +110,8 @@ Emission
 
 ```ethos
 Memory
-[ belief:[ Repository ModuleName ] ]
-[ Source.{ Repository Vector<ModuleName> }
+[ belief:[ ModuleSource ModuleName ] ]
+[ Source.{ ModuleSource Vector<ModuleName> } ; records: each registered source and the modules it holds
   Answer.[ Succeeded Failed ] ]
 ```
 
