@@ -19,7 +19,7 @@ flowchart LR
 
 ```ethos
 Library
-[]
+[ flow:[ Address ] ]                    ; imports: the Flow Nexus's Address, vision:flow-nexus
 [ Provider.[ Claude Codex ]
   Percent.Integer                      ; 0 to 100
   Instant.Integer                      ; Unix seconds
@@ -38,9 +38,17 @@ Library
             At.Instant }
   Level.[ Plenty Fair Low Out ]        ; Out is Allowed false
   Threshold.{ Level Left.Percent }     ; a level begins at this much left
-  Address.{ Aspect.[ Psyche Mind Field ] Topic.String Layer.[ Primary Secondary ] }
-  Recipient.Address
-  Reminder.{ Provider Level Recipient } ]
+  Recipient.Address                    ; a permaflow the reminder goes to
+  Reminder.{ Provider Level Recipient }
+  Target.[ Even                        ; spend the window evenly
+           SpendBy.Instant ]           ; spend it whole by this instant
+  ProviderTarget.{ Provider Target }
+  Pace.{ Provider
+         Target
+         Expected.Percent              ; what the target says is used by now
+         Used.Percent
+         Standing.[ Over Under On ]    ; used against expected
+         PerDay.Percent } ]            ; the daily share the target implies from here
 []
 []
 ```
@@ -49,11 +57,11 @@ Library
 
 ```ethos
 Signal
-[ energy:[ Provider Reading Level Reset ResetId ] ]
+[ energy:[ Provider Reading Level Reset ResetId Pace ] ]
 [ Read.Provider                        ; a reading, now
   Subscribe                            ; readings and levels as they change
   Redeem.Provider ]                    ; the soonest Codex reset, under the rule
-[ Read.Reading
+[ Read.{ Reading Pace }                ; the reading, and its pace against the target
   Subscribed
   Changed.{ Provider Level Reading }   ; pushed on every level change
   Redeemed.Reset
@@ -67,7 +75,7 @@ Signal
 
 ```ethos
 Signal
-[ energy:[ Provider Threshold Reminder Minutes ResetId ] ]
+[ energy:[ Provider Threshold Reminder Minutes ResetId ProviderTarget ] ]
 [ Configure.Set ]
 [ Configured.Set
   ConfigureRefused.String ]
@@ -76,7 +84,8 @@ Signal
         Reminder.Reminder              ; who hears about a level
         RemoveReminder.Reminder
         RedeemExpiring.Minutes         ; redeem within this many minutes of a reset expiring
-        RedeemUsedAtLeast.Percent ] ]  ; or when the week is this used
+        RedeemUsedAtLeast.Percent      ; or when the week is this used
+        Target.ProviderTarget ] ]      ; one provider's pace target
 ```
 
 ## Operation
@@ -127,15 +136,28 @@ impl Emittable for CodexRateLimits {                      // the one place the w
 
 ```ethos
 Memory
-[ energy:[ Provider Reading Level Threshold Reminder Minutes Percent ] ]
+[ energy:[ Provider Reading Level Threshold Reminder Minutes Percent ProviderTarget ] ]
 [ Latest.{ Provider Reading Level }
   History.Vector<Reading>
   Configuration.{ Polling.Minutes
                   Vector<Threshold>
                   Vector<Reminder>
                   RedeemExpiring.Minutes
-                  RedeemUsedAtLeast.Percent }
+                  RedeemUsedAtLeast.Percent
+                  Targets.Vector<ProviderTarget> }
   Answer.[ Succeeded Failed.String ] ]
+```
+
+## Pace: over or under, per day
+
+A reading alone says how much is left; pace says whether the machine is spending it as intended. Each provider has a target: Even spends the window evenly; SpendBy spends it whole by an instant, as when a Codex reset is to be redeemed before it expires and the week is meant to be used up first. Pace is the comparison of what has been used to what the target says should have been used by now, per day.
+
+```datom
+Configure.Target.{ Codex SpendBy.1762450320 }   ; use the week up before the reset expires
+Configure.Target.{ Claude Even }
+Read.Codex
+Read.{ { Codex true [ { Week 92 1762235580 10080 } ] [ { rc_1 Available 1762450320 } ] 1762210000 }
+       { Codex SpendBy.1762450320 88 92 Over 4 } }
 ```
 
 ## The redeem rule
@@ -148,6 +170,7 @@ The Flow Nexus subscribes. On Plenty it launches more and higher; on Low it laun
 
 ```datom
 energy-nexus main 'Read.Codex'
-Read.{ Codex true [ { Week 92 1762235580 10080 } ] [ { rc_1 Available 1762450320 } ] 1762210000 }
+Read.{ { Codex true [ { Week 92 1762235580 10080 } ] [ { rc_1 Available 1762450320 } ] 1762210000 }
+       { Codex Even 23 92 Over 1 } }
 Configure.Reminder.{ Codex Low { Psyche core Primary } }
 ```
