@@ -19,8 +19,6 @@ A comment the living makes on what a flow wrote in its chat is on that flow's ow
 
 A flow he is not conversing with sends its question up to Fable and goes on with its work.
 
-Notion is logged as notion; an order is a bead; a vision record holds vision alone.
-
 The living's latest word overrules everything he said before.
 
 ## Address to the whole self

@@ -38,10 +38,6 @@ Impurities are hunted by the records cleaner and fall through crystallization al
 
 A raw record whose every point a later record of his states better is superseded. A record whose subject is gone from the system is irrelevant and archived the same way.
 
-## Vision is logged from his words alone
-
-A vision record is made from his words alone.
-
 ## Crystallized vision is up to date
 
 Crystallized vision is up to date: it states what is wanted of the subject now.

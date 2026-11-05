@@ -19,7 +19,7 @@ Vision is what is wanted; it is neither real nor unreal, and it documents nothin
 
 ## A settled record moves to the archive
 
-A raw record is written in the vision or notion records of the flow that heard it and is open there. When it is landed,
+An open raw record sits in the vision or notion records of the flow that heard it. When it is landed,
 superseded or refuted it moves into the flow's archive of the same kind, under one
 line that says which. The archived records of
 the whole system are every flow's archive; the open ones are every
