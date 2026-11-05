@@ -36,7 +36,7 @@ A topic's name is a camelCase identifier, uncapitalized. A flow's id is the hash
 
 In the chat a flow is named by its permaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
-A request reaching a permaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. A flow sends a request through the Flow Nexus, which owns the lock and the delivery and answers sent or queued. A permaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a permaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A permaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the permaflow's belief modules and the prompt it is to get now.
+A request reaching a permaflow is one of a closed set of types, SendableRequest below, each with its waking effect. A flow sends a request through the Flow Nexus, which owns the lock and the delivery and answers sent or queued. A permaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a permaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A permaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the permaflow's belief modules and the prompt it is to get now.
 
 ```ethos
 SendableRequest.[ Order.String                  ; a request: what the recipient is to act on
@@ -101,8 +101,6 @@ A simplified flow is a kind of flow made for judgment alone: it starts with a sy
 
 A flow is specified whole, in Datom, by a domain-specific language in Ethos: its system prompt, its default belief modules and its variations. The flow ethos holds the specification.
 
-Short term, Opus starts first, then Fable.
-
 Long term, Fable is a simplified flow, used only to render judgment: guiding a design or posing questions.
 
 The system prompt is composed of modules of several types, and what a harness calls a skill overlaps with them.
@@ -123,7 +121,7 @@ A launch can be rehearsed: the same input, asked as a dry run, answers with the 
 ```
 
 ```
-Rehearse.{ { Psyche core Fable } Predecessors.1 «brief» }
+Rehearse.{ { Psyche core Fable } { Predecessors.1 [] } «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
@@ -208,6 +206,16 @@ A build of the Flow Nexus is tested in a testing capsule of its own: its own Her
 
 The stable Flow Nexus keeps running while variants are tested.
 
+## The Flow Nexus's unit
+
+A Flow Nexus unit Wants Curriculum, a soft dependency, and reconnects to Curriculum when it returns, so a Curriculum restart leaves every Flow Nexus running.
+
+```ini
+[Unit]
+Wants=curriculum-nexus.service
+After=curriculum-nexus.service
+```
+
 ## A permission prompt is a launch failure
 
 A permission prompt reaching the living is a launch failure.
@@ -254,14 +262,14 @@ Signal, what the Flow Nexus says:
 
 ```ethos
 Signal
-[ flow:[ FlowId Address Event ] ]
-[ Launch.{ Address Brief.String }
+[ flow:[ FlowId Address Event Remembering ] ]
+[ Launch.LaunchRequest
   Report.{ FlowId Event } ]
 [ Launched.FlowId
   Refused.[ NoCapsule
             AddressBusy.Address ]
   Reported ]
-[]
+[ LaunchRequest.{ Address Remembering Brief.String } ]
 ```
 
 Operation, what the Flow Nexus does:
@@ -291,7 +299,7 @@ Memory
 
 ```datom
 ; 1 Input, typed at the CLI, sent as signal
-Launch.{ { Psyche core Fable }
+Launch.{ { Psyche core Fable } { Predecessors.1 [] }
          «Draft the Nexus book» }
 ; 2 Operation, from Signal's intend
 Start.{ { Psyche core Fable }
