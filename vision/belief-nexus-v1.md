@@ -8,6 +8,8 @@ dependencies: [vision-ethos]
 The Belief Nexus holds the belief modules and furnishes workspaces with them. Belief is the word: what a model believes when it starts. It replaces Curriculum. Its memory is its own; a definition in the Flow Nexus refers to a module by name only, and a name may resolve to nothing: the Belief Nexus answers which names are missing, and what is done about it is the definition's policy, never the Nexus's.
 
 ## Signal
+The owner registers a belief repository at the Belief Nexus's own CLI, by his login, as he defines a complex at the Flow Nexus. A peer the meta peer list names furnishes over any registered repository.
+
 A registered repository is watched: when its main moves, every workspace furnished with a module it changed is furnished again, and the Flow Nexus is told which flows now run on old belief, so a perma flow can be refreshed on it. A module is named by kind and subject; its front matter names its placement, system prompt or skill. The skills directory is the harness's.
 
 ```ethos
@@ -34,9 +36,22 @@ Signal
 []
 ```
 
+```datom
+Register.
+  /git/github.com/LiGoldragon/psyche-belief
+Registered.
+  /git/github.com/LiGoldragon/psyche-belief
+```
+
+```sh
+belief-nexus main '
+  Register.
+    /git/github.com/LiGoldragon/psyche-belief'
+```
+
 ## Meta
 
-A module's front matter names its placement; the default per Kind is a meta setting, set one value at a time, never in the Rust.
+A module's front matter names its placement; the default per Kind is a meta setting, set one value at a time, never in the Rust. The meta peer list names the peers admitted to Furnish, each bound by kernel credentials as a Nexus's peers are.
 
 ```ethos
 Signal
@@ -44,7 +59,14 @@ Signal
 [ Configure.Set ]                    ; inputs: one value at a time
 [ Configured.Set ]                   ; outputs: the value set
 [ Set.[ Placement.{ Kind             ; types: the default
-                    Placement } ] ]  ;   placement per Kind
+                    Placement }      ;   placement per Kind
+        Peer.PeerBinding             ;   a peer admitted to Furnish
+        RemovePeer.PeerId ]          ;   a peer removed
+  UserId.Integer                     ; a login
+  ProcessId.Integer
+  PeerId.String                      ; a peer's name
+  PeerIdentity.{ UserId ProcessId }  ; checked by kernel credentials
+  PeerBinding.{ PeerId PeerIdentity } ]
 ```
 
 ## Library
