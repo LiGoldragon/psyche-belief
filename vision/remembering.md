@@ -44,11 +44,11 @@ flow 'Launch.{ { Psyche core Fable } { Custom.[ 36b71b e3c8c1 ] [] } «brief» }
 
 A record is one file per topic, flows/<id>/vision/<topic>.md, named in lower case with hyphens; a misc topic holds the small things. Before a refresh the flow shows the living the topics of its ancestors to the depth he names, and he picks the topics and the depth.
 
-A flow is refreshed after its landings: what he approved is landed and live before the handover is written. A handover is a broad overview of what the flow is still trying to do, and only that: the successor starts with a fresh point of view. The raw logs pass to a flow so that it may write its handover; the Psyche core Fable, the flow that speaks with the living, is their main user. The flow writes the handover at flows/<id>/handover.md when the Flow Nexus warns it, and the successor's first prompt is that file.
+A flow is refreshed after its landings: what he approved is landed and live before the handover is written. A handover is a broad overview of what the flow is still trying to do, and only that: the flow's judgment, what a successor could get by no look-up. A revision landed, a file's path, the state of a build or a queue is what one command returns in a handful of tokens, and the successor fetches it; the handover's words are spent on inference alone. The successor starts with a fresh point of view. The raw logs pass to a flow so that it may write its handover; the Psyche core Fable, the flow that speaks with the living, is their main user. The flow writes the handover at flows/<id>/handover.md when the Flow Nexus warns it, and the successor's first prompt is that file.
 
 ```mermaid
 flowchart TB
     n["Flow Nexus"] -- "warns, before the threshold" --> f["the flow"]
-    f -- "writes" --> h["handover: what it is still trying to do"]
+    f -- "writes" --> h["handover: its judgment on what it is still trying to do"]
     h -- "first prompt of" --> s["the successor, fresh"]
 ```
