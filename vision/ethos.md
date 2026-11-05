@@ -221,7 +221,7 @@ The Rust generated from it:
 #[derive(Datomizable, Compositional)] pub struct LockId(pub Integer);
 #[derive(Datomizable, Compositional)] pub struct LockName(pub String);
 #[derive(Datomizable, Compositional)]
-pub struct Lock { pub lock_id: LockId, pub lock_name: LockName, pub string_vector: Vec<String>, pub lock_option: Option<Lock> }
+pub struct Lock { pub lock_id: LockId, pub lock_name: LockName, pub string_vector: Vec<String>, pub lock_option: Option<Box<Lock>> }   // boxed: the position closes a by-value cycle
 #[derive(Datomizable, Compositional)]
 pub struct Generation { pub first_string: String, pub second_string: String }
 ```
@@ -514,9 +514,9 @@ The Ethos:
 
 ```
 Library
-[]                                                            ; imports
+[ std:Serializable ]                                          ; imports
 [ SinkError.[ Closed Full ] ]                                 ; types
-[ Fillable.[ push!{ [ String ] [ Result<Integer SinkError> ] } ; traits
+[ Fillable.[ push!{ [ Serializable ] [ Result<Integer SinkError> ] } ; traits: the input is a trait, so push takes any Serializable
              drain![ Vector<String> ]
              create:[ Self ] ] ]
 []                                                            ; associations
@@ -528,7 +528,7 @@ The Rust generated from it:
 #[derive(Datomizable, Compositional)]
 pub enum SinkError { Closed, Full }
 pub trait Fillable {
-    fn push(&mut self, input: String) -> Result<Integer, SinkError>;
+    fn push<N: Serializable>(&mut self, input: N) -> Result<Integer, SinkError>;
     fn drain(&mut self) -> Vec<String>;
     fn create() -> Self;
 }
