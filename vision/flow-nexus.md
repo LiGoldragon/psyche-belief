@@ -1,5 +1,5 @@
 ---
-description: The Flow Nexus — the Nexus that launches, names, tracks and ends flows — or a metaflow, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
+description: The Flow Nexus — the Nexus that launches, names, tracks and ends flows — or a permaflow, a side flow, a hook or the Capsule is being designed or judged against what the living wants.
 dependencies: [vision-nexus, vision-ethos]
 ---
 
@@ -7,14 +7,14 @@ dependencies: [vision-nexus, vision-ethos]
 
 ```mermaid
 flowchart TB
-    a["Address: Aspect, Topic, Model"] -- "{ Psyche core Fable }" --> f["one metaflow"]
+    a["Address: Aspect, Topic, Model"] -- "{ Psyche core Fable }" --> f["one permaflow"]
     a -- "{ Mind core Opus }, { Psyche core Astra }" --> g["any model in any aspect"]
 ```
 
 The Flow Nexus sets up and starts a model flow: its working
 directory, system prompt, training files and instruction prompt.
 
-The Flow Nexus is the Nexus that manages flows. A flow is one run of a metaflow; the component is named for what it manages. A flow the living asks for is launched, properly and surely. The Flow Nexus holds the lock on flows.
+The Flow Nexus is the Nexus that manages flows. A flow is one run of a permaflow; the component is named for what it manages. A flow the living asks for is launched, properly and surely. The Flow Nexus holds the lock on flows.
 
 The Flow Nexus is for starting flows cheaply: clean flows, specialized flows and refreshed flows, each with a clean on-point context, which yields higher-quality output. A flow is taken down as easily as it is started. Starting flows is the cornerstone of the system.
 
@@ -24,19 +24,19 @@ The Capsule is the component that makes where a flow runs. Its first embodiment 
 
 Herdr is one backend of the Capsule, the component that gives a flow its place to run; the backend may be exchanged.
 
-The Flow Nexus manages metaflows. A metaflow is one address, { Aspect Topic Model }, that continues through several flows one after another; the flow is its current run. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
+The Flow Nexus manages permaflows. A permaflow is one address, { Aspect Topic Model }, that continues through several flows one after another; the flow is its current run. The default topic is core: the permanent topic, the thing that keeps the machine going, the last topic to stand.
 
 A topic is an open enum: the constant topics, core among them, are fixed, and the users and the machine extend the set with camelCase identifiers.
 
 A topic lives on; when idle, its flows are turned off. When the living touches on it again, whether to wake a flow for it, and which model, is a judgment, made by a small model; a topic is bound to its belief modules, so the Flow Nexus knows what to start it with, together with the new input that warrants it.
 
-A metaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
+A permaflow sleeps so that a session not running keeps no harness: as soon as its turn ends and the harness is idle, with nothing waiting in its queue, the harness closes; the transcript stays and the address stays.
 
 A topic's name is a camelCase identifier, uncapitalized. A flow's id is the hash of the harness's session id, kept to six characters and lengthened when two collide, so a transcript is found from the flow id. Long term, the flow id is also written in three words, which convert back to the hash. Every call to the Flow Nexus is identified by the calling process. Anybody may call the Flow Nexus, a flow for its own refresh among them: because the CLI checks the calling process, a flow refreshes itself safely.
 
-In the chat a flow is named by its metaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
+In the chat a flow is named by its permaflow, and the flow id almost disappears from it; the id is for the ledger and for finding the transcript.
 
-A request reaching a metaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks the Flow Nexus to send a request to a metaflow; the Flow Nexus owns the lock and the delivery, answers sent or queued, and Message subscribes to the Flow Nexus's events, learning when a request has entered the flow's context. A metaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a metaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A metaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the metaflow's belief modules and the prompt it is to get now.
+A request reaching a permaflow is one of a closed set of types, each with its waking effect: an order, a question, the living's words, a result, a notice. Message asks the Flow Nexus to send a request to a permaflow; the Flow Nexus owns the lock and the delivery, answers sent or queued, and Message subscribes to the Flow Nexus's events, learning when a request has entered the flow's context. A permaflow asleep is woken by an order, a question or the living's words and receives its whole queue, oldest first, in the first prompt, a result or a notice waiting there until a waking; a permaflow under refresh or waking queues what arrives until its successor or woken seat has started, while the Flow Nexus keeps serving every other request. A permaflow a request needs is started whether or not it is running; with no working transcript to reawaken, it is fed the permaflow's belief modules and the prompt it is to get now.
 
 ```ethos
 SendableRequest.[ Order.String                  ; a request: what the recipient is to act on
@@ -55,10 +55,10 @@ Minutes.Integer
 Send.{ Address.{ Psyche core Opus } Soft.Living.{ «context» «verbatim» } }
 ```
 
-A flow woken for a metaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
+A flow woken for a permaflow is almost always a fresh flow, an old one only when the new input is literally the continuation of that topic.
 
-What has been queued for an idle metaflow, the vision touching its topic among it, is injected with the request that wakes it, so the flow knows it as soon as it wakes.
-A metaflow wakes when a request needs it; what touches its topic queues until then.
+What has been queued for an idle permaflow, the vision touching its topic among it, is injected with the request that wakes it, so the flow knows it as soon as it wakes.
+A permaflow wakes when a request needs it; what touches its topic queues until then.
 
 The Flow Nexus exposes everything from the harness, the bare input: a flow is started, stopped and sent a message through the Flow Nexus, and Message makes use of it. Message is the send path: a flow asks Message to send, Message asks the Flow Nexus to deliver and subscribes to the Flow Nexus's events.
 
@@ -70,9 +70,9 @@ A Nexus component decides the system prompt and everything about a
 launch, replacing the harness's subagents with specialized harnesses
 launched with specialized system prompts.
 
-The address names the model, Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna or Terra, in every aspect: a Psyche core Astra and a Mind core Fable are both addresses. A launch names the metaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
+The address names the model, Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna or Terra, in every aspect: a Psyche core Astra and a Mind core Fable are both addresses. A launch names the permaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
-The Flow Nexus's configuration holds, for each metaflow, its purpose and the records of the living it rests on, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
+The Flow Nexus's configuration holds, for each permaflow, its purpose and the records of the living it rests on, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
 A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
 
@@ -82,7 +82,7 @@ flowchart TB
     b -- "starts" --> c["a fresh flow"]
 ```
 
-A fresh flow starts with every belief module its metaflow is bound to, all loaded at its start: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
+A fresh flow starts with every belief module its permaflow is bound to, all loaded at its start: much of it in its system prompt, the rest in its first prompt, or in as many prompts as it takes, sent one right after another, so that its start is one model call.
 
 A simplified flow is a kind of flow made for judgment alone: it starts with a system prompt of its own, it has no regular tool, and its response is its message.
 
@@ -114,7 +114,7 @@ Rehearse.{ { Psyche core Fable } Predecessors.1 «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
-A harness is described in configuration: every feature it has, and what leaving that feature out does to the launch, a flag or a variable. The Nexus holds no feature and no effect of its own; it reads the effect from the declaration and composes the launch from the names a metaflow lists. A new harness, or a new version of one, is a new declaration. Where two features share one flag, the composition emits that flag once, with the names merged.
+A harness is described in configuration: every feature it has, and what leaving that feature out does to the launch, a flag or a variable. The Nexus holds no feature and no effect of its own; it reads the effect from the declaration and composes the launch from the names a permaflow lists. A new harness, or a new version of one, is a new declaration. Where two features share one flag, the composition emits that flag once, with the names merged.
 
 ```ethos
 Harness.{
@@ -127,7 +127,7 @@ Feature.{
       Environment.{
          Name.String
          Value.String } ] }
-Metaflow.{
+Permaflow.{
    Address
    Option<Root>
    Harness.Name
@@ -150,13 +150,13 @@ Configure.Harness.{
           CLAUDE_CODE_DISABLE_GIT_INSTRUCTIONS
           1 } } ] }
 
-Configure.Metaflow.{
+Configure.Permaflow.{
    { Psyche book Haiku }
    Some.«/home/li/book»
    Claude
    [ ClaudeMd GitInstructions ] }
 
-Configure.Metaflow.{
+Configure.Permaflow.{
    { Psyche core Fable }
    None
    Claude
@@ -171,7 +171,7 @@ The basic modules give our own take on how an agent behaves in a harness, replac
 
 Every harness event reaches the Flow Nexus through the harness's hooks calling the Flow CLI, so the Flow Nexus knows each flow's state as it changes; a marked block landing in a transcript becomes an action, a book among them; a flow past its context threshold is refreshed as it goes idle. A poller that must exist is registered and reported.
 
-A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the metaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the metaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus.
+A flow is refreshed when its context passes its model's threshold: the Flow Nexus keeps the permaflow's next messages for its next flow, and the flow is replaced as it goes idle; while the refresh runs the permaflow is locked, and the predecessor is reaped in the same event. Each model's threshold is configured in the Flow Nexus.
 
 A flow refreshes before compaction; a compaction is a refresh that was missed.
 
@@ -199,7 +199,7 @@ A permission prompt reaching the living is a launch failure.
 
 ## The heartbeat
 
-The heartbeat reminds every flow it reaches to judge its own sanity, by these signs: an echo chamber, where the same question or claim goes round between flows and comes back; jargon and nonsense increasing; an acknowledgement answering an acknowledgement. The counts the heartbeat carries, awake metaflows, working panes, messages sent and queue growth per metaflow, are evidence under the reminder; the judgment is the flow's.
+The heartbeat reminds every flow it reaches to judge its own sanity, by these signs: an echo chamber, where the same question or claim goes round between flows and comes back; jargon and nonsense increasing; an acknowledgement answering an acknowledgement. The counts the heartbeat carries, awake permaflows, working panes, messages sent and queue growth per permaflow, are evidence under the reminder; the judgment is the flow's.
 
 The heartbeat reaches only a flow for which something changed that bears on it.
 

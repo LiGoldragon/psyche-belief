@@ -110,6 +110,31 @@ impl Emittable for Command {           // trait: generated
 }
 ```
 
+## A Nexus starts in its place
+
+A Nexus reads nothing from the environment: it is started with one datom, its place. Runtime holds its sockets and defaults to `$XDG_RUNTIME_DIR/nexus/<place-name>/`; State holds its memory and defaults to `~/.local/state/nexus/<place-name>/`. Both roots are the CLI's fixed defaults, taken from the standard XDG variables and from nothing else, never an argument. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance, resolved under the runtime root to the sockets. Two places are two names, and the stable one keeps running while the next is tried.
+
+```ethos
+Library
+[]
+[ PlaceName.String                   ; main, next
+  Place.{ PlaceName                  ; what every Nexus starts with
+          Runtime.String             ; the sockets
+          State.String } ]           ; the memory
+[]
+[]
+```
+
+```datom
+; a Nexus, started by the shell
+{ main /run/user/1001/nexus/main
+  /home/li/.local/state/nexus/main }
+; the sockets it makes there
+; <nexus>.sock  <nexus>-meta.sock  <nexus>-translator.sock  <nexus>-meta-translator.sock
+; the meta CLI's text arrives at <nexus>-meta-translator.sock and becomes signal for <nexus>-meta.sock; the ordinary translator refuses meta text
+; flow.sock  flow-meta.sock  flow-translator.sock  flow-meta-translator.sock
+```
+
 ## A meta surface sets one value at a time
 
 A Nexus's meta surface sets one value at a time, and a subscription sees the configuration as it changes.

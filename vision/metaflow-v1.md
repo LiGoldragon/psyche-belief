@@ -1,11 +1,46 @@
 ---
-description: The metaflow, version 1, several complexes defined together and running as one self for one owner: three Nexuses, their definitions, and the place each Nexus starts in, is being designed or judged against what the living wants it to be.
-dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-v1]
+description: The metaflow, version 1, several complexes defined together and running as one self for one owner, is being designed or judged against what the living wants it to be.
+dependencies: [vision-flow-nexus-v1, vision-herdr-nexus-v1, vision-belief-nexus-v1, vision-nexus-v1]
 ---
 
 # The metaflow
 
-Version 1. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex. Three Nexuses run it, from the definitions given them, and the flows run from those.
+Version 1. A metaflow is several complexes defined together, running as one self for one owner: the layer above the complex. It is a definition, as a complex is: it is made of nothing but complexes, and it has no directory, process or socket of its own. Three Nexuses run it, from the definitions given them, and the flows run from those.
+
+## The layers
+
+Each layer is defined in terms of the one below it. A flow is one run of a model in a harness. A permanent flow continues through a succession of runs, one entity under one address. A complex is several flows defined together: each flow's model, harness, workspace, beliefs and tools, and which flow speaks to which. A metaflow is several complexes defined together.
+
+```mermaid
+flowchart TB
+    m["metaflow: several complexes, one self, one owner"] -- "is made of" --> c["complex: several flows defined together, with their routes and a speaker"]
+    c -- "is made of" --> f["flow: one run of a model in a harness; a permanent flow runs on under its address"]
+```
+
+## One self
+
+The complexes of a metaflow are one self because they speak to one another: a route may name another complex, and a message to a complex reaches its speaker. The living speaks to any complex with Say. What one complex says, does or leaves undone, the whole answers for.
+
+```mermaid
+flowchart TB
+    d["complex: designer"] -- "Speaks.Complex.implementer" --> i["complex: implementer"]
+    l["the living"] -- "Say" --> d
+    l -- "Say" --> i
+```
+
+## One owner
+
+A metaflow runs for one owner: the login whose Nexuses run it. The definitions are his sources; the flows run with his credentials and files; it is not a sandbox.
+
+## Where a metaflow lives
+
+A metaflow has no file and no type of its own: it is the set of complexes the Flow Nexus holds in its Memory, each given by Define and read back by Describe, the set by Definitions. A change to one complex touches no other.
+
+```ethos
+Memory
+[ flow:[ Complex ] ]
+[ Definition.Complex ]               ; the metaflow is every Definition held
+```
 
 ```mermaid
 flowchart TB
@@ -18,32 +53,9 @@ flowchart TB
     l["the living, at a CLI"] -- "Say" --> f
 ```
 
-## A Nexus starts in its place
+## The Nexuses that run it
 
-A Nexus reads nothing from the environment; the CLI's two default roots come from the standard XDG variables and from nothing else. A Nexus is started with one datom, its place. Runtime holds the sockets of the Nexus and defaults to `$XDG_RUNTIME_DIR/metaflow/<place-name>/`; State holds its memory and defaults to `~/.local/state/metaflow/<place-name>/`. A CLI resolves `<place-name>` under the runtime root and finds the sockets. Two places are two names, and the stable one keeps running while the next is tried. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance. Both roots are the CLI's fixed defaults, never an argument.
-
-```ethos
-Library
-[]
-[ PlaceName.String                   ; main, next
-  Place.{ PlaceName                  ; what every Nexus starts with
-          Runtime.String             ; the sockets
-          State.String } ]           ; the memories
-[]
-[]
-```
-
-```datom
-; each Nexus, started by the shell
-{ main /run/user/1001/metaflow/main
-  /home/li/.local/state/metaflow/main }
-; the sockets it makes there
-; <nexus>.sock  <nexus>-meta.sock  <nexus>-translator.sock  <nexus>-meta-translator.sock
-; the meta CLI's text arrives at <nexus>-meta-translator.sock and becomes signal for <nexus>-meta.sock; the ordinary translator refuses meta text
-; flow.sock  flow-meta.sock  flow-translator.sock  flow-meta-translator.sock
-; herdr.sock herdr-meta.sock herdr-translator.sock herdr-meta-translator.sock
-; belief.sock belief-meta.sock belief-translator.sock belief-meta-translator.sock
-```
+The Flow Nexus, the Belief Nexus and the herdr Nexus run a metaflow. Each is started in its place, a Nexus startup fact of vision:nexus-v1: the three that run one metaflow share one place name, and a CLI reaches them by it. Two place names are two sets of Nexuses, so the stable set keeps running while the next is tried; the metaflow is whatever complexes the Flow Nexus at that place holds.
 
 ```sh
 # the CLI: the place's name, then one datom
@@ -51,9 +63,9 @@ flow-nexus main 'Launch.{ designer fable «Read the book» }'
 herdr-nexus main 'Prompt.{ { main wQ:pT } «hello» }'
 ```
 
-## The metaflow is a Nix shell
+## The Nexuses are built and started by Nix
 
-The repository metaflow holds the Nix that builds the three Nexuses, their translators and CLIs, and a shell that starts each of them with its place under the owner's login. It is not a sandbox: a flow in it has the owner's credentials and files.
+The repository metaflow holds the Nix that builds the three Nexuses, their translators and CLIs, and a shell that starts each of them with its place under the owner's login.
 
 ```sh
 nix develop github:LiGoldragon/metaflow -- metaflow start next
