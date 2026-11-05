@@ -6,32 +6,32 @@ dependencies: []
 
 ## The CLI
 
-The CLI is `flow`, called with one datom argument.
+The CLI is `flow`, called with one datom argument. It speaks to the running Flow Nexus, 0.50.
 
 ```sh
-flow Send.{ Recipient Delivery SendableMessage }
+flow 'Send.{ Recipient SendableMessage }'
 ```
 
 ## The Send input
 
-The Signal ethos declares the query and its request:
-
 ```ethos
 Send.SendRequest
-SendRequest.{ Recipient Delivery SendableMessage }
-```
-
-```ethos
-Address.{ Aspect Topic Layer }
+SendRequest.{ Recipient SendableMessage }
 Recipient.[ Address Up ]
-Delivery.[ Queue Wake ]
+Address.{ Aspect Topic Layer }
 Aspect.[ Psyche Mind Field ]
+Topic.String                              ; an uncapitalized camelCase identifier
 Layer.[ Primary Secondary Tertiary Quaternary ]
-AnswerableTask.{ Minutes String }
+Said.{ Context.String Verbatim.String }   ; what his words were about, and his words whole
 Minutes.Integer
+AnswerableTask.{ Minutes String }
+Answerable.[ Order.String
+             Task.AnswerableTask ]
 SendableRequest.[ Order.String
                   Question.String
-                  Result.{ Answerable String }
+                  Psyche.Said
+                  Psyches.Vector<Said>
+                  Result.{ Answerable String }  ; answers the request it names, written whole
                   Notice.String
                   Task.AnswerableTask
                   Done.{ Answerable String } ]
@@ -40,54 +40,55 @@ SendableMessage.[ HardAbrupt.SendableRequest
                   Soft.SendableRequest ]
 ```
 
-Recipient is an Address, or Up. Up is the layer above in the sender's aspect and topic; a Send to Up from a Primary is refused NoneAbove.
+Up is the layer above the sender, in its aspect and topic.
 
 The address takes the model name in the next version.
 
-The living is reached by a book: `Presentation.{ Title }`, which names a book; the Nexus routes it to the bookmaker. There is no Living recipient.
+The priority decides delivery. An awake recipient receives every priority at once, and HardAbrupt alone interrupts; MiddleAbrupt arrives at the next tool boundary. An asleep recipient queues Soft and is woken by MiddleAbrupt or HardAbrupt.
 
-Delivery is Queue or Wake. Written with two fields, Recipient and SendableMessage, the Send takes Delivery Wake.
-
-SendableMessage is HardAbrupt, MiddleAbrupt or Soft, carrying Order, Question, Result, Notice, Task or Done.
-
-Text is a String, written in guillemets: «text».
+Text is a String, written in guillemets: «text». A datom holding an apostrophe is passed through a shell variable, since the argument is single-quoted.
 
 ## Examples
 
 ```sh
-flow Send.{ Address.{ Psyche core Secondary } Soft.Order.«Review the drain fix.» }
-```
-
-A Notice up, held in the queue until the recipient is next delivered to:
-
-```sh
-flow Send.{ Up Queue Soft.Notice.«The build is green.» }
-```
-
-A Question that interrupts at the next tool boundary:
-
-```sh
-flow Send.{ Address.{ Mind core Secondary } MiddleAbrupt.Question.«Which revision?» }
-```
-
-A Task with its Minutes:
-
-```sh
-flow Send.{ Address.{ Mind core Secondary } Soft.Task.{ 30 «Review the fix.» } }
+flow 'Send.{ Address.{ Psyche core Secondary } Soft.Order.«Review the drain fix.» }'
+flow 'Send.{ Up Soft.Notice.«The build is green.» }'
+flow 'Send.{ Address.{ Mind core Secondary } MiddleAbrupt.Question.«Which revision?» }'
+flow 'Send.{ Address.{ Mind core Secondary } Soft.Task.{ 30 «Review the fix.» } }'
+flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyche.{ «the drain» «Fix it today.» } }'
+flow 'Send.{ Address.{ Mind core Secondary } Soft.Result.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
 ```
 
 ## The replies
 
-A send is answered with one of:
-
 ```ethos
-SendAccepted.VisibleSendAcceptance
+Sent.NativeReceipt                         ; placed and received by the seat
+SendAccepted.{ DeliveryCursor DeliveryState }
 SendRefused.VisibleRefusal
-Sent.VisibleSendReceipt
-Failed.VisibleSendFailure
+Failed.{ SendFailureReason }
+NativeReceipt.{ HarnessKind NativeSessionId NativePromptId.String }
+DeliveryState.[ Queued Attempting Retryable.RetryCause Uncertain
+                Delivered.NativeReceipt Failed.VisibleRefusal Withdrawn ]
+SendFailureReason.[ RecipientUnavailable.Address
+                    QueueNotPermitted
+                    Refused.VisibleRefusal
+                    ReceiptUncertain
+                    NotSent.String ]
+VisibleRefusal.[ Locked Held.Lock Awake Asleep Lapsed Unknown.VisibleUnknown
+                 NoLayer NotConfigured NoneAbove NotMessage Taken.Address
+                 Unidentified.SeatEvidence Store.String NotSendServer.Process
+                 Oversized.SendPayloadSize Direct.String TopicRefused.Topic
+                 Unresolved Ambiguous MinutesRefused.MinutesRefusal ]
+MinutesRefusal.[ Zero Negative Unreachable ]
 ```
 
-- SendAccepted: a VisibleSendAcceptance, a DeliveryCursor and a DeliveryState (Queued, Attempting, Retryable, Uncertain, Delivered, Failed or Withdrawn).
-- Sent: a VisibleSendReceipt, a NativeReceipt.
-- SendRefused: a VisibleRefusal, among them Locked, Asleep, NoLayer, NoneAbove, TopicRefused, Unresolved, Ambiguous and MinutesRefused.
-- Failed: a SendFailure reason: RecipientUnavailable, QueueNotPermitted, Refused, ReceiptUncertain or NotSent.
+Failed.ReceiptUncertain on a Soft or MiddleAbrupt Send means the message was placed in the recipient's pane without a receipt; it is delivered, and is not sent again.
+
+```datom
+Sent.{ Claude 7a89916f-3849-5122-89ac-f99fb99b9f70 37888ad9-4633-45a3-8e65-c191568ffb17 }
+SendRefused.Unknown.Address.{ Field verifyNoSuchTopic Quaternary }   ; Soft to a metaflow Flow does not hold
+Failed.{ RecipientUnavailable.{ Field verifyNoSuchTopic Quaternary } } ; MiddleAbrupt or HardAbrupt to one
+SendRefused.TopicRefused.BadTopic
+SendRefused.MinutesRefused.Zero
+SendRefused.Unresolved                                                ; a Result or Done naming no open request
+```
