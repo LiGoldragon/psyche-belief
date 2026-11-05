@@ -363,7 +363,7 @@ Library
 []                           ; associations
 ```
 
-An enum has two variants or more; an enum of one variant is refused.
+An enum has two variants or more; an enum of one variant is refused. Its variants are ordered by seniority, the first most senior.
 
 The Ethos:
 
@@ -716,4 +716,4 @@ The datom: the Lock library of the Declaration section, as that data:
    [] }
 ```
 
-Ethos carries a comment on every section and on every line that has a next layer, saying in plain words what the machine reads there; a comment runs from ; to the end of the line.
+Ethos carries a comment on every section and on every line that has a next layer, saying in plain words what the machine reads there; a comment runs from ; to the end of the line, beside the line it describes or on its own line above it.
