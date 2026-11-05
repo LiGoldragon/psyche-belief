@@ -26,7 +26,7 @@ in one swoop.
 
 ## Roots
 
-Four roots: Library, Signal, Operation, Memory. Signal declares what a Nexus says; Operation what it does, one operation type for every effect; Memory what it remembers; Library what they share. A memory trait carries a standard successful-or-unsuccessful change and, for each version, the upgrade from the previous format; that upgrade is the very edit the type needs. A version lives in a manifest.
+Five roots: Library, Signal, Operation, Memory, Emission. Signal declares what a Nexus says; Operation what it does, one operation type for every effect; Memory what it remembers; Emission what it sends into the world, each emission one external call and its outcome what the translator observed; Library what they share. An Emission imports a Signal's Input and Output by name, so an emission may carry what the Nexus was asked or answered. A memory trait carries a standard successful-or-unsuccessful change and, for each version, the upgrade from the previous format; that upgrade is the very edit the type needs. A version lives in a manifest.
 
 ## Non-repetition
 
@@ -535,16 +535,38 @@ An association declares that a type bears a trait: the type's name, a
 dot, a bracket of its traits. In a Library they are the fourth section,
 after the traits.
 
-Signal, Operation and Memory imply traits on the types they declare: each type bears its root's trait, generated with it and never written. A Signal's first section holds its inputs and its second its outputs. An input is Answerable: it names the one output that answers it, sent at once, an acknowledgement at least. An output is Deliverable: it has a destination and leaves the Nexus toward it, expecting nothing back; an output no input names is a reaction. An operation is Operable: an object that acts on what it receives. A record of Memory is Memorizable.
+Signal, Operation, Memory and Emission imply traits on the types they declare: each type bears its root's trait, generated with it and never written. A Signal's first section holds its inputs and its second its outputs. An input is Answerable: it names the one output that answers it, sent at once, an acknowledgement at least. An output is Deliverable: it has a destination and leaves the Nexus toward it, expecting nothing back; an output no input names is a reaction. An operation is Operable: an object that acts on what it receives. A record of Memory is Memorizable. An emission is Emittable: the translator turns it into the call and yields its Outcome.
 
 ```mermaid
 flowchart TB
     a["a type declared in an Ethos file"] -- "in Memory" --> b["bears Memorizable"]
     a -- "in Signal" --> c["bears Answerable or Deliverable"]
     a -- "in Operation" --> d["bears Operable"]
+    a -- "in Emission" --> f["bears Emittable"]
     b -- "generated with the type, never written" --> e["the Rust type and its trait impl"]
     c -- "generated with the type, never written" --> e
     d -- "generated with the type, never written" --> e
+    f -- "generated with the type, never written" --> e
+```
+
+The Ethos, an Emission importing its Signal's Input and Output:
+
+```ethos
+Emission
+[ signal_herdr:[ Input Output ] ]      ; imports: the Signal's inputs and outputs, by name
+[ Command.{ Verb Vector<Argument> } ]  ; emissions: one external call each
+[ Outcome.[ Done Refused.Integer ] ]   ; outcomes: what the translator observed
+[ Verb.[ List Show ]                   ; types
+  Argument.[ Name.String Quiet ] ]
+```
+
+The Rust generated from it:
+
+```rust
+#[derive(Datomizable, Compositional)]
+pub struct Command { pub verb: Verb, pub argument_vector: Vec<Argument> }
+pub trait Emittable { type Outcome; fn emit(&self, translator: &Translator) -> Self::Outcome; }
+impl Emittable for Command { type Outcome = Outcome; fn emit(&self, translator: &Translator) -> Outcome { /* hand-written: the call */ } }
 ```
 
 The Rust generated from it:
