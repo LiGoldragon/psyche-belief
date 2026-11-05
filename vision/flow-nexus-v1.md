@@ -47,7 +47,7 @@ Library
           Living ]
   Member.{ FlowName HarnessName ModelName Effort
            Continuity Workspace Beliefs Tools
-           Features.Vector<FeatureName>  ; of its harness, composed into its launch
+           Features.Vector<FeatureName>  ; of its harness, composed into its launch beside its metaflow's
            Vector<Route> }
   Complex.{ ComplexName Vector<Member>
             Speaker.FlowName }
@@ -253,7 +253,7 @@ Signal
 [ flow:[ Complex ComplexName FlowName FlowId
          Address Brief ModuleName Message
          Request Priority Tool
-         Harness HarnessName
+         Harness HarnessName FeatureName
          Metaflow MetaflowName ] ]
 [ Define.[ Complex Harness Metaflow ] ; add or replace one
   Undefine.Name
@@ -288,6 +288,7 @@ Signal
             NoRoute.{ FlowId Address }
             NoBelief.Vector<ModuleName>
             Unenforceable.HarnessName     ; Restricted, harness cannot
+            UnknownFeature.{ HarnessName FeatureName } ; named by the member or its metaflow, absent from the harness
             HerdrDown BeliefDown
             Running.Address ] ]
 [ Name.[ Complex.ComplexName         ; a definition, by name
@@ -326,7 +327,7 @@ flowchart TB
 
 ## Emission
 
-The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
+The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names and each its metaflow names, its effect, a flag or a variable.
 
 A flow knows itself at launch: its Identity, the name of the metaflow it runs in, its Address and its FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report, finds its handover path, and knows which being it is part of; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 

@@ -46,15 +46,18 @@ A metaflow runs for one owner: the login whose Nexuses run it. The definitions a
 
 A metaflow is a definition the Flow Nexus holds in its Memory, given by Define and read back by Describe, the names by Definitions, as a complex and a harness are; it names its complexes by name, and a Flow Nexus holds many. A change to one definition touches no other.
 
+A metaflow names features for every flow of its complexes, as a member names them for itself: each a feature of that member's harness, with its effect, a flag or a variable, composed into the launch beside the member's own. So what every flow of a being is to run with, a harness reminder turned off among it, is said once, in the metaflow. A metaflow feature a member's harness lacks refuses the launch, with the harness named.
+
 ```ethos
 Library
-[ flow:[ ComplexName ] ]
+[ flow:[ ComplexName FeatureName ] ]
 [ MetaflowName.String                ; the being's name: main
   Relationship.{ From.ComplexName    ; this complex
                  To.ComplexName }    ;   may address that one
   Metaflow.{ MetaflowName
              Complexes.Vector<ComplexName>      ; its complexes, by name
              Relationships.Vector<Relationship> ; the relationships between them
+             Features.Vector<FeatureName>       ; of each member's harness, composed into every launch of its complexes
              Speaker.ComplexName } ] ; receives what comes to the metaflow; tentative
 []
 []
@@ -71,6 +74,7 @@ Memory
 { main
   [ designer implementer ]
   [ { designer implementer } ]
+  [ LongWaitReminder ]               ; a feature of the harness, for every flow of the metaflow
   designer }                         ; the speaker
 Say.{ main Order.«Read the book» }   ; the living, to its speaker
 ```
