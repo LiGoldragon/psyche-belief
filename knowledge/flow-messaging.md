@@ -48,6 +48,8 @@ The priority decides delivery. An awake recipient receives every priority at onc
 
 Text is a String, written in guillemets: «text». A datom holding an apostrophe is passed through a shell variable, since the argument is single-quoted.
 
+A Result answers an Order and a Done closes a Task; a Result naming a Task, or a Done naming an Order, is refused Unresolved. The Answerable repeats the original request byte for byte, escapes included, and a Task its Minutes too: a Result matches an Order the recipient sent the sender and that was delivered, a Done an open Task the recipient sent the sender. No match is Unresolved; more than one is Ambiguous.
+
 ## Examples
 
 ```sh
@@ -56,7 +58,8 @@ flow 'Send.{ Up Soft.Notice.«The build is green.» }'
 flow 'Send.{ Address.{ Mind core Secondary } MiddleAbrupt.Question.«Which revision?» }'
 flow 'Send.{ Address.{ Mind core Secondary } Soft.Task.{ 30 «Review the fix.» } }'
 flow 'Send.{ Address.{ Psyche core Secondary } Soft.Psyche.{ «the drain» «Fix it today.» } }'
-flow 'Send.{ Address.{ Mind core Secondary } Soft.Result.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
+flow 'Send.{ Address.{ Mind core Secondary } Soft.Result.{ Order.«Review the fix.» «Reviewed; green.» } }'
+flow 'Send.{ Address.{ Mind core Secondary } Soft.Done.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
 ```
 
 ## The replies
