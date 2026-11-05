@@ -75,6 +75,13 @@ nix develop github:LiGoldragon/metaflow -- metaflow start next
 
 The Nexuses hold vocabulary; the owner writes definitions in datom. A definition is one file, one datom; the definition files are the owner's sources, kept wherever he keeps them and given by Define and replaced the same way; the running set is the Flow Nexus's Memory in its State directory. A change to one definition touches no other. The Rust knows no role, model name or topic.
 
+A new place is told its metaflow by replaying the definition files, one Define per file, harnesses before the complexes that name them; nothing is migrated from the place before it, and the set of files is the whole of what a place needs to know.
+
+```sh
+# the owner's definitions, replayed into a fresh place
+for f in definitions/*.datom; do flow-nexus next "Define.$(cat "$f")"; done
+```
+
 ```datom
 ; definitions/designer.datom: one complex
 { designer

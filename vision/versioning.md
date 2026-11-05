@@ -49,3 +49,5 @@ flow 'Send.{ … }'        # the one the wrapper points at
 A permaflow is one persistent address, { Aspect topic Model }, with its succession of flows; it is what was called a metaflow. A metaflow is several complexes defined together; the Nexuses that run it are each started in a place, main or next, and nothing in them depends on an environment variable: a flow is bound to its Nexuses by configuration. A new version is tested at a place of its own, with cheap flows messaging one another and starting flows, while the stable place keeps running.
 
 The Nexuses of two places talk to each other through an inter-place interface, so that the flows of a new version speak with the permaflows of the place being upgraded from. An upgrade then proceeds flow by flow, each new flow started at the new place, and needs no store compatibility between the two.
+
+Side by side is the only upgrade: a new place is told its metaflow by replaying the owner's definition files, and nothing is migrated from the place before it.
