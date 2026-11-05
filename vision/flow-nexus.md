@@ -130,21 +130,23 @@ Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissio
 A harness is described in configuration: every feature it has, and what leaving that feature out does to the launch, a flag or a variable. The Nexus holds no feature and no effect of its own; it reads the effect from the declaration and composes the launch from the names a permaflow lists. A new harness, or a new version of one, is a new declaration. Where two features share one flag, the composition emits that flag once, with the names merged.
 
 ```ethos
-Harness.{
-   Name.[ Claude Codex ]
-   Features.Vector<Feature> }
-Feature.{
-   Name.String
-   Effect.[
-      Flag.String
-      Environment.{
-         Name.String
-         Value.String } ] }
-Permaflow.{
-   Address
-   Option<Root>
-   Harness.Name
-   LeaveOuts.Vector<String> }
+Library
+[ flow:[ Address ] ]                  ; imports: the permaflow's address
+[ HarnessName.[ Claude Codex ]        ; types: a harness, by name
+  FeatureName.String                  ;   a feature, by name
+  Effect.[ Flag.String                ;   what leaving the feature out does to the launch
+           Environment.{ Name.String  ;     a variable, set for the harness alone
+                         Value.String } ]
+  Feature.{ FeatureName Effect }
+  Harness.{ HarnessName               ; the declaration: every feature the harness has
+            Features.Vector<Feature> }
+  Root.String                         ; the flow's working directory
+  Permaflow.{ Address
+              Option<Root>
+              HarnessName
+              LeaveOuts.Vector<FeatureName> } ]
+[]                                    ; traits
+[]                                    ; associations
 ```
 
 ```datom
