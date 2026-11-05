@@ -1,13 +1,13 @@
 ---
 description: How a proposal of the living's vision is made: what it is made of, how its code is shown, and how it is shown to him.
-dependencies: [vision-crystallization]
+dependencies: [vision-crystallization, vision-presentation]
 ---
 
 ## A proposal
 
-A proposal is the prose and the code that describe the system.
+A proposal is a presentation: the prose and the code that describe the system as it will be, shown as changes to belief modules, in the light shades, for the living to rule on.
 
-A proposal lives in its source file and is edited on his comments. A book is one publication of a proposal, at one link; the edited proposal is published as a new book, and the commented one stays as he left it.
+A proposal lives in its source file and is edited on his comments.
 
 A proposal states what is wanted of the system; it documents nothing.
 
@@ -37,7 +37,7 @@ Every type a proposal names is in the proposal: added to the module it lands in,
 
 What can be expressed in code is shown as code, with a comment where the code needs one; prose is the comment on the code. A method is shown with the trait it belongs to and that trait's ethos, so its inputs and its yield are read. Code not yet settled is marked tentative. A "never" or an "always" is code: the rule is shown as the code that enforces it.
 
-A shape is a flowchart, written in a mermaid fence and drawn by the bookmaker as a vector graphic. Prose carries only what neither code nor chart can. Ethos is the first chart: its types are the nodes and its traits the actions between them.
+A shape is a flowchart. Prose carries only what neither code nor chart can. Ethos is the first chart: its types are the nodes and its traits the actions between them.
 
 Code shown is complete: every name it uses is declared in the proposal, a method with its trait in ethos. A type wraps nothing without purpose: a variant carries a type bare when the wrapping would name nothing the type does not.
 
@@ -56,9 +56,31 @@ flowchart TB
     c -- "is shown to" --> d["him"]
 ```
 
-## A proposal is signed
+## What a proposal shows
+
+A module shown whole, as it stands, situates the landing.
+
+A module shown beside another, both as they stand, serves comparison: psyche with knowledge.
+
+A line replaced shows its removal and its addition together, and only the changed words are marked.
+
+A new module shows whole under a green margin, under the path it will have.
+
+A module deleted shows whole under a red margin, with a Destroy or Archive mark.
+
+A dependency changed shows in the module's front matter: the dependency removed under a red margin, the dependency added under a green margin.
+
+A figure proposed for a module shows under that module's path with a green margin, as an added line does; a fence it replaces, in the module, shows as its lines under a red margin.
+
+```mermaid
+flowchart TB
+    a["belief module"] -- "stays" --> b["shown whole or beside another"]
+    a -- "changes" --> c["line added with a green margin, removed with a red margin, moved with the third"]
+    a -- "is born or is deleted" --> d["shown whole, under a green or a red margin"]
+    c -- "proposed as" --> e["a proposal: land, amend or reject"]
+    d -- "proposed as" --> e
+```
+
+## Who writes a proposal
 
 Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. Opus publishes it and lands it.
-
-A proposal names the model that created it and, for each model that
-helped, what that help was, on a subtitle line under the title.
