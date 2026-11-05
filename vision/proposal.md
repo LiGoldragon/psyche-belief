@@ -17,6 +17,8 @@ A versioned module is self-contained: everything true of that version is in it, 
 
 A proposal is a proposal into belief modules, and the whole of it is its crystallization: what it removes and what it adds.
 
+A proposal has one subject, and small changes that belong together are one subject: one proposal per subject he would judge as one.
+
 A proposal that touches a code component shows the code it changes or adds.
 
 A code block in a proposal stands on its own. It carries the code, why it is important, and what its function is.
