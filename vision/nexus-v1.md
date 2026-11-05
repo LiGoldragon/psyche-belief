@@ -114,7 +114,7 @@ impl Emittable for Command {           // trait: generated
 
 ## A Nexus starts in its place
 
-A Nexus reads nothing from the environment: it is started with one datom, its place. Runtime holds its sockets and defaults to `$XDG_RUNTIME_DIR/nexus/<place-name>/`; State holds its memory and defaults to `~/.local/state/nexus/<place-name>/`. Both roots are the CLI's fixed defaults, taken from the standard XDG variables and from nothing else, never an argument. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance, resolved under the runtime root to the sockets. Two places are two names, and the stable one keeps running while the next is tried.
+A Nexus reads nothing from the environment: it is started with one datom, its place. Runtime holds its sockets and defaults to `$XDG_RUNTIME_DIR/nexus/<place-name>/`; State holds its memory and defaults to `$XDG_STATE_HOME/nexus/<place-name>/`, `~/.local/state/nexus/<place-name>/` when the variable is unset. Both roots are the CLI's fixed defaults, taken from the standard XDG variables and from nothing else, never an argument. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance, resolved under the runtime root to the sockets. Two places are two names, and the stable one keeps running while the next is tried.
 
 ```ethos
 Library
