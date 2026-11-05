@@ -94,10 +94,10 @@ The Ethos:
 Library
 [ std:[ Clonable Sendable Serializable ] ]                  ; imports: where the three constraint traits come from
 []                                                          ; types
-[ Processable<[Clonable Sendable] Serializable>.[ … ] ]     ; traits: the head is the identity, the name and two
+[ Processable<[Clonable Sendable] Serializable>.[] ]        ; traits: the head is the identity, the name and two
                                                             ;   constraints, the first a bracket of two traits, the
                                                             ;   second one trait; the bracket after the dot holds
-                                                            ;   its capabilities, its definition
+                                                            ;   its capabilities, its definition, empty here
 []                                                          ; associations
 ```
 
@@ -135,7 +135,9 @@ Library
 [ Record.{ String Integer } ]   ; types
 []                              ; traits
 []                              ; associations
+```
 
+```
 ; the canonical form the reader sees, after the mechanical conversion
 Library.{ [ protos:String ]
           [ Record.{ String Integer } ]
@@ -150,7 +152,11 @@ An explicit import and an intrinsic name mean the same thing. The names known wi
 The older form, `namespace:[ Type ]`, holds now: `std:[ Clonable Sendable Serializable ]` imports the three constraint traits from `std`.
 
 ```
+Library
 [ std:[ Clonable Sendable Serializable ] ]   ; imports
+[]                                           ; types
+[]                                           ; traits
+[]                                           ; associations
 ```
 
 A root that generates types puts them in an implied namespace named for the root, beside the file's own namespace, which holds only what the file writes, so a generated name reserves nothing in the file. A Signal exports `signal:[ Input Output ]`; Operation and Memory export `operation:` and `memory:` when they generate. A trait is exported by name as a type is, from the written namespace; the root-implied traits, Answerable, Deliverable, Operable, Memorizable and Emittable, are defined once in the standard library.
@@ -169,11 +175,15 @@ pub struct Call { … }                                            // the writte
 Ethos resolves every import while it reads, from the ethos each dependency carries beside its crate, and refuses before any Rust exists; an unresolved import or a doubled name is an Ethos error naming the file and the name.
 
 ```ethos
-ImportError.[ UnknownNamespace.Namespace                 ; no such namespace is known
-              UnknownName.{ Namespace Name }             ; the namespace exists, exports no such name
-              Collision.{ Namespace Name } ]             ; two declarations of one name in one file
-Namespace.String
-Name.String
+Library
+[]                                                         ; imports
+[ ImportError.[ UnknownNamespace.Namespace                 ; types: no such namespace is known
+                UnknownName.{ Namespace Name }             ;   the namespace exists, exports no such name
+                Collision.{ Namespace Name } ]             ;   two declarations of one name in one file
+  Namespace.String
+  Name.String ]
+[]                                                         ; traits
+[]                                                         ; associations
 ```
 
 ## What a declaration turns into
@@ -345,8 +355,12 @@ Every variant is capitalized: Ethos reads only a capitalized symbol as a variant
 The Ethos:
 
 ```
-Reply.[ Accepted.Integer   ; two variants
-        Refused.String ]
+Library
+[]                           ; imports
+[ Reply.[ Accepted.Integer   ; types: two variants
+          Refused.String ] ]
+[]                           ; traits
+[]                           ; associations
 ```
 
 An enum has two variants or more; an enum of one variant is refused.
@@ -354,7 +368,11 @@ An enum has two variants or more; an enum of one variant is refused.
 The Ethos:
 
 ```
-Reply.[ Accepted ]   ; refused: one variant
+Library
+[]                     ; imports
+[ Reply.[ Accepted ] ] ; types: refused, one variant
+[]                     ; traits
+[]                     ; associations
 ```
 
 ## An open enum
