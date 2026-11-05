@@ -259,6 +259,7 @@ Signal
   Describe.Name                      ; one definition, read back
   Definitions                        ; the names defined
   Launch.{ ComplexName FlowName Brief }
+  Rehearse.{ ComplexName FlowName Brief } ; a Launch as a dry run: nothing runs
   Stop.FlowId
   Send.{ FlowId Address Priority Request }
   Say.{ ComplexName Request }        ; the living, to a speaker
@@ -271,6 +272,7 @@ Signal
   Described.[ Complex Harness ]
   Listed.Vector<Name>
   Launched.FlowId
+  Rehearsed.Command.String           ; the shell command, whole
   Stopped.FlowId
   Sent.[ Delivered Queued ]
   Said.[ Delivered Queued ]
@@ -303,6 +305,13 @@ flows/f54886/handover.md»
 ```datom
 Broadcast.Notice.«Search with knowledge:search»
 Broadcast.[ 7 9 12 ]
+```
+
+A launch can be rehearsed: the same input, asked as a dry run, answers with the whole command the Flow Nexus would run and runs nothing. From that command an agent starts the flow by hand, changed however the Flow Nexus does not yet support. The answer is one string, the command line as the shell is to receive it, quoted for the shell inside.
+
+```datom
+Rehearse.{ designer fable «Read the version one book» }
+Rehearsed.«herdr --session main agent start … -- --system-prompt-file /…/bundle --model claude-fable-5-1 --effort medium»
 ```
 
 ```mermaid
