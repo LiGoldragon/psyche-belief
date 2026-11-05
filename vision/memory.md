@@ -13,3 +13,7 @@ Memory
 [ Lock.{ LockId LockName FlowId LockPaths LockReason } ]  ; record types
                                                           ; the remaining sections are to be decided
 ```
+
+## Memory is upgraded, never accommodated
+
+A Nexus's Memory is designed for the Nexus as it is to be; the new Nexus accommodates nothing of the old store. The old store is upgraded to the new format on open, and where that upgrade looks or proves difficult, a cheap flow reads the old store and sends the signals that repopulate the new one: the signals of a Nexus repopulate its Memory in every way.
