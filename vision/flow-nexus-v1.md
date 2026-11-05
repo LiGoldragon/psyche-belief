@@ -54,6 +54,9 @@ Library
   FlowId.Integer
   Address.{ ComplexName
             FlowName }  ; a permanent flow's name
+  Roster.Vector<Address>             ; every hot flow, in every first prompt
+  RosterChange.[ Started.Address     ; pushed to every hot flow as a flow starts
+                 Stopped.Address ]   ;   or stops
   Brief.String ]
 []
 []
@@ -134,9 +137,19 @@ flowchart TB
 
 A permanent flow continues through runs under its address and is kept hot: it is not stopped between works, so no restart pays the full cost of starting again. It is warned when its context reaches the Warning share of its model's threshold, configured per model in the Flow Nexus: a HardAbrupt Notice naming its handover path, flows/<id>/handover.md. When the context passes the threshold its successor is launched with the same definition, that file as its first prompt, and the queue that gathered meanwhile; the predecessor ends. An absent file means the successor starts from its definition and the queue alone. The address stays; the flow id changes. An ephemeral flow past its threshold takes no new work and ends when its work ends.
 
-The lander, the bookmaker, the readers and the rest of the roster are permanent flows; any flow sends work to them directly, with Send. The harness subagent is used only for what no running flow holds.
+The lander, the bookmaker, the readers and the rest of the roster are permanent flows; any flow sends work to them directly, with Send. The harness subagent is used only for what no running flow holds. A flow's first prompt carries the roster, the address of every hot flow, so it knows whom to send to; when a flow starts or stops, the Nexus pushes the change to every hot flow.
 
 His words: "we do not want flows that are idle because they go cold and when we restart them we pay the full cost again"
+
+His words: "enhance the probability of flows communicating instead of using a subagent, a subagent more like a last resort; it makes even more sense for Primary to pass things over since sending a message through Flow is cheap for the main model"
+
+The roster, as it lands in a first prompt, and a change, as it is pushed:
+
+```datom
+[ { designer fable } { designer opus } { jobs lander } { jobs bookmaker } ]
+Started.{ jobs reader }
+Stopped.{ jobs reader }
+```
 
 Work goes straight to a permanent flow by its standing address, in the Signal's Send form `Send.{ FlowId Address Priority Request }`:
 
@@ -200,7 +213,8 @@ The roster, as Members: each a permanent flow, in a temporary workspace, with th
 
 ```mermaid
 flowchart TB
-    f["any flow"] -- "Send" --> p["permanent flow, hot"]
+    n["the Flow Nexus"] -- "roster in the first prompt, each change pushed" --> f["any flow"]
+    f -- "Send" --> p["permanent flow, hot"]
     p -- "answers as a message" --> f
     f -. "only if no running flow holds the work" .-> h["harness subagent"]
     p -- "past threshold, replaced by" --> s["successor, from its modules"]
@@ -302,22 +316,24 @@ flowchart TB
 
 The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace, the default modules first and the member's own Beliefs after them; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them, composing the command line from the member's harness definition: each feature the member names, its effect, a flag or a variable.
 
-A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path. The place it runs in is the Nexus's, named at the CLI, never the flow's.
+A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path; the Roster is composed into the first prompt beside it. The place it runs in is the Nexus's, named at the CLI, never the flow's.
 
 ```ethos
 Emission
 [ flow:[ Member Address FlowId Brief Waking Tools
-         HarnessName ]
+         HarnessName Roster RosterChange ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
   Settle.{ Member FlowId }            ; the harness's settings file
-  Open.{ Member Identity Brief }      ; pane made, harness started
+  Open.{ Member Identity Roster Brief } ; pane made, harness started
   Wake.{ Pane Waking }                ; the queue typed in
+  Tell.{ Pane RosterChange }          ; a flow started or stopped, typed in
   Close.{ Pane Workspace } ]          ; pane killed, Temporary removed
 [ Furnished.Outcome
   Settled.Outcome
   Opened.{ Pane Outcome }
   Woken.Outcome
+  Told.Outcome
   Closed.Outcome ]
 [ Identity.{ Address FlowId }                ; composed into the first prompt
                                              ;   or the system prompt
