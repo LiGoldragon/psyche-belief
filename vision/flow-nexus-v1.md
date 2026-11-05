@@ -263,13 +263,15 @@ flowchart TB
 
 The Flow Nexus runs nothing. Its translator is the client of two sockets: the Belief Nexus furnishes the workspace; the herdr Nexus makes the pane, starts the harness, types the prompt. The harness's command line and its settings file are types; the translator writes them.
 
+A flow knows itself at launch: its Identity, its Address and FlowId, is composed into its first prompt or its system prompt, so it names itself in Send and Report and finds its handover path. The place it runs in is the Nexus's, named at the CLI, never the flow's.
+
 ```ethos
 Emission
-[ flow:[ Member FlowId Brief Waking Tools ]
+[ flow:[ Member Address FlowId Brief Waking Tools ]
   herdr:[ Pane Outcome ] ]
 [ Furnish.{ Member FlowId }           ; beliefs into the workspace
   Settle.{ Member FlowId }            ; the harness's settings file
-  Open.{ Member FlowId Brief }        ; pane made, harness started
+  Open.{ Member Identity Brief }      ; pane made, harness started
   Wake.{ Pane Waking }                ; the queue typed in
   Close.{ Pane Workspace } ]          ; pane killed, Temporary removed
 [ Furnished.Outcome
@@ -277,7 +279,9 @@ Emission
   Opened.{ Pane Outcome }
   Woken.Outcome
   Closed.Outcome ]
-[ Settings.[ Claude.{ Tools Model.String }   ; what the translator writes
+[ Identity.{ Address FlowId }                ; composed into the first prompt
+                                             ;   or the system prompt
+  Settings.[ Claude.{ Tools Model.String }   ; what the translator writes
              Codex.{ Tools Model.String } ] ]
 ```
 
