@@ -40,6 +40,12 @@ and designs nothing.
 Every model launches the cheapest model that does the job, its own
 rarely, and Fable never.
 
+A launch new to the system is tried on a cheap flow before a Fable flow spends on it.
+
+## A Fable flow does not wake itself
+
+A Fable flow is woken by what reaches it. It schedules no wake-up for itself and takes no heartbeat: a turn on it is too dear.
+
 ## One declaration sets the model everywhere
 
 The model is declared once, in the metaflow definition the Flow Nexus
