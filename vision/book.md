@@ -19,39 +19,41 @@ A module shown whole, as it stands, situates the landing.
 
 A module shown beside another, both as they stand, serves comparison: psyche with knowledge.
 
-A line added shows in green.
+Colour is the sign of a change and lies in the margin alone: text keeps the page's colour, and code its language's colours, highlighted.
 
-A line removed shows in red.
+A line added shows a green margin.
+
+A line removed shows a red margin.
 
 A line replaced shows its removal and its addition together, and only the changed words are marked.
 
-A new module shows whole in green, under the path it will have.
+A new module shows whole under a green margin, under the path it will have.
 
-A module deleted shows whole in red, with a Destroy or Archive mark.
+A module deleted shows whole under a red margin, with a Destroy or Archive mark.
 
-A line moved between modules is one proposal headed by both paths: the line in red under the module it leaves, the same line in green under the module it enters.
+A line moved between modules is one proposal headed by both paths: the line under a red margin in the module it leaves, the same line under a green margin in the module it enters.
 
-A dependency changed shows in the module's front matter: the dependency removed in red, the dependency added in green.
+A dependency changed shows in the module's front matter: the dependency removed under a red margin, the dependency added under a green margin.
 
-A figure proposed for a module shows under that module's path in green, as an added line does; a fence it replaces, in the module, shows as its red lines. A figure is drawn only of what is wanted; a removed sentence is its red text and is never drawn.
+A figure proposed for a module shows under that module's path with a green margin, as an added line does; a fence it replaces, in the module, shows as its lines under a red margin. A figure is drawn only of what is wanted; a removed sentence is its red text and is never drawn.
 
 ```mermaid
 flowchart TB
     v["vision: what is wanted now"] -- "is" --> p["the proposal, as the module will be"]
-    p -- "shows, in red text, for the edit to be seen" --> r["a line removed"]
+    p -- "shows, under a red margin, for the edit to be seen" --> r["a line removed"]
     p -- "draws" --> f["a figure of what is wanted"]
 ```
 
 ```mermaid
 flowchart TB
     a["belief module"] -- "stays" --> b["shown whole or beside another"]
-    a -- "changes" --> c["line added in green, removed in red"]
-    a -- "is born or is deleted" --> d["shown whole, in green or in red"]
+    a -- "changes" --> c["line added with a green margin, removed with a red margin"]
+    a -- "is born or is deleted" --> d["shown whole, under a green or a red margin"]
     c -- "proposed as" --> e["a proposal: land, amend or reject"]
     d -- "proposed as" --> e
 ```
 
-Code in a book is shown as code, labelled with its language, plain.
+Code in a book is shown as code, labelled with its language and highlighted in that language's colours.
 
 ## Pictures
 
