@@ -20,3 +20,7 @@ Line.{ Path.String Text.String }
 Found.[ { vision/subflows.md «A subflow's reply is a datom» } ]
 Nothing
 ```
+
+## A subflow belongs to its parent's flow
+
+A subflow is part of the flow that briefed it: it writes under its parent's flow directory and flow id, and opens no lane of its own.

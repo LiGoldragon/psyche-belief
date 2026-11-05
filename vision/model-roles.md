@@ -29,6 +29,8 @@ flowchart TB
 | Sonnet | Luna | large plain work |
 | Haiku | Luna, low effort | small jobs |
 
+Jev, a System 1 model, is the lowest power, below Haiku and Luna at low effort, and is reached through OpenRouter.
+
 ## Delegation ceiling
 
 The most complex reasoning goes to Fable. Opus stands in for a design
