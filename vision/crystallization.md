@@ -60,15 +60,3 @@ A statement about code carries the code: a crystallized statement on a syntax, a
 Vision code is written in the stacks the system is built in: Ethos and Datom first, then Rust and Nix; where a design depends on how any of them is used, the statement carries that code.
 
 A crystallized statement lands as lines in a vision- or intent- skill's authored source.
-
-## His word lands the same hour
-
-What the living says that changes the vision is in its module before the conversation ends. The flow that hears him writes the line; his words stay in the transcript.
-
-```mermaid
-flowchart LR
-    l["the living says it"] --> f["Fable writes the line"]
-    f --> m["the module, same hour"]
-    f -. "if it needs his eye" .-> b["one book, ruled before the flow ends"]
-    b --> m
-```
