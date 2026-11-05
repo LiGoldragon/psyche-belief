@@ -71,3 +71,15 @@ The landing of a line archives the raw records it drew on, in the same commit; a
 
 Crystallization is proposed on encounter, dispatched proactively by
 the flow working a subject, or done in dedicated passes.
+
+## His word lands the same hour
+
+What the living says that changes the vision is in its module before the conversation ends. The flow that hears him writes the line; his words stay in the transcript.
+
+```mermaid
+flowchart LR
+    l["the living says it"] --> f["Fable writes the line"]
+    f --> m["the module, same hour"]
+    f -. "if it needs his eye" .-> b["one book, ruled before the flow ends"]
+    b --> m
+```

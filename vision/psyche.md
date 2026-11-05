@@ -29,6 +29,6 @@ record outside an archive. A file is never renamed to say
 what became of its records. In the long term the records live in the
 psyche nexus and the state is a field.
 
-## A record is written when there is a reason
+## A record is a proposal
 
-A flow writes a raw record of the living's words only when there is a reason to. What else he says reaches the next flow through the handover at the end, and the transcripts hold everything.
+What the living says is not written down. What it changes is: Fable restructures, simplifies and harmonizes it with everything he has said, as a line in a proposal. The transcript holds his words; nothing else does.

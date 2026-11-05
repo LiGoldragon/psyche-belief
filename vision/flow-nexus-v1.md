@@ -171,6 +171,32 @@ flowchart TB
     p -- "past threshold, replaced by" --> s["successor, from its modules"]
 ```
 
+## A running session joins any Flow Nexus
+
+A flow's identity is its own, not the Nexus's. A Nexus is replaced by starting the next version beside it and having every running flow join it; nobody restarts, no context is lost. A change to a Nexus is a new version, always.
+
+```ethos
+Signal
+[ flow:[ Address FlowId ] ]
+[ Adopt.{ Address Session } ]            ; input: a running session, under its address
+[ Adopted.FlowId                         ; outputs
+  Refused.[ AddressHeld.FlowId           ;   one live flow per address
+            Unidentified ] ]             ;   the calling session is not the one named
+[ Session.String ]                       ; the harness's session id, verified by the caller's process
+```
+
+```datom
+Adopt.{ { Psyche core Primary } 15c0cea2-aa34-508b-8e20-ece1ab7823f4 }
+Adopted.15c0ce
+```
+
+```mermaid
+flowchart LR
+    a["Nexus 0.48, running"] -- "0.49 started beside it" --> b["Nexus 0.49"]
+    f["every running flow"] -- "Adopt" --> b
+    a -- "empty, stopped" --> x[" "]
+```
+
 ## Signal
 
 ```ethos
