@@ -176,7 +176,7 @@ is itself datomizable.
 
 ```
 [ 1 x ]                                  ; read as Vector<Integer>
-Corporate.{ [ 1 ] Value.x }              ; at path 1, the bare string x is not an integer
+{ Composition [ 1 ] Value.{ Integer x } } ; the Composition layer, at path 1: the bare string x is not an Integer
 ```
 
 ## The interface shape
