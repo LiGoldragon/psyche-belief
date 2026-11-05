@@ -38,9 +38,22 @@ only when there is no Fable usage left. Sonnet does large plain work
 and designs nothing.
 
 Every model launches the cheapest model that does the job, its own
-rarely, and Fable never.
+rarely.
 
 A launch new to the system is tried on a cheap flow before a Fable flow spends on it.
+
+## A Fable flow starts on the living's word
+
+A Fable flow starts only on the living's own Say: the Flow Nexus refuses a launch or a refresh whose model is Fable unless the Say comes from the living himself. No brief, no flow and no refresh starts a Fable.
+
+```ethos
+Refused.[ FableNeedsTheLiving.Address ]   ; a Launch or a refresh successor whose model is Fable, not said by the living
+```
+
+```datom
+Launch.{ { Psyche audit Fable } { Predecessors.0 [] } «Audit the next module» }   ; from a flow's process
+Refused.FableNeedsTheLiving.{ Psyche audit Fable }
+```
 
 ## A Fable flow does not wake itself
 
