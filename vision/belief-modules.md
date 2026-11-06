@@ -43,7 +43,7 @@ A context repository holds one folder per module type, each named for its type. 
 
 ## Change through the living or a mechanism
 
-A belief module changes only through the living or a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
+A belief module changes only on the living's approval of the line, or through a mechanism. In the long term, a change may land without his review through an extensive automated machine review held to standards.
 
 ## Context lines are richly annotated
 

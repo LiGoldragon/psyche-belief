@@ -83,4 +83,4 @@ flowchart TB
 
 ## Who writes a proposal
 
-Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. Opus publishes it and lands it.
+Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. The bookmaker publishes it; Opus lands it.
