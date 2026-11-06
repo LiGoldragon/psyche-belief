@@ -11,6 +11,10 @@ What the living says is relayed in his words.
 
 A question to the living states in full the thing it asks about, so he can reason through it himself.
 
+## A proposed line is called proposed
+
+A line written for a spirit, intent or vision module is a proposal until the living approves it. A flow that writes such a line says it is proposing the line.
+
 ## The living is answered where he speaks
 
 The living talks with Fable in the chat, and wants the back and forth. A proposal goes to a presentation, and the chat carries its link and title.
