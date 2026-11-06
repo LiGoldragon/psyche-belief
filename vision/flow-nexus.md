@@ -53,18 +53,20 @@ SendableMessage.[ HardAbrupt.SendableRequest  ; the priority, a head on the requ
                   Soft.SendableRequest ]
 ```
 
-A request is written without an id and delivered with one: the Nexus mints it, four characters, as a bead has, and places it as the first field of the request it delivers. The delivered request is its own type, the sent request with its id in it. A Result or a Done names that id and nothing of the request's text; the answerer spends no output repeating it, and the receiver's context holds its own words once.
+A request is written without an id and delivered with one: the Nexus mints it, four characters, as a bead has, and places it as the first field of the request it delivers. The delivered request is its own type, the sent request with its id in it. A Result or a Done names that id and nothing of the request's text; the answerer spends no output repeating it, and the receiver's context holds its own words once. The reply to a Send carries the id the Nexus minted, so the sender knows which Result or Done answers it.
 
 ```ethos
 DeliveredRequest.[ Order.{ RequestId String }        ; the sent request, with the id the Nexus gave it
                    Question.{ RequestId String }
                    Task.{ RequestId Minutes String }
                    Notice.{ RequestId String } ]
+Sent.RequestId                                       ; the reply to a Send: the id the Nexus minted
 ```
 
 ```datom
 ; sent
 Send.{ Address.{ Mind core Secondary } Soft.Order.«Review the drain fix.» }
+Sent.{ k7ph }
 ; delivered
 { Sender.{ Psyche core Primary } Soft.Order.{ k7ph «Review the drain fix.» } }
 ; answered
