@@ -17,7 +17,7 @@ flowchart TB
 
 ## Every change is a new version
 
-Every change to a source is a new version. The change and its number land in the same commit, the patch number at least, so that two builds that differ in any byte differ in number; a deployment of software whose number did not change is a fault. Each release tells the living its number and what changed. One or two revisions ship a day.
+Every change to a source is a new version. The change and its number land in the same commit, the patch number at least, so that two builds that differ in any byte differ in number; a deployment of software whose number did not change is a fault. Each release tells the living its number and what changed.
 
 ## A full rewrite
 
