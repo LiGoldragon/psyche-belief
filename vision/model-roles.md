@@ -42,19 +42,6 @@ rarely.
 
 A launch new to the system is tried on a cheap flow before a Fable flow spends on it.
 
-## A Fable flow starts on the living's word
-
-A Fable flow starts only on the living's own Say: the Flow Nexus refuses a launch or a refresh whose model is Fable unless the Say comes from the living himself. No brief, no flow and no refresh starts a Fable.
-
-```ethos
-Refused.[ FableNeedsTheLiving.Address ]   ; a Launch or a refresh successor whose model is Fable, not said by the living
-```
-
-```datom
-Launch.{ { Psyche audit Fable } «Audit the next module» }   ; from a flow's process
-Refused.FableNeedsTheLiving.{ Psyche audit Fable }
-```
-
 ## A Fable flow does not wake itself
 
 A Fable flow is woken by what reaches it. It schedules no wake-up for itself and takes no heartbeat: a turn on it is too dear.

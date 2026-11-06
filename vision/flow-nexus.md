@@ -102,8 +102,6 @@ launched with specialized system prompts.
 
 The address names the model, Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna or Terra, in every aspect: a Psyche core Astra and a Mind core Fable are both addresses. A launch names the permaflow, the belief modules composed into its prompts, and a brief of a small paragraph; the Nexus composes the prompt from its module registry.
 
-A launch or a refresh whose model is Fable is refused unless the Say comes from the living himself: no brief, no flow and no refresh starts a Fable. A Fable permaflow past its threshold keeps its queue until the living says to refresh it; the Nexus knows the living by the calling process.
-
 The Flow Nexus's configuration holds, for each permaflow, its purpose, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
 A fresh flow's first prompt carries the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
@@ -284,8 +282,7 @@ Signal
   Report.{ FlowId Event } ]
 [ Launched.FlowId
   Refused.[ NoCapsule
-            AddressBusy.Address
-            FableNeedsTheLiving.Address ]  ; a Fable launch or refresh not said by the living
+            AddressBusy.Address ]
   Reported ]
 [ LaunchRequest.{ Address Brief.String } ]
 ```
