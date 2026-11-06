@@ -245,7 +245,7 @@ The number of running flows is kept low: a topic flow no longer used is retired.
 
 ## Restarting without waking
 
-A flow can be restarted without being woken: its harness closes, its transcript stays, and its successor runs when a message wakes it. A flow can also restart itself. A restart meant to leave the flow asleep is done from outside; what arrives queues for its successor.
+A flow is its session. A restart closes its harness and reopens it on the same session; a refresh starts a fresh flow.
 
 ## Debugging
 
