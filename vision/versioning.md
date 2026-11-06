@@ -5,7 +5,7 @@ dependencies: [vision-nexus]
 
 ## The three numbers
 
-A Nexus's version is three numbers. Any change that leaves the memory format alone is a new revision. A change of the memory format is a new subversion, and carries the upgrade from the previous format: the old store is upgraded to the new format on open, and a Nexus is never crippled to run on an old format; where a format cannot be upgraded in code, its data is migrated by interpretation. A complete rewrite is a new version. No build is ever the finished one: each takes the next number, and one or two revisions ship a day.
+A Nexus's version is three numbers. Any change that leaves the memory format alone is a new revision. A change of the memory format is a new subversion, and carries the upgrade from the previous format: the old store is upgraded to the new format on open, and a Nexus is never crippled to run on an old format; where a format cannot be upgraded in code, its data is migrated by interpretation. A complete rewrite is a new version.
 
 ```mermaid
 flowchart TB
@@ -14,6 +14,10 @@ flowchart TB
     c -- "revision" --> d["0.41.1"]
     e["1.0.0"] -- "version: a complete rewrite, sharing nothing with 0" --> e
 ```
+
+## Every change is a new version
+
+Every change to a source is a new version. The change and its number land in the same commit, the patch number at least, so that two builds that differ in any byte differ in number; a deployment of software whose number did not change is a fault. Each release tells the living its number and what changed.
 
 ## A full rewrite
 
