@@ -63,14 +63,24 @@ defines a string. In such a position a string is written bare when it
 contains no space and no delimiter, Ada, 75002, 2026-09-03; any other
 string is written in guillemets. Because the position already knows it
 holds a string, a bare run may contain characters that are syntax
-elsewhere, the colon among them. A guillemet string is opaque: every
-glyph inside it is content until the closing guillemet, which is
-escaped with a backslash where it is content. An integer is written as
+elsewhere, the colon among them. A guillemet string is read by balance, as a
+Meaning is: a « » pair inside it is content,
+nesting to any depth, and the string closes at
+the guillemet that balances the one that opened
+it; an unbalanced guillemet inside it is escaped
+with a backslash. An integer is written as
 bare decimal, 0, 42, -42: ASCII digits, no leading plus, no leading
 zero except 0 itself. A single semicolon opens a comment. Canonical
 text leaves a space inside every bracket and brace delimiter, at both
 ends, so that head, dot, delimiter and content read apart, and never
 inside the guillemets, where a space is content.
+
+```datom
+«Title «The Belief Nexus made small»»
+; the inner pair is content
+«an unbalanced \» inside»
+; escaped, since nothing balances it
+```
 
 ```
 Observed.Locks.[]     ; on one line
