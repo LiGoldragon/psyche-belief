@@ -53,6 +53,16 @@ Context lines are richly annotated, because lines of very different categories s
 
 A belief module states what holds now.
 
+## A belief module names nothing particular to his own machines
+
+A belief module carries the mechanism, and nothing that is true of his own machines alone: no cluster name, host name, login, path or address of his. An example that needs a name uses one that is plainly an example, and says so. What is particular to his machines lives in the host's own declaration, which the module points to.
+
+```nix
+# a belief module's example: a name that
+# is plainly an example
+{ cluster = "example"; host = "laptop"; }
+```
+
 ## A description is part of the content
 
 A module's description is part of its content: what the description says, the body does not say again.
