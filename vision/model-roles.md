@@ -51,7 +51,7 @@ Refused.[ FableNeedsTheLiving.Address ]   ; a Launch or a refresh successor whos
 ```
 
 ```datom
-Launch.{ { Psyche audit Fable } { Predecessors.0 [] } «Audit the next module» }   ; from a flow's process
+Launch.{ { Psyche audit Fable } «Audit the next module» }   ; from a flow's process
 Refused.FableNeedsTheLiving.{ Psyche audit Fable }
 ```
 

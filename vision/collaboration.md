@@ -5,7 +5,7 @@ dependencies: [vision-aspects, vision-flow-nexus]
 
 ## Work goes up whole
 
-A flow that hands work to Fable first gathers everything that work needs — his words whole, his comments on the books, the records and the files — and sends it in one message, complete. Opus carries his words and context whole; Fable judges alone.
+A flow that hands work to Fable first gathers everything that work needs — his words whole, his comments on the books and the files — and sends it in one message, complete. Opus carries his words and context whole; Fable judges alone.
 
 A ruling Opus relays from Fable carries Fable's authority.
 

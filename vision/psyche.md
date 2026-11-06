@@ -7,24 +7,12 @@ Psyche contains Spirit, Intent, Vision, and Notion, in descending authority.
 
 Everything the living says he wants is crystallized into the existing vision: psyche data is what the work mines for, and rich building stands on it.
 
-Crystallized vision preserves references to its supporting raw records. Archived
-records retain their original words and provenance.
-
 Psyche data belongs in a dedicated repository symlinked into Primary. Orchestrate
 coordinates concurrent work across those repositories.
 
 The belief modules belong in a context repository; Psyche's is psyche-belief.
 
 Vision is what is wanted; it is neither real nor unreal, and it documents nothing. The minute a line is not wanted it is not vision: there is one vision, the one in the module now, and nothing refers to a past one. Vision refers only to vision: every type a vision names is defined in a vision module. The horizons separate what he sees long term from what he pursues now so that it arrives more quickly.
-
-## A settled record moves to the archive
-
-An open raw record sits in the vision or notion records of the flow that heard it. When it is landed,
-superseded or refuted it moves into the flow's archive of the same kind, under one
-line that says which. The archived records of
-the whole system are every flow's archive; the open ones are every
-record outside an archive. In the long term the records live in the
-psyche nexus and the state is a field.
 
 ## A record is a proposal
 

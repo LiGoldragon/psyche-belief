@@ -85,13 +85,13 @@ The address names the model, Fable, Opus, Sonnet, Haiku, Astra, Sol, Luna or Ter
 
 A launch or a refresh whose model is Fable is refused unless the Say comes from the living himself: no brief, no flow and no refresh starts a Fable. A Fable permaflow past its threshold keeps its queue until the living says to refresh it; the Nexus knows the living by the calling process.
 
-The Flow Nexus's configuration holds, for each permaflow, its purpose and the records of the living it rests on, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
+The Flow Nexus's configuration holds, for each permaflow, its purpose, beside its modules; the Flow Nexus composes them with the brief into the first prompt, and the instruction for the first response belongs to that composition.
 
-A fresh flow's first prompt carries the raw psyche relevant to it and recent, together with the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
+A fresh flow's first prompt carries the belief modules relevant to it, of any kind except spirit and intent, which sit in the system prompt.
 
 ```mermaid
 flowchart TB
-    a["Flow"] -- "composes into the first prompt" --> b["recent raw psyche, belief modules of any kind except spirit and intent"]
+    a["Flow"] -- "composes into the first prompt" --> b["belief modules of any kind except spirit and intent"]
     b -- "starts" --> c["a fresh flow"]
 ```
 
@@ -119,7 +119,7 @@ A launch can be rehearsed: the same input, asked as a dry run, answers with the 
 ```
 
 ```
-Rehearse.{ { Psyche core Fable } { Predecessors.1 [] } «brief» }
+Rehearse.{ { Psyche core Fable } «brief» }
 Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissions --system-prompt-file /…/bundle --model … --effort …»
 ```
 
@@ -236,7 +236,7 @@ Everything that may need debugging, changing or reconfiguring is reached through
 
 ## What a refresh carries
 
-A refresh carries the flow's important presentations and illustrations, the raw psyche given to it, and the basic skills. The basic skills are everything a flow needs.
+A refresh carries the flow's important presentations and illustrations, and the basic skills. The basic skills are everything a flow needs.
 
 ## The Flow Nexus's parts
 
@@ -260,7 +260,7 @@ Signal, what the Flow Nexus says:
 
 ```ethos
 Signal
-[ flow:[ FlowId Address Event Remembering ] ]
+[ flow:[ FlowId Address Event ] ]
 [ Launch.LaunchRequest
   Report.{ FlowId Event } ]
 [ Launched.FlowId
@@ -268,7 +268,7 @@ Signal
             AddressBusy.Address
             FableNeedsTheLiving.Address ]  ; a Fable launch or refresh not said by the living
   Reported ]
-[ LaunchRequest.{ Address Remembering Brief.String } ]
+[ LaunchRequest.{ Address Brief.String } ]
 ```
 
 Operation, what the Flow Nexus does:
@@ -298,7 +298,7 @@ Memory
 
 ```datom
 ; 1 Input, typed at the CLI, sent as signal
-Launch.{ { Psyche core Fable } { Predecessors.1 [] }
+Launch.{ { Psyche core Fable }
          «Draft the Nexus book» }
 ; 2 Operation, from Signal's intend
 Start.{ { Psyche core Fable }

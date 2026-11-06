@@ -1,14 +1,7 @@
 ---
-description: A crystallization proposal is composed or judged, or a vision impurity is met in a psyche record.
+description: A crystallization proposal is composed or judged.
 dependencies: []
 ---
-
-## Vision impurities
-
-A working instruction logged as vision is a vision impurity. It may
-sit in a log beside valid vision; when crystallization finds it, the
-impurity is dissected out of the log and destroyed, and the valid
-vision around it stays.
 
 ## A proposal names each statement's destination
 
@@ -29,14 +22,7 @@ conduct is vision.
 ## Statements are positive
 
 A crystallized statement says what is and what is wanted, in positive
-terms only. A negative the living spoke stays in the archive, which
-remains linkable.
-
-## Impurities are hunted and fall through crystallization alike
-
-Impurities are hunted by the records cleaner and fall through crystallization alike.
-
-A raw record whose every point a later record of his states better is superseded. A record whose subject is gone from the system is irrelevant and archived the same way.
+terms only.
 
 ## Crystallized vision is up to date
 
@@ -44,17 +30,12 @@ Crystallized vision is up to date: it states what is wanted of the subject now.
 
 ## Crystallization
 
-Crystallization re-articulates psyche records into self-standing statements and merges each with what is already crystallized, so the whole stays cohesive and the new reads as if always written with the original context. The model clarifies and purifies.
+Crystallization re-articulates what the living said into self-standing statements and merges each with what is already crystallized, so the whole stays cohesive and the new reads as if always written with the original context. The model clarifies and purifies.
 
-A crystallization agglomerates records across flows that touch the
-same topic.
-One record may serve many crystallizations; one crystallization may
-draw from many topics.
-
-A crystallized statement stands on its own words. A proposed change to a raw record — correction included — is proposed as a crystallization of its subject.
+A crystallized statement stands on its own words.
 
 Every term in a
-crystallized statement is defined. Define the term first, or leave the statement raw.
+crystallized statement is defined. Define the term first.
 A statement about code carries the code: a crystallized statement on a syntax, a type, a kind, or a wire form shows example code, because machines think in code and the next machine to read it must understand.
 
 Vision code is written in the stacks the system is built in: Ethos and Datom first, then Rust and Nix; where a design depends on how any of them is used, the statement carries that code.
