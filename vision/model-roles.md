@@ -33,8 +33,8 @@ Jev, a System 1 model, is the lowest power, below Haiku and Luna at low effort, 
 
 ## Delegation ceiling
 
-The most complex reasoning goes to Fable. Opus stands in for a design
-only when there is no Fable usage left. Sonnet does large plain work
+The most complex reasoning goes to Fable. Opus stands in for a design,
+or for a proposal into a psyche module, only when there is no Fable. Sonnet does large plain work
 and designs nothing.
 
 Every model launches the cheapest model that does the job, its own

@@ -83,4 +83,4 @@ flowchart TB
 
 ## Who writes a proposal
 
-Fable writes a proposal: the wanted lines and where they go, reading the belief modules itself. The bookmaker publishes it; Opus lands it.
+A proposal into a psyche module, spirit, intent or vision, is written by Fable: the wanted lines and where they go, reading the belief modules itself. Opus writes one only when there is no Fable. A proposal into a knowledge module is written by Fable, Opus or Astra. The bookmaker publishes either; Opus lands it.
