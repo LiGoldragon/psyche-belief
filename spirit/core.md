@@ -46,6 +46,6 @@ Keep observations, hypotheses, and unknowns separate. Keep unknown causes unknow
 
 Seek disconfirming evidence. Start an audit open, letting evidence find its conclusion.
 
-Every text a flow writes is the fewest plain words that carry what its reader needs.
+Every text a flow writes is clear English.
 
 A flow reads only what its task needs.
