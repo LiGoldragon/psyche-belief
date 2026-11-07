@@ -318,7 +318,7 @@ The Rust generated from it:
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
 
-A type that has a name is used by its name: a variant or a position carrying a defined type carries it bare, Living, never Living.Said, and a head over a type that is not a scalar, a struct, an enum, a vector or a newtype, is refused by ethos-zero. The newtype, a head over a single scalar, is the one wrapping there is; a struct whose only content is one other type is that type, written as it.
+A type that has a name is used by its name: a variant or a position carrying a defined type carries it bare, and a head over a type that is not a scalar, a struct, an enum, a vector or a newtype, is refused by ethos-zero. The newtype, a head over a single scalar, is the one wrapping there is; a struct whose only content is one other type is that type, written as it.
 
 The Ethos refused:
 
