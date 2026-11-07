@@ -56,6 +56,10 @@ The running Nexus holds its whole domain as typed values, a specific type for ev
 
 Signal is the messaging layer and the wire's only traffic: an rkyv binary archive, typed, validated on receive, length-prefixed on the socket. Every reply is typed, refusals included: errors are vocabulary. The wire vocabulary's version is its contract crate's semver.
 
+## A Nexus keeps nobody out
+
+A Nexus runs for its owner, with his credentials, and keeps nobody out: it checks what it needs to run. Security is the host's, whole, by its users and its kernel; a guard inside a Nexus is a difficulty, not a security.
+
 ## The graph
 
 A Nexus is a vertex in the graph of nexuses. An edge joins two
