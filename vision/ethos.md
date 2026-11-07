@@ -217,7 +217,7 @@ A field is named after its type in snake case; a constructed type
 type-first, `string_vector`, `lock_option`; a repeated type as first
 and second.
 
-A head over a single type declares a newtype: a single-member tuple struct holding it, so every declared name is its own type and carries its own derive.
+A head over a single scalar declares a newtype: a single-member tuple struct holding it, so every declared name is its own type and carries its own derive.
 
 The Ethos:
 
@@ -318,7 +318,7 @@ The Rust generated from it:
 pub enum GenerationFailure { SyntaxError(SyntaxError), Unwritable }
 ```
 
-A variant or a position that carries a defined type carries it under that type's own name, bare: Living, never Living.Said. A struct whose only content is one other struct is that struct, and is written as it. The form is refused in review, not by ethos-zero.
+A type that has a name is used by its name: a variant or a position carrying a defined type carries it bare, Living, never Living.Said, and a head over a type that is not a scalar, a struct, an enum, a vector or a newtype, is refused by ethos-zero. The newtype, a head over a single scalar, is the one wrapping there is; a struct whose only content is one other type is that type, written as it.
 
 The Ethos refused:
 
