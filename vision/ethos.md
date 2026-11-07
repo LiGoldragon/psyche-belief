@@ -340,8 +340,6 @@ The datom, the same either way:
 Living.{ «context» «verbatim» }
 ```
 
-The newtype, a head over a single scalar, stands as the Declaration section declares it.
-
 ## A variant may declare its payload inline
 
 Instead of naming a defined type, a variant may declare what it
