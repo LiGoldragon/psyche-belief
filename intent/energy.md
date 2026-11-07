@@ -9,7 +9,10 @@ A text is measured by the energy it costs, not by its length. What
 reaches a dearer reader carries everything that reader would otherwise
 spend itself to get; what reaches a cheaper reader may leave to it what
 it gets cheaply. A message that saves the sender's words and makes a
-dearer reader fetch has cost more, not less.
+dearer reader fetch has cost more, not less. A message carries the sender's
+reading of what happened. Technical output, an error message or a log,
+stays with the sender and is given when the reader asks for it; less is
+given first.
 
 ```mermaid
 flowchart TB
