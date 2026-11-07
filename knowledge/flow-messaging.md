@@ -6,12 +6,31 @@ dependencies: []
 
 ## The CLI
 
-The client speaks to the running Flow Nexus, 0.53, and takes one datom argument. The `flow` on PATH still runs 0.51.2, whose Sends are refused; until PATH is switched, the 0.53 client is called by its store path:
+The `flow` on PATH is the configured 0.53.1 client. It speaks to the running Flow Nexus and takes one datom argument:
 
 ```sh
-flow=/nix/store/v8hdvaw508mw7acszlfl8gzwr8pav260-flow-0.53.0
-$flow 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
+flow 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
 ```
+
+## Running permaflows and their routing
+
+`flow 'Metaflows'` reads current permaflow states. `flow-meta 'Configuration'` reads their committed declarations. The table below was read from both on 2026-11-07; all 22 addresses were `Awake`. A routing description is the declaration's `Purpose` unless it names a bound role. A blank `Purpose` leaves specialized routing unknown. A declared historical task describes the configuration and grants no present authority.
+
+| Address | Work routed there by current evidence |
+|---|---|
+| `{ Field protosReview Sonnet }` | Declared purpose: sole reviewer and publisher of the four exact Protos consumer candidates, under Field core Astra coordination and the explicit review brief. |
+| `{ Field protosConsumers Sonnet }` | Declared purpose: implementation lane for the consumers of Protos: datom-codec first, then signal, meta-signal and the other dependents, new versions, locks, tests and pushes, after the approved dependency graph, under Field core Primary source custody. |
+| `{ Field protos Sonnet }` | Declared purpose: implementation lane for Protos: the protos crate, its version, UPGRADES, tests and review, under Field core Primary source custody. |
+| `{ Field core Astra }`, `{ Field core Sol }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
+| `{ Mind datomCodec Sol }`, `{ Mind herdrNexus Sol }`, `{ Mind nixCriomos Sol }`, `{ Mind orchestrate Sol }`, `{ Mind versionZero Astra }`, `{ Mind versionZero Sol }`, `{ Mind core Astra }`, `{ Mind core Sol }`, `{ Mind lojix Sol }`, `{ Mind flowNexus Sol }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
+| `{ Mind beliefNexus Astra }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
+| `{ Psyche book Haiku }` | `Purpose` is blank. Its bound `role:book-publishing-procedure` says it is sent a presentation source path, publishes the built page, and returns the title and link to the ordering flow. |
+| `{ Psyche core Fable }`, `{ Psyche core Opus }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
+| `{ Psyche core Sonnet }` | `Purpose` is blank. Its bound `role:psyche-core-tertiary` receives the living's notice of a book comment, asks the appropriate flow to relay the comments, and relays a request for a proposal or design whole to Psyche core Opus. |
+| `{ Psyche criomos Opus }` | Declared purpose: fix the CriomOS infrastructure audit findings and report effects to Psyche core Primary. This recorded task is not current work authority. |
+| `{ Psyche restart Opus }` | Declared purpose: implement Flow 0.51.3 Restart in the same native session and report effects to Psyche core Primary. This recorded historical task is not current work authority. |
+
+Read both queries again before routing work: state and configuration can change independently.
 
 ## The Send input
 
@@ -52,12 +71,12 @@ A Result answers an Order and a Done closes a Task; a Result naming a Task, or a
 ## Examples
 
 ```sh
-$flow 'Send.{ { Psyche core Opus } Soft.Order.«Review the drain fix.» }'
-$flow 'Send.{ { Mind core Astra } MiddleAbrupt.Question.«Which revision?» }'
-$flow 'Send.{ { Mind core Astra } Soft.Task.{ 30 «Review the fix.» } }'
-$flow 'Send.{ { Psyche core Fable } Soft.Psyche.{ «the drain» «Fix it today.» } }'
-$flow 'Send.{ { Mind core Astra } Soft.Result.{ Order.«Review the fix.» «Reviewed; green.» } }'
-$flow 'Send.{ { Mind core Astra } Soft.Done.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
+flow 'Send.{ { Psyche core Opus } Soft.Order.«Review the drain fix.» }'
+flow 'Send.{ { Mind core Astra } MiddleAbrupt.Question.«Which revision?» }'
+flow 'Send.{ { Mind core Astra } Soft.Task.{ 30 «Review the fix.» } }'
+flow 'Send.{ { Psyche core Fable } Soft.Psyche.{ «the drain» «Fix it today.» } }'
+flow 'Send.{ { Mind core Astra } Soft.Result.{ Order.«Review the fix.» «Reviewed; green.» } }'
+flow 'Send.{ { Mind core Astra } Soft.Done.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
 ```
 
 ## The replies
