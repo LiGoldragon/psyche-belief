@@ -25,6 +25,8 @@ Prose is shown as rendered text.
 
 Code is shown as code, labelled with its language and highlighted in that language's colours.
 
+Prose carries no code: a type, a value or a datom, however short, is a code block, and prose names a thing by its name alone.
+
 ## Change marks
 
 A presentation shows belief modules, each under its repo › path; its headings, naming the module and the kind of change, are the only words it has of its own.
