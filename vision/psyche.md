@@ -3,7 +3,7 @@ description: The structure of the psyche — its four levels, where psyche data 
 dependencies: []
 ---
 
-Psyche contains Spirit, Intent, Vision, and Notion, in descending authority.
+Psyche contains Spirit, Intent and Vision, in descending authority. A notion is an idea not yet intended, a brainstorm the living has had and not ruled on; it is a Mind belief, kept in the mind repository under its own kind, and a notion that he rules into vision leaves Mind for Psyche.
 
 Everything the living says he wants is crystallized into the existing vision: psyche data is what the work mines for, and rich building stands on it.
 

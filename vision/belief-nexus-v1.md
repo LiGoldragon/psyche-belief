@@ -74,7 +74,7 @@ Signal
 
 ```ethos
 Library
-[]
+[ sema:[ Document Block Edit Place Outline ] ]
 [ Path.String                        ; a directory holding
                                      ;   <type>/<subject>.md
   ModuleSource.[ Repository.Path     ; a git repository, watched:
