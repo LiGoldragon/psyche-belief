@@ -32,3 +32,7 @@ A comment that explains an exception: the knot, confessing.
 ## Every action answers an event
 
 Polling, in any form and for any reason, is out of every design. Every action has a cause, and the cause is an event; a design names the event each action answers and finds where that event is announced, and the system is quiet when nothing has happened. A need whose event is not yet found is brought to Psyche, who finds it.
+
+## A name says what the thing is
+
+A name spells out what the thing is, whole: FrontMatter, not Front; ProgrammingLanguage, not Language. A shortening a reader must already know is a lingo, and none is made; a name is read right by someone who has never seen the system.
