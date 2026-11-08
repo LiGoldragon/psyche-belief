@@ -1,5 +1,6 @@
 ---
 description: Subflows, the actual flows that replace the harness subagent tool long term, are being designed or judged.
+dependencies: []
 ---
 
 ## Long term: actual flows replace the harness subagent tool
