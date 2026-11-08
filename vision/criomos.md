@@ -40,3 +40,6 @@ The cluster data holds a model table: from a computer's model it derives its fac
 A new service lives in CriomOS.
 A service is updated by bringing it up at its latest version.
 
+## Between events the operating system is silent
+
+CriomOS has no polling of any kind: no timer, no periodic job, no loop that looks. A service acts when something it listens to tells it: a path unit, a socket, a hook, a word from the kernel or from a Nexus. A writer who needs an event he cannot reach brings the need to Psyche, who finds the event; between events the operating system is silent.

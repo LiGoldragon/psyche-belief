@@ -28,3 +28,7 @@ A string in code: a name, a path, a command, a format or a message written as a 
 A fact held twice: two places that must agree are one place that was split.
 
 A comment that explains an exception: the knot, confessing.
+
+## Every action answers an event
+
+Polling, in any form and for any reason, is out of every design. Every action has a cause, and the cause is an event; a design names the event each action answers and finds where that event is announced, and the system is quiet when nothing has happened. A need whose event is not yet found is brought to Psyche, who finds it.
