@@ -1,6 +1,5 @@
 ---
 description: "The system context of every main flow: composed into its SYSTEM by the launcher, never loaded as a skill."
-user-only: true
 dependencies: []
 ---
 
