@@ -23,7 +23,7 @@ flowchart TB
     b -- "passes to" --> d["fresh flow"]
 ```
 
-A flow is refreshed after its landings: what he approved is landed and live before the handover is written. A handover is a broad overview of what the flow is still trying to do, and only that: the flow's judgment, what a successor could get by no look-up. A revision landed, a file's path, the state of a build or a queue is what one command returns in a handful of tokens, and the successor fetches it; the handover's words are spent on inference alone. The successor starts with a fresh point of view. The flow writes the handover at flows/<id>/handover.md when the Flow Nexus warns it, and the successor's first prompt is that file.
+A flow is refreshed after its landings: what he approved is landed and live before the handover is written. A handover is a broad overview of what the flow is still trying to do, and only that: the flow's judgment, what a successor could get by no look-up. A revision landed, a file's path, the state of a build or a queue is what one command returns in a handful of tokens, and the successor fetches it; the handover's words are spent on inference alone. The successor starts with a fresh point of view. The flow writes the handover at `flows/<id>/handover.md` when the Flow Nexus warns it, and the successor's first prompt is that file.
 
 ```mermaid
 flowchart TB
