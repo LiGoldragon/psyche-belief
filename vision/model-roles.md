@@ -35,7 +35,7 @@ Jev, a System 1 model, is the lowest power, below Haiku and Luna at low effort, 
 
 The most complex reasoning goes to Fable. Opus stands in for a design,
 or for a proposal into a psyche module, only when there is no Fable. Sonnet does large plain work
-and designs nothing.
+and designs nothing. A Nexus, and the infrastructure under the Nexuses, Ethos, Datom, Protos and Signal, is implemented by Opus or higher; Sonnet keeps the plain work around them.
 
 Every model launches the cheapest model that does the job, its own
 rarely.

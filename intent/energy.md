@@ -10,9 +10,10 @@ reaches a dearer reader carries everything that reader would otherwise
 spend itself to get; what reaches a cheaper reader may leave to it what
 it gets cheaply. A message that saves the sender's words and makes a
 dearer reader fetch has cost more, not less. A message carries the sender's
-reading of what happened. Technical output, an error message or a log,
-stays with the sender and is given when the reader asks for it; less is
-given first.
+reading of what happened. A text longer than a dozen lines, a draft, a
+log, a listing, an error, stays with its writer in a file, and the
+message carries the path and one line saying what the file is. The
+reader opens it, or sees from the line that it need not.
 
 ```mermaid
 flowchart TB

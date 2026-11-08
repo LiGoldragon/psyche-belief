@@ -16,6 +16,8 @@ Everything that can be configured is configuration. The Nexus holds the vocabula
 ## The vocabulary of a definition
 A metaflow is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the metaflow from outside. A harness is a definition like a metaflow: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a metaflow is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another metaflow, or the living; a message off the routes is refused. What a metaflow is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
 
+A member's definition names its intake, the most a message to it may carry; a Send beyond it is refused, naming the intake, and the sender writes a file.
+
 ```ethos
 Library
 [ herdr:[ Pane ]
@@ -45,9 +47,11 @@ Library
   Route.[ Speaks.FlowName             ; a member of this metaflow
           Metaflow.MetaflowName         ;   that metaflow's speaker
           Living ]
+  Intake.Integer                       ; the most characters a message to this member carries
   Member.{ FlowName HarnessName ModelName Effort
            Continuity Workspace Beliefs Tools
            Features.Vector<FeatureName>  ; of its harness, composed into its launch beside its complex's
+           Intake
            Vector<Route> }
   Metaflow.{ MetaflowName Vector<Member>
             Speaker.FlowName }
@@ -60,6 +64,17 @@ Library
   Brief.String ]
 []
 []
+```
+
+```datom
+; the designer's Fable takes a question; a worker takes a draft
+{ fable claude claude-fable-5-1 Medium
+  Permanent Path.«/home/li/primary»
+  { [ { Spirit core } ] Refuse }
+  HarnessDefault [] 1200
+  [ Speaks.opus Living ] }
+Send.{ 15c0ce { designer fable } Soft Notice.«…nine thousand characters…» }
+Refused.Oversized.{ { designer fable } 1200 }
 ```
 
 ```mermaid
@@ -275,7 +290,8 @@ Signal
   Broadcast.Vector<FlowId>           ; who received it
   Reported
   Subscribed
-  Refused.[ UnknownMetaflow.MetaflowName
+  Refused.[ Oversized.{ Address Intake }     ; the message exceeds the member's intake
+            UnknownMetaflow.MetaflowName
             UnknownHarness.HarnessName
             UnknownComplex.ComplexName
             UnknownFlow.FlowName
