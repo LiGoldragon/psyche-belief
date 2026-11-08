@@ -131,12 +131,14 @@ Metaflow.{
        { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
        Restricted.{ [ Bash Edit ] [ Artifact ] }
        [ ClaudeMd ]
+       1200
        [ Speaks.opus Living ] }
      { opus claude claude-opus-4 Medium Ephemeral
        Temporary
        { [ { Spirit core } { Role worker } ] Notice }
        HarnessDefault
        []
+       4000
        [ Speaks.fable Metaflow.implementer ] } ]
    fable }                           ; the speaker
 ```

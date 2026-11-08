@@ -173,51 +173,51 @@ The roster, as Members: each a permanent flow, in a temporary workspace, with th
 [ { lander claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role lander } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { bookmaker claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role book } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { bookPager claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role book-page } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { bookReader claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role book-reader } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { commentRelay claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role comment-relay } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { contextualizer claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role contextualizer } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { illustrator claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role illustrator } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { scripter claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role scripter } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { tester claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role tester } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { reader claude claude-haiku-4-5 Medium
       Permanent Temporary
       { [ { Role read } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { writer claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role write } ] Refuse }
-      HarnessDefault [] [] }
+      HarnessDefault [] 40000 [] }
   { worker claude claude-sonnet-5-5 Medium
       Permanent Temporary
       { [ { Role worker } ] Refuse }
-      HarnessDefault [] [] } ]
+      HarnessDefault [] 40000 [] } ]
 ```
 
 ```mermaid
@@ -394,6 +394,7 @@ Define.Metaflow.{
        Path.«/home/li/primary»
        { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
        HarnessDefault []
+       1200
        [ Living ] } ]
    fable }
 Defined.Metaflow.designer
