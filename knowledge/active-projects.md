@@ -5,10 +5,10 @@ dependencies: []
 
 The active repositories, under github.com/LiGoldragon:
 
-- protos, datom-codec, signal, meta-signal: the parsing and wire layers
+- protos, datom-codec, signal: the parsing and wire layers
 - ethos-zero: the ethos generator
-- flow: the Flow Nexus and its clients
-- herdr-nexus, belief-nexus: the Nexuses of the complex, version 1
+- flow, with signal-flow and meta-signal-flow: the Flow Nexus, its clients and its contracts
+- herdr-nexus, belief-nexus, each with its signal- and meta-signal- contract repositories: the Nexuses of the complex, version 1
 - sema: version 0
 - criomos: the hosts
 - psyche-belief, mind-belief, field-belief: the belief modules
