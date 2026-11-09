@@ -6,15 +6,15 @@ dependencies: []
 
 ## The CLI
 
-The `flow` on PATH is the configured 0.53.1 client. It speaks to the running Flow Nexus and takes one datom argument:
+The `flow-nexus` on PATH is Flow 0.53.3's ordinary client and `flow-nexus-meta` its meta client. Each takes one datom argument and nothing else, and reaches the Flow Nexus at the place its configuration names: `~/.config/nexus/flow-nexus.datom` (`$XDG_CONFIG_HOME/nexus/flow-nexus.datom` when set), `{ main }`. A missing or unreadable configuration, or one naming no place, is refused naming the file (`Missing.<path>`, `Unreadable.{ <path> <reason> }`, `Invalid.{ <path> <reason> }`, exit 2), and nothing is sent.
 
 ```sh
-flow 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
+flow-nexus 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
 ```
 
 ## Running permaflows and their routing
 
-`flow 'Metaflows'` reads current permaflow states. `flow-meta 'Configuration'` reads their committed declarations. The table below was read from both on 2026-11-07; all 22 addresses were `Awake`. A routing description is the declaration's `Purpose` unless it names a bound role. A blank `Purpose` leaves specialized routing unknown. A declared historical task describes the configuration and grants no present authority.
+`flow-nexus 'Metaflows'` reads current permaflow states. `flow-nexus-meta 'Configuration'` reads their committed declarations. `flow-nexus 'Observe.Metaflows'` stays open: `MetaflowsObserved.[ … ]` as `Metaflows` lists them, then `MetaflowChanged.<Metaflow>` for each metaflow that changes and `MetaflowGone.<Address>` for each no longer listed; a flow waiting for a recipient to wake or sleep waits on it. The table below was read from both on 2026-11-07; all 22 addresses were `Awake`. A routing description is the declaration's `Purpose` unless it names a bound role. A blank `Purpose` leaves specialized routing unknown. A declared historical task describes the configuration and grants no present authority.
 
 | Address | Work routed there by current evidence |
 |---|---|
@@ -47,16 +47,15 @@ Model.[ Fable Opus Sonnet Haiku Astra Sol Luna Terra ]
 Said.{ Context.String Verbatim.String }   ; what his words were about, and his words whole
 Minutes.Integer
 AnswerableTask.{ Minutes String }
-Answerable.[ Order.String
-             Task.AnswerableTask ]
+RequestId.String                          ; four characters, 0-9 and a-z
 SendableRequest.[ Order.String
                   Question.String
                   Psyche.Said
                   Psyches.Vector<Said>
-                  Result.{ Answerable String }  ; answers the request it names, written whole
+                  Result.{ RequestId String }   ; answers the Order or Question it names
                   Notice.String
                   Task.AnswerableTask
-                  Done.{ Answerable String } ]
+                  Done.{ RequestId String } ]   ; closes the Task it names
 SendableMessage.[ HardAbrupt.SendableRequest
                   MiddleAbrupt.SendableRequest
                   Soft.SendableRequest ]
@@ -66,53 +65,66 @@ The priority decides delivery. An awake recipient receives every priority at onc
 
 Text is a String, written in guillemets: «text». A text keeps its ordinary spaces. A datom holding an apostrophe is passed through a shell variable, since the argument is single-quoted.
 
-A Result answers an Order and a Done closes a Task; a Result naming a Task, or a Done naming an Order, is refused Unresolved. The Answerable repeats the original request byte for byte, escapes included, and a Task its Minutes too: a Result matches an Order the recipient sent the sender and that was delivered, a Done an open Task the recipient sent the sender. No match is Unresolved; more than one is Ambiguous.
+Every request reaches its recipient with its RequestId, which Flow draws when it admits the Send:
+
+```datom
+[ { Sender.{ Mind core Astra } Soft.Order.{ k7ph «Review the fix.» } } ]
+[ { Sender.{ Mind core Astra } Soft.Task.{ m2x9 30 «Review the fix.» } } ]
+```
+
+A Result answers an Order or a Question and a Done closes a Task, each naming the request by its RequestId. It is admitted when the request was sent by the Result's recipient to its sender, was delivered, and is still open; anything else, a Result naming a Task or a Done naming an Order among them, is refused Unresolved. One answer closes a request.
 
 ## Examples
 
 ```sh
-flow 'Send.{ { Psyche core Opus } Soft.Order.«Review the drain fix.» }'
-flow 'Send.{ { Mind core Astra } MiddleAbrupt.Question.«Which revision?» }'
-flow 'Send.{ { Mind core Astra } Soft.Task.{ 30 «Review the fix.» } }'
-flow 'Send.{ { Psyche core Fable } Soft.Psyche.{ «the drain» «Fix it today.» } }'
-flow 'Send.{ { Mind core Astra } Soft.Result.{ Order.«Review the fix.» «Reviewed; green.» } }'
-flow 'Send.{ { Mind core Astra } Soft.Done.{ Task.{ 30 «Review the fix.» } «Reviewed; green.» } }'
+flow-nexus 'Send.{ { Psyche core Opus } Soft.Order.«Review the drain fix.» }'
+flow-nexus 'Send.{ { Mind core Astra } MiddleAbrupt.Question.«Which revision?» }'
+flow-nexus 'Send.{ { Mind core Astra } Soft.Task.{ 30 «Review the fix.» } }'
+flow-nexus 'Send.{ { Psyche core Fable } Soft.Psyche.{ «the drain» «Fix it today.» } }'
+flow-nexus 'Send.{ { Mind core Astra } Soft.Result.{ k7ph «Reviewed; green.» } }'
+flow-nexus 'Send.{ { Mind core Astra } Soft.Done.{ m2x9 «Reviewed; green.» } }'
 ```
 
 ## The replies
 
 ```ethos
-Sent.NativeReceipt                         ; placed and received by the seat
-SendAccepted.{ DeliveryCursor DeliveryState }
+Sent.RequestId                             ; placed and received by the seat
+SendAccepted.{ RequestId DeliveryCursor VisibleDeliveryState }
 SendRefused.VisibleRefusal
-Failed.{ SendFailureReason }
-NativeReceipt.{ HarnessKind NativeSessionId NativePromptId.String }
-DeliveryState.[ Queued Attempting Retryable.RetryCause Uncertain
-                Delivered.NativeReceipt Failed.VisibleRefusal Withdrawn ]
-SendFailureReason.[ RecipientUnavailable.Address
-                    QueueNotPermitted
-                    Refused.VisibleRefusal
-                    ReceiptUncertain
-                    NotSent.String ]
+Failed.VisibleSendFailure
+VisibleDeliveryState.[ Queued Attempting Retryable.RetryCause Uncertain
+                       Delivered Read Failed.VisibleRefusal Withdrawn Archived ]
+VisibleSendFailure.[ Unadmitted.VisibleSendFailureReason
+                     Admitted.{ RequestId VisibleSendFailureReason } ]
+VisibleSendFailureReason.[ RecipientUnavailable.Address
+                           QueueNotPermitted
+                           Refused.VisibleRefusal
+                           ReceiptUncertain
+                           NotSent.String ]
 VisibleRefusal.[ Locked Held.Lock Awake Asleep Lapsed Unknown.VisibleUnknown
                  NotConfigured NotMessage Taken.Address
                  Unidentified.SeatEvidence Store.String NotSendServer.Process
                  Oversized.SendPayloadSize Direct.String TopicRefused.Topic
-                 Unresolved Ambiguous MinutesRefused.MinutesRefusal ]
+                 Unresolved RequestIdSpaceFull RequestIdDrawsCollided
+                 MinutesRefused.MinutesRefusal ]
 VisibleUnknown.[ Address.Address Lock.Lock Flow Key.Key ]
 MinutesRefusal.[ Zero Negative Unreachable ]
 ```
 
-Failed.ReceiptUncertain on a Soft or MiddleAbrupt Send means the message was placed in the recipient's pane without a receipt; it is delivered, and is not sent again.
+SendAccepted with Uncertain means the message was placed in the recipient's pane without its receipt; it is not sent again.
 
 ```datom
-Sent.{ Claude 7a89916f-3849-5122-89ac-f99fb99b9f70 37888ad9-4633-45a3-8e65-c191568ffb17 }
-SendAccepted.{ 116 Uncertain }
+Sent.k7ph
+SendAccepted.{ k7ph 116 Uncertain }
 SendRefused.Unknown.Address.{ Field verifyNoSuchTopic Haiku }   ; an address Flow does not hold
 SendRefused.TopicRefused.BadTopic
 SendRefused.MinutesRefused.Zero
 SendRefused.Unresolved                                           ; a Result or Done naming no open request
 ```
+
+## A flow's own refresh
+
+`flow-nexus 'Refresh.{ <Aspect> <topic> <Model> }'` naming the flow's own Address answers `RefreshQueued.{ <Address> <FlowId> }` while the flow works: the refresh is recorded and carried out at its next rest, its background work ended, and until then it receives what is sent to it. A resting flow is refreshed at once, `Refreshed.{ <Address> <FlowId> }`.
 
 ## When the Flow Nexus cannot deliver
 
