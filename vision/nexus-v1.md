@@ -114,7 +114,7 @@ impl Emittable for Command {           // trait: generated
 
 ## A Nexus starts in its place
 
-A Nexus reads nothing from the environment: it is started with one datom, its place. Runtime holds its sockets and defaults to `$XDG_RUNTIME_DIR/nexus/<place-name>/`; State holds its memory and defaults to `$XDG_STATE_HOME/nexus/<place-name>/`, `~/.local/state/nexus/<place-name>/` when the variable is unset. Both roots are the CLI's fixed defaults, taken from the standard XDG variables and from nothing else, never an argument. The CLI is `<nexus-name> <place-name> '<datom>'`: named after the Nexus; the place name picks the instance, resolved under the runtime root to the sockets. Two places are two names, and the stable one keeps running while the next is tried.
+A Nexus reads nothing from the environment: it is started with one datom, its place. Runtime holds its sockets and defaults to `$XDG_RUNTIME_DIR/nexus/<place-name>/`; State holds its memory and defaults to `$XDG_STATE_HOME/nexus/<place-name>/`, `~/.local/state/nexus/<place-name>/` when the variable is unset. Both roots are the CLI's fixed defaults, taken from the standard XDG variables and from nothing else, never an argument. The CLI is `<nexus-name> '<datom>'`: named after the Nexus, and taking the datom and nothing else. Whatever else it knows is its configuration, one datom at `$XDG_CONFIG_HOME/nexus/<nexus-name>.datom`, the place first among its values and more as the CLI gains options. The place name is resolved under the runtime root to the sockets. Two places are two names, and the stable one keeps running while the next is tried; a place is reached by the configuration that names it, so the testing capsule has its own configuration as it has its own sockets and store, and no place is ever typed.
 
 ```ethos
 Library
@@ -122,9 +122,16 @@ Library
 [ PlaceName.String                   ; main, next
   Place.{ PlaceName                  ; what every Nexus starts with
           Runtime.String             ; the sockets
-          State.String } ]           ; the memory
+          State.String }             ; the memory
+  CliConfiguration.{ PlaceName } ]   ; what the CLI knows besides its datom; grows as the CLI gains options
 []
 []
+```
+
+```sh
+# ~/.config/nexus/flow-nexus.datom
+{ main }
+flow-nexus 'Launch.{ designer fable «Read the book» }'
 ```
 
 ```datom

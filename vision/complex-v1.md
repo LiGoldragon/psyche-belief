@@ -97,9 +97,9 @@ flowchart TB
 The Flow Nexus, the Belief Nexus and the herdr Nexus run a complex. Each is started in its place, a Nexus startup fact of vision:nexus-v1: the three that run one complex share one place name, and a CLI reaches them by it. Two place names are two sets of Nexuses, so the stable set keeps running while the next is tried; the complexes are whatever the Flow Nexus at that place holds.
 
 ```sh
-# the CLI: the place's name, then one datom
-flow-nexus main 'Launch.{ designer fable «Read the book» }'
-herdr-nexus main 'Prompt.{ { main wQ:pT } «hello» }'
+# the CLI: one datom; the place is its configuration's
+flow-nexus 'Launch.{ designer fable «Read the book» }'
+herdr-nexus 'Prompt.{ { main wQ:pT } «hello» }'
 ```
 
 ## The Nexuses are built and started by Nix
@@ -117,8 +117,8 @@ The Nexuses hold vocabulary; the owner writes definitions in datom. A definition
 A new place is told its complexes by replaying the definition files, one Define per file, harnesses before the metaflows that name them and metaflows before the complexes that name them; nothing is migrated from the place before it, and the set of files is the whole of what a place needs to know.
 
 ```sh
-# the owner's definitions, replayed into a fresh place
-for f in definitions/*.datom; do flow-nexus next "Define.$(cat "$f")"; done
+# the owner's definitions, replayed into a fresh place, from the capsule whose configuration names it
+for f in definitions/*.datom; do flow-nexus "Define.$(cat "$f")"; done
 ```
 
 ```datom

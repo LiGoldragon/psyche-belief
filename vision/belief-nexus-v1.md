@@ -45,7 +45,7 @@ Register.Directory./home/li/psyche-belief-edits
 ```
 
 ```sh
-belief-nexus main '
+belief-nexus '
   Register.
     /git/github.com/LiGoldragon/psyche-belief'
 ```

@@ -169,7 +169,7 @@ A Codex reset is redeemed when the provider says usage is not allowed and work i
 The Flow Nexus subscribes. On Plenty it launches more and higher; on Low it launches fewer and cheaper; on Out it lets flows sleep and wakes them on Changed. What it does at each level is its own configuration, not the Energy Nexus's.
 
 ```datom
-energy-nexus main 'Read.Codex'
+energy-nexus 'Read.Codex'
 Read.{ { Codex true [ { Week 92 1762235580 10080 } ] [ { rc_1 Available 1762450320 } ] 1762210000 }
        { Codex Even 23 92 Over 1 } }
 Configure.Reminder.{ Codex Low { Psyche core Primary } }
