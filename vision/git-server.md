@@ -19,7 +19,7 @@ inputs.signal.url = "git+ssh://git.example.criom.net/li/signal";   # an example 
 ```
 
 ```nix
-inputs.flow.url = "git+ssh://git.example.criom.net/flow";   # the cluster's own server; flake.lock holds the commit
+inputs.flow.url = "git+ssh://git.example.criom.net/li/flow";   # the cluster's own server, under the owner's namespace; flake.lock holds the commit
 ```
 
 ```mermaid
