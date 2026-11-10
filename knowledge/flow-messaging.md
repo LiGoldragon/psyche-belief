@@ -38,8 +38,7 @@ An address names its model: { Psyche core Fable }, { Mind core Astra }. Any mode
 
 ```ethos
 Send.SendRequest
-SendRequest.{ Recipient SendableMessage }
-Recipient.Address
+SendRequest.{ Address SendableMessage }   ; the recipient, then the message
 Address.{ Aspect Topic Model }
 Aspect.[ Psyche Mind Field ]
 Topic.String                              ; an uncapitalized camelCase identifier
