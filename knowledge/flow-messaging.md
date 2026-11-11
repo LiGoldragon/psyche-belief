@@ -6,7 +6,7 @@ dependencies: []
 
 ## The CLI
 
-The `flow-nexus` on PATH is Flow 0.53.3's ordinary client and `flow-nexus-meta` its meta client. Each takes one datom argument and nothing else, and reaches the Flow Nexus at the place its configuration names: `~/.config/nexus/flow-nexus.datom` (`$XDG_CONFIG_HOME/nexus/flow-nexus.datom` when set), `{ main }`. A missing or unreadable configuration, or one naming no place, is refused naming the file (`Missing.<path>`, `Unreadable.{ <path> <reason> }`, `Invalid.{ <path> <reason> }`, exit 2), and nothing is sent.
+The `flow-nexus` on PATH is Flow 0.54.3's ordinary client and `flow-nexus-meta` its meta client. Each takes one datom argument and nothing else, and reaches the Flow Nexus at the place its configuration names: `~/.config/nexus/flow-nexus.datom` (`$XDG_CONFIG_HOME/nexus/flow-nexus.datom` when set), `{ main }`. A missing or unreadable configuration, or one naming no place, is refused naming the file (`Missing.<path>`, `Unreadable.{ <path> <reason> }`, `Invalid.{ <path> <reason> }`, exit 2), and nothing is sent.
 
 ```sh
 flow-nexus 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
@@ -44,14 +44,14 @@ Address.{ Aspect Topic Model }
 Aspect.[ Psyche Mind Field ]
 Topic.String                              ; an uncapitalized camelCase identifier
 Model.[ Fable Opus Sonnet Haiku Astra Sol Luna Terra ]
-Said.{ Context.String Verbatim.String }   ; what his words were about, and his words whole
+Context.String                            ; what the living's words were about
+Verbatim.String                           ; his words whole
 Minutes.Integer
 AnswerableTask.{ Minutes String }
 RequestId.String                          ; four characters, 0-9 and a-z
 SendableRequest.[ Order.String
                   Question.String
-                  Psyche.Said
-                  Psyches.Vector<Said>
+                  Living.{ Context Verbatim }   ; one saying; several are several Sends
                   Result.{ RequestId String }   ; answers the Order or Question it names
                   Notice.String
                   Task.AnswerableTask
@@ -72,7 +72,9 @@ Every request reaches its recipient with its RequestId, which Flow draws when it
 [ { Sender.{ Mind core Astra } Soft.Task.{ m2x9 30 «Review the fix.» } } ]
 ```
 
-A Result answers an Order or a Question and a Done closes a Task, each naming the request by its RequestId. It is admitted when the request was sent by the Result's recipient to its sender, was delivered, and is still open; anything else, a Result naming a Task or a Done naming an Order among them, is refused Unresolved. One answer closes a request.
+A Result answers an Order or a Question and a Done closes a Task, each naming the request by its RequestId. It is admitted when the request was delivered and is still open; anything else, a Result naming a Task or a Done naming an Order among them, is refused Unresolved. One answer closes a request. The Flow Nexus routes it to the sender of the request it names, whatever address the Send writes. A request whose sender is no address, the living at a shell or Flow itself, keeps its answer: the Send answers `Sent.<RequestId>` and `flow-nexus 'Answer.<RequestId>'` reads it, `Answered.{ <sender> <priority>.Result.{ <RequestId> «…» } }`.
+
+`flow-nexus 'Remind.{ <Address> <Minutes> «text» }'` reminds that address after the minutes, `Reminded.<RequestId>`: it is sent `MiddleAbrupt.Reminder.{ <RequestId> «text» }` from whoever asked, and `Cancel.<RequestId>` ends it before then. `flow-nexus 'Queues'` reads every queue that holds something, each message with its sender and priority as it would land in the prompt.
 
 ## Examples
 
@@ -80,7 +82,7 @@ A Result answers an Order or a Question and a Done closes a Task, each naming th
 flow-nexus 'Send.{ { Psyche core Opus } Soft.Order.«Review the drain fix.» }'
 flow-nexus 'Send.{ { Mind core Astra } MiddleAbrupt.Question.«Which revision?» }'
 flow-nexus 'Send.{ { Mind core Astra } Soft.Task.{ 30 «Review the fix.» } }'
-flow-nexus 'Send.{ { Psyche core Fable } Soft.Psyche.{ «the drain» «Fix it today.» } }'
+flow-nexus 'Send.{ { Psyche core Fable } Soft.Living.{ «the drain» «Fix it today.» } }'
 flow-nexus 'Send.{ { Mind core Astra } Soft.Result.{ k7ph «Reviewed; green.» } }'
 flow-nexus 'Send.{ { Mind core Astra } Soft.Done.{ m2x9 «Reviewed; green.» } }'
 ```
