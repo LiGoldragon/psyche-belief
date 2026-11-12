@@ -14,24 +14,9 @@ flow-nexus 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
 
 ## Running permaflows and their routing
 
-`flow-nexus 'Metaflows'` reads current permaflow states. `flow-nexus-meta 'Configuration'` reads their committed declarations. `flow-nexus 'Observe.Metaflows'` stays open: `MetaflowsObserved.[ … ]` as `Metaflows` lists them, then `MetaflowChanged.<Metaflow>` for each metaflow that changes and `MetaflowGone.<Address>` for each no longer listed; a flow waiting for a recipient to wake or sleep waits on it. The table below was read from both on 2026-11-07, when all 22 addresses were `Awake`; the rows for `{ Psyche book Haiku }`, `{ Psyche comments Haiku }` and `{ Psyche core Sonnet }` were read from the declaration and its roles on 2026-11-10. A routing description is the declaration's `Purpose` unless it names a bound role. A blank `Purpose` leaves specialized routing unknown. A declared historical task describes the configuration and grants no present authority.
+`flow-nexus 'Metaflows'` reads current permaflow states. `flow-nexus-meta 'Configuration'` reads their committed declarations. `flow-nexus 'Observe.Metaflows'` stays open: `MetaflowsObserved.[ … ]` as `Metaflows` lists them, then `MetaflowChanged.<Metaflow>` for each metaflow that changes and `MetaflowGone.<Address>` for each no longer listed; a flow waiting for a recipient to wake or sleep waits on it. A routing description is the declaration's `Purpose` unless it names a bound role. A blank `Purpose` leaves specialized routing unknown. A declared historical task describes the configuration and grants no present authority.
 
-| Address | Work routed there by current evidence |
-|---|---|
-| `{ Field protosReview Sonnet }` | Declared purpose: sole reviewer and publisher of the four exact Protos consumer candidates, under Field core Astra coordination and the explicit review brief. |
-| `{ Field protosConsumers Sonnet }` | Declared purpose: implementation lane for the consumers of Protos: datom-codec first, then signal, meta-signal and the other dependents, new versions, locks, tests and pushes, after the approved dependency graph, under Field core Primary source custody. |
-| `{ Field protos Sonnet }` | Declared purpose: implementation lane for Protos: the protos crate, its version, UPGRADES, tests and review, under Field core Primary source custody. |
-| `{ Field core Astra }`, `{ Field core Sol }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
-| `{ Mind datomCodec Sol }`, `{ Mind herdrNexus Sol }`, `{ Mind nixCriomos Sol }`, `{ Mind orchestrate Sol }`, `{ Mind versionZero Astra }`, `{ Mind versionZero Sol }`, `{ Mind core Astra }`, `{ Mind core Sol }`, `{ Mind lojix Sol }`, `{ Mind flowNexus Sol }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
-| `{ Mind beliefNexus Astra }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
-| `{ Psyche book Haiku }` | `Purpose` is blank. Its bound `role:book-publishing-procedure` says it is sent a presentation source path, publishes the built page, and returns the title and link to the ordering flow. It arms no comment watch: it sends each proposal's title and link to `{ Psyche comments Haiku }` and adds the book to the open-books record. |
-| `{ Psyche comments Haiku }` | Declared purpose: arms the live comment watch on each book awaiting the living's ruling and relays each comment, whole, to Psyche core Fable. Its bound `role:comment-watch` holds ten watches at most and re-arms them from the open-books record, `/home/li/primary/flows/book/open-books.datom`, on a successor's first turn. |
-| `{ Psyche core Fable }`, `{ Psyche core Opus }` | Specialized routing is unknown: `Purpose` is blank and no routing role is bound. |
-| `{ Psyche core Sonnet }` | `Purpose` is blank. Its bound `role:psyche-core-tertiary` sends the living's notice of a book comment to `{ Psyche comments Haiku }`, naming the book, and relays a request for a proposal or design whole to Psyche core Opus. |
-| `{ Psyche criomos Opus }` | Declared purpose: fix the CriomOS infrastructure audit findings and report effects to Psyche core Primary. This recorded task is not current work authority. |
-| `{ Psyche restart Opus }` | Declared purpose: implement Flow 0.51.3 Restart in the same native session and report effects to Psyche core Primary. This recorded historical task is not current work authority. |
-
-Read both queries again before routing work: state and configuration can change independently.
+Read both queries before routing work: state and configuration can change independently.
 
 ## The Send input
 
