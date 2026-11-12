@@ -9,6 +9,10 @@ The active repositories, under github.com/LiGoldragon:
 - ethos-zero: the ethos generator
 - flow, with signal-flow and meta-signal-flow: the Flow Nexus, its clients and its contracts
 - herdr-nexus, belief-nexus, each with its signal- and meta-signal- contract repositories: the Nexuses of the complex, version 1
+- Curriculum, with signal-curriculum-nexus and meta-signal-curriculum-nexus: Curriculum, version 1
+- energy-nexus, with signal-energy-nexus and meta-signal-energy-nexus: the Energy Nexus
+- book-nexus, with signal-book-nexus and meta-signal-book-nexus: the book tools
+- the test repository of each Nexus above, named <nexus>-tests: its tests
 - translator: the translator herdr-nexus and belief-nexus run
 - sema: version 0
 - criomos: the hosts
