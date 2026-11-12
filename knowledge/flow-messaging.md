@@ -12,9 +12,7 @@ The `flow-nexus` on PATH is Flow 0.54.3's ordinary client and `flow-nexus-meta` 
 flow-nexus 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
 ```
 
-## Permaflow states
-
-`flow-nexus 'Metaflows'` reads current permaflow states. `flow-nexus-meta 'Configuration'` reads their committed declarations. `flow-nexus 'Observe.Metaflows'` stays open: `MetaflowsObserved.[ … ]` as `Metaflows` lists them, then `MetaflowChanged.<Metaflow>` for each metaflow that changes and `MetaflowGone.<Address>` for each no longer listed; a flow waiting for a recipient to wake or sleep waits on it.
+A flow sends to the address it already knows; `flow-nexus Metaflows` is read only when an address is in doubt.
 
 ## The Send input
 
