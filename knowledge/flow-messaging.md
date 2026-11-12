@@ -46,6 +46,8 @@ The priority decides delivery. An awake recipient receives every priority at onc
 
 Text is a String, written in guillemets: «text». A text keeps its ordinary spaces. A datom holding an apostrophe is passed through a shell variable, since the argument is single-quoted.
 
+A message is written as ordinary English sentences, a space between every two words.
+
 Every request reaches its recipient with its RequestId, which Flow draws when it admits the Send:
 
 ```datom
