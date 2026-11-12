@@ -12,7 +12,7 @@ The `flow-nexus` on PATH is Flow 0.54.3's ordinary client and `flow-nexus-meta` 
 flow-nexus 'Send.{ { Psyche core Fable } Soft.Notice.«The build is green.» }'
 ```
 
-A flow sends to the address it already knows; `flow-nexus Metaflows` is read only when an address is in doubt.
+A flow sends to the address it already knows. To learn which permaflows exist or what they are doing, it asks the cheap core flow of its own aspect, { Psyche core Sonnet }, { Mind core Sol } or { Field core Sol }, which reads the listing and answers with the few addresses that bear on the question.
 
 ## The Send input
 
