@@ -222,8 +222,6 @@ A flow refreshes before compaction; a compaction is a refresh that was missed.
 
 A flow that keeps working without being given more work may compact. Its compaction raises a warning, and a flow investigates why it worked so long, so that the trouble is brought to the living or Psyche reconsiders the approach and gives guidance.
 
-An ephemeral flow is a continuous job flow that does not wake back up: it takes jobs while it runs, up to a ceiling on its context, and past the ceiling it is given no new job and another ephemeral flow takes it.
-
 ## A superseded flow is closed
 
 An abandoned, duplicated or superseded flow is closed, archived and deregistered.
