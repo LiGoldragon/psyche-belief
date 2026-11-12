@@ -7,6 +7,7 @@ The active repositories, under github.com/LiGoldragon:
 
 - protos, datom-codec, signal: the parsing and wire layers
 - ethos-zero: the ethos generator
+- nexus: the library that defines the core of a Nexus, its shared traits among it
 - flow, with signal-flow and meta-signal-flow: the Flow Nexus, its clients and its contracts
 - herdr-nexus, belief-nexus, each with its signal- and meta-signal- contract repositories: the Nexuses of the complex, version 1
 - Curriculum, with signal-curriculum-nexus and meta-signal-curriculum-nexus: Curriculum, version 1
