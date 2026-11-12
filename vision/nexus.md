@@ -56,6 +56,36 @@ The running Nexus holds its whole domain as typed values, a specific type for ev
 
 Signal is the messaging layer and the wire's only traffic: an rkyv binary archive, typed, validated on receive, length-prefixed on the socket. Every reply is typed, refusals included: errors are vocabulary. The wire vocabulary's version is its contract crate's semver.
 
+## The variations of a feature stand at the root
+
+A feature of a Nexus is called in more than one variation. Each variation is an input of its own, at the root of the Signal's inputs, and its answer is an output of its own, at the root of the outputs. The plainly named input is the default: the briefest to write and the briefest answered, because most calls are that one. A variation that takes more or answers more bears a longer name that says accurately what it varies: verbose, custom, debug. So the cost of a variation is paid by its caller alone, and the default call stays as short as its name. The names below are an example, one feature of many.
+
+```ethos
+Signal
+[]                                    ; imports
+[ Records                             ; inputs: the default, plainly named, takes nothing
+  RecordsVerbose.Limit                ;   a variation: takes an option, answers more
+  RecordsDebug.Limit ]                ;   a variation: answers what the Nexus keeps for its own work
+[ Records.Vector<Name>                ; outputs: the default answer, the names alone
+  RecordsVerbose.Vector<Record>       ;   each record whole
+  RecordsDebug.Vector<Stored> ]       ;   each record with its storage id
+[ Name.String                         ; types
+  Limit.Integer                       ;   how many records at most
+  Size.Integer
+  StorageId.String
+  Record.{ Name Size }
+  Stored.{ Record StorageId } ]
+```
+
+```datom
+; the default: asked, then answered
+Records
+Records.[ «alpha» «beta» ]
+; the verbose variation: one option taken, more answered
+RecordsVerbose.1
+RecordsVerbose.[ { «alpha» 12 } ]
+```
+
 ## A Nexus keeps nobody out
 
 A Nexus runs for its owner, with his credentials, and keeps nobody out: it checks what it needs to run. Security is the host's, whole, by its users and its kernel; a guard inside a Nexus is a difficulty, not a security.
