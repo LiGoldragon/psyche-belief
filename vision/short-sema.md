@@ -1,5 +1,5 @@
 ---
-description: The short-term compromise of Sema: what stands until the full verb set lands.
+description: Sema: what stands until the full verb set lands.
 dependencies: [vision-sema]
 ---
 

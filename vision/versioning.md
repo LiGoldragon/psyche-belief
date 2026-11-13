@@ -23,7 +23,7 @@ Every change to a source is a new version. The change and its number land in the
 
 A full rewrite is the next version: built from the vision alone, reusing nothing of the implementation it replaces. It may live in the same repository, as a branch forked from the root commit and starting empty; this is one way of doing it, in Git or Jujutsu alike, and the rule is the empty start, not the tool. It runs beside the stable in a metaflow of its own and is switched to when it has proved itself.
 
-While two versions live, each has its own vision module: the running version keeps `vision:<nexus>` and goes on taking fixes, and the rewrite is designed in `vision:<nexus>-<version>`, as vision:flow-nexus-v1; when the rewrite is the stable, the old module is archived and the new one takes the name.
+While two versions live, each has its own vision module, named by its number: the running version keeps its number, `vision:<nexus>:0`, and goes on taking fixes, and the rewrite is designed in the next, `vision:<nexus>:1`, as vision:flow-nexus:1; when the rewrite is the stable, the old module is archived.
 
 ## One source
 
