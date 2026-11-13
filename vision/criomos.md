@@ -35,6 +35,40 @@ A fix that only some hardware needs is a value in the cluster data, marked by th
 A library reads the cluster's list of its hardware and answers, by processor, model and variant, which fixes a computer needs.
 The cluster data holds a model table: from a computer's model it derives its facts, its processor architecture, display and form factor among them; a computer of unknown model is given its architecture and form factor by hand; Field verifies the hardware after boot. A form factor is a variant named for what the computer is, handheld, laptop, paper-size tablet or large tablet, in high or low pixel density. The hardware record has sections, audio, visual and interface among them.
 
+### Battery care
+
+Battery care is a capability of a laptop node, declared in the cluster data with its values. The battery is held between two levels while the charger is connected. When a charge begins and the last full charge is older than the configured days, that charge goes to full, which resets the gauge; when the battery reports full, the node discharges it back to the limit with the charger still connected, and holds it there again. Where the hardware cannot discharge while connected, the node returns to holding and the level falls when the charger is next away.
+
+The firmware may forget the levels; they are written again, and read back, at every boot, every resume from any sleep and every connection of the charger. When the service stops, and again when it starts, it returns the battery to charging as the firmware does by itself, so a discharge left unfinished ends at the next start.
+
+```ethos
+Library
+[]                                   ; imports
+[ Percent.Integer                    ; types
+  Days.Integer
+  BatteryCare.{ Resume.Percent       ; the capability: charging resumes below this level
+                Limit.Percent        ;   and stops at this one
+                FullEvery.Days }     ;   a charge goes to full when the last full charge is older
+  Phase.[ Holding                    ; held between Resume and Limit
+          Calibrating                ; this charge goes to full
+          Returning ] ]              ; full reached: discharging to Limit, charger connected
+[]                                   ; traits
+[]                                   ; associations
+```
+
+```datom
+; a laptop node in the cluster data; the names are an example
+{ laptop Laptop [ BatteryCare.{ 75 80 30 } ] }
+```
+
+```mermaid
+flowchart TB
+    h["Holding: between Resume and Limit"] -- "a charge begins, the last full charge older than FullEvery" --> c["Calibrating: this charge goes to full"]
+    c -- "the battery reports full" --> r["Returning: discharging, charger connected"]
+    r -- "the level reaches Limit" --> h
+    e["boot, resume, charger connected"] -- "writes the levels again, and reads them back" --> h
+```
+
 ## Services
 
 A new service lives in CriomOS.
