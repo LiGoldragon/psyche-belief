@@ -177,6 +177,8 @@ takes one line at a time.
 { FlowId State.[ Running Ended ] Vector<Event> }
 ```
 
+## Parsing happens inside a context
+
 Protos parsing always happens inside a context, and only the
 current context gives shapes their meaning: it defines which
 shapes can appear next and which shape completes it. A met shape
