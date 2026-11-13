@@ -13,7 +13,7 @@ A proposal states what is wanted of the system; it documents nothing.
 
 A proposal is the vision as it will be. A removed line is shown as the text it was, under a red margin, so the edit can be seen, and nothing else is made of it: it is not drawn, not summarised and not shown as a state of anything. A proof, a test, a milestone or a sequence of work is an order, and goes to a bead; written into a proposal it is a vision impurity.
 
-A versioned module is self-contained: everything true of that version is in it, and the version is named once, in its description. Another version is not mentioned.
+A versioned module is self-contained: everything true of that version is in it, and the version is named once, in its name. Another version is not mentioned.
 
 A proposal is a proposal into belief modules, and the whole of it is its crystallization: what it removes and what it adds.
 

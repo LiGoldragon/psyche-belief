@@ -7,7 +7,7 @@ A system is simple when each thing in it does one thing and the things are not b
 
 A design is one set of ideas held whole by one mind, drawn from the complete concept it belongs to; a good idea holds together like a person. It is made so simple that there are obviously no deficiencies, rather than so complicated that there are no obvious ones.
 
-A design is begun by listing its unknowns and judging them against the complete concept. Research feeds it options to choose from. It advances one step at a time, each step one thing judged on its own: the design, or an abstraction the design needs, or the behavior on that abstraction; a line that needs an abstraction the system lacks is two steps, the abstraction first. A short-term proposal names what it builds on and proposes only what can be built next.
+A design is begun by listing its unknowns and judging them against the complete concept. Research feeds it options to choose from. It advances one step at a time, each step one thing judged on its own: the design, or an abstraction the design needs, or the behavior on that abstraction; a line that needs an abstraction the system lacks is two steps, the abstraction first. A proposal for the version being built names what it builds on and proposes only what can be built next.
 
 A rewrite is designed first and small: a complex system that works grew from a simple system that worked, so the new system is the smallest one that works, and grows from there.
 
