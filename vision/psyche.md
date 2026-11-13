@@ -17,3 +17,9 @@ Vision is what is wanted; it is neither real nor unreal, and it documents nothin
 ## A record is a proposal
 
 What the living says is not written down. What it changes is: Fable restructures, simplifies and harmonizes it with everything he has said, as a line in a proposal. The transcript holds his words; nothing else does.
+
+## Vision is a series of versions
+
+Vision is what the living says the system is to be. A topic's vision is versioned as every belief module is, and each version is more capable than the one before. A new idea goes into the latest version until that version is specified and implemented so far that the idea would break it or put too much on it; then the next version begins, and the idea goes there. An earlier version is phased out as the later ones run, and the numbers go on.
+
+Each version of a vision has its own main branch in each repository that holds its code. Several versions may be in implementation at once.

@@ -80,3 +80,7 @@ flowchart TB
     d["a contradicted line"] -- "is" --> e["removed"]
     e -- "then places" --> g["the new line"]
 ```
+
+## A belief module is versioned
+
+Every belief module is versioned, as software is. A topic's belief modules are a series of versions: a new concept starts at version 0, and what follows it is version 1. Each version has its own module, and every module's name is three fields, its type, its topic and its version number, `<type>:<topic>:<number>`; a topic with one module has it at version 0. A change to a module's lines is a revision of that version; a new number begins a version that stands beside the earlier one. A module of any type that is about one version of a thing carries that version: `vision:flow-nexus:1` says what the Flow Nexus, version 1, is to be, and `knowledge:flow-nexus:1` holds what is known of it as built.
