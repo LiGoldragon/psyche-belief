@@ -166,6 +166,8 @@ Energy is best spent in the hours it is most useful, so pace measures time in us
 
 The schedule is its owner's: one who works every day, one who keeps the weekend, and one who has two evenings a week each say so in spans.
 
+Where two spans name the same hour, the more specific one counts: the span naming fewer days, and between two naming as many days, the one naming fewer hours. An override counts over every span.
+
 ```ethos
 Hours.Integer
 Hour.Integer                         ; 0 to 23, in the owner's local time
