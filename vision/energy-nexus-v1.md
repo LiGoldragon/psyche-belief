@@ -77,7 +77,7 @@ Signal
 
 ```ethos
 Signal
-[ energy:[ Provider Threshold Reminder Minutes ResetId ProviderTarget ] ]
+[ energy:[ Provider Threshold Reminder Minutes Percent ResetId ProviderTarget Span Override Baseline ] ]
 [ Configure.Set ]
 [ Configured.Set
   ConfigureRefused.String ]
@@ -143,7 +143,7 @@ impl Emittable for CodexRateLimits {                      // the one place the w
 
 ```ethos
 Memory
-[ energy:[ Provider Reading Level Threshold Reminder Minutes Percent ProviderTarget ] ]
+[ energy:[ Provider Reading Level Threshold Reminder Minutes Percent ProviderTarget Span Override Baseline ] ]
 [ Latest.{ Provider Reading Level }
   History.Vector<Reading>
   Configuration.{ Polling.Minutes
