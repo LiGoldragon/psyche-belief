@@ -1,5 +1,5 @@
 ---
-description: The long-term vision of model roles, how a Fable flow is served by the flows below it, is being designed or judged.
+description: Model roles, how a Fable flow is served by the flows below it, are being designed or judged.
 dependencies: []
 ---
 

@@ -39,7 +39,7 @@ Spirit and intent are placed in the system prompt.
 
 The vocabulary is context, belief modules and context building.
 
-A context repository holds one folder per module type, each named for its type. A file is named by its subject alone, and its folder gives its type.
+A context repository holds one folder per module type, each named for its type. A file is named by its version number, and its folders give its type and its topic.
 
 ## Change through the living or a mechanism
 

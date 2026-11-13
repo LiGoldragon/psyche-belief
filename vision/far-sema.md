@@ -1,5 +1,5 @@
 ---
-description: The far vision of Sema: the living read through every channel, and the machine spoken to in signal alone.
+description: Sema: the living read through every channel, and the machine spoken to in signal alone.
 dependencies: [vision-sema]
 ---
 

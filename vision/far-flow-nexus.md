@@ -1,5 +1,5 @@
 ---
-description: The far vision of the Flow Nexus, loaded by a flow designing that horizon.
+description: The Flow Nexus, loaded by a flow designing it.
 dependencies: [vision-flow-nexus]
 ---
 

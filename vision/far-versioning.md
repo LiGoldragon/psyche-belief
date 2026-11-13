@@ -1,5 +1,5 @@
 ---
-description: The far vision of upgrading a running system from one version to the next, its state shifted without the system being killed, is being designed or judged.
+description: Upgrading a running system from one version to the next, its state shifted without the system being killed, is being designed or judged.
 dependencies: [vision-versioning]
 ---
 

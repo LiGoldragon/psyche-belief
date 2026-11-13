@@ -1,5 +1,5 @@
 ---
-description: The short-term compromise of ethos: how an Emission is written while ethos-zero knows no Emission root.
+description: Ethos: how an Emission is written while ethos-zero knows no Emission root.
 dependencies: []
 ---
 
