@@ -12,7 +12,7 @@ coordinates concurrent work across those repositories.
 
 The belief modules belong in a context repository; Psyche's is psyche-belief.
 
-Vision is what is wanted; it is neither real nor unreal, and it documents nothing. The minute a line is not wanted it is not vision: there is one vision, the one in the module now, and nothing refers to a past one. Vision refers only to vision: every type a vision names is defined in a vision module. The horizons separate what he sees long term from what he pursues now so that it arrives more quickly.
+Vision is what is wanted; it is neither real nor unreal, and it documents nothing. The minute a line is not wanted it is not vision: there is one vision, the one in the module now, and nothing refers to a past one. Vision refers only to vision: every type a vision names is defined in a vision module. The versions separate what he sees further on from what he pursues now so that it arrives more quickly.
 
 ## A record is a proposal
 
