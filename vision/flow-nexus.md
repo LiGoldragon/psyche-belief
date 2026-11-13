@@ -193,6 +193,10 @@ Configure.Permaflow.{
    [ Artifact ClaudeMd GitInstructions ] }
 ```
 
+## One block, with the startup skills in it
+
+A flow starts from one startup prompt: a single block of text. Some skills are startup skills: they are given to particular flows at their start and never to their subflows. A startup skill enters through the startup prompt.
+
 ## Repository and belief modules
 
 The flow repository holds the machinery of the Flow Nexus and is a runtime repository.

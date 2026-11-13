@@ -1,5 +1,5 @@
 ---
-description: Code is structured, or Datom or Ethos Zero is judged for solidity.
+description: Code is written, or its structure is judged.
 dependencies: []
 ---
 
