@@ -144,6 +144,16 @@ Rehearsed.«herdr --session main agent start … -- --dangerously-skip-permissio
 
 A harness is described in configuration: every feature it has, and what leaving that feature out does to the launch, a flag or a variable. The Nexus holds no feature and no effect of its own; it reads the effect from the declaration and composes the launch from the names a permaflow lists. A new harness, or a new version of one, is a new declaration. Where two features share one flag, the composition emits that flag once, with the names merged.
 
+A permaflow is one definition: everything the Flow Nexus holds about one address is in it. Configuration changes one value at a time: one permaflow is added, replaced or removed alone, and one value of one permaflow, a module among them, is changed alone, by naming the address and the value. The change takes effect at the permaflow's next flow.
+
+```mermaid
+flowchart TB
+    a["Configure.Amend: an address and one change"] -- "changes" --> b["one value of one permaflow"]
+    c["Configure.Permaflow: one definition, whole"] -- "adds or replaces" --> d["one permaflow"]
+    b -- "takes effect at" --> e["that permaflow's next flow"]
+    d -- "takes effect at" --> e
+```
+
 ```ethos
 Library
 [ flow:[ Address ] ]                  ; imports: the permaflow's address
@@ -156,12 +166,59 @@ Library
   Harness.{ HarnessName               ; the declaration: every feature the harness has
             Features.Vector<Feature> }
   Root.String                         ; the flow's working directory
+  ModuleName.String                   ; a belief module, by its name: type, topic, version
+  Purpose.String                      ; what the permaflow is for, composed into its first prompt
+  Kind.[ Regular Simplified ]         ; a simplified flow judges alone, with no regular tool
+  Continuity.[ Maintained             ; always has a running flow
+               OnDemand ]             ;   asleep until a request wakes it
   Permaflow.{ Address
               Option<Root>
               HarnessName
-              LeaveOuts.Vector<FeatureName> } ]
+              LeaveOuts.Vector<FeatureName>
+              SystemModules.Vector<ModuleName>   ; composed into the system prompt
+              PromptModules.Vector<ModuleName>   ; composed into the first prompt
+              Purpose
+              Kind
+              Continuity } ]
 []                                    ; traits
 []                                    ; associations
+```
+
+```ethos
+Signal
+[ flow:[ Address Root HarnessName FeatureName ModuleName   ; imports
+         Purpose Kind Continuity Permaflow Harness ] ]
+[ Configure.Set ]                          ; inputs: one change at a time
+[ Configured.Set                           ; outputs: the change made
+  ConfigureRefused.[ UnknownPermaflow.Address
+                     UnknownHarness.HarnessName
+                     UnknownFeature.FeatureName
+                     UnknownModule.ModuleName ] ]
+[ Set.[ Permaflow                          ; types: one permaflow, whole, added or replaced
+        RemovePermaflow.Address
+        Harness                            ;   one harness, whole, added or replaced
+        RemoveHarness.HarnessName
+        Amend.{ Address Change } ]         ;   one value of one permaflow
+  Change.[ Workspace.Option<Root>          ; a single value, replaced
+           HarnessName
+           Purpose
+           Kind
+           Continuity
+           Add.Element                     ; an element appended to its list
+           Remove.Element ]
+  Element.[ SystemModule.ModuleName
+            PromptModule.ModuleName
+            LeaveOut.FeatureName ] ]
+```
+
+```datom
+; one module added to one permaflow
+Configure.Amend.{ { Psyche core Fable } Add.PromptModule.vision:energy-nexus:1 }
+Configured.Amend.{ { Psyche core Fable } Add.PromptModule.vision:energy-nexus:1 }
+; its purpose set
+Configure.Amend.{ { Psyche core Fable } Purpose.«Designs with the living.» }
+; one permaflow removed
+Configure.RemovePermaflow.{ Psyche book Haiku }
 ```
 
 ```datom
@@ -184,13 +241,23 @@ Configure.Permaflow.{
    { Psyche book Haiku }
    Some.«/home/li/book»
    Claude
-   [ ClaudeMd GitInstructions ] }
+   [ ClaudeMd GitInstructions ]
+   [ spirit:core:0 ]
+   [ knowledge:book:0 ]
+   «Publishes books.»
+   Regular
+   OnDemand }
 
 Configure.Permaflow.{
    { Psyche core Fable }
    None
    Claude
-   [ Artifact ClaudeMd GitInstructions ] }
+   [ Artifact ClaudeMd GitInstructions ]
+   [ spirit:core:0 intent:fable:0 ]
+   [ vision:proposal:0 vision:psyche:0 ]
+   «Designs with the living.»
+   Regular
+   Maintained }
 ```
 
 ## One block, with the startup skills in it
