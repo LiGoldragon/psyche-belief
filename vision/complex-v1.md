@@ -128,14 +128,14 @@ Metaflow.{
    [ { fable claude claude-fable-5-1 Medium
        Permanent
        Path.«/home/li/primary»
-       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
+       { [ { Spirit core 0 } { Vision nexus 1 } ] Refuse }
        Restricted.{ [ Bash Edit ] [ Artifact ] }
        [ ClaudeMd ]
        1200
        [ Speaks.opus Living ] }
      { opus claude claude-opus-4 Medium Ephemeral
        Temporary
-       { [ { Spirit core } { Role worker } ] Notice }
+       { [ { Spirit core 0 } { Role worker 0 } ] Notice }
        HarnessDefault
        []
        4000

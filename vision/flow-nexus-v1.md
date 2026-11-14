@@ -76,7 +76,7 @@ Library
 ; the designer's Fable takes a question; a worker takes a draft
 { fable claude claude-fable-5-1 Medium
   Permanent Path.«/home/li/primary»
-  { [ { Spirit core } ] Refuse }
+  { [ { Spirit core 0 } ] Refuse }
   HarnessDefault [] 1200
   [ Speaks.opus Living ] }
 Send.{ 15c0ce { designer fable } Soft Notice.«…nine thousand characters…» }
@@ -107,8 +107,8 @@ Signal
 ```
 
 ```datom
-Configure.DefaultModules.[ { Spirit core } { Knowledge flow-messaging } ]
-Configured.DefaultModules.[ { Spirit core } { Knowledge flow-messaging } ]
+Configure.DefaultModules.[ { Spirit core 0 } { Knowledge flow-messaging 0 } ]
+Configured.DefaultModules.[ { Spirit core 0 } { Knowledge flow-messaging 0 } ]
 ```
 
 ```mermaid
@@ -178,51 +178,51 @@ The roster, as Members: each a permanent flow, in a temporary workspace, with th
 ```datom
 [ { lander claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role lander } ] Refuse }
+      { [ { Role lander 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { bookmaker claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role book } ] Refuse }
+      { [ { Role book 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { bookPager claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role book-page } ] Refuse }
+      { [ { Role book-page 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { bookReader claude claude-haiku-4-5 Medium
       Permanent Temporary
-      { [ { Role book-reader } ] Refuse }
+      { [ { Role book-reader 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { commentRelay claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role comment-relay } ] Refuse }
+      { [ { Role comment-relay 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { contextualizer claude claude-haiku-4-5 Medium
       Permanent Temporary
-      { [ { Role contextualizer } ] Refuse }
+      { [ { Role contextualizer 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { illustrator claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role illustrator } ] Refuse }
+      { [ { Role illustrator 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { scripter claude claude-haiku-4-5 Medium
       Permanent Temporary
-      { [ { Role scripter } ] Refuse }
+      { [ { Role scripter 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { tester claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role tester } ] Refuse }
+      { [ { Role tester 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { reader claude claude-haiku-4-5 Medium
       Permanent Temporary
-      { [ { Role read } ] Refuse }
+      { [ { Role read 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { writer claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role write } ] Refuse }
+      { [ { Role write 0 } ] Refuse }
       HarnessDefault [] 40000 [] }
   { worker claude claude-sonnet-5-5 Medium
       Permanent Temporary
-      { [ { Role worker } ] Refuse }
+      { [ { Role worker 0 } ] Refuse }
       HarnessDefault [] 40000 [] } ]
 ```
 
@@ -335,7 +335,7 @@ Signal
 ```
 
 ```datom
-Amend.{ { designer fable } Add.Belief.{ Vision ethos } }
+Amend.{ { designer fable } Add.Belief.{ Vision ethos 0 } }
 Amended.{ designer fable }
 Amend.{ { designer fable } Effort.High }
 Amended.{ designer fable }
@@ -423,7 +423,7 @@ Define.Metaflow.{
    [ { fable claude claude-fable-5-1 Medium
        Permanent
        Path.«/home/li/primary»
-       { [ { Spirit core } { Vision nexus-v1 } ] Refuse }
+       { [ { Spirit core 0 } { Vision nexus 1 } ] Refuse }
        HarnessDefault []
        1200
        [ Living ] } ]

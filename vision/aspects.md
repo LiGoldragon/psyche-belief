@@ -12,7 +12,7 @@ Who speaks to whom, within an aspect and across aspects, is the routes each meta
 { designer
   [ { fable claude claude-fable-5-1 Medium
       Permanent Path.«/home/li/primary»
-      { [ { Spirit core } ] Refuse }
+      { [ { Spirit core 0 } ] Refuse }
       HarnessDefault [] 1200
       [ Speaks.opus Living ] } ]
   fable }
