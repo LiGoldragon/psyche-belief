@@ -13,6 +13,8 @@ A flow is one run of a model in a harness. A permanent flow is a flow that conti
 
 Everything that can be configured is configuration. The Nexus holds the vocabulary a definition is written in, as Ethos types; the user writes definitions in datom, the way Nix defines an operating system; a running flow is a definition in action. A metaflow is named by the user, and the Nexus runs it without knowing its name beforehand. A definition is one datom of its own: it is added, replaced or removed alone; a complex is one of them, naming its metaflows. No role or anatomy is in the Rust.
 
+One value of one member is changed alone, by naming the member and the value; the rest of its metaflow stands as it was.
+
 ## The vocabulary of a definition
 A metaflow is members, routes and a speaker. A member is one flow definition: its harness, model and effort; whether it is a permanent flow or ephemeral; its workspace, beliefs and tools; and whom it speaks to. The speaker is the member that receives what comes to the metaflow from outside. A harness is a definition like a metaflow: its name, its features, and each feature's effect on the launch, a flag or a variable; a member names its harness by name and the features its launch is composed with, so a feature adds to a launch as well as leaves out. The Nexus holds no harness and no effect of its own; a harness is added, replaced or removed alone, as a metaflow is. Its tools are the harness default, or a restriction the harness enforces: a launch naming Restricted for a harness that cannot enforce it is refused, with the harness named. A route names whom a member may address: another member, another metaflow, or the living; a message off the routes is refused. What a metaflow is made of is the user's to define: one main flow that speaks for it, or a filter run by a System 1 model in front of the designer, or a messenger on a regular model and harness; the Nexus decides none of it.
 
@@ -270,6 +272,7 @@ Signal
          Complex ComplexName ] ]
 [ Define.[ Metaflow Harness Complex ] ; add or replace one
   Undefine.Name
+  Amend.{ Address Change }             ; one value of one member, named by its address
   Describe.Name                      ; one definition, read back
   Definitions                        ; the names defined
   Launch.{ MetaflowName FlowName Brief }
@@ -283,6 +286,7 @@ Signal
   Subscribe ]                        ; events, as they happen
 [ Defined.Name
   Undefined.Name
+  Amended.Address
   Described.[ Metaflow Harness Complex ]
   Listed.Vector<Name>
   Launched.FlowId
@@ -312,6 +316,29 @@ Signal
           Responded.String            ; the response, whole
           Warned                     ;   the handover asked
           Threshold ] ]              ;   context past its mark
+```
+
+```ethos
+  Change.[ HarnessName                 ; a single value of the member, replaced
+           ModelName
+           Effort
+           Continuity
+           Workspace
+           Tools
+           Intake
+           Missing
+           Add.Element                 ; an element appended to its list
+           Remove.Element ]
+  Element.[ Belief.ModuleName
+            Feature.FeatureName
+            Route ]
+```
+
+```datom
+Amend.{ { designer fable } Add.Belief.{ Vision ethos } }
+Amended.{ designer fable }
+Amend.{ { designer fable } Effort.High }
+Amended.{ designer fable }
 ```
 
 ```datom
