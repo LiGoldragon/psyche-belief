@@ -37,6 +37,7 @@
   { { Vision field-aspect Single.0 } «vision/field-aspect/0.md» }
   { { Vision flow-nexus Single.0 } «vision/flow-nexus/0.md» }
   { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
+  { { Vision flow-nexus Span.{ 0 1 } } «vision/flow-nexus/0-1.md» }
   { { Vision git-server Single.0 } «vision/git-server/0.md» }
   { { Vision capsule-nexus Single.0 } «vision/capsule-nexus/0.md» }
   { { Vision high-level-view Single.0 } «vision/high-level-view/0.md» }
