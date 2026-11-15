@@ -35,6 +35,7 @@
   { { Vision far-sema Single.0 } «vision/far-sema/0.md» }
   { { Vision far-versioning Single.0 } «vision/far-versioning/0.md» }
   { { Vision field-aspect Single.0 } «vision/field-aspect/0.md» }
+  { { Vision field-nexus Single.0 } «vision/field-nexus/0.md» }
   { { Vision flow-nexus Single.0 } «vision/flow-nexus/0.md» }
   { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
   { { Vision flow-nexus Span.{ 0 1 } } «vision/flow-nexus/0-1.md» }
@@ -47,6 +48,7 @@
   { { Vision long-sema Single.0 } «vision/long-sema/0.md» }
   { { Vision memory Single.0 } «vision/memory/0.md» }
   { { Vision mind-aspect Single.0 } «vision/mind-aspect/0.md» }
+  { { Vision mind-nexus Single.0 } «vision/mind-nexus/0.md» }
   { { Vision model-roles Single.0 } «vision/model-roles/0.md» }
   { { Vision nexus Single.0 } «vision/nexus/0.md» }
   { { Vision nexus Single.1 } «vision/nexus/1.md» }
@@ -58,6 +60,7 @@
   { { Vision protos Single.0 } «vision/protos/0.md» }
   { { Vision psyche Single.0 } «vision/psyche/0.md» }
   { { Vision psyche-aspect Single.0 } «vision/psyche-aspect/0.md» }
+  { { Vision psyche-nexus Single.0 } «vision/psyche-nexus/0.md» }
   { { Vision psyche-fable Single.0 } «vision/psyche-fable/0.md» }
   { { Vision remembering Single.0 } «vision/remembering/0.md» }
   { { Vision review Single.0 } «vision/review/0.md» }
