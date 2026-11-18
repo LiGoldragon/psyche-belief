@@ -31,6 +31,7 @@
   { { Vision crystallization Single.0 } «vision/crystallization/0.md» }
   { { Vision datom Single.0 } «vision/datom/0.md» }
   { { Vision deployment Single.0 } «vision/deployment/0.md» }
+  { { Vision energy-management Single.0 } «vision/energy-management/0.md» }
   { { Vision energy-nexus Single.1 } «vision/energy-nexus/1.md» }
   { { Vision ethos Single.0 } «vision/ethos/0.md» }
   { { Vision far-flow-nexus Single.0 } «vision/far-flow-nexus/0.md» }
@@ -51,6 +52,7 @@
   { { Vision memory Single.0 } «vision/memory/0.md» }
   { { Vision mind-aspect Single.0 } «vision/mind-aspect/0.md» }
   { { Vision mind-nexus Single.0 } «vision/mind-nexus/0.md» }
+  { { Vision model-modules Single.0 } «vision/model-modules/0.md» }
   { { Vision model-roles Single.0 } «vision/model-roles/0.md» }
   { { Vision nexus Single.0 } «vision/nexus/0.md» }
   { { Vision nexus Single.1 } «vision/nexus/1.md» }
