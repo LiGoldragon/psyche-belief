@@ -24,6 +24,7 @@
   { { Vision chronos Single.0 } «vision/chronos/0.md» }
   { { Vision clojure Single.0 } «vision/clojure/0.md» }
   { { Vision code Single.0 } «vision/code/0.md» }
+  { { Vision codex-harness-nexus Single.0 } «vision/codex-harness-nexus/0.md» }
   { { Vision collaboration Single.0 } «vision/collaboration/0.md» }
   { { Vision committing Single.0 } «vision/committing/0.md» }
   { { Vision complex Single.1 } «vision/complex/1.md» }
@@ -43,6 +44,7 @@
   { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
   { { Vision flow-nexus Span.{ 0 1 } } «vision/flow-nexus/0-1.md» }
   { { Vision git-server Single.0 } «vision/git-server/0.md» }
+  { { Vision harness-nexus Single.0 } «vision/harness-nexus/0.md» }
   { { Vision capsule-nexus Single.0 } «vision/capsule-nexus/0.md» }
   { { Vision high-level-view Single.0 } «vision/high-level-view/0.md» }
   { { Vision horizon Single.0 } «vision/horizon/0.md» }
