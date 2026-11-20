@@ -47,6 +47,9 @@
   { { Vision capsule-nexus Single.0 } «vision/capsule-nexus/0.md» }
   { { Vision high-level-view Single.0 } «vision/high-level-view/0.md» }
   { { Vision horizon Single.0 } «vision/horizon/0.md» }
+  { { Vision listener Single.0 } «vision/listener/0.md» }
+  { { Vision listener Single.1 } «vision/listener/1.md» }
+  { { Vision listener Span.{ 0 1 } } «vision/listener/0-1.md» }
   { { Vision long-model-roles Single.0 } «vision/long-model-roles/0.md» }
   { { Vision long-nexus Single.0 } «vision/long-nexus/0.md» }
   { { Vision long-sema Single.0 } «vision/long-sema/0.md» }
