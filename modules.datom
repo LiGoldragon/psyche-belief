@@ -38,6 +38,7 @@
   { { Vision far-sema Single.0 } «vision/far-sema/0.md» }
   { { Vision far-versioning Single.0 } «vision/far-versioning/0.md» }
   { { Vision field-aspect Single.0 } «vision/field-aspect/0.md» }
+  { { Vision field-handover Single.0 } «vision/field-handover/0.md» }
   { { Vision field-nexus Single.0 } «vision/field-nexus/0.md» }
   { { Vision flow-nexus Single.0 } «vision/flow-nexus/0.md» }
   { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
@@ -55,6 +56,7 @@
   { { Vision long-sema Single.0 } «vision/long-sema/0.md» }
   { { Vision memory Single.0 } «vision/memory/0.md» }
   { { Vision mind-aspect Single.0 } «vision/mind-aspect/0.md» }
+  { { Vision mind-handover Single.0 } «vision/mind-handover/0.md» }
   { { Vision mind-nexus Single.0 } «vision/mind-nexus/0.md» }
   { { Vision model-modules Single.0 } «vision/model-modules/0.md» }
   { { Vision model-roles Single.0 } «vision/model-roles/0.md» }
