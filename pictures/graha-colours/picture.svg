@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="2256" viewBox="0 0 1000 2256">
+<rect width="1000" height="2256" fill="#FAF7F2"/>
+<g transform="translate(101 80) scale(0.9)">
+<circle cx="0" cy="0" r="23" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<circle cx="0" cy="0" r="3.5" fill="#1F2430" stroke="none" stroke-width="1"/>
+</g>
+<text x="101" y="141" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Sūrya</text>
+<text x="101" y="173" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Sun</text>
+<circle cx="255" cy="81" r="45" fill="#D8341E" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="156" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">rakta</text>
+<g transform="translate(255 185) scale(0.8849 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">red (vermilion)</text>
+</g>
+<circle cx="411" cy="81" r="33" fill="#B5622E" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="156" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">tāmra</text>
+<text x="411" y="185" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">copper</text>
+<circle cx="567" cy="81" r="33" fill="#E2A93B" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="156" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">hiraṇmaya</text>
+<text x="567" y="185" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">golden</text>
+<circle cx="723" cy="81" r="33" fill="#F2C14E" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(723 156) scale(0.7685 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">padmagarbha</text>
+</g>
+<text x="723" y="185" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">lotus-heart</text>
+<text x="723" y="213" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">pollen</text>
+<circle cx="879" cy="81" r="33" fill="#7A2A1E" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(879 156) scale(0.9232 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">raktaśyāma</text>
+</g>
+<text x="879" y="185" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">red-dark</text>
+<line x1="40" y1="252" x2="960" y2="252" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 312) scale(0.9)">
+<path d="M-10 -24 A25 25 0 1 1 -10 24 A27 27 0 0 0 -10 -24 Z" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="373" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Candra</text>
+<text x="101" y="405" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Moon</text>
+<circle cx="255" cy="313" r="45" fill="#F7F5EE" stroke="#1F2430" stroke-width="1.5"/>
+<text x="255" y="388" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">śveta</text>
+<text x="255" y="417" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">white</text>
+<g transform="translate(255 445) scale(0.8032 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">(kunda jasmine)</text>
+</g>
+<circle cx="411" cy="313" r="33" fill="#E6EEF2" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="388" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">sphaṭika</text>
+<text x="411" y="417" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">crystal</text>
+<circle cx="567" cy="313" r="33" fill="#C9CED6" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="388" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">rajata</text>
+<text x="567" y="417" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">silver</text>
+<circle cx="723" cy="313" r="33" fill="#F3F0E4" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="388" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">kumuda</text>
+<g transform="translate(723 417) scale(0.8493 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">white water-lily</text>
+</g>
+<line x1="40" y1="484" x2="960" y2="484" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 544) scale(0.9)">
+<circle cx="-7" cy="7" r="15" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<path d="M4 -4L25 -25 M12 -25 H25 V-12" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="605" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Maṅgala</text>
+<text x="101" y="637" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Mars</text>
+<circle cx="255" cy="545" r="45" fill="#A8131B" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="620" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">rakta</text>
+<text x="255" y="649" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">blood-red</text>
+<circle cx="411" cy="545" r="33" fill="#E0461E" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="620" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">aṅgāraka</text>
+<text x="411" y="649" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">live coal</text>
+<circle cx="567" cy="545" r="33" fill="#E8702A" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="620" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">kiṃśuka</text>
+<g transform="translate(567 649) scale(0.9413 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">flame-of-the-</text>
+</g>
+<text x="567" y="677" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">forest flower</text>
+<circle cx="723" cy="545" r="33" fill="#E0614F" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="620" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">pravāla</text>
+<text x="723" y="649" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">coral</text>
+<circle cx="879" cy="545" r="33" fill="#C2562B" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(879 620) scale(0.9056 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">tapta-tāmra</text>
+</g>
+<g transform="translate(879 649) scale(0.8849 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">heated copper</text>
+</g>
+<line x1="40" y1="716" x2="960" y2="716" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 776) scale(0.9)">
+<circle cx="0" cy="-4" r="12" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<path d="M0 8 V29 M-10 21 H10" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M-16 -29 Q0 -10 16 -29" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="837" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Budha</text>
+<text x="101" y="869" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Mercury</text>
+<circle cx="255" cy="777" r="45" fill="#3F6B2A" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(255 852) scale(0.8033 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">dūrvā-śyāma</text>
+</g>
+<g transform="translate(255 881) scale(0.9534 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">dark green of</text>
+</g>
+<text x="255" y="909" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">dūrvā grass</text>
+<circle cx="411" cy="777" r="33" fill="#3FA34D" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="852" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">śuka</text>
+<text x="411" y="881" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">parrot green</text>
+<circle cx="567" cy="777" r="33" fill="#F2C230" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="852" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">karṇikāra</text>
+<text x="567" y="881" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">karṇikāra-</text>
+<g transform="translate(567 909) scale(0.9787 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">flower yellow</text>
+</g>
+<circle cx="723" cy="777" r="33" fill="#D9A53A" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="852" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">hema</text>
+<text x="723" y="881" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">gold</text>
+<line x1="40" y1="948" x2="960" y2="948" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 1008) scale(0.9)">
+<path d="M9 -23 V26 M-17 11 H22" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M-18 -16 C-10 -32 8 -19 -2 -5 Q-8 3 -17 11" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="1069" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Guru</text>
+<text x="101" y="1101" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Jupiter</text>
+<circle cx="255" cy="1009" r="45" fill="#E3A81F" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="1084" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">pīta</text>
+<text x="255" y="1113" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">yellow</text>
+<g transform="translate(255 1141) scale(0.9596 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">(heated gold)</text>
+</g>
+<circle cx="411" cy="1009" r="33" fill="#E8CF95" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="1084" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">gaura</text>
+<text x="411" y="1113" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">fair-golden</text>
+<circle cx="567" cy="1009" r="33" fill="#F4F2EA" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(567 1084) scale(0.6155 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">kumuda-sphaṭika</text>
+</g>
+<g transform="translate(567 1113) scale(0.8542 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">lily-and-crystal</text>
+</g>
+<g transform="translate(567 1141) scale(0.7352 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">white of the good</text>
+</g>
+<g transform="translate(567 1169) scale(0.7540 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Jupiter in the sky</text>
+</g>
+<circle cx="723" cy="1009" r="33" fill="#E9B949" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="1084" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">puṣparāga</text>
+<text x="723" y="1113" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">topaz</text>
+<line x1="40" y1="1180" x2="960" y2="1180" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 1240) scale(0.9)">
+<circle cx="0" cy="-10" r="15" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<path d="M0 5 V29 M-10 21 H10" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="1301" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Śukra</text>
+<text x="101" y="1333" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Venus</text>
+<circle cx="255" cy="1241" r="45" fill="#FAF8F2" stroke="#1F2430" stroke-width="1.5"/>
+<text x="255" y="1316" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">śveta</text>
+<text x="255" y="1345" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">white</text>
+<path d="M411 1241 L411.00 1208.00 A33 33 0 0 1 444.00 1241.00 Z" fill="#D9738A" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1241 L444.00 1241.00 A33 33 0 0 1 411.00 1274.00 Z" fill="#5E9E5A" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1241 L411.00 1274.00 A33 33 0 0 1 378.00 1241.00 Z" fill="#D8A93F" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1241 L378.00 1241.00 A33 33 0 0 1 411.00 1208.00 Z" fill="#8DB8DE" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="411" y="1316" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">citra</text>
+<text x="411" y="1345" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">variegated</text>
+<circle cx="567" cy="1241" r="33" fill="#4C6B3A" stroke="#E2DDD5" stroke-width="1.5"/>
+<g transform="translate(567 1316) scale(0.9479 1)">
+<text x="0" y="0" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">dūrvā-dark</text>
+</g>
+<g transform="translate(567 1345) scale(0.7464 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">dark grass-green</text>
+</g>
+<circle cx="723" cy="1241" r="33" fill="#C9CED6" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="1316" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">rajata</text>
+<text x="723" y="1345" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">silver</text>
+<line x1="40" y1="1412" x2="960" y2="1412" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 1472) scale(0.9)">
+<path d="M-8 -28 V9 M-22 -17 H7" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M-8 9 C9 -13 22 -3 13 13 Q0 33 17 28" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="101" y="1533" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Śani</text>
+<text x="101" y="1565" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Saturn</text>
+<circle cx="255" cy="1473" r="45" fill="#1A1A1F" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="1548" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">kṛṣṇa</text>
+<text x="255" y="1577" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">black</text>
+<circle cx="411" cy="1473" r="33" fill="#1F3A7A" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="1548" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">indranīla</text>
+<g transform="translate(411 1577) scale(0.9534 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">sapphire blue</text>
+</g>
+<circle cx="567" cy="1473" r="33" fill="#3E6E6A" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="1548" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">vaiḍūrya</text>
+<text x="567" y="1577" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">cat’s-eye</text>
+<text x="567" y="1605" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">blue-green</text>
+<circle cx="723" cy="1473" r="33" fill="#5B7FC2" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="723" y="1548" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">atasī</text>
+<g transform="translate(723 1577) scale(0.8210 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">flax-flower blue</text>
+</g>
+<line x1="40" y1="1644" x2="960" y2="1644" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 1704) scale(0.9)">
+<path d="M-17 10 C-35 7 -7 -36 0 -17 C7 -36 35 7 17 10" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="-16" cy="11" r="7" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<circle cx="16" cy="11" r="7" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+</g>
+<text x="101" y="1765" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Rāhu</text>
+<text x="101" y="1797" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Rāhu</text>
+<circle cx="255" cy="1705" r="45" fill="#1C2340" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="1780" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">nīla</text>
+<g transform="translate(255 1809) scale(0.7945 1)">
+<text x="0" y="0" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">deep blue-black</text>
+</g>
+<circle cx="411" cy="1705" r="33" fill="#6E6A66" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="411" y="1780" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">dhūmra</text>
+<text x="411" y="1809" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">smoky</text>
+<circle cx="567" cy="1705" r="33" fill="#1A1A1F" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="1780" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">kṛṣṇa</text>
+<text x="567" y="1809" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">black</text>
+<line x1="40" y1="1876" x2="960" y2="1876" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<g transform="translate(101 1936) scale(0.9)">
+<path d="M-17 -10 C-35 -7 -7 36 0 17 C7 36 35 -7 17 -10" fill="none" stroke="#1F2430" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="-16" cy="-11" r="7" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+<circle cx="16" cy="-11" r="7" fill="none" stroke="#1F2430" stroke-width="3.3"/>
+</g>
+<text x="101" y="1997" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Ketu</text>
+<text x="101" y="2029" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">Ketu</text>
+<circle cx="255" cy="1937" r="45" fill="#8A847D" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="255" y="2012" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">dhūmra</text>
+<text x="255" y="2041" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">smoky</text>
+<path d="M411 1937 L411.00 1904.00 A33 33 0 0 1 444.00 1937.00 Z" fill="#8A847D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1937 L444.00 1937.00 A33 33 0 0 1 411.00 1970.00 Z" fill="#D8541E" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1937 L411.00 1970.00 A33 33 0 0 1 378.00 1937.00 Z" fill="#1A1A1F" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M411 1937 L378.00 1937.00 A33 33 0 0 1 411.00 1904.00 Z" fill="#D8D4CC" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="411" y="2012" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">citra</text>
+<text x="411" y="2041" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">variegated</text>
+<circle cx="567" cy="1937" r="33" fill="#D8541E" stroke="#E2DDD5" stroke-width="1.5"/>
+<text x="567" y="2012" font-family="Inter" font-size="28" font-weight="700" text-anchor="middle" fill="#1F2430">agni</text>
+<text x="567" y="2041" font-family="Inter" font-size="24" font-weight="400" text-anchor="middle" fill="#1F2430">fire</text>
+<line x1="40" y1="2119" x2="960" y2="2119" stroke="#E2DDD5" stroke-width="2" stroke-linecap="round" />
+<text x="40" y="2157" font-family="Inter" font-size="24" font-weight="400" text-anchor="start" fill="#1F2430">Bṛhajjātaka 2; Bṛhat Saṃhitā 3–11; Bṛhat Parāśara Horā Śāstra 3, 84;</text>
+<text x="40" y="2189" font-family="Inter" font-size="24" font-weight="400" text-anchor="start" fill="#1F2430">Matsya Purāṇa 93–94; Viṣṇudharmottara III 67–69; Sārāvalī 4; Jātakapārijāta 2;</text>
+<text x="40" y="2221" font-family="Inter" font-size="24" font-weight="400" text-anchor="start" fill="#1F2430">Phaladīpikā 2; Yavanajātaka 1.120.</text>
+</svg>

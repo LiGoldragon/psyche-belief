@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" fill="#FAF7F2"/>
+<g transform="translate(500 500)">
+<circle cx="0" cy="0" r="60" fill="#C4622D" stroke="none" stroke-width="1"/>
+<circle cx="0" cy="0" r="11" fill="#F2B33D" stroke="none" stroke-width="1"/>
+<line x1="66.00000000" y1="0.00000000" x2="85.00000000" y2="0.00000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="57.15767665" y1="33.00000000" x2="73.61215932" y2="42.50000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="33.00000000" y1="57.15767665" x2="42.50000000" y2="73.61215932" stroke="#C4622D" stroke-width="5"/>
+<line x1="0.00000000" y1="66.00000000" x2="0.00000000" y2="85.00000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="-33.00000000" y1="57.15767665" x2="-42.50000000" y2="73.61215932" stroke="#C4622D" stroke-width="5"/>
+<line x1="-57.15767665" y1="33.00000000" x2="-73.61215932" y2="42.50000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="-66.00000000" y1="0.00000000" x2="-85.00000000" y2="0.00000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="-57.15767665" y1="-33.00000000" x2="-73.61215932" y2="-42.50000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="-33.00000000" y1="-57.15767665" x2="-42.50000000" y2="-73.61215932" stroke="#C4622D" stroke-width="5"/>
+<line x1="-0.00000000" y1="-66.00000000" x2="-0.00000000" y2="-85.00000000" stroke="#C4622D" stroke-width="5"/>
+<line x1="33.00000000" y1="-57.15767665" x2="42.50000000" y2="-73.61215932" stroke="#C4622D" stroke-width="5"/>
+<line x1="57.15767665" y1="-33.00000000" x2="73.61215932" y2="-42.50000000" stroke="#C4622D" stroke-width="5"/>
+</g>
+<text x="500" y="616" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Sūrya</text>
+<text x="500" y="650" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">soul</text>
+<g transform="translate(500 150)">
+<path d="M-15.30734 -36.95518 C-17.98612 -43.42234 -10.00000 -58.00000 0.00000 -58.00000 C10.00000 -58.00000 17.98612 -43.42234 15.30734 -36.95518 C17.98612 -43.42234 33.94113 -48.08326 41.01219 -41.01219 C48.08326 -33.94113 43.42234 -17.98612 36.95518 -15.30734 C43.42234 -17.98612 58.00000 -10.00000 58.00000 0.00000 C58.00000 10.00000 43.42234 17.98612 36.95518 15.30734 C43.42234 17.98612 48.08326 33.94113 41.01219 41.01219 C33.94113 48.08326 17.98612 43.42234 15.30734 36.95518 C17.98612 43.42234 10.00000 58.00000 0.00000 58.00000 C-10.00000 58.00000 -17.98612 43.42234 -15.30734 36.95518 C-17.98612 43.42234 -33.94113 48.08326 -41.01219 41.01219 C-48.08326 33.94113 -43.42234 17.98612 -36.95518 15.30734 C-43.42234 17.98612 -58.00000 10.00000 -58.00000 0.00000 C-58.00000 -10.00000 -43.42234 -17.98612 -36.95518 -15.30734 C-43.42234 -17.98612 -48.08326 -33.94113 -41.01219 -41.01219 C-33.94113 -48.08326 -17.98612 -43.42234 -15.30734 -36.95518 Z" fill="#FBF7F0" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M-15.30734 -36.95518 C-17.98612 -43.42234 -10.00000 -58.00000 0.00000 -58.00000 C10.00000 -58.00000 17.98612 -43.42234 15.30734 -36.95518 C17.98612 -43.42234 33.94113 -48.08326 41.01219 -41.01219 C48.08326 -33.94113 43.42234 -17.98612 36.95518 -15.30734" fill="none" stroke="#E58FB0" stroke-width="4" stroke-linejoin="round"/>
+<path d="M36.95518 -15.30734 C43.42234 -17.98612 58.00000 -10.00000 58.00000 0.00000 C58.00000 10.00000 43.42234 17.98612 36.95518 15.30734 C43.42234 17.98612 48.08326 33.94113 41.01219 41.01219 C33.94113 48.08326 17.98612 43.42234 15.30734 36.95518" fill="none" stroke="#6CC5C0" stroke-width="4" stroke-linejoin="round"/>
+<path d="M15.30734 36.95518 C17.98612 43.42234 10.00000 58.00000 0.00000 58.00000 C-10.00000 58.00000 -17.98612 43.42234 -15.30734 36.95518 C-17.98612 43.42234 -33.94113 48.08326 -41.01219 41.01219 C-48.08326 33.94113 -43.42234 17.98612 -36.95518 15.30734" fill="none" stroke="#E9C46A" stroke-width="4" stroke-linejoin="round"/>
+<path d="M-36.95518 15.30734 C-43.42234 17.98612 -58.00000 10.00000 -58.00000 0.00000 C-58.00000 -10.00000 -43.42234 -17.98612 -36.95518 -15.30734 C-43.42234 -17.98612 -48.08326 -33.94113 -41.01219 -41.01219 C-33.94113 -48.08326 -17.98612 -43.42234 -15.30734 -36.95518" fill="none" stroke="#9A7BD0" stroke-width="4" stroke-linejoin="round"/>
+</g>
+<text x="500" y="246" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Śukra</text>
+<text x="500" y="280" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">desire</text>
+<g transform="translate(748 252)">
+<path d="M-60 -30 A60 60 0 0 0 60 -30 A75 75 0 0 1 -60 -30 Z" fill="#F4F7FA" stroke="#9FB3C8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="748" y="348" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Candra</text>
+<text x="748" y="382" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">mind</text>
+<g transform="translate(850 500)">
+<path d="M0.00 -51.96 L60.00 51.96 L-60.00 51.96 Z" fill="#C81E2B" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="850" y="596" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Maṅgala</text>
+<text x="850" y="630" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">strength</text>
+<g transform="translate(748 748)">
+<g transform="rotate(225)">
+<path d="M46.62876 37.75922 A60 60 0 1 1 46.62876 -37.75922 L-12 0 Z" fill="#2E3A5C" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".60"/>
+</g>
+</g>
+<text x="748" y="844" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Rāhu</text>
+<text x="748" y="878" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">shadow</text>
+<g transform="translate(500 850)">
+<rect x="-13" y="-65" width="26" height="130" rx="0" fill="#141B3F" stroke="none" stroke-width="1"/>
+</g>
+<text x="500" y="946" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Śani</text>
+<text x="500" y="980" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">sorrow</text>
+<g transform="translate(252 748)">
+<g transform="rotate(-45)">
+<path d="M39 -35 C34 -21 26 -20 18 -21 Q8 -21 4 -10 Q-6 -14 -13 -3 Q-23 -5 -30 6 Q-38 7 -51 12 L-37 12 L-47 20 L-27 17 L-34 26 L-15 22 L-20 31 L-6 26 L-6 31 L7 24 Q21 35 39 35 Q25 23 31 13 Q42 3 33 -13 Q32 -19 39 -35 Z M19 -12 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 Z M4 11 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0 Z M-14 14 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 Z" fill="#8A8F99" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd"/>
+<path d="M39 -35 Q34 -24 26 -22 Q32 -22 33 -17 Q35 -27 39 -35 Z" fill="#D9662B" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="-54" cy="13" r="1.5" fill="#8A8F99" stroke="none" stroke-width="1"/>
+<circle cx="-48" cy="27" r="1.7" fill="#8A8F99" stroke="none" stroke-width="1"/>
+<circle cx="-60" cy="20" r="1.2" fill="#8A8F99" stroke="none" stroke-width="1"/>
+<circle cx="-39" cy="29" r="1.2" fill="#8A8F99" stroke="none" stroke-width="1"/>
+</g>
+</g>
+<text x="252" y="844" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Ketu</text>
+<text x="252" y="878" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">portent</text>
+<g transform="translate(150 500)">
+<circle cx="0" cy="0" r="59" fill="none" stroke="#E3A712" stroke-width="12"/>
+</g>
+<text x="150" y="596" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Guru</text>
+<text x="150" y="630" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">knowledge</text>
+<g transform="translate(252 252)">
+<rect x="-35" y="-35" width="70" height="70" rx="0" fill="#3F8F3A" stroke="none" stroke-width="1"/>
+</g>
+<text x="252" y="348" font-family="Inter" font-size="30" font-weight="700" text-anchor="middle" fill="#1F2430">Budha</text>
+<text x="252" y="382" font-family="Inter" font-size="26" font-weight="400" text-anchor="middle" fill="#1F2430">speech</text>
+</svg>
