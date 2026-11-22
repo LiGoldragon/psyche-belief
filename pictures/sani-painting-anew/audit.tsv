@@ -1,0 +1,76 @@
+row	source-line	statement	classification	visual evidence / reason
+001	L3a	The work is a painting rather than a diagram.	Shown	A continuous representational painted scene; no diagrammatic marks or schema.
+002	L3b	Every part has Śani quality and no other quality.	Not shown / visually undecidable	Exclusive symbolic quality is an interpretation, not a visible property that can be tested from pixels.
+003	L3c	It holds no word, letter, numeral, or glyph.	Shown	No writing, numerals, labels, or glyph-like marks are visible.
+004	L3d	Two readings of one correspondence are both present.	Not shown / visually undecidable	The claim does not identify a separately testable visible pair at this line.
+005	L7a	The end of day.	Shown	A low sun touches the horizon.
+006	L7b	The cool season.	Shown	Leafless tree, grey air, and white frost-like speckling support a cold season.
+007	L7c	The view looks west.	Not shown / visually undecidable	A sunset suggests west, but the canvas supplies no independent directional marker.
+008	L7d	Worked land belonging to someone else.	Not shown / visually undecidable	Rows, fencing, and active tilling show worked land; ownership cannot be seen.
+009	L7e	A wind blows.	Shown	Hair and torn strips stream strongly toward the left.
+010	L8a	One tall, thin, worn, very old figure.	Shown	One gaunt elongated elder is the dominant human figure.
+011	L8b	The figure is neither man nor woman.	Not shown / visually undecidable	The body is presented ambiguously; gender identity cannot be established visually.
+012	L8c	The figure is black-bodied.	Shown	Exposed skin is painted near-black/charcoal.
+013	L8d	Coarse stiff hair.	Shown	Long coarse strands are wind-tossed and rigidly separated.
+014	L8e	Deep-set tawny-red eyes.	Shown	Eyes are recessed and carry a small warm reddish gleam.
+015	L8f	Conspicuous veins, large teeth and nails.	Not shown / visually undecidable	Gaunt anatomy and bared teeth are apparent, but vein and nail size cannot be confidently resolved.
+016	L8g	Drooping head and bent, stiff limbs.	Shown	Head bows and the back, elbows, knees, and fingers are sharply bent.
+017	L9a	Old torn black cloth.	Shown	The figure wears ragged, hole-filled dark cloth.
+018	L9b	An iron fetter on one ankle.	Shown	A dark metal cuff and chain visibly encircle the left ankle.
+019	L9c	The figure leans on a field tool, still working and enduring.	Shown	Both hands bear on a long hoe planted into the tilled earth.
+020	L10a	Ground scorched and cracked.	Shown	Foreground soil is brown-black, bare, and deeply fissured.
+021	L10b	Frost in the hollows.	Shown	Pale granular crusts sit along furrows and low ground.
+022	L10c	A fence across the land.	Shown	A long post-and-rail fence crosses the middle distance.
+023	L10d	A prison wall far back.	Shown	A high windowless wall and square watchtower stand in the distance.
+024	L10e	A heap of refuse far back.	Shown	A pale irregular rubbish mound lies beside the wall.
+025	L10f	An anthill near the figure.	Shown	A perforated earthen mound is in the left foreground.
+026	L11a	A buffalo and donkey stand heads down.	Shown	Two dark buffalo and a donkey graze with lowered heads.
+027	L11b	A camel far off.	Shown	A small camel silhouette appears at the far-right horizon.
+028	L11c	A crow on a sapless tree.	Shown	A black crow perches on a leafless dead tree.
+029	L11d	A serpent at the anthill.	Shown	A snake rises beside the earthen mound.
+030	L11e	Poor grain, sesame and chickpeas in thin rows.	Not shown / visually undecidable	Sparse failing crop rows are visible; plant species cannot be reliably identified.
+031	L12a	Iron, lead and plain stone lie about.	Not shown / visually undecidable	Several grey stones and scraps lie around, but iron versus lead cannot be established visually.
+032	L12b	One small blue sapphire is the only clear colour.	Shown	A single vivid blue oval stone lies on a foreground rock; other hues remain muted except the intended rust-red horizon.
+033	L13a	Low sun going down, dull and hot at horizon.	Shown	A dim orange-red solar disc sits at the horizon.
+034	L13b	Livid light over everything.	Shown	Grey-blue, ashen illumination blankets the scene.
+035	L17a	Tall narrow panel, mostly empty, great bare sky and ground.	Shown	Portrait canvas devotes most area to blank grey sky and barren earth.
+036	L17b	Figure small, low, off-centre, with long distances around it.	Shown	Figure is below centre and surrounded by broad open space.
+037	L18a	Livid cold grey-blue light and long shadows.	Shown	Cold grey-blue palette and low-angle illumination dominate; shadows extend laterally.
+038	L18b	One band of sullen heat at horizon.	Shown	A narrow rusty orange band marks the horizon.
+039	L22a	Dry dragged brush on rough ground, thin, scratched, cracked, and bare.	Shown	Visible scumbles, scratches, crackle, abrasion, and exposed brown ground simulate those surface effects.
+040	L22b	Manner is slow, exact and severe.	Not shown / visually undecidable	Severity is a reasonable impression; speed and intention of execution are not visually decidable.
+041	L23	Black, lead grey, livid blue-grey, beaver-pelt dull brown, and rust colours.	Shown	Those dark neutral, blue-grey, brown, and rust families make up the visible palette.
+042	L29a	Necessity over long span: age, delay, limits, remains after loss.	Not shown / visually undecidable	Age, restraint, and barrenness are pictured, but the whole abstract proposition cannot be visually proven.
+043	L29b	Malefic power associated with grief and passing time.	Not shown / visually undecidable	The mood may evoke grief and time; the astrological status is not visible fact.
+044	L29c	Element is air.	Shown	Strong wind is visibly embodied in hair and rags.
+045	L29d	Governs long life and wearing down; poor, indebted, confined under restrictions.	Not shown / visually undecidable	Wear, poverty, and confinement motifs appear, but governance, debt, and longevity are not directly visible.
+046	L31a	Old age, west, cool season.	Shown	An elderly figure, sunset, and frost/leafless vegetation visibly combine these cues.
+047	L31b	Year, touch, and astringent taste.	Not shown / visually undecidable	Duration, tactile sensation, and taste cannot be established from the static image.
+048	L31c	Setting gives decline a bodily feeling.	Not shown / visually undecidable	This is an interpretive effect rather than a discrete visible fact.
+049	L33	Saturn chiefly cools, slightly dries, and is also a hot malefic.	Not shown / visually undecidable	Cold frost, dry cracked land, and warm horizon depict the juxtaposition; the physical/astrological doctrine itself is not visually testable.
+050	L35a	Strength rosters place Saturn by day and at night; day warmth offsets cold.	Not shown / visually undecidable	The scene is twilight; roster and sect affiliations cannot be seen.
+051	L35b	End of day is a particular interval.	Shown	The solar disc at the horizon clearly sets the depicted interval at day’s end.
+052	L39a	Grave, solitary, difficult, enduring disposition.	Shown	Solitary posture, severe face, continued work, and barren setting visibly convey gravity and endurance.
+053	L39b	Trust, memory, suspicion, hoarding, spite, deliberation and commitment.	Not shown / visually undecidable	These internal traits cannot be determined from one depicted action.
+054	L41	Ties to elders, widows, unmarried men, marginal people, fatherhood or foster care.	Not shown / visually undecidable	An elder at a social margin is shown; the remaining identities and family relations are absent or unknowable.
+055	L45a	Tall thin worn body, coarse hair, deep eyes, veins, teeth/nails, droop, stiffness.	Shown	The portrait visibly realizes the repeated bodily complex, with the smallest vein/nail details less certain.
+056	L45b	Wind constitution; muscle and sinew leading tissues.	Shown	Wind-whipped hair and extremely exposed tendons/musculature provide visible equivalents.
+057	L45c	Bones, knees, legs, ear, spleen, bladder, kidneys, viscera, fluids, left-leg mark.	Not shown / visually undecidable	Exterior knees and legs appear, but anatomical rulership and an intended left-leg mark cannot be identified.
+058	L49a	Servant/hired cultivator working another’s property.	Not shown / visually undecidable	A solitary cultivator is shown; employment and ownership relations remain unknowable.
+059	L49b	Stewardship, guardianship, tenancy, estate management.	Not shown / visually undecidable	No visible evidence distinguishes any of these legal/social roles.
+060	L49c	Field labor.	Shown	The figure actively hoes crop rows.
+061	L49d	Blacksmithing, oil pressing, fishing, livestock tending.	Not shown / visually undecidable	Livestock stand nearby but no tending interaction is clear; the other trades are absent.
+062	L49e	Jailer and captive; burial, tunneling or water work.	Not shown / visually undecidable	A prison wall and fetter allude to captivity, but roles and listed work are not directly enacted.
+063	L53a	Fetters and fences as restraints; old torn black garments; timber, stone, tools.	Shown	Chain, fence, ragged cloth, wooden tool/fence, and stones are explicit.
+064	L53b	Want, debt, mourning, dispossession, long lawsuits, stalled efforts.	Not shown / visually undecidable	Want and stalled toil may be evoked; legal and economic conditions cannot be read from pixels.
+065	L53c	Frost, spoiled harvest, polluted waters, famine.	Not shown / visually undecidable	Frost and crop failure are depicted; water and a population-scale famine are not.
+066	L57a	Refuse place, prison, marginal quarters, worked/tenanted land, anthill.	Shown	Refuse, prison wall, marginal worked field, and anthill are all visible; tenancy itself is undecidable.
+067	L57b	Saurāṣṭra and western country.	Not shown / visually undecidable	The landscape contains no unique geographic identifier.
+068	L61a	Sapless trees, poor grain, chickpeas/legumes, sesame.	Not shown / visually undecidable	Dead tree and poor crop are clear; exact crop species are not visually secure.
+069	L61b	Buffalo, donkey, camel, serpent and crow.	Shown	All five are distinctly visible.
+070	L61c	Elephant and cuckoo.	Not shown / visually undecidable	Neither is visible.
+071	L65	Iron, lead, dark metals, ordinary stone, sapphire.	Not shown / visually undecidable	Dark metal, stones, and blue gem are shown, but material/mineral identity cannot be proven visually.
+072	L69	Black body, castor-like hue, livid star; coarse dark hair and tawny/red sunken eyes.	Shown	The figure and light visibly use these colour/feature cues; castor’s exact modern hue is inherently unspecified.
+073	L73	Chronic debility, wasting, cold/damp disorders, pain, stiffness and other persistent illnesses.	Not shown / visually undecidable	Wasting and stiffness are visibly suggested; diagnoses and chronic course cannot be established.
+074	ADD1	Visible addition: a second dark bovine behind the foreground buffalo.	Visible addition	Two bovines are painted although the explicit painting list names a buffalo singular.
+075	ADD2	Visible addition: scattered bricks and a broken masonry edge in foreground.	Visible addition	Rectangular broken brick/masonry pieces appear near the bottom-left and bottom edge.

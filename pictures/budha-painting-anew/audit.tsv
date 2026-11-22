@@ -1,0 +1,118 @@
+id	line	statement	classification	evidence
+B001	3	Painting rather than diagram	Shown	Figurative painted scene, although arranged in compartments.
+B002	3	Every part carries Budha's quality	Not shown / visually undecidable	An exclusive symbolic quality cannot be established from pixels alone.
+B003	3	No word, letter, numeral, or glyph	Shown	No legible textual or numeric character is visible; books and ledgers use blank or non-legible marks.
+B004	3	Both readings of any paired correspondence are present	Not shown / visually undecidable	The universal claim and textual readings cannot be visually proved.
+B005	7	Clear autumn day	Shown	Clear pale sky and many gold-brown falling leaves indicate autumn daylight.
+B006	7	Market	Shown	Stalls, bolts, wares, merchants, scales and coins fill the scene.
+B007	7	School	Shown	Teacher with children, scribes and study tables are visibly compartmented.
+B008	7	Playground	Shown	Juggler and ball game occupy visible upper-right compartments.
+B009	7	Crowded with small scenes	Shown	Numerous discrete vignettes cover the panel.
+B010	8	Central youth neither boy nor girl	Not shown / visually undecidable	The central person's gender identity is not visually decidable.
+B011	8	Young prince of middling size	Shown	Youthful, richly adorned central figure is neither giant nor tiny relative to neighbors.
+B012	8	Even, well-made frame	Shown	Balanced, proportionate torso and limbs are clearly modeled.
+B013	8	Fine eyes edged red	Shown	Elongated eyes have red accents.
+B014	8	Dark curls	Shown	Dense black curling hair is prominent.
+B015	8	Dark-green skin with a little blue in shadows	Shown	Skin is saturated grass-green with cool dark shadowing.
+B016	8	Green and washed-linen clothing	Shown	Green drape and white linen sash/clothing are visible.
+B017	8	Emerald and brass worn	Shown	Green gemstone jewelry and yellow-metal ornaments are visible.
+B018	9	Writes on a tablet	Shown	Right hand holds a stylus over an open writing surface.
+B019	9	Weighs coin on a scale	Shown	Left hand suspends a balance above coins and weights.
+B020	9	Speaks to two people facing across him	Shown	Two interlocutors flank the center and gesture toward one another.
+B021a	9	Half smile	Shown	A slight half-smile is visible.
+B021b	9	Joke with two meanings	Not shown / visually undecidable	No semantic content can be recovered from the still image.
+B022	10	Parrot on shoulder	Shown	Green-red parrot perches on the left shoulder.
+B023	10	Cat under table	Shown	Cat lies directly below the central table.
+B024	10	Loaded mule	Shown	Pack-laden mule stands at left.
+B025	11	Scribes	Shown	Multiple seated writers work at paper or books.
+B026	11	Accountant	Shown	Abacus/ledger worker appears behind the central figure.
+B027	11	Teacher with children	Shown	Upper-left teacher addresses seated children.
+B028	11	Merchants	Shown	Several stalls and negotiations are visible.
+B029	11	Juggler doing a trick	Shown	Upper-right figure juggles several balls.
+B030	11	Mechanic with machine	Shown	Right-side worker operates a toothed wheel mechanism.
+B031	11	Sculptor	Shown	Right-middle artisan chisels a stone figure.
+B032	11	Astrologer reading signs	Shown	Bottom-center-right observer points beside an armillary sphere and star chart.
+B033	11	Messenger running	Shown	Bottom-right runner carries a case.
+B034	11	Boys at a game	Shown	Upper-right youths play a ball game.
+B035	12	Fruitless trees line square	Shown	Repeated deciduous trees carry leaves but no visible fruit.
+B036	12	Bridge and embankment behind	Shown	Arched bridge and built river edge cross the upper background.
+B037	12	Oyster shell on table	Shown	Large open shell lies before the central figure.
+B038	12	Green gram on table	Shown	Bowl of small green pulses sits beside the shell.
+B039	13	One side lit as morning and other as evening	Contradicted	The whole scene has even daytime illumination; no distinct evening side is visible.
+B040	13	One side dry and other wet from washing	Shown	Dry autumn ground contrasts with people washing cloth at the lower-right water edge.
+B041	17	Page-like panel of many compartments and passages	Shown	White-edged arched compartments and paths divide the image.
+B042	17	Each compartment forms a complete little scene	Shown	Each bounded vignette contains a recognizable activity.
+B043a	17	Scenes linked by paths and glances	Shown	Curving paths and directed gazes connect adjacent scenes.
+B043b	17	Scenes linked by things handed onward	Not shown / visually undecidable	Some gestures suggest exchange, but a chain of handed objects cannot be traced securely.
+B044	18	Even clear light without one source; every detail readable	Shown	Illumination is diffuse and fine details remain legible across the panel.
+B045	22	Miniature with fine line, thin wash, pointed-brush exactness	Shown	Delicate outlines, pale modeling and intricate small-scale details simulate miniature technique.
+B046	22	Quick, witty quality; tiny things rendered whole	Shown	Juxtaposed tricks and compact complete activities visibly create a lively witty effect.
+B047	22	Pattern and number everywhere	Shown	Repeated textiles, arches, leaves, coins, balls and books form abundant patterns/countable sets.
+B048	23	Greens from grass to emerald	Shown	Multiple greens range from pale plants to deep cloth and jewel tones.
+B049	23	A little blue, brass yellow, linen/paper white	Shown	Blue trim, yellow metal and broad white cloth/paper are visible.
+B050	29	Power of speech, reckoning and exchange	Shown	Gesturing speech, balance/coins, abacus, writing and commerce visibly embody all three.
+B051	29	Earth is strongest elemental association	Not shown / visually undecidable	A painted ground does not establish a privileged elemental correspondence.
+B052	29	Figure neither male nor female	Not shown / visually undecidable	Gender category is not visually decidable.
+B053	29	Takes either side; learning and deception	Not shown / visually undecidable	The paired social/moral capacity cannot be read with confidence from a still scene.
+B054a	31	Autumn belongs to Budha	Shown	Falling gold leaves visibly establish autumn.
+B054b	31	North belongs to Budha	Not shown / visually undecidable	No compass reference is present.
+B055	31	Two-month span	Not shown / visually undecidable	Duration is not encoded visibly.
+B056	31	Childhood and first mastery of learning	Shown	Children learn and play in surrounding vignettes.
+B057a	33	Variable drying and moistening	Shown	Dry autumn ground and wet cloth-washing zone coexist.
+B057b	33	Mixed innate disposition and changing associate nature	Not shown / visually undecidable	Astrological disposition and associate-dependent nature are not visibly encoded.
+B058	35	Companion of the Sun	Not shown / visually undecidable	No identifiable Sun companion relation is depicted.
+B059	37	Shared sect; morning/day/evening/night strengths	Not shown / visually undecidable	The scene lacks a legible sect/time sequence; its illumination is daytime.
+B060	39	Mixed or sharp taste	Not shown / visually undecidable	Taste cannot be inferred from appearance.
+B061	43	Intelligence, speech and quick resourcefulness	Shown	Simultaneous writing, weighing and conversation visually convey these traits.
+B062	43	Calculates, inquires, learns and invents methods	Shown	Abacus, school, geometric drawing and mechanism visibly support these activities.
+B063	43	Pleasure in jokes and double meanings	Shown	The central half-smile and playful vignettes support pleasure in wit; semantic double meaning is undecidable.
+B064	43	Imitates dress/speech and turns arguments around	Not shown / visually undecidable	No unmistakable imitation or argument reversal is visible.
+B065	43	Thoughtful, clear and practical; adverse haste/evasion/fickleness/falsehood	Not shown / visually undecidable	Practical work is visible, but inner virtues and adverse alternatives cannot be sorted visually.
+B066	43	Younger relations, siblings and work/learning companions	Shown	Groups of young learners, players and coworkers are visible; exact kinship is undecidable.
+B067	45	Social-class assignments and royal-prince court office	Not shown / visually undecidable	Dress suggests status but does not establish textual caste or office assignments.
+B068	49	Middling, even body and fine eyes	Shown	Central body and eyes visibly match.
+B069	49	Roundness/softness and visible veins/sinew	Not shown / visually undecidable	Soft modeling is visible, but veins/sinew are not clearly delineated.
+B070	49	Bile, wind and phlegm constitution; skin tissue	Not shown / visually undecidable	Humoral constitution and characteristic tissue cannot be seen.
+B071a	49	Hands and fingers are central associations	Shown	The large central hands write and operate a balance; many surrounding hands perform skilled work.
+B071b	49	Tongue and joints are central associations	Not shown / visually undecidable	Ordinary visible anatomy does not establish these categorical correspondences.
+B072	49	Shoulders, breath passage, abdomen and bowels	Not shown / visually undecidable	Ordinary anatomy does not establish these correspondences.
+B073	49	Mark near right armpit	Not shown / visually undecidable	The covered area provides no clear mark.
+B074	51	Conditional white spots or ill health under lunar conjunction	Not shown / visually undecidable	No white-spotted body or legible lunar configuration is shown.
+B075a	55	Scribes, teachers, accountants and merchants	Shown	Each profession has a distinct visible vignette.
+B075b	55	Bankers	Not shown / visually undecidable	Money handling is present, but no figure is unambiguously a banker.
+B076	55	Grammarians, interpreters, speakers and secretaries	Not shown / visually undecidable	Speech/writing are present, but these exact professions are indistinguishable.
+B077	55	Mechanics, artisans, architects and sculptors	Shown	Mechanic, several artisans, geometric designers and sculptor are visible.
+B078a	55	Astrologers	Shown	A star chart and armillary sphere identify an astrologer.
+B078b	55	Diviners and court minister	Not shown / visually undecidable	These exact roles cannot be distinguished.
+B079a	55	Performance, weaving, modeling and instrument-making	Shown	Juggling, loom work, sculpting and mechanical construction appear.
+B079b	55	Those skills occur through partnership with Venus	Not shown / visually undecidable	No Venus partnership is visually encoded.
+B080	59	Accounts, writing, coin, merchandise and machines	Shown	All are prominent and concrete.
+B081a	59	Washed cloth, green clothing and oyster shell	Shown	All three are explicit in the foreground.
+B081b	59	Temple linen and bitter goods	Not shown / visually undecidable	Temple use and taste cannot be established visually.
+B082a	59	Teaching, arguing, news-carrying, trading and reckoning	Shown	Teacher, gesturing discussants, runner, merchants, scale and abacus show these actions.
+B082b	59	Interpreting	Not shown / visually undecidable	No distinct act of translation or interpretation is identifiable.
+B083a	59	Games, tricks and calculated feats	Shown	Ball game and juggling are explicit.
+B083b	59	False accounting	Not shown / visually undecidable	Nothing identifies a fraudulent account.
+B084a	59	Drawings, alloys and crafted objects	Shown	Geometric drawing, metalware and crafted goods are visible.
+B084b	59	Poems	Not shown / visually undecidable	No legible or identifiable poem appears.
+B085	63	Playground, schools, meeting/math halls and market	Shown	Play, instruction, grouped discussions/calculation and commerce are explicit.
+B086a	63	Waters, bridges and embankments	Shown	River, arched bridge and built bank are clear.
+B086b	63	Magadha geography	Not shown / visually undecidable	No unique geographic marker identifies Magadha.
+B087a	67	Fruitless trees and green gram	Shown	Trees bear no visible fruit and a bowl of green pulses is central.
+B087b	67	Seeds	Not shown / visually undecidable	No separate object can securely be identified as seed.
+B088a	67	Parrot, Garuḍa-like bird, cat and mule	Shown	These are respectively on shoulder, upper-right pedestal, below table and at left.
+B088b	67	Cātaka bird	Not shown / visually undecidable	No bird can be securely identified as a Cātaka.
+B089a	71	Brass/alloy and gold	Shown	Yellow-metal vessels, balance, ornaments and coins visually represent these materials.
+B089b	71	Copper	Not shown / visually undecidable	Some metal is reddish, but copper cannot be securely distinguished.
+B090a	71	Green gemstone / emerald appearance	Shown	Central jewelry contains prominent emerald-green stones.
+B090b	71	Exact mineral identity as emerald	Not shown / visually undecidable	Color alone cannot prove mineral species.
+B090c	71	Garuḍa form	Shown	A large eagle/Garuḍa-like figure stands on the upper-right pedestal.
+B091	75	Dark curls and red-edged eyes	Shown	Both portrait traits are visible.
+B092	77	Green/dūrvā-dark complexion, blue supplement	Shown	Central figure is distinctly grass-green with cool blue-green shadows.
+B093	81	Dry disorders, fever, cough, wasting and partner-dependent illness	Not shown / visually undecidable	No clearly ill subject or planetary medical configuration is depicted.
+B094	81	Speech difficulty in a specified Saturn-Mercury-Sun-Moon configuration	Not shown / visually undecidable	No readable astrological configuration or impaired speech is visible.
+A001	addition	White flowered vine canopy behind the central figure	Visible addition	A dense flowering vine frames the center; the source specifies fruitless trees but not this floral canopy.
+A002	addition	Large eagle statue on a pedestal	Visible addition	Upper-right gold-and-green eagle sculpture is prominent beyond the less specific Garuḍa association.
+A003	addition	Boats and riverside cityscape	Visible addition	Boats, distant buildings and river traffic expand the setting beyond the stated bridge/embankment.
+A004	addition	Metalworkers and textile washers in foreground	Visible addition	Bottom edge adds furnace work, vessel craft and a multi-person laundering scene.
+A005	addition	Armillary sphere and painted star chart	Visible addition	A large astronomical instrument and dark star chart make the astrologer vignette unusually explicit.

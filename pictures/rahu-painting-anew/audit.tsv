@@ -1,0 +1,53 @@
+row	source-line	statement	classification	visual evidence / reason
+001	L3a	The work is a painting rather than a diagram.	Shown	A continuous representational painted scene; no diagrammatic schema.
+002	L3b	Every part has Rāhu quality and no other quality.	Not shown / visually undecidable	Exclusive symbolic quality cannot be established visually.
+003	L3c	It holds no word, letter, numeral, or glyph.	Shown	No writing or glyphs are visible.
+004	L3d	Both readings of paired correspondences are present.	Not shown / visually undecidable	The meta-claim is not independently testable from the pixels.
+005	L7a	The sun is being swallowed in total eclipse.	Shown	A black circular sun with bright corona is directly approached by the giant open mouth.
+006	L7a.2	The eclipse occurs at midday.	Not shown / visually undecidable	Totality darkens the scene and no independent clock or solar altitude fixes midday.
+007	L7b	Eclipse stands over southwest.	Not shown / visually undecidable	No compass cue establishes southwest.
+008	L7c	Land beneath has gone dark.	Shown	Terrain and figures lie in deep eclipse shadow.
+009	L8a	Imposing figure rises from dark, made of smoke, blue-bodied with dark-blue gleam.	Shown	A monumental blue-black torso coalesces from smoke and clouds.
+010	L8b	Head tilted up, mouth open toward sun, taking it in.	Shown	Face turns upward with open mouth immediately beneath the eclipsed disc.
+011	L9a	Eyes bright and knowing; rest of face masked by smoke.	Shown	One eye shines sharply while smoke obscures much of the face.
+012	L9b	Old patchwork cloth of many colours.	Shown	Tattered multicolour strips drape the shoulders and torso.
+013	L10a	Ravines and caves.	Shown	Jagged gullies and several dark cave mouths fill the lower slopes.
+014	L10b	Dark snake hole in anthill.	Shown	A perforated earthen mound with a black opening stands at bottom centre.
+015	L10c	Thicket and forest climbing to mountain summit.	Shown	Dense scrub/trees climb the right-hand mountain ridge.
+016	L11a	Spy watches behind a rock.	Shown	A concealed human face peers from behind rock at lower left.
+017	L11b	Thief carries something off.	Shown	A crouching runner clutches a round vessel or bundle.
+018	L11c	A wrestler.	Shown	A muscular kneeling figure grapples/strains at centre.
+019	L11d	Snake catcher with serpent.	Shown	A seated man faces and handles an upright cobra.
+020	L11e	Army far away.	Shown	A distant marching formation with flags lines the right ridge.
+021	L12a	Serpent, owl, wolf, donkey and camel.	Shown	All five animals appear distinctly in the lower half.
+022	L12b	Small biting creatures.	Shown	Ant/scorpion-like insects crawl across the foreground.
+023	L12c	Black gram and sesame.	Not shown / visually undecidable	Black and pale seed/bean piles are shown, but species cannot be authenticated visually.
+024	L12d	Lump of lead and honey-coloured stone.	Not shown / visually undecidable	A grey metallic-looking rock and glowing amber stone appear; material identity is not visually provable.
+025	L16	Tall, top-heavy canvas; dark mass thickens upward and draws forms to eclipse.	Shown	Portrait canvas concentrates giant smoky body and eclipse in its upper half with upward flow.
+026	L17a	Only light is eclipse ring and cold gleam on figure.	Contradicted	A distinctly warm self-luminous amber stone glows at bottom right in addition to the corona and blue gleam.
+027	L17b	Everything else is guessed at.	Contradicted	Many lower figures, animals, seeds, and rocks are rendered with clear, legible detail rather than merely guessed forms.
+028	L21a	No drawn outline anywhere; forms melt into one another.	Shown	Edges arise through tonal modelling rather than drawn contour lines, while smoke merges figure, terrain, and cloud.
+029	L21b	Layered dark glaze; things seem one creature then another.	Shown	Smoke transitions into face, torso, mountain, and animal-like cloud forms ambiguously.
+030	L22	Blue-black, smoke grey, deep blue, pale eclipse ring, multicolour flecks.	Shown	The stated palette is visibly dominant and patchwork provides coloured flecks.
+031	L28	Malefic figure associated with southwest and touch.	Not shown / visually undecidable	Threatening presentation is visible; astrological status, direction, and touch association are not.
+032	L30a	Orbital crossing and eclipse geometry.	Not shown / visually undecidable	An eclipse is pictured; orbital latitude geometry and lunar phase/crossing cannot be derived from the scene.
+033	L30b	Sun is swallowed in eclipse myth.	Shown	The giant smoky mouth visibly reaches to consume the blackened sun.
+034	L30c	Point of intake / receiving solar or lunar power.	Not shown / visually undecidable	The swallowing gesture supports intake metaphor, but the two doctrinal readings cannot be visually distinguished.
+035	L34a	Fearsome and tending toward false speech.	Not shown / visually undecidable	The figure is fearsome; truthfulness cannot be assessed visually.
+036	L34b	Turns toward acquiring resources and building faculties.	Not shown / visually undecidable	No visible action establishes this abstract developmental orientation.
+037	L36	Intelligent/lacking intelligence/cunning portraits.	Not shown / visually undecidable	A bright eye can suggest alertness; cognition and cunning cannot be determined.
+038	L38	Moon at bends/crossings changes human adaptability, activity, and mind.	Not shown / visually undecidable	No Moon or mental-state comparison is visually available.
+039	L42	Imposing stature and windy constitution.	Shown	The giant scale and smoke/wind-blown dissolution visibly embody both cues.
+040	L46	Spy, thief, wrestler, snake catcher and army.	Shown	Each occupational/role motif is explicitly represented.
+041	L50	Old cloth and many-coloured patchwork garment.	Shown	Torn variegated drapery is conspicuous.
+042	L54	Anthill, snake hole, caves, ravines, summit and forest.	Shown	All listed landforms/sites are visible.
+043	L58a	Donkey, serpent, ram, wolf, camel, owl, small biting creatures.	Shown	All named animals are present; the ram is low near centre-left.
+044	L58b	Black gram, sesame and thickets.	Not shown / visually undecidable	Seed piles and thicket are visible; precise seed species are undecidable.
+045	L62	Lead as metal.	Not shown / visually undecidable	Grey rock may symbolize lead but material cannot be confirmed visually.
+046	L64	Named gomedha stone, agate or retained name.	Not shown / visually undecidable	Honey-coloured stone is shown, but species/name cannot be inferred from appearance.
+047	L68	Dark/blue gleam, blue body and smoky appearance are separate features.	Shown	Blue body surfaces glimmer while smoky edges and clouds remain materially distinct.
+048	L72	Skin disease and hiccups.	Not shown / visually undecidable	No reliable sign of either condition is visible.
+049	L74	Approaching alignment can intensify posture/movement disorders.	Not shown / visually undecidable	The astrological configuration and medical effect are not visually represented.
+050	ADD1	Visible addition: a ram among the lower animals.	Visible addition	A curled-horn ram is visible although the explicit painting inventory at L12 omits it; correspondence L58 includes it.
+051	ADD2	Visible addition: warm glowing amber stone emits its own light.	Visible addition	The lower-right stone has a bright orange core and halo beyond the stated two light sources.
+052	ADD3	Visible addition: pale/white seed pile beside black gram.	Visible addition	A clearly separate pale seed pile is rendered at the bottom edge.

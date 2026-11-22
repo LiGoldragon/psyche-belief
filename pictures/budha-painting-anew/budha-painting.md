@@ -1,0 +1,81 @@
+# Budha, a painting: the source
+
+A painting, not a diagram. Every part of it has the quality of Budha, and nothing in it has another quality: the subject, the setting, the things, the format, the composition, the light, the colour, the stroke and the surface. It holds no word, no letter, no numeral and no glyph. Where the correspondence below gives two readings of one thing, both are present in the one picture.
+
+## The painting
+
+- A clear autumn day in a market that is also a school and a playground, crowded with small scenes.
+- In the middle, a youth who is neither boy nor girl, a young prince of middling size with an even, well-made frame, fine eyes edged with red, dark curls, and skin dark green like dūrvā grass, a little blue in its shadows. He wears green and washed linen, an emerald, and brass.
+- He does several things at once: he writes on a tablet, weighs coin on a scale, and speaks to two people who face each other across him, with a half smile, as at a joke with two meanings.
+- A parrot sits on his shoulder; a cat is under the table; a mule waits loaded with merchandise.
+- Around him, each in its own small space: scribes, an accountant, a teacher with children, merchants, a juggler doing a trick, a mechanic with a machine, a sculptor, an astrologer reading signs, a messenger running, boys at a game.
+- Trees without fruit line the square; a bridge and an embankment lie behind; an oyster shell and green gram are on the table.
+- One side of the picture is lit as by morning and the other as by evening; one side is dry and the other wet from washing.
+
+## Format, composition and light
+
+- A panel divided like a page into many small compartments and passages, each a complete little scene, linked by paths, glances and the things handed from one to the next.
+- An even, clear light with no single source, so every detail can be read.
+
+## Manner
+
+- A miniature: fine pen line and thin wash, drawn with a pointed brush, exact, quick, witty; tiny things rendered whole; pattern and number everywhere.
+- Colours: greens from grass to emerald, a little blue, brass yellow, the white of linen and paper.
+
+## The correspondence, whole
+
+### nature
+
+Budha is the power of speech, reckoning and exchange. Earth is its strongest elemental association. Its figure is neither male nor female. The ability to take part on either side helps explain why one power can govern both clear learning and clever deception.
+
+Autumn, the north and a span of two months belong to it. In a human life it belongs to childhood and the first mastery of the arts of learning.
+
+**Variable moisture and mixed disposition.** In the physical-powers account Mercury can be *ξηραντικὸς*, drying, or *ὑγραντικὸς*, moistening, depending on its relation to the Sun and lunar sphere. In a thermal grouping Mercury is *miśrasvabhāvo*, of mixed innate disposition. In the adjacent benefic rule it is favorable when unmixed, taking on the nature of its associates when mixed. These are different accounts of variation.
+
+**Companions of the Sun.** An invocation calls Mercury and Venus together *fidi Solis comites*, faithful companions of the Sun.
+
+**Affiliation and measures of strength.** Mercury is *ἐπίκοινον*, shared between sects: *ἑῴῳ σχήματι ἡμερινόν*, diurnal in morning configuration, and *ἑσπερίῳ νυκτερινόν*, nocturnal in evening configuration. A general strength rule gives *dine kṣapāyāṃ ca*, day and night. Separate English readings give strength in the morning as an interval and in the ascendant as a chart place; the exact Sanskrit for those two readings is unverified here.
+
+**Assigned taste and supplemental taste.** One ordered list gives *miśritā*, mixed taste. The English supplement that calls Mercury blue also says “sharp in taste”; the Greek basis for that supplement is unverified.
+
+### character
+
+Intelligence, speech and quick resourcefulness come first. Budha can calculate, inquire, learn a method and invent a new one. It takes pleasure in a joke, a neat turn of phrase or words with more than one sense. It can imitate another’s dress and speech, and turn an argument around to see how it holds together. When well placed it is thoughtful, clear and practical; under adverse influence it can turn hasty, evasive, fickle or false. Adaptability makes both readings possible. It is close to younger relations, siblings and companions who learn or work together.
+
+**Social class and court office.** One social classification gives Mercury *śūdrāṇāṃ*, rulership of Śūdras; another in the available English gives Mercury and the Moon rulership of Vaiśyas; the Sanskrit wording of that reading is unverified here. A separate class roster, *vaiśyavarṇau*, calls Mercury and the Moon Vaiśyas. The *rājakumāra*, royal prince, belongs to a separate assignment of court offices.
+
+### body
+
+The portrait is of middling size, with an even, well-made frame and fine eyes. Roundness and softness are among its forms; visible veins or sinew give it definition. Its constitution combines bile, wind and phlegm, and skin is its characteristic tissue. In the human body the tongue, hands, fingers and joints are central associations. The shoulders, passage of breath, abdomen and bowels also belong. A mark near the right armpit is a particular sign.
+
+**White spots under a waxing conjunction.** In a natal rule, *coniunctionem Lunae crescentis* is the waxing Moon joining Mercury in the fifth place. Under that condition the person has either *albis … maculis*, white spots over the whole body, or ill health according to the nature and quality of the signs. A joining waning Moon, *deficiens se Luna coniunxerit*, is a separate adverse branch.
+
+### occupations
+
+Budha is less defined by rank than by the means of the work. Scribes, teachers, accountants, merchants and bankers use words or figures to record and exchange things. Grammarians, interpreters, speakers and secretaries make thought available to others. Mechanics, artisans, architects and sculptors make their skill visible in objects; astrologers and diviners apply it to signs. There is also a place at court as minister. Where Venus is its partner, the technical skill can be put to performance, weaving, modeling or making instruments.
+
+### things
+
+Accounts, writing, coin, merchandise, machines and their making express its field. Cloth washed or soaked in water, green clothing, temple linen and an oyster shell are particular objects. Bitter goods also belong here. Its actions are teaching, arguing, interpreting, carrying news, trading and reckoning. Games, tricks and calculated feats use the same skill in play, and can cross the line into false accounting. Drawings, poems, alloys and crafted objects show how it turns ideas into usable forms.
+
+### places
+
+The playground or recreation ground is its most recurrent place. Schools of learning, meeting rooms and halls for mathematical study belong beside it. A market is where its skill in exchange becomes public. Magadha is a geographical association; waters, bridges and embankments also fall within its wider field.
+
+### animals and plants
+
+Fruitless trees are especially well established. Seeds and green gram belong among the smaller growths. Birds include the parrot and the Cātaka; Garuḍa has a place as a divine bird. The cat and mule also belong.
+
+### metals and stones
+
+Alloy or brass comes first, with copper and gold also named. Emerald is its distinctive stone, including the form of Garuḍa.
+
+### colours
+
+Dark curls and eyes edged with red describe parts of the figure.
+
+**Green and the blue supplement.** The assigned planetary colour is *harita*, green, and the figure is *dūrvāśyāmo*, dark like dūrvā grass. An English supplement to a different planetary portrait says “blue”; its Greek basis is unverified, and the available Greek paragraph assigns no hue.
+
+### illnesses
+
+Dry disorders, recurrent fever, cough and wasting belong here. The partner can change the complaint: Saturn makes cold disorders longer and can bring fluid into the chest, throat or stomach, while Mars intensifies dryness, irritation and ulceration. Speech difficulties are associated with Saturn and Mercury joining the Sun at a horizon angle, especially when Mercury is setting and both planets aspect the Moon. This concerns the use of speech by a person and does not make impaired speech the nature of Mercury.

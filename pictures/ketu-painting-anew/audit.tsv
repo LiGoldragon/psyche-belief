@@ -1,0 +1,55 @@
+row	source-line	statement	classification	visual evidence / reason
+001	L3a	The work is a painting rather than a diagram.	Shown	A continuous representational painted scene, without diagram structure.
+002	L3b	Every part has Ketu quality and no other quality.	Not shown / visually undecidable	Exclusive symbolic quality is not a property that pixels can prove.
+003	L3c	It holds no word, letter, numeral, or glyph.	Shown	No writing or glyphs are visible.
+004	L3d	Both readings of paired correspondences are present.	Not shown / visually undecidable	This meta-claim cannot be independently resolved visually.
+005	L7a	Desert frontier at dusk.	Shown	Sparse sandy ground, haze, and waning light depict an arid frontier at dusk.
+006	L7b	The setting is southwest.	Not shown / visually undecidable	No compass marker establishes southwest.
+007	L7c	Hill fort on far ridge.	Shown	A crenellated fortress sits on the distant central ridge.
+008	L7d	Comet: fiery apparition with long smoke tail.	Shown	A bright red-orange head crosses the sky with a long smoky trail.
+009	L7e	Full moon near comet darkened by eclipse.	Shown	A round dark red lunar disc is visible beside the comet.
+010	L8a	Figure high on rock, elevated and lean.	Shown	A very lean figure stands above the landscape on a high rock.
+011	L8b	Ascetic bearing a weapon.	Shown	Ragged ascetic presentation and long spear/trident-like weapon are clear.
+012	L8c	Fierce red gaze and venomous tongue.	Shown	Eyes glow red and a long red tongue protrudes.
+013	L8d	Breathing smoke.	Shown	A grey plume issues from the mouth/nose region.
+014	L8e	Smoky brilliance; body thins into air at edges.	Shown	Hair, smoke, and rag edges dissolve into the atmosphere, though the central body remains solid.
+015	L9a	Rags and mixed cloth full of holes.	Shown	Multi-toned garments are torn through with many holes.
+016	L9b	Tips a mud vessel pouring seed.	Shown	The left hand tilts a brown clay pot and a long stream of individual seeds pours out.
+017	L9c	Wind carries seed over ground.	Shown	The seed stream arcs far to the right with the wind.
+018	L9d	Green shoots where seed has fallen.	Shown	Several fresh green shoots rise at the receiving end of the seed arc.
+019	L10a	Anthill and dark snake hole at feet.	Shown	A perforated mound and black burrow opening sit below the rock.
+020	L10b	Serpent and thorn bushes.	Shown	An upright cobra and thorny vegetation are prominent.
+021	L10c	Donkey, ram, wolf, camel and owl at distance.	Shown	All five animals are visible across left and middle distance.
+022	L10d	Insects in air.	Shown	Numerous winged insects surround the figure.
+023	L10e	Horse gram.	Not shown / visually undecidable	Seeds are visible in pot, air, and ground, but species cannot be securely identified.
+024	L11	One blue stone with line of light across it.	Shown	A blue oval stone on the rock has a bright diagonal band.
+025	L15a	Wide canvas empties toward one side.	Shown	Landscape format opens into a large bare right-hand expanse.
+026	L15b	Forms whole at left, coming apart to right; right ground bare.	Shown	Dense figure/animals/vegetation at left give way to windblown seeds, sparse shoots, haze, and bare right ground.
+027	L16a	Ash-pale smoky light.	Shown	Pale grey-brown haze and smoke spread across the scene.
+028	L16b	Three red-fire points: gaze, comet head, eclipsed moon.	Shown	Red eye, comet head, and lunar disc make three separated red accents.
+029	L20a	Paint scraped/rubbed thin and broken; weave and bare ground show.	Shown	Surface visibly simulates abrasion, thin scumbles, exposed weave/ground, and worn edges.
+030	L20b	Scattered separate touches like things let go.	Shown	Seeds, insects, rag fragments, and sparse marks scatter freely across open space.
+031	L21	Ash grey, smoke, bone white, dull earth, red points, one blue.	Shown	The stated restrained palette matches the visible image.
+032	L27	Malefic figure associated with southwest and touch.	Not shown / visually undecidable	Fearsome appearance is visible; astrological nature, compass association, and touch are not.
+033	L29a	Ketu as southward crossing and eclipse myth.	Not shown / visually undecidable	An eclipsed moon is shown; orbital direction/crossing and mythic identity are not independently visible.
+034	L29b	Point of release: assimilated matter leaves as waste or seed.	Shown	The figure visibly releases a stream of seed from its vessel.
+035	L29c	Spontaneous giving can help others at cost to giver.	Not shown / visually undecidable	Seed and new shoots suggest giving/help; spontaneity and cost to giver cannot be established.
+036	L33a	Fearsome and harsh.	Shown	Fierce eyes, weapon, protruding tongue, and gauntness visibly create a fearsome harsh presence.
+037	L33b	Turns toward acquired/inherited things; holding is inertia, letting go integrates life.	Not shown / visually undecidable	Release is pictured, but acquisition, inheritance, inertia, and integration are abstract and not visually testable.
+038	L35	Moon at bends/crossings changes human mind and activity.	Not shown / visually undecidable	No comparative human mental state or orbital geometry is shown.
+039	L39	Elevated lean figure, fierce gaze, venomous tongue, windy constitution.	Shown	Every exterior feature is visible; wind appears in smoke, hair, rags, and seeds.
+040	L43	Snake catcher, soldier, and religious life.	Not shown / visually undecidable	The single ascetic bears a weapon, supporting religious/soldier readings; no snake-catching act is shown.
+041	L47	Mud vessel, mixed cloth, rags, holes, arms, and smoke breath.	Shown	All listed objects/features appear clearly.
+042	L51	Anthill, dark snake hole, or forest.	Shown	Anthill and dark hole are present; no forest is required by the disjunction.
+043	L53a	Hill forts, deserts and frontier districts.	Shown	Distant fort and arid frontier visibly combine these allocations.
+044	L53b	Ketu denotes a fiery cometary apparition in separate usage.	Shown	The painting prominently includes a fiery comet.
+045	L53c	Allotment does not identify Ketu with natal crossing or expressly name comet.	Not shown / visually undecidable	This textual distinction cannot be tested against the picture.
+046	L57a	Horse gram.	Not shown / visually undecidable	Rendered seeds cannot be identified to species from appearance.
+047	L57b	Donkey, ram, wolf, camel, serpent, owl, insects, bushes.	Shown	Every listed animal and the thorny bush cluster are visible.
+048	L61	Blue stone may be lapis, turquoise, cat’s eye, or unnamed species.	Not shown / visually undecidable	Blue banded stone is clear; mineral species cannot be visually settled.
+049	L65	Smoky brilliance and fierce red gaze as separate portrait features.	Shown	Smoky body/air and red eyes are separately legible.
+050	L69	Bruised limbs.	Shown	Purple-red bruising is visible around knees, shin, forearm, and elbow.
+051	L71	Approaching alignment can intensify posture/movement disorders.	Not shown / visually undecidable	Chart geometry and medical causal claim are not visually available.
+052	ADD1	Visible addition: red bruises on several limbs.	Visible addition	Purple-red bruising is conspicuous on knees and forearm; correspondence L69 mentions it but the initial painting inventory does not.
+053	ADD2	Visible addition: a second long implement or staff behind the figure.	Visible addition	A separate hooked/staff-like implement rises beside the donkey behind the figure’s main spear.
+054	ADD3	Visible addition: distant howling canine posture.	Visible addition	The wolf/canine is posed with muzzle lifted as if howling, a visible action not specified by the source inventory.

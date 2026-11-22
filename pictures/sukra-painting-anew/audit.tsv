@@ -1,0 +1,134 @@
+id	line	statement	classification	evidence
+V001	3	Painting rather than diagram	Shown	Figurative ornamental narrative painting is visible.
+V002	3	Every part carries Śukra's quality	Not shown / visually undecidable	Exclusive symbolic quality cannot be established from pixels alone.
+V003	3	No word, letter, numeral or glyph	Shown	No legible textual or numeric character appears.
+V004	3	Both readings of paired correspondences are present	Not shown / visually undecidable	Universal textual correspondence is not visually provable.
+V005	7	Twilight	Shown	Blue-violet sky retains light while lamps burn.
+V006	7	Spring	Shown	Abundant fresh blossoms and lush flowering vegetation indicate spring.
+V007	7	Garden pavilion	Shown	Ornate open arches frame a formal flower garden.
+V008	7	Open to lotus pool	Shown	Pavilion opens directly toward a lotus-filled reflective pool.
+V009	7	Lamps lit while sky still light	Shown	Hanging and distant lamps glow under a luminous twilight sky.
+V010	7	One bright star	Shown	A single brilliant star stands near the top center.
+V011	8	Young woman, lovely	Shown	Central reclining figure is youthful and conventionally idealized as beautiful.
+V012	8	Broad chest and face	Shown	Face and upper torso are visibly broad/full.
+V013	8	Full strong limbs	Shown	Arms and exposed leg are full and robust.
+V014	8	Wide pleasing eyes and beautiful lips	Shown	Large outlined eyes and carefully modeled lips are prominent.
+V015	8	Fine black curling hair	Shown	Long black curls, ringlets and elaborate styling are clear.
+V016	8	Skin dusky/dark as dūrvā grass	Contradicted	Skin is rendered pale warm beige-gold, not dark grass-green or dusky green-brown.
+V017	8	Silvery-white radiance around her	Shown	Sheer silver-white drapery and bright pearl-like highlights form a pale radiance.
+V018	8	Multicoloured clothes	Shown	Rose, blue, green, gold and patterned textiles cover her.
+V019	9	Reclines on couch among silk cushions	Shown	She reclines across a richly cushioned seat.
+V020	9	Garlanded	Shown	Multiple flower garlands cover her hair, neck and torso.
+V021	9	Wears diamonds, pearls and silver	Shown	Abundant white gems, pearl strands and pale-metal jewelry are visible; mineral identity is inferred from appearance.
+V022	9	Plays a stringed instrument	Shown	Hands hold and pluck a long-necked string instrument.
+V023	9	Cheerful, affectionate and at play	Shown	Smile, relaxed pose, music and surrounding social attention convey these moods.
+V024	10	Perfumes and ointments in small vessels	Shown	Many small stoppered and open vessels stand in foreground.
+V025	10	Sandalwood	Not shown / visually undecidable	Aromatic sticks are present, but wood species cannot be identified visually.
+V026	10	Wine	Shown	Red liquid in a stemmed glass and decanter is visible.
+V027	10	Sweets and spices	Shown	Trays of confections and spice sticks/pods are visible.
+V028	10	Jewelry	Shown	Open jewel box and abundant ornaments are prominent.
+V029	10	Gifts just exchanged	Not shown / visually undecidable	Gift boxes and jewels are visible, but a completed exchange cannot be inferred.
+V030	10	Musicians	Shown	Flute and drum players accompany the central instrument.
+V031	10	Dancer	Shown	Dancing woman performs in the middle distance.
+V032	10	Poet	Not shown / visually undecidable	A seated writer is present, but poetic role cannot be distinguished.
+V033	10	Lover arriving	Shown	Richly dressed garland-bearing man approaches from the right.
+V034	11	Peacock	Shown	Peacock stands at lower right.
+V035	11	Parrot	Shown	Green-red parrot sits at lower left.
+V036	11	Cow at garden edge	Shown	White cow appears behind the musicians.
+V037	11	Flowering trees and creepers	Shown	Flower-heavy branches and climbing growth surround the pavilion.
+V038	11	Olive	Shown	Upper-right branch bears narrow leaves and olive-like green fruits.
+V039	11	Lotuses on water	Shown	Many pink lotuses fill the pool.
+V040	15	Upright oval composition	Shown	Painted scene is enclosed in a tall oval jeweled border.
+V041	15	Long sinuous curves with each line leading to next	Shown	Instrument, reclining body, drapery, branches and oval border form linked curves.
+V042	15	Whole surface filled and ornamented; no bare place	Shown	Inside the oval, figures, flowers, textiles and objects densely cover the field; exterior black corners belong outside the oval composition.
+V043	16	Cool silver sky light	Shown	Cool blue-violet twilight and silver-white highlights are visible.
+V044	16	Light moist with dew	Not shown / visually undecidable	Gloss and lushness suggest moisture, but dew itself is not clearly visible.
+V045	16	Warm lamp light on her skin	Shown	Warm golden highlights fall on the central face and body near lamps.
+V046	20	Smooth jewel-like decorative painting	Shown	Polished surfaces, dense jewelry and ornament create a jewel-like finish.
+V047a	20	Luminous enamelled visual color	Shown	The image has smooth saturated jewel-like color.
+V047b	20	Thin transparent glaze technique	Not shown / visually undecidable	Physical layering cannot be proved from the digital image.
+V048	20	Pattern on every cloth and leaf	Contradicted	Many textiles are patterned, but numerous leaves remain natural unpatterned foliage; the literal every claim does not hold.
+V049	20	Perfect finish with no stroke showing	Shown	Surface is uniformly polished without obvious brush marks.
+V050	21	Silver-white and pearl palette	Shown	White/silver drapery and pearl highlights are extensive.
+V051	21	Dusky green-brown skin	Contradicted	Central skin is pale warm beige-gold rather than dusky green-brown.
+V052	21	Variegated rose, blue, green and gold cloth/flowers	Shown	All four color families are abundant.
+V053	27	Benefic feminine attraction, pleasure and refinement	Shown	Female center, courtship, music, flowers and luxury visibly convey these qualities.
+V054	27	Water and moistening	Shown	Lotus pool, lush plants and reflective moist atmosphere are prominent.
+V055	27	Ease and relationship satisfaction	Shown	Relaxed reclining social gathering and arriving lover visibly suggest ease and affection.
+V056	27	Desire drawing toward person/thing and pleasure in meeting	Shown	Approaching garland-bearer and surrounding attentive performers converge on the central woman.
+V057	27	Tenderness, art, hospitality and luxury	Shown	Music/dance, intimate approach, refreshments, silks and jewels depict all four.
+V058	27	Potency and passing on life	Not shown / visually undecidable	No unmistakable reproductive or generational event is shown.
+V059	29	Spring season	Shown	Blossoming garden and lush growth support spring.
+V060	29	Southeast quarter	Not shown / visually undecidable	No compass orientation is provided.
+V061	29	Fortnight measure	Not shown / visually undecidable	Duration is not visibly encoded.
+V062	29	Youth and formation of attraction/taste	Shown	Young figures, courtship, art and luxury concretize youth and taste.
+V063a	29	Visible sources of smell and fragrance	Shown	Perfume vessels, incense smoke and flowers are explicit.
+V063b	29	Fragrance delights before its source is seen	Not shown / visually undecidable	The order of sensing cannot be represented in this still image.
+V064	31	Moderate warming and chief moistening	Shown	Warm lamps coexist with dominant pool/lushness and cool moist atmosphere.
+V065	31	Cold property of gentle group	Shown	Cool twilight palette and gentle scene support the visual half of this correspondence.
+V066	33	Night/day strength, night sect and middle-of-night intervals	Not shown / visually undecidable	Twilight is visible but does not establish the several textual strength rules.
+V067	35	Companion of the Sun with Mercury	Not shown / visually undecidable	No Sun-Mercury companionship is identifiable.
+V068	37	Sour or greasy tastes	Not shown / visually undecidable	Food and drink are visible but their tastes cannot be determined.
+V069	41	Affectionate, graceful, cheerful and playful	Shown	Expression, posture, music and social gestures convey all four.
+V070	41	Notices and responds to beauty in person/object/performance	Shown	Adornment, lover, jewelry, music and dance organize the scene.
+V071a	41	Music and dancing	Shown	Central string player, flutist, drummer and dancer are visible.
+V071b	41	Singing	Not shown / visually undecidable	No figure is unambiguously singing.
+V072	41	Charming easy speech	Not shown / visually undecidable	A still image cannot establish vocal manner.
+V073	41	Cleanliness and order make shared pleasure possible	Shown	Highly ordered pavilion, textiles, vessels and offerings create a meticulous social setting.
+V074a	41	Favorable affection and decorum	Shown	Courtship and orderly refined gathering are visible.
+V074b	41	Adverse careless or undiscriminating indulgence	Not shown / visually undecidable	No clear adverse reversal is depicted.
+V075a	41	Lover and friends	Shown	Approaching garland bearer and social companions are visible.
+V075b	41	Spouse, mothers and nurses	Not shown / visually undecidable	These exact relationships/roles cannot be assigned.
+V076	45	Lovely body, broad chest/face, strong/full limbs and wide pleasing eyes	Shown	All named portrait features are clearly visible.
+V077	45	Weight of shoulders and thighs; body not slight	Shown	Exposed thigh, shoulder line and full torso are substantial.
+V078	45	Fine voice	Not shown / visually undecidable	Sound cannot be assessed.
+V079	45	Beauty of face and lips	Shown	Face and lips receive detailed idealized modeling.
+V080	45	Phlegm/wind constitution and reproductive seed essence	Not shown / visually undecidable	Humoral and bodily essences cannot be seen.
+V081	45	Neck, face, liver, flesh and reproductive functions	Not shown / visually undecidable	Visible neck/face/flesh do not establish categorical bodily correspondences; internal/reproductive functions are unseen.
+V082	45	Mark on left face	Not shown / visually undecidable	No definite facial mark is visible.
+V083a	49	Musicians and dancers	Shown	Multiple instrumentalists and a dancer are clear.
+V083b	49	Poets	Not shown / visually undecidable	A seated writer may be a poet, but role is not identifiable.
+V084	49	Perfumers, wreath/ornament makers, weavers, dyers and fine-goods dealers	Not shown / visually undecidable	Their products are abundant, but none of the workers or trades is distinctly shown.
+V085	49	Gold workers, painters and instrument makers	Not shown / visually undecidable	Goldwork, painting and instruments are present as products; production work is not shown.
+V086a	49	Technical or theatrical performance	Shown	Instrumental music and dance are visible.
+V086b	49	Partnership with Mercury	Not shown / visually undecidable	No Mercury relation is encoded.
+V087	49	Court advisor or minister	Not shown / visually undecidable	No unambiguous court office is depicted.
+V088	51	Delight in music	Shown	Central figure actively plays while surrounded by musicians.
+V089	51	Instrument specialists and painters under depressed-place condition	Not shown / visually undecidable	Instruments appear, but profession and astrological condition are not identifiable.
+V090	55	Perfumes, ointments, garlands, ornaments, jewelry and fine cloth	Shown	Every listed class is visibly represented.
+V091a	55	Couch, silk and stored valuables	Shown	Rich couch, silk-like fabrics and an open jewel box are visible.
+V091b	55	Vehicles	Not shown / visually undecidable	No vehicle appears.
+V092	55	Wine, spices and sweets	Shown	Red wine, spice materials and confection trays are clear.
+V093a	55	Dance and instrumental celebration	Shown	Dancer and several instruments are explicit.
+V093b	55	Song	Not shown / visually undecidable	No singer is unambiguous.
+V094	55	Gifts exchanged, marriage and sexual union	Not shown / visually undecidable	Gift objects and courtship are visible, but completed exchange, marriage and union are not.
+V095	59	Bedroom	Not shown / visually undecidable	Couch and intimate setting suggest it, but the location is explicitly an open garden pavilion.
+V096a	59	Place used for dancing	Shown	A dancer performs inside the leisure pavilion.
+V096b	59	Courtesan quarters	Not shown / visually undecidable	Occupant status and place category cannot be established.
+V097	59	Garden or park	Shown	Dense formal garden and lotus pool are explicit.
+V098	59	Markets and workshops for pleasure goods	Not shown / visually undecidable	Goods are present, but no market or manufacturing workshop is visible.
+V099	59	House sharing these associations	Not shown / visually undecidable	Open pavilion is visible rather than a clearly bounded house.
+V100	63	Flowers, flowering trees, lotus, creepers and sap-filled plants	Shown	All are visibly abundant.
+V101	63	Sandalwood, agarwood, cassia and nutmeg	Not shown / visually undecidable	Aromatic sticks/spices appear, but species cannot be visually distinguished.
+V102	63	Peacock and parrot	Shown	Both are unmistakable.
+V103a	63	Cow	Shown	White cow stands in the garden background.
+V103b	63	Buffalo	Not shown / visually undecidable	No buffalo is visible.
+V104	63	Horse and elephant	Not shown / visually undecidable	Neither is clearly visible.
+V105	63	Olive	Shown	Olive-like branch and fruit are visible.
+V106	67	Diamond, pearl and silver	Shown	White faceted gems, pearl strands and pale metal abound; exact material identification remains appearance-based.
+V107	67	Gems as class	Shown	Many multicolored gemstones appear.
+V108	71	Fine black curling hair	Shown	Long black curls are prominent.
+V109	73	Assigned white and silvery-white figure	Shown	Silver-white sheer cloth/radiance and pearls strongly represent white/silver.
+V110	73	Dusky complexion	Contradicted	Central figure's skin is light warm beige-gold.
+V111	73	Variegated colour and multicoloured apparel	Shown	Clothes and ornaments are intensely multicolored.
+V112	73	Dūrvā-dark complexion / yellow-green translation	Contradicted	Skin is neither grass-dark nor clearly yellow-green; it is pale warm beige-gold.
+V113a	77	Healthy vigorous body	Shown	The central woman is depicted as robust and well.
+V113b	77	Favorable astrological condition	Not shown / visually undecidable	No astrological configuration is visible.
+V114	77	Conditional moderation of illness or blemish	Not shown / visually undecidable	No illness, blemish or harmful planets appear.
+V115	77	Reproductive difficulty, childbirth danger or miscarriage under configurations	Not shown / visually undecidable	No pregnancy, childbirth, loss or natal configuration is depicted.
+A001	addition	Black exterior around jeweled oval	Visible addition	The tall oval sits against large black corner fields outside the composed picture.
+A002	addition	Flute and double-headed drum	Visible addition	Specific accompanying instruments extend the general musician direction.
+A003	addition	Incense burner with rising smoke	Visible addition	A smoking censer is prominent among foreground luxuries.
+A004	addition	Distant domed pavilion across pool	Visible addition	A second lit domed structure deepens the garden setting.
+A005	addition	Elaborate jeweled oval frame	Visible addition	A gem-studded gold border makes the composition resemble a precious object.
+A006	addition	Wrapped gift boxes and stacked textiles	Visible addition	Foreground includes ribboned boxes and folded fabric piles beyond the general gifts/fine cloth.

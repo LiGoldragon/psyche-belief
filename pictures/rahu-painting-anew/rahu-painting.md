@@ -1,0 +1,74 @@
+# Rāhu, a painting: the source
+
+A painting, not a diagram. Every part of it has the quality of Rāhu, and nothing in it has another quality: the subject, the setting, the things, the format, the composition, the light, the colour, the stroke and the surface. It holds no word, no letter, no numeral and no glyph. Where the correspondence below gives two readings of one thing, both are present in the one picture.
+
+## The painting
+
+- The sun at midday being swallowed: a total eclipse stands in the sky over the southwest, the black disc ringed with pale fire, and the land beneath has gone dark.
+- Out of the dark rises a figure of imposing stature, made of smoke, blue-bodied, with a dark blue gleam on it. Its head is tilted up and its mouth is open toward the sun, taking it in.
+- Its eyes are bright and knowing; the rest of the face is masked by the smoke. It wears old cloth, a patchwork of many colours.
+- Below it: ravines, caves, a dark snake hole in an anthill, a thicket, a forest climbing to a mountain summit.
+- In the shadows a spy watches from behind a rock and a thief carries something off; a wrestler; a snake catcher with his serpent; an army far away.
+- A serpent, an owl, a wolf, a donkey, a camel, small biting creatures; black gram and sesame; a lump of lead and a honey-coloured stone.
+
+## Format, composition and light
+
+- A tall canvas with the weight at the top: the dark mass spreads and thickens upward toward the eclipse and draws everything up into it.
+- The only light is the ring around the black sun and the cold gleam on the figure; everything else is guessed at.
+
+## Manner
+
+- Smoke: no outline anywhere, forms melting into one another, layer on layer of dark glaze, so that a thing seems one creature and then another.
+- Colours: blue-black, smoke grey, deep blue, the pale ring of the eclipse, and small flecks of many colours in the patchwork.
+
+## The correspondence, whole
+
+### nature
+
+The figure is malefic and associated with the southwest and with touch.
+
+**Crossing, eclipse myth and intake.** In orbital geometry, “the Moon passes from the hemicycle … of south latitude … to that of the north latitude.” A new Moon near either crossing can yield a solar eclipse; a full Moon near either can yield a lunar eclipse. “Swallowed up” describes the eclipse in myth. “Point of intake” is symbolic: one reading puts the Moon in the role of receiving solar power; another puts earth-nature in the role of receiving lunar power.
+
+### character
+
+Rāhu is fearsome, with a tendency toward false speech in the portrait. In the symbolic cycle of taking in and letting go, it turns toward acquiring resources and building faculties.
+
+**Intelligence and cunning.** One portrait calls Rāhu *dhīmān*, intelligent. Another calls it *buddhīnaḥ*, lacking intelligence, and *kapaṭī*, cunning. The latter account gives cunning alongside its judgment of intelligence.
+
+**Moon at the bends and crossings.** At the Moon’s north or south bend, *ἐν μὲν ταῖς καμπίαις*, the human mind is described as adaptable, resourceful and changeable; the bends are limits of latitude. With the Moon instead at either crossing, *ἐπὶ δὲ τῶν συνδέσμων*, the mind is sharper, more active and more readily stirred. This concerns the Moon’s placement and the human mind.
+
+### body
+
+Its figure has imposing stature and a windy constitution. The body belongs to the portrait; the crossing itself is a position.
+
+### occupations
+
+The spy, thief, wrestler and snake catcher belong here, with the army as a broader association.
+
+### things
+
+Old cloth and a many-colored patchwork garment.
+
+### places
+
+The anthill and dark snake hole are closest to the figure. Caves and ravines extend the same sense of concealment; mountain summits and forest also belong.
+
+### animals and plants
+
+The donkey and black gram recur. The serpent, ram, wolf, camel, owl and small biting creatures are also associated with it, as are sesame and thickets.
+
+### metals and stones
+
+Lead is its metal.
+
+**The named stone.** One ordered gem allotment gives Rāhu the *gomedha* part of *gomedhavaidūryake*. One translation identifies it as agate; another retains the stone’s name. The retained name gives no second mineral identification.
+
+### colours
+
+**Dark gleam, blue body and smoke.** One portrait has *nīladyutir*, a dark or blue gleam, rendered “black” and “blue” in different translations. Another has *nīlatanur*, blue-bodied, together with *dhūmrākāro*, smoky in appearance. The smoky form and the body’s hue are separate features in that portrait.
+
+### illnesses
+
+Skin disease and hiccups belong to its associations.
+
+**Moon in an approaching alignment.** If the Sun and Moon are together or opposite and the lights and harmful planets at the chart’s angles approach one another, the Moon at either crossing or at either bend can intensify disorders of posture or movement.

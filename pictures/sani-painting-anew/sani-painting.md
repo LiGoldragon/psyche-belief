@@ -1,0 +1,73 @@
+# Śani, a painting: the source
+
+A painting, not a diagram. Every part of it has the quality of Śani, and nothing in it has another quality: the subject, the setting, the things, the format, the composition, the light, the colour, the stroke and the surface. It holds no word, no letter, no numeral and no glyph. Where the correspondence below gives two readings of one thing, both are present in the one picture.
+
+## The painting
+
+- The end of the day in the cool season, looking west over worked land that belongs to someone else. A wind blows.
+- One figure, tall, thin and worn, neither man nor woman, very old: black-bodied, with coarse stiff hair, deep-set tawny-red eyes, conspicuous veins, large teeth and nails, the head drooping, the limbs bent and stiff.
+- It wears old, torn black cloth and an iron fetter on one ankle, and leans on a tool of the field, still at its work, enduring.
+- The ground is scorched and cracked, and frost lies in its hollows. A fence runs across the land. Far back stand a prison wall and a heap of refuse; near the figure, an anthill.
+- A buffalo and a donkey stand with their heads down; a camel far off; a crow on a sapless tree; a serpent at the anthill; poor grain, sesame and chickpeas in thin rows.
+- Iron, lead and plain stone lie about; one small blue sapphire is the only clear colour.
+- The low sun is going down, dull and hot at the horizon, and the light over everything is livid.
+
+## Format, composition and light
+
+- A tall, narrow panel, mostly empty: a great bare sky and a great bare ground, the figure small and low, off centre, with long distances around it.
+- Livid, cold, grey-blue light; long shadows; one band of sullen heat at the horizon.
+
+## Manner
+
+- Dry brush dragged over a rough ground, thin and sparing, with scratched lines, cracked paint and bare patches; slow, exact and severe.
+- Colours: black, lead grey, livid blue-grey, the dull brown of a beaver's pelt, rust.
+
+## The correspondence, whole
+
+### nature
+
+Śani is necessity over a long span: age, delay, limits and what remains after loss. It is a malefic power, associated with grief and with the passing of time. Its element is air and its figure is neither male nor female. It governs long life as well as the wearing down that comes with it. The poor, the indebted and the confined belong to its field because they live under restrictions that intention alone cannot lift.
+
+Old age is its stage of life, the west its quarter and the cool season its time of year. It is associated with the year as a measure of duration, with touch and with the astringent taste that draws the mouth tight. Its setting place gives direction a bodily feeling of decline.
+
+**Cooling and heat.** In an account of physical powers Saturn acts chiefly to cool, *ψύχειν*, with a minor drying action. In the thermal classification of favorable and adverse planets it is one of the *krūrāśca gharmā*, hot malefics.
+
+**Time of strength and sect.** One temporal-strength roster puts Saturn *divā*, by day; another puts it with the planets strong *niśi*, at night. The day sect, *τῷ θερμῷ τῷ τῆς ἡμέρας*, is affiliation: day’s warmth offsets Saturn’s cold. A third-of-day rule gives *dinānte*, the end of the day, a particular interval rather than the whole day.
+
+### character
+
+The Saturnine disposition is grave, solitary, slow to trust and difficult to please. It keeps to its purpose, remembers injuries and can go without ease or companionship. Given a sound position, its severity becomes deliberation, exacting work, endurance and the ability to stay with a problem. Under harder conditions the same inwardness can become suspicion, gloom, hoarding or spite. It may be sluggish when nothing moves it and formidable when it commits itself to a task.
+
+Śani stands close to elders, widows, unmarried men and people pushed to the edge of a household or community. It can stand for the father in a night birth and for a person raising children who are not their own. Its ties are formed as much by obligation and endurance as by the ease of affection.
+
+### body
+
+Its figure is tall, thin and worn, with coarse stiff hair, deep-set eyes, conspicuous veins and large teeth and nails. The head may droop and the limbs bend or move stiffly. Wind is the prevailing constitution of the portrait; muscle and sinew are its leading tissues. In the human body it is associated with bones, knees, legs, the right ear, spleen and bladder. The kidneys, deeper viscera and bodily fluids also enter its field. A mark on the left leg is a particular bodily sign.
+
+### occupations
+
+The servant and hired laborer come first, especially the person who cultivates, tends or works property held by somebody else. The same relation can yield stewardship, guardianship, tenancy or the management of another’s estate. Field labor, blacksmithing, oil pressing, fishing and tending livestock show work done steadily at the margins of more visible trades. Jailer and captive belong to opposite sides of one duty of confinement. With other powers involved Saturn can govern some exacting affairs of burial, tunneling or work on the water.
+
+### things
+
+Fetters and fences are the clearest objects of restraint. Old or torn cloth and black garments mark wear, hardship or station. Timber, stone and agricultural tools show things meant to endure repeated labor. Its affairs include want, debt, mourning, dispossession, long lawsuits and efforts stalled before they are finished. In accounts of widespread adversity it brings frost, spoiled harvests, polluted waters and famine. The connection among these events is the narrowing of the means by which people carry on.
+
+### places
+
+Its places are those set apart or held in low regard: where refuse accumulates, the prison, and quarters at the edge of common habitation. The land itself belongs to it as something worked or tenanted. An anthill is a more particular associated site. Saurāṣṭra and the western country are geographical associations.
+
+### animals and plants
+
+Sapless or ill-favored trees and poor grain belong most closely to the Saturnine landscape. Chickpeas and other legumes that produce wind, and sesame, also belong. The buffalo, donkey, camel, serpent and crow give it a range from burden-bearing animals to creatures of neglected places. The elephant and cuckoo also appear among its animals.
+
+### metals and stones
+
+Iron and lead are foremost, with dark metals and ordinary stone close by. Sapphire is its gemstone.
+
+### colours
+
+**Dark body, castor-like hue, livid light.** One bodily portrait gives *kṛṣṇadehaḥ*, black-bodied. An account of planetary colour gives *καστορίζων*, castor-like, without a secure modern hue. An invocation calls on the *livedinem sideris tui*, the livid appearance of the star. Hair and eyes are separate features: coarse dark hair and tawny or reddish, sunken eyes.
+
+### illnesses
+
+Chronic debility, wasting and disorders associated with cold or damp are characteristic. Joint and sinew pain, stiffness, gout, lingering coughs and fluid accumulation show the same slow course in different parts of the body. Dysentery also recurs. Cold disorders can settle in the chest, throat or stomach when Mercury is involved. Saturn’s link is with ailments that persist or recur, rather than with an assumption that every difficult illness belongs to it.

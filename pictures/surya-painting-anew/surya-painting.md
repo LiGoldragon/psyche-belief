@@ -1,0 +1,67 @@
+# Sūrya, a painting: the source
+
+A painting, not a diagram. Every part of it has the quality of Sūrya, and nothing in it has another quality: the subject, the setting, the things, the format, the composition, the light, the colour, the stroke and the surface. It holds no word, no letter, no numeral and no glyph. Where the correspondence below gives two readings of one thing, both are present in the one picture.
+
+## The painting
+
+- A king at high noon, seated facing us, alone and central, on a bare, bright, waterless hilltop before a temple, the east behind him.
+- His body is square and well set, strong in bone, large in the arms, as wide in his arm span as he is tall; the hair sparse, soft and slightly curled; the eyes large, clear and honey-coloured; a young man who has taken command.
+- His skin is coppery red, dark as red wine in the shadowed side, and the whole figure shines like heated gold, yellow at its brightest edge.
+- He wears coarse, thick-threaded wool in red and saffron, a wreath, gold and copper, and one ruby.
+- A sacred fire burns before him, tended; a weapon lies at his hand; wood is stacked for the fire.
+- A tiger lies at his side. Ripe wheat and barley stand below the hill; one tall tree with a thick trunk; deer and a ruddy goose far off on a riverbank.
+- His gaze is steady and commanding, dignified, a little fierce: splendid, and not mild.
+
+## Format, composition and light
+
+- A square panel. Strict frontal symmetry: the figure on the vertical axis, everything else arranged around him and turned toward him.
+- The sun itself stands directly above his head, and there are almost no shadows. The sky is one burnished field of gold.
+
+## Manner
+
+- An icon in tempera and gold leaf: flat, blazing, hieratic; hard, clear, certain edges; a few large shapes; nothing hidden, nothing vague.
+- Colours: copper red, wine red, saffron, heated gold, a little white at the brightest point.
+
+## The correspondence, whole
+
+### nature
+
+Sūrya is the light of day and the fire at the center of a system of powers. It gives heat, dries moderately, and lends or takes away strength from other powers according to their relation to it. It stands for the soul, the self that directs action, and the light by which the mind sees. Its governing image is masculine and royal. It can be life-giving and fierce at once: to call it splendid is not to call its effects mild.
+
+Its time is daylight, especially midday; its quarter is east, where light first appears. Summer belongs to it, as do the sharpness of a pungent taste and the faculty of sight. Its stage of life is young adulthood, when a person first takes responsibility for a course of action and seeks a place in the world. Sunrise stirs living things into activity. Noon, when the Sun is highest, shows the force of illumination in its most public form.
+
+### character
+
+Sūrya gives steadiness of purpose, courage, clear judgment and a commanding presence. It wants to act in its own name and to be answerable for what it does. In a favorable setting that can become dignified conduct, a sense of justice and serious attention to duty. Where its power is poorly placed, resolution can harden into obstinacy and authority into harshness. The desire to succeed is specifically a desire for achievement that is seen and acknowledged. The father is its closest human likeness; the master, protector and person of distinction extend that likeness into public life.
+
+### body
+
+The solar portrait is square and well set, strong in bone, large in the arms and sparing in the hair. The hair may be soft and slightly curled; the eyes are large and clear, and the voice has weight. The figure can be close to the same height as its arm span. Its constitution is bilious. These are features of the portrait. In the human body the solar associations center on the heart, the head and brain, the nerves and sinews, and the right side, especially the right eye. A mark on the right hip is a further bodily association.
+
+### occupations
+
+Foremost is the sovereign: the one who commands, presides before others and bears responsibility for the realm. Military leaders, royal officers and ministers carry aspects of that role; chief priests and officiants carry its ceremonial weight. Physicians belong through a separate association. When Mars aspects the Sun, it is also the fire at the worker’s hand: cooks, smiths, metal molders, miners and those who treat by cautery. That is a relation between two powers, rather than a reason to make every solar figure a smith or soldier.
+
+### things
+
+Fire and weapons give heat and force a material form. Thick-threaded or coarse cloth, wool and sturdy red or saffron garments suit the figure. Wreaths, portraits and statues are awards that give public achievement a lasting shape. Wood feeds the fire; medicines, herbs and poisons show how what acts strongly on a body can be used for different ends. The acts associated with Sūrya include victory, a journey into forested hills and the tending of a sacred fire.
+
+### places
+
+A temple or other place of worship is the firmest setting. An open, bright place, especially one without water, shows the Sun directly rather than through its shelter or reflection. Hills, forests and riverbanks also belong to it. A court or palace belongs to the work of kingship; the eastern lands and Kaliṅga are distinct geographical associations.
+
+### animals and plants
+
+Wheat is particularly well established, with barley, seed and grain in the husk close beside it. Trees grow tall and strong, with thick trunks. The tiger gives the solar fierceness an animal likeness. Deer, the ruddy goose and serpents are also associated with it, as are wild beasts of prey more broadly.
+
+### metals and stones
+
+Gold comes first, with copper close beside it. Ruby is its distinctive stone.
+
+### colours
+
+**Solar hue.** In the planetary colour lists, *tāmra* is coppery; the figure can be *raktaśyāmo*, reddish-dark. In another planetary portrait the printed Greek *κάτοινος* is wine-coloured, which can overlap the red range. A different English rendering of that portrait gives “yellowish”; its exact Greek basis is unverified. These are readings of the Sun’s colour, distinct from the honey tones of the eyes and from *prataptacāmīkaradīptamūrtiḥ*, the figure shining like heated gold.
+
+### illnesses
+
+The clearest link is to sight, especially injury to vision when the lights are under severe pressure from harmful planets. A separate adverse figure, with masculinized lights and Venus, a waning Moon, approaching harmful planets and the Sun in aspect, can bear on fertility and injury to the reproductive organs. These belong to particular configurations of people, not to the solar figure’s own body.

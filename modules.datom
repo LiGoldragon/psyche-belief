@@ -21,6 +21,8 @@
   { { Vision belief-modules Single.0 } «vision/belief-modules/0.md» }
   { { Vision belief-nexus Single.0 } «vision/belief-nexus/0.md» }
   { { Vision book Single.0 } «vision/book/0.md» }
+  { { Vision budha Single.0 } «vision/budha/0.md» }
+  { { Vision candra Single.0 } «vision/candra/0.md» }
   { { Vision chronos Single.0 } «vision/chronos/0.md» }
   { { Vision clojure Single.0 } «vision/clojure/0.md» }
   { { Vision code Single.0 } «vision/code/0.md» }
@@ -45,10 +47,12 @@
   { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
   { { Vision flow-nexus Span.{ 0 1 } } «vision/flow-nexus/0-1.md» }
   { { Vision git-server Single.0 } «vision/git-server/0.md» }
+  { { Vision guru Single.0 } «vision/guru/0.md» }
   { { Vision harness-nexus Single.0 } «vision/harness-nexus/0.md» }
   { { Vision capsule-nexus Single.0 } «vision/capsule-nexus/0.md» }
   { { Vision high-level-view Single.0 } «vision/high-level-view/0.md» }
   { { Vision horizon Single.0 } «vision/horizon/0.md» }
+  { { Vision ketu Single.0 } «vision/ketu/0.md» }
   { { Vision listener Single.0 } «vision/listener/0.md» }
   { { Vision listener Single.1 } «vision/listener/1.md» }
   { { Vision listener Single.2 } «vision/listener/2.md» }
@@ -56,6 +60,7 @@
   { { Vision long-model-roles Single.0 } «vision/long-model-roles/0.md» }
   { { Vision long-nexus Single.0 } «vision/long-nexus/0.md» }
   { { Vision long-sema Single.0 } «vision/long-sema/0.md» }
+  { { Vision mangala Single.0 } «vision/mangala/0.md» }
   { { Vision memory Single.0 } «vision/memory/0.md» }
   { { Vision mind-aspect Single.0 } «vision/mind-aspect/0.md» }
   { { Vision mind-handover Single.0 } «vision/mind-handover/0.md» }
@@ -74,8 +79,10 @@
   { { Vision psyche-aspect Single.0 } «vision/psyche-aspect/0.md» }
   { { Vision psyche-nexus Single.0 } «vision/psyche-nexus/0.md» }
   { { Vision psyche-fable Single.0 } «vision/psyche-fable/0.md» }
+  { { Vision rahu Single.0 } «vision/rahu/0.md» }
   { { Vision remembering Single.0 } «vision/remembering/0.md» }
   { { Vision review Single.0 } «vision/review/0.md» }
+  { { Vision sani Single.0 } «vision/sani/0.md» }
   { { Vision sanskrit Single.0 } «vision/sanskrit/0.md» }
   { { Vision sema Single.0 } «vision/sema/0.md» }
   { { Vision sema Single.1 } «vision/sema/1.md» }
@@ -83,6 +90,8 @@
   { { Vision short-sema Single.0 } «vision/short-sema/0.md» }
   { { Vision signal Single.0 } «vision/signal/0.md» }
   { { Vision subflows Single.0 } «vision/subflows/0.md» }
+  { { Vision sukra Single.0 } «vision/sukra/0.md» }
+  { { Vision surya Single.0 } «vision/surya/0.md» }
   { { Vision system-one Single.0 } «vision/system-one/0.md» }
   { { Vision testing Single.0 } «vision/testing/0.md» }
   { { Vision unison Single.0 } «vision/unison/0.md» }

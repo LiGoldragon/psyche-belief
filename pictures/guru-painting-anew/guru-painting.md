@@ -1,0 +1,76 @@
+# Guru, a painting: the source
+
+A painting, not a diagram. Every part of it has the quality of Guru, and nothing in it has another quality: the subject, the setting, the things, the format, the composition, the light, the colour, the stroke and the surface. It holds no word, no letter, no numeral and no glyph. Where the correspondence below gives two readings of one thing, both are present in the one picture.
+
+## The painting
+
+- A clear early-winter morning in a great hall that is a treasury and a place of sacred learning, in a city, open to the northeast.
+- A teacher in the fullness of his elder years, standing: large through the chest and broad in build, solid and powerful, the head held up, the eyes steady and tawny. He has strength, power and majesty, and is at ease in them; nothing in him is slack.
+- His body is the colour of pure gold; his hair and beard are dove-grey going to white; he wears yellow cloth, a crown, gold, silver, and a yellow stone.
+- With one hand he gives: grain and coin pass from him to people who need them, and a freed captive rises with his chains fallen. With the other he holds a book, and he is speaking, giving counsel; a king and ministers, scholars and sons listen.
+- Behind him the storerooms stand open: heaped grain, sealed jars of honey, a balance, things kept in trust. A banner, a parasol and fly whisks are held over him.
+- An elephant and a horse stand in the court; a swan and pigeons; a great pīpal tree spreads over the roof, and beyond it are fields in harvest.
+
+## Format, composition and light
+
+- A very large, wide canvas. The composition is a broad, stable pyramid with him at its summit and the many people gathered into one whole beneath; tall columns, wide steps, generous room between things.
+- The air is cool, clear and grey-white as a winter sky; the light that falls on him is warm, golden and mild, and makes the cold hall kindly.
+
+## Manner
+
+- The grand manner in oil: monumental figures fully modelled in the round, broad, generous, confident brushwork, rich depth, everything finished and sound.
+- Colours: yellow from ivory to gold, dove grey and white, the brown of grain and wood, a little clear blue.
+
+## The correspondence, whole
+
+### nature
+
+Guru is a benefic power of increase, protection and good judgment. It is masculine. Its increase is more than accumulation: plenty allows people to live securely, settle differences and act with freedom. Teaching and sound counsel make knowledge something others can use. The power can bring peace, prosperity and honor together, with enough for the household and a surplus from which to give.
+
+The northeast is its quarter, early winter its season and a month its usual span. Sweetness is its taste. It marks the elder part of life, when experience can be put to the use of others.
+
+**Element in the fivefold list.** In one English rendering of the five elements linked to the human body, Jupiter takes “air.” A readable Sanskrit witness has *kham*, space or ether, in that same slot, with *anila*, wind, in Saturn’s. Other five-element lists give Jupiter *kha* or *nabhas*, space or ether. The original behind the English “air” has not been established.
+
+**Warming and cold.** In the physical-powers account Jupiter *θερμαίνει τε γὰρ ἅμα καὶ ὑγραίνει*, warms and moistens together. In a thermal classification, *mṛdavaśca śitā* gives cold as the property of the gentle group, including Jupiter. Moistening is a separate action from warming.
+
+**Sect and measures of strength.** The day sect, *τῆς ἡμερινῆς αἱρέσεως*, is affiliation. A general roster gives Jupiter vigor *divā*, by day. A separate roster of times of day gives Jupiter “always” strong in the available English translation; its Sanskrit wording is unverified here. These are different measures, and day strength need not be exclusive.
+
+### character
+
+Guru is learned, generous, just and compassionate. It keeps a promise, respects elders and can be both modest in bearing and large in what it undertakes. It enjoys discussion because it can weigh an argument and give counsel rather than simply win it. Memory and steadiness under pressure give judgment time to mature. Its dignity shows in how it treats those who need help. In an unfavorable position confidence can turn to credulity or conceit, and generosity to extravagance. Such reversals show what happens when increase loses the guidance of good judgment.
+
+Its nearest relations are teachers and learned elders, sons and associates bound by fellowship. Friendship with powerful people matters where influence can be turned into protection or aid.
+
+### body
+
+Guru is large through the chest and broad in build, solid and fleshy rather than necessarily tall. The head is held up and the eyes are steady. The voice is deep and full, compared to a lion’s or the sound of a conch. A phlegmatic constitution and ample bodily fat belong to the figure. Its human bodily associations include lungs and arteries, the liver, thighs and feet, and seed and womb. A mark on the right shoulder is a further association.
+
+### occupations
+
+The teacher, counselor and minister come first. Guru advises in law and policy as well as in sacred study and ritual. It belongs to preceptors, scholars, royal chaplains and those who direct a temple. In public life it favors offices that require judgment, the ability to settle disputes, or custody of resources. When Jupiter aspects Mercury, these can include lawmaking and public speech. Its authority is often exercised through counsel and trust rather than direct command.
+
+### things
+
+Money, stored grain, generous grants and safeguarded possessions express abundance put to use. Crowns, banners, parasols and fly whisks signify public honor. A bed, conveyance and well-kept garments give that prosperity a domestic form. Yellow clothing is especially well established. Honey and aromatic substances belong among its goods. Its actions include teaching, paying homage, arbitration, payment of wages, forming alliances, giving freely, freeing captives and providing safe custody. This is also the field of a good harvest and of an inheritance passed on securely.
+
+### places
+
+The treasury or storeroom comes first: a place where collective resources are kept in trust. The city, provincial seat and places of worship or sacred learning give this power a public setting. The Sindhu region and lands along its eastern bank give it a more particular geography.
+
+### animals and plants
+
+Grain and fruit-bearing trees show provision and increase. The pīpal is a particular tree, and Bengal gram a particular crop. The horse and elephant belong to a prosperous household or court. The pigeon and swan are also associated with Guru.
+
+### metals and stones
+
+Gold, silver and tin are each named.
+
+**Identity of the gemstone.** The gemstone allotment names *puṣparāgam* for Jupiter. One identification is topaz; another is yellow sapphire. Both identify the same textual stone.
+
+### colours
+
+**Jupiter’s hue and complexion.** One planetary list gives *pītaka*, yellow; another colour designation is *vyāpīta*, distinctly yellow. A Greek colour description is *φαιὸς καὶ μᾶλλον λευκός*, gray inclining to white; a Sanskrit colour-list witness has *kapota*, dove-gray, where another has *kapīta*, explained as yellow. The golden body, *suviśuddhakāñcanavapuḥ*, belongs to the human-shaped planetary portrait; *corporis forma munda formosa candida*, a clean, shapely, fair body, describes a person when Jupiter is ruler of the nativity. Tawny eyes are a separate feature of the portrait.
+
+### illnesses
+
+Guru is primarily associated with keeping or restoring health. Where well-placed benefics prevail over harmful planets, its aid can alleviate illness or make an injury less conspicuous through material and human help. With Mercury in that same favorable setting, relief can come through medicines and physicians. The claim is for aid under a clear condition, not for a cure in every case.
