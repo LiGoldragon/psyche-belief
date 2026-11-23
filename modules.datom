@@ -33,6 +33,7 @@
   { { Vision criomos Single.0 } «vision/criomos/0.md» }
   { { Vision crystallization Single.0 } «vision/crystallization/0.md» }
   { { Vision datom Single.0 } «vision/datom/0.md» }
+  { { Vision datom-codec Single.0 } «vision/datom-codec/0.md» }
   { { Vision deployment Single.0 } «vision/deployment/0.md» }
   { { Vision energy-management Single.0 } «vision/energy-management/0.md» }
   { { Vision energy-nexus Single.1 } «vision/energy-nexus/1.md» }
