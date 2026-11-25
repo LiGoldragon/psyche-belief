@@ -21,6 +21,7 @@
   { { Vision belief-modules Single.0 } «vision/belief-modules/0.md» }
   { { Vision belief-nexus Single.0 } «vision/belief-nexus/0.md» }
   { { Vision book Single.0 } «vision/book/0.md» }
+  { { Vision chart Single.0 } «vision/chart/0.md» }
   { { Vision mercury Single.0 } «vision/mercury/0.md» }
   { { Vision moon Single.0 } «vision/moon/0.md» }
   { { Vision chronos Single.0 } «vision/chronos/0.md» }
@@ -94,6 +95,7 @@
   { { Vision short-sema Single.0 } «vision/short-sema/0.md» }
   { { Vision signal Single.0 } «vision/signal/0.md» }
   { { Vision subflows Single.0 } «vision/subflows/0.md» }
+  { { Vision symbols Single.0 } «vision/symbols/0.md» }
   { { Vision venus Single.0 } «vision/venus/0.md» }
   { { Vision sun Single.0 } «vision/sun/0.md» }
   { { Vision system-one Single.0 } «vision/system-one/0.md» }
