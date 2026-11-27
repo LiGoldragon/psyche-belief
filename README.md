@@ -1,6 +1,6 @@
-# psyche-belief
+# psyche-pattern
 
-This repository holds the Psyche aspect's authored belief modules in
+This repository holds the Psyche aspect's authored pattern modules in
 `vision/`, `intent/` and `spirit/`, with subject-only filenames. Stable
 logical IDs retain the `vision-`, `intent-` and `spirit-` type prefixes; for
 example, `vision/ethos/0.md` is `vision:ethos:0`.

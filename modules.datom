@@ -1,5 +1,5 @@
 [ { { Spirit knowing Single.0 } «spirit/knowing/0.md» }
-  { { Intent belief-modules Single.0 } «intent/belief-modules/0.md» }
+  { { Intent pattern-modules Single.0 } «intent/pattern-modules/0.md» }
   { { Intent code-design Single.0 } «intent/code-design/0.md» }
   { { Intent configuration Single.0 } «intent/configuration/0.md» }
   { { Intent design-faculty Single.0 } «intent/design-faculty/0.md» }
@@ -14,8 +14,8 @@
   { { Vision account Single.0 } «vision/account/0.md» }
   { { Vision anatomy Single.0 } «vision/anatomy/0.md» }
   { { Vision aspects Single.0 } «vision/aspects/0.md» }
-  { { Vision belief-modules Single.0 } «vision/belief-modules/0.md» }
-  { { Vision belief-nexus Single.0 } «vision/belief-nexus/0.md» }
+  { { Vision pattern-modules Single.0 } «vision/pattern-modules/0.md» }
+  { { Vision pattern-nexus Single.0 } «vision/pattern-nexus/0.md» }
   { { Vision book Single.0 } «vision/book/0.md» }
   { { Vision chart Single.0 } «vision/chart/0.md» }
   { { Vision mercury Single.0 } «vision/mercury/0.md» }
