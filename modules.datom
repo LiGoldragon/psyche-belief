@@ -94,6 +94,7 @@
   { { Vision sun Single.0 } «vision/sun/0.md» }
   { { Vision system-one Single.0 } «vision/system-one/0.md» }
   { { Vision testing Single.0 } «vision/testing/0.md» }
+  { { Vision thread-management Single.0 } «vision/thread-management/0.md» }
   { { Vision unison Single.0 } «vision/unison/0.md» }
   { { Vision versioning Single.0 } «vision/versioning/0.md» }
   { { Vision visualization Single.0 } «vision/visualization/0.md» }
