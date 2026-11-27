@@ -43,8 +43,6 @@
   { { Vision field-handover Single.0 } «vision/field-handover/0.md» }
   { { Vision field-nexus Single.0 } «vision/field-nexus/0.md» }
   { { Vision flow-nexus Single.0 } «vision/flow-nexus/0.md» }
-  { { Vision flow-nexus Single.1 } «vision/flow-nexus/1.md» }
-  { { Vision flow-nexus Span.{ 0 1 } } «vision/flow-nexus/0-1.md» }
   { { Vision git-server Single.0 } «vision/git-server/0.md» }
   { { Vision jupiter Single.0 } «vision/jupiter/0.md» }
   { { Vision harness-nexus Single.0 } «vision/harness-nexus/0.md» }
@@ -59,8 +57,9 @@
   { { Vision long-model-roles Single.0 } «vision/long-model-roles/0.md» }
   { { Vision long-nexus Single.0 } «vision/long-nexus/0.md» }
   { { Vision long-sema Single.0 } «vision/long-sema/0.md» }
+  { { Vision loom Single.0 } «vision/loom/0.md» }
   { { Vision mars Single.0 } «vision/mars/0.md» }
-  { { Vision memory Single.0 } «vision/memory/0.md» }
+  { { Vision matrix Single.0 } «vision/matrix/0.md» }
   { { Vision mind-aspect Single.0 } «vision/mind-aspect/0.md» }
   { { Vision mind-handover Single.0 } «vision/mind-handover/0.md» }
   { { Vision mind-nexus Single.0 } «vision/mind-nexus/0.md» }
