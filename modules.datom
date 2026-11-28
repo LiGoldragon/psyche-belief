@@ -20,6 +20,7 @@
   { { Vision mercury Single.0 } «vision/mercury/0.md» }
   { { Vision moon Single.0 } «vision/moon/0.md» }
   { { Vision chronos Single.0 } «vision/chronos/0.md» }
+  { { Vision claude-no-artifact Single.0 } «vision/claude-no-artifact/0.md» }
   { { Vision clojure Single.0 } «vision/clojure/0.md» }
   { { Vision code Single.0 } «vision/code/0.md» }
   { { Vision codex-harness-nexus Single.0 } «vision/codex-harness-nexus/0.md» }
